@@ -1,681 +1,357 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0xa3240f8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
-  <generator>GNOME Inform 7</generator>
-  <activeNode nodeId="node-0xa3240f8"/>
-  <item nodeId="node-0xa3240f8">
+<Skein rootNode="node-0x02644940" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x02644940"/>
+  <item nodeId="node-0x02644940">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">
-
-
-
-The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can&apos;t feel it because you&apos;re completely numb.
- ...
- The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.
-
-Silent Stars
-An Interactive Fiction by Zaq Grow
-Release 1 / Serial number 130309 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
-
-TEST: Autodoc, in good light.
-
-Autodoc, in good light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-A control panel, complete with colored buttons, is.
-
-&gt;</result>
+    <result xml:space="preserve">&#x000A;&#x000A;&#x000A;&#x000A;The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.&#x000A; ...&#x000A; The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.&#x000A;&#x000A;Silent Stars&#x000A;An Interactive Fiction by Zaq Grow&#x000A;Release 1 / Serial number 130309 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;TEST: Autodoc, in good light.&#x000A;&#x000A;Autodoc, in good light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;A control panel, complete with colored buttons, is.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3241d0"/>
-      <child nodeId="node-0xa3a0aa0"/>
-      <child nodeId="node-0xa3a0b78"/>
-      <child nodeId="node-0xa3a0c50"/>
+      <child nodeId="node-0x02644670"/>
+      <child nodeId="node-0x0265B588"/>
+      <child nodeId="node-0x0265B5F8"/>
+      <child nodeId="node-0x0265B668"/>
     </children>
   </item>
-  <item nodeId="node-0xa3241d0">
+  <item nodeId="node-0x02644670">
     <command xml:space="preserve">press cycle</command>
-    <result xml:space="preserve">The button changes to green and blinks &quot;Completed&quot; a couple times.
-
-&gt;</result>
+    <result xml:space="preserve">The button changes to green and blinks "Completed" a couple times.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3242a8"/>
+      <child nodeId="node-0x0264EE68"/>
     </children>
   </item>
-  <item nodeId="node-0xa3242a8">
+  <item nodeId="node-0x0264EE68">
     <command xml:space="preserve">press unlock</command>
-    <result xml:space="preserve">The &quot;Unlock Hatch&quot; button changes to green.
-
-&gt;</result>
+    <result xml:space="preserve">The "Unlock Hatch" button changes to green.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa324380"/>
+      <child nodeId="node-0x0264F078"/>
     </children>
   </item>
-  <item nodeId="node-0xa324380">
+  <item nodeId="node-0x0264F078">
     <command xml:space="preserve">press exit</command>
-    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc&apos;s hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
-
-You open the hatch.
-
-&gt;</result>
+    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;You open the hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa324458"/>
+      <child nodeId="node-0x0264F2E8"/>
     </children>
   </item>
-  <item nodeId="node-0xa324458">
+  <item nodeId="node-0x0264F2E8">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">outside
-The Medical Bay has no description in the dark.
-
-You hear white noise, coming from the radio.
-
-An amber-colored control panel shines wan light onto your sternum.
-The faint gleam from the nothing shows a Medical hatch and a hatch.
-
-&gt;</result>
+    <result xml:space="preserve">outside&#x000A;The Medical Bay has no description in the dark.&#x000A;&#x000A;You hear white noise, coming from the radio.&#x000A;&#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The faint gleam from the nothing shows a Medical hatch and a hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa324530"/>
-      <child nodeId="node-0xa3642b8"/>
+      <child nodeId="node-0x02677FE8"/>
+      <child nodeId="node-0x02678448"/>
     </children>
   </item>
-  <item nodeId="node-0xa324530">
+  <item nodeId="node-0x02677FE8">
     <command xml:space="preserve">in</command>
-    <result xml:space="preserve">TEST: Autodoc, in good light.
-
-Autodoc, in good light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-A control panel, complete with colored buttons, is.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Autodoc, in good light.&#x000A;&#x000A;Autodoc, in good light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;A control panel, complete with colored buttons, is.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa324608"/>
+      <child nodeId="node-0x02678178"/>
     </children>
   </item>
-  <item nodeId="node-0xa324608">
+  <item nodeId="node-0x02678178">
     <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
-
-&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3246e0"/>
+      <child nodeId="node-0x026781E8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3246e0">
+  <item nodeId="node-0x026781E8">
     <command xml:space="preserve">actions</command>
-    <result xml:space="preserve">Actions listing on.
-
-&gt;</result>
+    <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa364030"/>
+      <child nodeId="node-0x02678258"/>
     </children>
   </item>
-  <item nodeId="node-0xa364030">
+  <item nodeId="node-0x02678258">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">[Rule &quot;Setting action variables for exiting&quot; applies.]
-[exiting]
-[Rule &quot;convert exit into go out rule&quot; applies.]
-[Rule &quot;standard set going variables rule&quot; applies.]
-[(1) going outside]
-[Rule &quot;can&apos;t travel in what&apos;s not a vehicle rule&quot; applies.]
-[Rule &quot;can&apos;t go through undescribed doors rule&quot; applies.]
-[Rule &quot;can&apos;t go through closed doors rule&quot; applies.]
-[Rule &quot;determine map connection rule&quot; applies.]
-[Rule &quot;can&apos;t go that way rule&quot; applies.]
-[Rule &quot;move player and vehicle rule&quot; applies.]
-[Rule &quot;move floating objects rule&quot; applies.]
-[Rule &quot;check light in new location rule&quot; applies.]
-[Rule &quot;describe room gone into rule&quot; applies.]
-
-[Rule &quot;determine visibility ceiling rule&quot; applies.]
-[Rule &quot;complex room heading rule&quot; applies.]
-
-
-[Rule &quot;room description body text rule&quot; applies.]
-The Medical Bay has no description in the dark.
-
-[Rule &quot;ambient sound rule&quot; applies.]
-[(2) listening to the Medical Bay]
-[Rule &quot;Check listening&quot; applies.]
-[Rule &quot;Report listening&quot; applies.]
-You hear white noise, coming from the radio.
-[(2) listening to the Medical Bay - succeeded]
-
-An amber-colored control panel shines wan light onto your sternum.
-The insubstantial incandescence from the nothing illuminates a hatch and a Medical hatch.
-
-[Rule &quot;room description paragraphs about objects rule&quot; applies.]
-[Rule &quot;check new arrival rule&quot; applies.]
-[Rule &quot;mark items as seen when looking rule&quot; applies.]
-[Rule &quot;other people looking rule&quot; applies.]
-[(1) going outside - succeeded]
-
-[exiting - succeeded]
-
-&gt;</result>
+    <result xml:space="preserve">[Rule "Setting action variables for exiting" applies.]&#x000A;[exiting]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[(1) going outside]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "complex room heading rule" applies.]&#x000A;&#x000A;&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;&#x000A;[Rule "ambient sound rule" applies.]&#x000A;[(2) listening to the Medical Bay]&#x000A;[Rule "Check listening" applies.]&#x000A;[Rule "Report listening" applies.]&#x000A;You hear white noise, coming from the radio.&#x000A;[(2) listening to the Medical Bay - succeeded]&#x000A;&#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The insubstantial incandescence from the nothing illuminates a hatch and a Medical hatch.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "check new arrival rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;[(1) going outside - succeeded]&#x000A;&#x000A;[exiting - succeeded]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa364108"/>
+      <child nodeId="node-0x026782C8"/>
     </children>
   </item>
-  <item nodeId="node-0xa364108">
+  <item nodeId="node-0x026782C8">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">[Rule &quot;determine visibility ceiling rule&quot; applies.]
-[looking]
-[Rule &quot;complex room heading rule&quot; applies.]
-
-
-[Rule &quot;room description body text rule&quot; applies.]
-The Medical Bay has no description in the dark.
-
-An amber-colored control panel shines wan light onto your sternum.
-The subdued glimmer from the nothing shows a hatch and a Medical hatch.
-
-[Rule &quot;room description paragraphs about objects rule&quot; applies.]
-[Rule &quot;check new arrival rule&quot; applies.]
-[Rule &quot;mark items as seen when looking rule&quot; applies.]
-[Rule &quot;other people looking rule&quot; applies.]
-[looking - succeeded]
-
-&gt;</result>
+    <result xml:space="preserve">[Rule "determine visibility ceiling rule" applies.]&#x000A;[looking]&#x000A;[Rule "complex room heading rule" applies.]&#x000A;&#x000A;&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;&#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The subdued glimmer from the nothing shows a hatch and a Medical hatch.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "check new arrival rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;[looking - succeeded]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3641e0"/>
+      <child nodeId="node-0x026783D8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3641e0">
+  <item nodeId="node-0x026783D8">
     <command xml:space="preserve">showme location</command>
-    <result xml:space="preserve">There seems to be no such object anywhere in the model world.
-
-&gt;</result>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa3642b8">
+  <item nodeId="node-0x02678448">
     <command xml:space="preserve">whereami</command>
-    <result xml:space="preserve">You are here: Medical Bay.
-
-&gt;</result>
+    <result xml:space="preserve">You are here: Medical Bay.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa364390"/>
+      <child nodeId="node-0x026784B8"/>
     </children>
   </item>
-  <item nodeId="node-0xa364390">
+  <item nodeId="node-0x026784B8">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">The Hallway A has no description in the dark.
-
-You hear white noise, coming from the radio.
-
-An amber-colored control panel shines wan light onto your sternum.
-The tenuous lambency from the nothing shows a Medical hatch.
-
-&gt;</result>
+    <result xml:space="preserve">The Hallway A has no description in the dark.&#x000A;&#x000A;You hear white noise, coming from the radio.&#x000A;&#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The tenuous lambency from the nothing shows a Medical hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa364468"/>
+      <child nodeId="node-0x0265B278"/>
     </children>
   </item>
-  <item nodeId="node-0xa364468">
+  <item nodeId="node-0x0265B278">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">The Hallway A has no description in the dark.
-
-You hear white noise, coming from the radio.
-
-An amber-colored control panel shines wan light onto your sternum.
-The subdued gleam from the nothing shines on a Medical hatch.
-
-&gt;</result>
+    <result xml:space="preserve">The Hallway A has no description in the dark.&#x000A;&#x000A;You hear white noise, coming from the radio.&#x000A;&#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The subdued gleam from the nothing shines on a Medical hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa364540"/>
+      <child nodeId="node-0x0265B2E8"/>
     </children>
   </item>
-  <item nodeId="node-0xa364540">
+  <item nodeId="node-0x0265B2E8">
     <command xml:space="preserve">w</command>
-    <result xml:space="preserve">The Medical Bay has no description in the dark.
-
-You hear white noise, coming from the radio.
-
-An amber-colored control panel shines wan light onto your sternum.
-The insufficient gleam from the nothing shows a Medical hatch and a hatch.
-
-&gt;</result>
+    <result xml:space="preserve">The Medical Bay has no description in the dark.&#x000A;&#x000A;You hear white noise, coming from the radio.&#x000A;&#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The insufficient gleam from the nothing shows a Medical hatch and a hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa364618"/>
+      <child nodeId="node-0x0265B358"/>
     </children>
   </item>
-  <item nodeId="node-0xa364618">
+  <item nodeId="node-0x0265B358">
     <command xml:space="preserve">turn on sunrod</command>
-    <result xml:space="preserve">LIGHTS
-You switch the sunrod on.
-
-TEST: Medical Bay, in good light.
-
-Medical Bay, in good light
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-You can also see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">LIGHTS&#x000A;You switch the sunrod on.&#x000A;&#x000A;TEST: Medical Bay, in good light.&#x000A;&#x000A;Medical Bay, in good light&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;You can also see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3646f0"/>
+      <child nodeId="node-0x0265B3C8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3646f0">
+  <item nodeId="node-0x0265B3C8">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">The Hallway A has no description in the dark.
-
-You hear white noise, coming from the radio.
-
-The sunrod in your hand glows dimly. 
-An amber-colored control panel shines wan light onto your sternum.
-The ghostly incandescence from the nothing limns a Medical hatch.
-
-TEST: Hallway A, in good light.
-
-Hallway A, in good light
-Hallway!
-
-You can see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">The Hallway A has no description in the dark.&#x000A;&#x000A;You hear white noise, coming from the radio.&#x000A;&#x000A;The sunrod in your hand glows dimly. &#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The ghostly incandescence from the nothing limns a Medical hatch.&#x000A;&#x000A;TEST: Hallway A, in good light.&#x000A;&#x000A;Hallway A, in good light&#x000A;Hallway!&#x000A;&#x000A;You can see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3a0818"/>
+      <child nodeId="node-0x0265B438"/>
     </children>
   </item>
-  <item nodeId="node-0xa3a0818">
+  <item nodeId="node-0x0265B438">
     <command xml:space="preserve">w</command>
-    <result xml:space="preserve">TEST: Medical Bay, in good light.
-
-Medical Bay, in good light
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-You can also see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Medical Bay, in good light.&#x000A;&#x000A;Medical Bay, in good light&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;You can also see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3a08f0"/>
+      <child nodeId="node-0x0265B4A8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3a08f0">
+  <item nodeId="node-0x0265B4A8">
     <command xml:space="preserve">in</command>
-    <result xml:space="preserve">TEST: Autodoc, in good light.
-
-Autodoc, in good light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-A control panel, complete with colored buttons, is.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Autodoc, in good light.&#x000A;&#x000A;Autodoc, in good light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;A control panel, complete with colored buttons, is.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3a09c8"/>
+      <child nodeId="node-0x0265B518"/>
     </children>
   </item>
-  <item nodeId="node-0xa3a09c8">
+  <item nodeId="node-0x0265B518">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">TEST: Medical Bay, in good light.
-
-Medical Bay, in good light
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-You can also see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Medical Bay, in good light.&#x000A;&#x000A;Medical Bay, in good light&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;You can also see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa3a0aa0">
+  <item nodeId="node-0x0265B588">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">TEST: Autodoc.
-TEST: Autodoc.
-
-Autodoc, in good light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-A control panel, complete with colored buttons, is.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Autodoc.&#x000A;TEST: Autodoc.&#x000A;&#x000A;Autodoc, in good light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;A control panel, complete with colored buttons, is.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa3a0b78">
+  <item nodeId="node-0x0265B5F8">
     <command xml:space="preserve">whereami</command>
-    <result xml:space="preserve">You are here: Autodoc.
-
-&gt;</result>
+    <result xml:space="preserve">You are here: Autodoc.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa3a0c50">
+  <item nodeId="node-0x0265B668">
     <command xml:space="preserve">turn on sunrod</command>
-    <result xml:space="preserve">LIGHTS
-You switch the sunrod on.
-
-&gt;</result>
+    <result xml:space="preserve">LIGHTS&#x000A;You switch the sunrod on.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3a0d28"/>
+      <child nodeId="node-0x0265B6D8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3a0d28">
+  <item nodeId="node-0x0265B6D8">
     <command xml:space="preserve">press cycle</command>
-    <result xml:space="preserve">The button changes to green and blinks &quot;Completed&quot; a couple times.
-
-&gt;</result>
+    <result xml:space="preserve">The button changes to green and blinks "Completed" a couple times.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3a0e00"/>
+      <child nodeId="node-0x0265B748"/>
     </children>
   </item>
-  <item nodeId="node-0xa3a0e00">
+  <item nodeId="node-0x0265B748">
     <command xml:space="preserve">press unlock</command>
-    <result xml:space="preserve">The &quot;Unlock Hatch&quot; button changes to green.
-
-&gt;</result>
+    <result xml:space="preserve">The "Unlock Hatch" button changes to green.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3a0ed8"/>
+      <child nodeId="node-0x0265B7B8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3a0ed8">
+  <item nodeId="node-0x0265B7B8">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc&apos;s hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
-
-
-outside
-The Medical Bay has no description in the dark.
-
-The sunrod in your hand glows dimly. 
-An amber-colored control panel shines wan light onto your sternum.
-The anemic glimmer from the nothing illuminates a Medical hatch and a hatch.
-
-TEST: Medical Bay, in good light.
-
-Medical Bay, in good light
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-You can also see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;&#x000A;outside&#x000A;The Medical Bay has no description in the dark.&#x000A;&#x000A;The sunrod in your hand glows dimly. &#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The anemic glimmer from the nothing illuminates a Medical hatch and a hatch.&#x000A;&#x000A;TEST: Medical Bay, in good light.&#x000A;&#x000A;Medical Bay, in good light&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;You can also see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3ca030"/>
+      <child nodeId="node-0x0265B828"/>
     </children>
   </item>
-  <item nodeId="node-0xa3ca030">
+  <item nodeId="node-0x0265B828">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">TEST: Medical Bay, in good light.
-
-Medical Bay, in good light
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-You can also see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Medical Bay, in good light.&#x000A;&#x000A;Medical Bay, in good light&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;You can also see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3ca108"/>
+      <child nodeId="node-0x0265B898"/>
     </children>
   </item>
-  <item nodeId="node-0xa3ca108">
+  <item nodeId="node-0x0265B898">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">The Hallway A has no description in the dark.
-
-You hear white noise, coming from the radio.
-
-The sunrod in your hand glows dimly. 
-An amber-colored control panel shines wan light onto your sternum.
-The dim glimmer from the nothing shines on a Medical hatch.
-
-TEST: Hallway A, in good light.
-
-Hallway A, in good light
-Hallway!
-
-You can see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">The Hallway A has no description in the dark.&#x000A;&#x000A;You hear white noise, coming from the radio.&#x000A;&#x000A;The sunrod in your hand glows dimly. &#x000A;An amber-colored control panel shines wan light onto your sternum.&#x000A;The dim glimmer from the nothing shines on a Medical hatch.&#x000A;&#x000A;TEST: Hallway A, in good light.&#x000A;&#x000A;Hallway A, in good light&#x000A;Hallway!&#x000A;&#x000A;You can see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3ca1e0"/>
+      <child nodeId="node-0x0265B908"/>
     </children>
   </item>
-  <item nodeId="node-0xa3ca1e0">
+  <item nodeId="node-0x0265B908">
     <command xml:space="preserve">w</command>
-    <result xml:space="preserve">TEST: Medical Bay, in good light.
-
-Medical Bay, in good light
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-You can also see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Medical Bay, in good light.&#x000A;&#x000A;Medical Bay, in good light&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;You can also see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3ca2b8"/>
+      <child nodeId="node-0x0265B978"/>
     </children>
   </item>
-  <item nodeId="node-0xa3ca2b8">
+  <item nodeId="node-0x0265B978">
     <command xml:space="preserve">e</command>
-    <result xml:space="preserve">TEST: Hallway A, in good light.
-
-Hallway A, in good light
-Hallway!
-
-You can see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Hallway A, in good light.&#x000A;&#x000A;Hallway A, in good light&#x000A;Hallway!&#x000A;&#x000A;You can see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3ca390"/>
+      <child nodeId="node-0x0265B9E8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3ca390">
+  <item nodeId="node-0x0265B9E8">
     <command xml:space="preserve">w</command>
-    <result xml:space="preserve">TEST: Medical Bay, in good light.
-
-Medical Bay, in good light
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-You can also see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Medical Bay, in good light.&#x000A;&#x000A;Medical Bay, in good light&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;You can also see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3ca468"/>
+      <child nodeId="node-0x0265BA58"/>
     </children>
   </item>
-  <item nodeId="node-0xa3ca468">
+  <item nodeId="node-0x0265BA58">
     <command xml:space="preserve">in</command>
-    <result xml:space="preserve">TEST: Autodoc, in blinding light.
-
-Autodoc, in blinding light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-A control panel, complete with colored buttons, is.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Autodoc, in blinding light.&#x000A;&#x000A;Autodoc, in blinding light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;A control panel, complete with colored buttons, is.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3ca540"/>
+      <child nodeId="node-0x0265BAC8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3ca540">
+  <item nodeId="node-0x0265BAC8">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">TEST: Medical Bay, in good light.
-
-Medical Bay, in good light
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-A rectangular porthole made from plastex is set into the hatch above.
-
-You can also see a Medical hatch here.
-
-&gt;</result>
+    <result xml:space="preserve">TEST: Medical Bay, in good light.&#x000A;&#x000A;Medical Bay, in good light&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A rectangular porthole made from plastex is set into the hatch above.&#x000A;&#x000A;You can also see a Medical hatch here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
 </Skein>
