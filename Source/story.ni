@@ -54,6 +54,8 @@ Definition: a thing is midsized if its bulk is at least 5 and its bulk is at mos
 Definition: a thing is large if its bulk is at least 9.
 A person usually has bulk 20.
 
+A room is usually dark.
+
 Part 3 - Status Line, Game HUD, Misc
 
 To set the status line:
@@ -136,23 +138,26 @@ Rule for printing the name of a dark room:
 Rule for printing the description of a dark room:
 	say "[dark-description of the location]";
 
+[since Zeke knows where he is even in the dark, we want the rooms he arrives in to be visited as normal]
 The replacement arrival check rule is listed instead of the check new arrival rule in the carry out looking rules.
 This is the replacement arrival check rule:
+	if the location is a room, now the location is visited;
 	if in darkness:
 		now the darkness witnessed is true;
-		if the location is a room, now the location is visited;
-	otherwise:
-		if the location is a room, now the location is visited;
-
+		
+[Changes the "You also see..." message written during room description to be a little more flexible]
 Rule for listing nondescript items while the light level is dim:
-	if the location does not enclose a lit thing, list the contents of the location, as a sentence, listing marked items only;
-	let foo be a random number from 1 to 3;
-	if foo is:
-		-- 1: say "[A random lit thing] [random shine] on ";
-			list the contents of the location, as a sentence, listing marked items only;
-			say ".";
-		-- 2: say "wob.";
-		-- 3: say "wub.";
+	if the location does not enclose a lit thing:
+		say "The ambient [random lightness] [random shine] ";
+	else:
+		let foo be a random number from 1 to 3;
+		if foo is:
+			-- 1: say "[The random lit thing] [random shine] on "; [The glowing blorb shines on a sprocket.]
+			-- 2: say "wob."; [The shifting light from the glowing blorb illuminates a sprocket.]
+			-- 3: say "wub."; [A sprocket and a widget glow in the shifting light from a blorb.]
+	list the contents of the location, as a sentence, listing marked items only;
+	say ".";
+				
 
 Book 3 - Scenery, Furniture, and Props
 
@@ -169,7 +174,7 @@ Part 2 - Kinds of Objects
 [synonyms for noun light]
 A lightness is a kind of value. The lightnesses are glow, gleam, glimmer, lambency, and incandescence.
 [synonyms for verb shine]
-A shine is a kind of value. The shines are shows, illuminates, limns, and shines on.
+A shine is a kind of value. The shines are shows, illuminates, limns, reveals, and shines on.
 [synonyms for noun darkness]
 A darkness is a kind of value. The darknesses are gloom, and shadows.
 
@@ -294,8 +299,10 @@ The player is here. The Autodoc is in Deck A.
 The printed name of the autodoc is "Antiseptic Coffin". Understand "coffin" as the Autodoc. The dark-description of the Autodoc is "It's cold and damp and dark in here."
 Index map with the Autodoc mapped south of the Medical Bay.
 
-There is a panel called the control panel in the Autodoc. "A control panel, complete with colored buttons, is." The description is "The edges of the control panel have some biogunk in them." The dark-description is "An amber-colored control panel shines wan light onto your sternum."
+There is a panel called the control panel in the Autodoc. "The control panel above you shows a blinking red button." The description is "The edges of the control panel have some biogunk in them." The dark-description is "An amber-colored control panel shines wan light onto your sternum."
+The control panel is lit.
 
+[need to adapt the buttons to track their on-off status rather than intercepting their logic wholesale]
 The cycle button is a button. The cycle button is part of the control panel.
 The description of the cycle button is "It's red, and it says 'Surgery Complete?' in blinking letters." 
 Instead of pushing the cycle button:
@@ -321,7 +328,9 @@ Instead of pushing the exit button:
 	otherwise:
 		try opening the autodoc's hatch;
 
-The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "A rectangular porthole made from plastex is set into the hatch above." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
+There is a widget in the Autodoc. 
+
+The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex window is set into the hatch above you.[else]A dark plastex porthole is set into the hatch of the autodoc." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
 Before opening the Autodoc's hatch:
 	if the Autodoc's hatch is locked:
