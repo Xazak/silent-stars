@@ -150,14 +150,12 @@ Rule for listing nondescript items while the light level is dim:
 	if the location does not enclose a lit thing:
 		say "The ambient [random lightness] [random shine] ";
 	else:
-		let foo be a random number from 1 to 3;
+		let foo be a random number from 1 to 2;
 		if foo is:
-			-- 1: say "[The random lit thing] [random shine] on "; [The glowing blorb shines on a sprocket.]
-			-- 2: say "wob."; [The shifting light from the glowing blorb illuminates a sprocket.]
-			-- 3: say "wub."; [A sprocket and a widget glow in the shifting light from a blorb.]
+			-- 1: say "The [random lit thing] [random shine] "; [The glowing blorb shines on a sprocket.]
+			-- 2: say "The [random lightness] from [a random lit thing] [random shine] "; [The shifting light from the glowing blorb illuminates a sprocket.]
 	list the contents of the location, as a sentence, listing marked items only;
 	say ".";
-				
 
 Book 3 - Scenery, Furniture, and Props
 
@@ -355,7 +353,7 @@ When play begins:
 	set the status line;
 	say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[line break]
 	...[line break]
-	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.".
+	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";
 	
 Volume 3 - During Play
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x91880f8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0xad018108" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>GNOME Inform 7</generator>
-  <activeNode nodeId="node-0x91880f8"/>
-  <item nodeId="node-0x91880f8">
+  <activeNode nodeId="node-0xad018108"/>
+  <item nodeId="node-0xad018108">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
@@ -14,7 +14,7 @@ The smell of burning electronics hits your lizard hindbrain like a rivet gun and
 
 Silent Stars
 An Interactive Fiction by Zaq Grow
-Release 1 / Serial number 130311 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+Release 1 / Serial number 130313 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
 
 Antiseptic Coffin, in the shadows
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -23,8 +23,7 @@ A small plastex window is set into the hatch above you.
 
 The control panel above you shows a blinking red button.
 
-wob.
-a widget.
+incandescence from the control panel illuminates a widget.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -33,13 +32,13 @@ a widget.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x91881d0"/>
-      <child nodeId="node-0x91daab8"/>
-      <child nodeId="node-0x91dab90"/>
-      <child nodeId="node-0x91dac68"/>
+      <child nodeId="node-0xad0181e0"/>
+      <child nodeId="node-0x8655ac8"/>
+      <child nodeId="node-0x8655ba0"/>
+      <child nodeId="node-0x8655c78"/>
     </children>
   </item>
-  <item nodeId="node-0x91881d0">
+  <item nodeId="node-0xad0181e0">
     <command xml:space="preserve">press cycle</command>
     <result xml:space="preserve">The button changes to green and blinks &quot;Completed&quot; a couple times.
 
@@ -50,10 +49,10 @@ a widget.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x91882a8"/>
+      <child nodeId="node-0xad0182b8"/>
     </children>
   </item>
-  <item nodeId="node-0x91882a8">
+  <item nodeId="node-0xad0182b8">
     <command xml:space="preserve">press unlock</command>
     <result xml:space="preserve">The &quot;Unlock Hatch&quot; button changes to green.
 
@@ -64,10 +63,10 @@ a widget.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9188380"/>
+      <child nodeId="node-0xad018390"/>
     </children>
   </item>
-  <item nodeId="node-0x9188380">
+  <item nodeId="node-0xad018390">
     <command xml:space="preserve">press exit</command>
     <result xml:space="preserve">A beat passes, and then the gasket on the autodoc&apos;s hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
 
@@ -80,10 +79,10 @@ You open the hatch.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9188458"/>
+      <child nodeId="node-0xad018468"/>
     </children>
   </item>
-  <item nodeId="node-0x9188458">
+  <item nodeId="node-0xad018468">
     <command xml:space="preserve">out</command>
     <result xml:space="preserve">Medical Bay, in the shadows
 The Medical Bay has no description in the dark.
@@ -94,12 +93,12 @@ The Medical Bay has no description in the dark.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9188530"/>
-      <child nodeId="node-0x91886e0"/>
-      <child nodeId="node-0x91da908"/>
+      <child nodeId="node-0xad018540"/>
+      <child nodeId="node-0xad0186f0"/>
+      <child nodeId="node-0x8655918"/>
     </children>
   </item>
-  <item nodeId="node-0x9188530">
+  <item nodeId="node-0xad018540">
     <command xml:space="preserve">lambency</command>
     <result xml:space="preserve">The Medical Bay, in the shadows is dark.
 
@@ -110,10 +109,10 @@ The Medical Bay has no description in the dark.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9188608"/>
+      <child nodeId="node-0xad018618"/>
     </children>
   </item>
-  <item nodeId="node-0x9188608">
+  <item nodeId="node-0xad018618">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Medical Bay, in the shadows
 The Medical Bay has no description in the dark.
@@ -124,7 +123,7 @@ The Medical Bay has no description in the dark.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x91886e0">
+  <item nodeId="node-0xad0186f0">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">The Medical Bay has no description in the dark.
 &gt;</result>
@@ -134,10 +133,10 @@ The Medical Bay has no description in the dark.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x91da830"/>
+      <child nodeId="node-0x8655840"/>
     </children>
   </item>
-  <item nodeId="node-0x91da830">
+  <item nodeId="node-0x8655840">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">The Medical Bay has no description in the dark.
 &gt;</result>
@@ -147,7 +146,7 @@ The Medical Bay has no description in the dark.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x91da908">
+  <item nodeId="node-0x8655918">
     <command xml:space="preserve">in</command>
     <result xml:space="preserve">Antiseptic Coffin
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -163,10 +162,10 @@ A control panel, complete with colored buttons, is.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x91da9e0"/>
+      <child nodeId="node-0x86559f0"/>
     </children>
   </item>
-  <item nodeId="node-0x91da9e0">
+  <item nodeId="node-0x86559f0">
     <command xml:space="preserve">lambency</command>
     <result xml:space="preserve">The Antiseptic Coffin is dim.
 
@@ -177,7 +176,7 @@ A control panel, complete with colored buttons, is.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x91daab8">
+  <item nodeId="node-0x8655ac8">
     <command xml:space="preserve">showme coffin</command>
     <result xml:space="preserve">Antiseptic Coffin - room
     hatch - hatch
@@ -205,7 +204,7 @@ dark-description: &quot;It&apos;s cold and damp and dark in here.&quot;
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x91dab90">
+  <item nodeId="node-0x8655ba0">
     <command xml:space="preserve">lambency</command>
     <result xml:space="preserve">The Antiseptic Coffin is dim.
 
@@ -216,7 +215,7 @@ dark-description: &quot;It&apos;s cold and damp and dark in here.&quot;
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x91dac68">
+  <item nodeId="node-0x8655c78">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
 
@@ -231,10 +230,10 @@ A control panel, complete with colored buttons, is.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x91dad40"/>
+      <child nodeId="node-0x8655d50"/>
     </children>
   </item>
-  <item nodeId="node-0x91dad40">
+  <item nodeId="node-0x8655d50">
     <command xml:space="preserve">press cycle</command>
     <result xml:space="preserve">The button changes to green and blinks &quot;Completed&quot; a couple times.
 
@@ -245,10 +244,10 @@ A control panel, complete with colored buttons, is.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x91dae18"/>
+      <child nodeId="node-0x8655e28"/>
     </children>
   </item>
-  <item nodeId="node-0x91dae18">
+  <item nodeId="node-0x8655e28">
     <command xml:space="preserve">press unlock</command>
     <result xml:space="preserve">The &quot;Unlock Hatch&quot; button changes to green.
 
@@ -259,10 +258,10 @@ A control panel, complete with colored buttons, is.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x91daef0"/>
+      <child nodeId="node-0x8655f00"/>
     </children>
   </item>
-  <item nodeId="node-0x91daef0">
+  <item nodeId="node-0x8655f00">
     <command xml:space="preserve">out</command>
     <result xml:space="preserve">A beat passes, and then the gasket on the autodoc&apos;s hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
 
@@ -276,10 +275,10 @@ The Medical Bay has no description in the dark.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x921d018"/>
+      <child nodeId="node-0x86a0028"/>
     </children>
   </item>
-  <item nodeId="node-0x921d018">
+  <item nodeId="node-0x86a0028">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">The Medical Bay has no description in the dark.
 &gt;</result>
