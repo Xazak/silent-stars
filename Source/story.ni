@@ -22,7 +22,7 @@ Include Epistemology by Eric Eve.
 
 Needed objects:
 Doortypes: hatches, blast doors
-Objects: bandage, styptic powder? antiseptic?	
+Objects: bandage, styptic powder? antiseptic?
 ]
 
 Volume 1 - Setting Things Up
