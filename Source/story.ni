@@ -68,8 +68,6 @@ Book 2 - Let There Be Light
 
 Part 1 - Units and Definitions
 
-[the spectrum of light now runs unlit, glowing, shining (where glowing and shining correspond to lit and dim/bright)]
-
 Every room has some text called the dark-description. The dark-description is usually "The [printed name] has no description in the dark."
 
 Every thing has some text called the dark-description. The dark-description is usually "The [printed name] has no description in the dark."
@@ -106,7 +104,26 @@ Understand the lit property as describing a thing. Understand "luminous" as lit.
 
 Part 2 - New Rules
 
-The luminous exception rule is listed instead of the can't act in the dark rule in the visibility rules.
+The new-visibility rules is a rulebook. The new-visibility rules have outcomes there is sufficient light (failure), there is mediocre light (failure), and there is insufficient light (success).
+
+A new-visibility rule (this is the visibility level rule):
+	if the light level is bright:
+		there is sufficient light; [being in a bright room always passes all vis checks]
+	otherwise if the actor is carrying a bright thing:
+		there is sufficient light; [so does having something bright in hand]
+	otherwise if the actor is carrying a dim direct thing:
+		there is mediocre light; [but if the flashlight is getting weak...]
+	otherwise if the light level is dim:
+		if the noun is familiar, there is sufficient light; [if the player has examined it before, they are presumed to be familiar enough to recall/use it in dim light]
+		otherwise there is mediocre light;
+	otherwise:
+		there is insufficient light. [if none of the above is true, assume the player is in the dark]
+
+The can't act in the dark rule is not listed in any rulebook.
+The first visibility rule:
+	consider the new-visibility rulebook instead.
+
+[The luminous exception rule is listed instead of the can't act in the dark rule in the visibility rules.
 This is the luminous exception rule:
 	if in darkness:
 		if the noun is lit:
@@ -114,7 +131,7 @@ This is the luminous exception rule:
 		else if the actor is carrying a lit thing:
 			there is sufficient light;
 		there is insufficient light;
-	there is sufficient light.
+	there is sufficient light.]
 
 Part 3 - New Activities
 
@@ -326,8 +343,6 @@ Instead of pushing the exit button:
 	otherwise:
 		try opening the autodoc's hatch;
 
-There is a widget in the Autodoc. 
-
 The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex window is set into the hatch above you.[else]A dark plastex porthole is set into the hatch of the autodoc." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
 Before opening the Autodoc's hatch:
@@ -343,6 +358,8 @@ The hatch window is part of the Autodoc's hatch. The description of the hatch wi
 The Medical Bay is a room. "The Medical Bay: filled with all the pointy and invasive tools of the trade." The Medical Bay is in Deck A. The Medical Bay is dark.
 
 The Medical hatch is a hatch. It is west of Hallway A and east of the Medical Bay. 
+
+There is a widget in the Medical Bay.
 
 [*** Deck A Hallway]
 Hallway A is a room. "Hallway!" Hallway A is in Deck A.
@@ -366,11 +383,13 @@ Current-light-level is an action applying to nothing.
 Carry out current-light-level:
 	say "[The location] is [if the location is bright]bright.[else if the location is dim]dim.[else]dark.";
 
-A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly."
+A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright.
 Carry out switching on the sunrod:
+	now the sunrod is lit;
 	say "LIGHTS";
 
 Carry out switching off the sunrod: 
+	now the sunrod is unlit;
 	say "DARKNESS";
 
 [A radio is a device carried by the player. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise".
