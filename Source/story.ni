@@ -7,6 +7,7 @@ Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
 
 [TODO:
+--Message addition: The lit status of the room and any overriding light sources in the room should be communicated to the player via a short message directly previous to the room description and after the heading (if possible). Ex: "The sunrod in your hand does a good job of lighting up the shadows. /n/nThe Medical Bay is..."
 --Message change: "It seems to be locked." when attempting to open a locked door
 --Message change: "It is now pitch dark in here!" when a room moves from lit to dark
 --Message change: "It is pitch dark, and you can't see a thing." when examining something in the dark(?)
@@ -72,6 +73,7 @@ Every room has some text called the dark-description. The dark-description is us
 
 Every thing has some text called the dark-description. The dark-description is usually "The [printed name] has no description in the dark."
 
+[these don't account for shining things being inside opaque containers right now]
 To decide whether the light level is bright:
 	if the location encloses a shining thing, yes;
 	no.
@@ -104,35 +106,40 @@ Understand the lit property as describing a thing. Understand "luminous" as lit.
 
 Part 2 - New Rules
 
+The can't act in the dark rule is not listed in any rulebook.
+The first visibility rule:
+	consider the new-visibility rulebook instead.
+	
 The new-visibility rules is a rulebook. The new-visibility rules have outcomes there is sufficient light (failure), there is mediocre light (failure), and there is insufficient light (success).
 
 A new-visibility rule (this is the visibility level rule):
 	if the light level is bright:
 		there is sufficient light; [being in a bright room always passes all vis checks]
-	otherwise if the actor is carrying a bright thing:
-		there is sufficient light; [so does having something bright in hand]
+	otherwise if the actor is carrying a bright direct thing:
+		there is sufficient light; [so does having a flashlight in hand]
 	otherwise if the actor is carrying a dim direct thing:
-		there is mediocre light; [but if the flashlight is getting weak...]
+		there is mediocre light; [but if the flashlight is getting weak...(note that this is technically the same as sufficient light, and so it needs to be trapped appropriately to be made use of]
 	otherwise if the light level is dim:
 		if the noun is familiar, there is sufficient light; [if the player has examined it before, they are presumed to be familiar enough to recall/use it in dim light]
 		otherwise there is mediocre light;
 	otherwise:
 		there is insufficient light. [if none of the above is true, assume the player is in the dark]
 
-The can't act in the dark rule is not listed in any rulebook.
-The first visibility rule:
-	consider the new-visibility rulebook instead.
+[The shining-glowing exception causes a dark room to become lit if the room contains lit things, so by definition a dark room is one that does not contain any lit things, and thus nothing should be in scope. An exception might be made for familiar things the player has dropped; need to do more work]
+[After deciding the scope of the player while in darkness:
+	if the light level is dim:
+		place the location in scope;
+	if the light level is dark:
+		repeat with item running through lit things enclosed by the location:
+			if item is not inside an opaque container, place item in scope;]
 
-[The luminous exception rule is listed instead of the can't act in the dark rule in the visibility rules.
-This is the luminous exception rule:
-	if in darkness:
-		if the noun is lit:
-			there is sufficient light;
-		else if the actor is carrying a lit thing:
-			there is sufficient light;
-		there is insufficient light;
-	there is sufficient light.]
-
+[After adjusting the light in the room, check to see how powerful those lit items are and whether the lighted status of the room needs to be adjusted to match]
+The shining-glowing exception rule is listed after the adjust light rule in the turn sequence rulebook.
+This is the shining-glowing exception rule:
+	if the location is dark:
+		if the light level is bright or the light level is dim:
+			now the location is lighted.
+	
 Part 3 - New Activities
 
 [Zeke knows where is in the ship by memory anyway, so don't bother obscuring the names of rooms]
@@ -142,11 +149,11 @@ Rule for printing the name of a room (this is the new room-name rule):
 	if the current action is looking, now light-description-toggle is true;
 	if light-description-toggle is false, say "[printed name of the location]" instead;
 	if the light level is dark:
-		say "[printed name of the location], in the [random darkness]" instead;
+		say "[printed name of the location], in the [random dark-noun]" instead;
 	if the light level is dim:
 		say "[printed name of the location], in dim light" instead;
 	if the light level is bright:
-		say "[printed name of the location], in the [random lightness]" instead;
+		say "[printed name of the location], in the [random light-noun]" instead;
 	say "[printed name of the location]" instead.
 
 Rule for printing the name of a dark room:
@@ -154,6 +161,10 @@ Rule for printing the name of a dark room:
 
 Rule for printing the description of a dark room:
 	say "[dark-description of the location]";
+	if the light level is dim:
+		say "WOB";
+[With regards to location contents listing after a dark room's description:
+Because a dark room is defined as one that does not contain any lit things, it is thus impossible to see anything in the room. Again, an exception might be made for familiar things the player has abandoned here]
 
 [since Zeke knows where he is even in the dark, we want the rooms he arrives in to be visited as normal]
 The replacement arrival check rule is listed instead of the check new arrival rule in the carry out looking rules.
@@ -165,12 +176,12 @@ This is the replacement arrival check rule:
 [Changes the "You also see..." message written during room description to be a little more flexible]
 Rule for listing nondescript items while the light level is dim:
 	if the location does not enclose a lit thing:
-		say "The ambient [random lightness] [random shine] ";
+		say "The ambient [random light-noun] [random light-verb] ";
 	else:
 		let foo be a random number from 1 to 2;
 		if foo is:
-			-- 1: say "The [random lit thing] [random shine] "; [The glowing blorb shines on a sprocket.]
-			-- 2: say "The [random lightness] from [a random lit thing] [random shine] "; [The shifting light from the glowing blorb illuminates a sprocket.]
+			-- 1: say "The [random lit thing] [random light-verb] "; [The glowing blorb shines on a sprocket.]
+			-- 2: say "The [random light-noun] from [a random lit thing] [random light-verb] "; [The shifting light from the glowing blorb illuminates a sprocket.]
 	list the contents of the location, as a sentence, listing marked items only;
 	say ".";
 
@@ -186,12 +197,9 @@ Before going through a closed hatch (called the blocking hatch):
 
 Part 2 - Kinds of Objects
 
-[synonyms for noun light]
-A lightness is a kind of value. The lightnesses are glow, gleam, glimmer, lambency, and incandescence.
-[synonyms for verb shine]
-A shine is a kind of value. The shines are shows, illuminates, limns, reveals, and shines on.
-[synonyms for noun darkness]
-A darkness is a kind of value. The darknesses are gloom, and shadows.
+A light-noun is a kind of value. The light-nouns are lightness, glow, gleam, glimmer, lambency, and incandescence.
+A light-verb is a kind of value. The light-verbs are shows, illuminates, limns, reveals, and shines on.
+A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 A panel is a kind of supporter. The description of a panel is "A cheap amber-monochrome touchscreen[if active]. The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]. The display is dark[end if]." The dark-description of a panel is "A control panel glows faintly in the dark." 
 A panel can be active or inactive. A panel is usually active.
