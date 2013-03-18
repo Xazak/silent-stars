@@ -32,6 +32,20 @@ Book 1 - Abstractions, Generalizations, and Basic Physics
 
 Part 1 - Redefining Standard Rules and Style
 
+Before printing the name of something while listing contents:
+	if the holder of the noun contains exactly 1 thing, say "single ".
+
+Before printing the name of a lit thing (called the item) while taking inventory in the dark:
+	if the item is bright, say "shining ";
+	if the item is dim, say "glowing ";
+
+[cf examples 60 and 330 for possible alternatives to this rule]
+Rule for printing a number of something (called the item):
+	if the listing group size is 2, say "a couple [printed plural name of item]";
+	if the listing group size is at least 3 and the listing group size is at most 5, say "a few [printed plural name of item]";
+	if the listing group size is at least 6 and the listing group size is at most 8, say "several [printed plural name of item]";
+	if the listing group size is at least 9, say "many [printed plural name of item]".
+
 Part 2 - Space, Time, Physics
 
 The time of day is 01:14 AM.
@@ -161,8 +175,6 @@ Rule for printing the name of a dark room:
 
 Rule for printing the description of a dark room:
 	say "[dark-description of the location]";
-	if the light level is dim:
-		say "WOB";
 [With regards to location contents listing after a dark room's description:
 Because a dark room is defined as one that does not contain any lit things, it is thus impossible to see anything in the room. Again, an exception might be made for familiar things the player has abandoned here]
 
@@ -201,6 +213,8 @@ A light-noun is a kind of value. The light-nouns are lightness, glow, gleam, gli
 A light-verb is a kind of value. The light-verbs are shows, illuminates, limns, reveals, and shines on.
 A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
+[A flicker is a kind of value. The flickers are insubstantial, insufficient, faint, muted, poor, weak, wavering, dim, low, shadowy, wan, subdued, tenuous, shifting, dull, anemic, frail, ghostly, and flickering.]
+
 A panel is a kind of supporter. The description of a panel is "A cheap amber-monochrome touchscreen[if active]. The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]. The display is dark[end if]." The dark-description of a panel is "A control panel glows faintly in the dark." 
 A panel can be active or inactive. A panel is usually active.
 
@@ -231,77 +245,8 @@ To pay attention:
 	-- otherwise: say "[line break]".
 	[say "Sensing value: [foo][line break]"; [NFR]]
 
-[Listening and smelling are handled the same way:
-1) If the player doesn't listen to anything specific, the ambient sound/odour rule supplies the location as the default noun for the verb
-2) Assuming no other rules are hooked into the process order, the block listening/smelling rule (which is set to fail by default) fires and supplies the default message "You hear/smell nothing unexpected."
+Chapter 1 - Listening
 
-NEW PROCESSING:
-1) If the player supplies a noun, listen or smell it as per default
-2) If no noun is supplied, I7 checks the surroundings for any NOTABLE sounds/smells ("stimuli")
-	--Sounds that are "noisy" should be audible from the next room over /at least/; maybe sounds have a decibel level that determines how far away it can be heard? On the flip side of that, have certain sounds that are /only/ audible if the player issues a LISTEN command?
-	--Smells do not travel between rooms unless A) it's a strong smell and B) there is an open connection between the location of the smell and the location of the player (certain rooms have air vents that allow this to be circumvented?)
-3) If ANY are found, ALL of them are reported to the player
-4) If NONE are found, I7 supplies a semi-generic "You smell..." message
-	--Not sure yet whether generic sounds should be on a per-room basis (maybe just for notable rooms?) or whether there should be an overall (per-region?) generic sounds table
-
-Priority list:
-prominent audible things
-ambient audible things
-silence
-] 
-
-[*** Listening][
-Everything has some text called the sound. The sound is usually "silence".
-Definition: a thing is audible rather than silent if the sound of it is not "silence".
-Definition: a thing is prominent if it is audible and it is notable.
-Definition: a thing is ambient if it is audible and it is mundane.
-
-Definition: an area is noisy if it encloses a prominent thing.
-Definition: an area is peaceful if it encloses an ambient thing and it does not enclose a prominent thing.
-Definition: an area (called the place) is silent:
-	if the place encloses a prominent thing, no;
-	if the place encloses an ambient thing, no;
-	yes;
-
-[remove the original listening logic entirely]
-The block listening rule is not listed in any rulebook.
-
-To tune in:
-	say "this is the tune in phrase.";
-	let places be a list of areas; [all areas in the region]
-	let houseparty be a list of areas; [all NOISY areas in the region]
-	repeat with bar running through the list of areas contained by the map region of the location:
-		add bar to places;
-	say "added all areas in region to list places";
-	repeat with target running through places:
-		if target is noisy, add target to houseparty;
-	say "[houseparty]";
-
-Check listening:
-	if the location is not noisy:
-		if the location is not peaceful:
-			tune in;
-			say "You hear only the dead silence of a scuttled ship." instead;
-		continue the action;
-	continue the action;
-
-[	say "[the location] - [if noisy]noisy[else if peaceful]peaceful[else if silent]silent[end if][line break]"; [NFR]
-	if the location is silent:
-		say "You hear only the dead silence of a scuttled ship." instead;
-	continue the action;]
-	
-[	if the map region of the location is noisy:
-		say "The region is noisy!"; [just kidding: decide which region to check, decide which rooms, decide which items, play those sounds]]
-
-[Carry out listening:
-	let ducks be the list of audible things in the location;]
-
-Report listening:
-	repeat with duck running through the audible things enclosed by the location:
-		say "You hear [the sound of the duck], coming from the [printed name of the duck].";
-
-Listening is sense behavior.
-]
 Part 2 - The Player
 
 The printed name of the player is "Zek Lumien".
@@ -414,137 +359,5 @@ Carry out switching off the radio:
 [**********************************]
 [_ _ t THE CODE GRAVEYARD t _t ]
 [
-Brightness is a kind of value. Every area has a brightness. The brightnesses are defined by the Table of Brightnesses.
 
-Table of Brightnesses
-brightness	candlepower	roomlight
-blinding	100cp	"lighted"
-bright	80cp	"lighted"
-good	50cp	"lighted"
-twilit	20cp	"dark"
-gloomy	10cp	"dark"
-black	0cp	"dark"
-
-An area is usually black.
-
-A flicker is a kind of value. The flickers are insubstantial, insufficient, faint, muted, poor, weak, wavering, dim, [low, shadowy, ]wan, subdued, tenuous, shifting, dull, anemic, frail, ghostly, and flickering.
-
-Part 2 - Activities, Interrupts, and Rules
-
-Chapter 1 - Activities
-
-To set the light level:
-	let arealight be 0cp;
-	repeat with portal running through the open doors in the location: [connected to???]
-		if the area on the other side of the portal is lighted:
-			increase arealight by 25cp;
-	repeat with luminant running through luminous things in the location:
-	[say "In room - [luminant]: [candlepower of luminant]."; [NFR]]
-		increase arealight by arealight plus candlepower of luminant;
-		[say "[arealight]."; [NFR]]
-	[if arealight is not round, say "Not round!"; [NFR]]
-	repeat with luminant running through luminous things enclosed by the player:
-		if the luminant is not inside a transparent container:
-			[say "In player - [luminant]: [candlepower of luminant]."; [NFR]]
-			now arealight is arealight plus candlepower of luminant;
-			[say "[arealight]."; [NFR]]
-	[Make the arealight a round number and cap it if it's too high or low]
-	if arealight is not round, now arealight is arealight - (remainder after dividing arealight by 10cp);
-	if arealight is greater than 100cp, now arealight is 100cp;
-	if arealight is less than 0cp, now arealight is 0cp;
-	[say "room total: [arealight]."; [NFR]]
-	if there is no brightness corresponding to a candlepower of arealight in the Table of Brightnesses:
-		[say "No matching brightness found!"; [NFR]]
-		repeat with counter running from arealight to 100cp:
-			decrease arealight by 10cp;
-			[say "Decreased by 10cp: [arealight][line break]"; [NFR]]
-			if there is a brightness corresponding to a candlepower of arealight in the Table of Brightnesses, break;
-	now brightness of location is brightness corresponding to a candlepower of arealight in the Table of Brightnesses;
-	[say "Brightness found and set: [brightness of location]"; [NFR]]
-	if the location is dark:
-		if the roomlight of the brightness of the location is "lighted":
-			now the location is lighted;
-	otherwise:
-		if the roomlight of the brightness of the location is "dark":
-			now the location is dark.
-		
-To say the dim item description:
-	say "The [random flicker] [random glow] from the [random luminous thing in the location] [random shine] [list of tenebrous small things in the location] and [list of tenebrous large things in the location]."
-
-Chapter 2 - Interrupts and Reactions
-
-Before printing the name of something while listing contents:
-	if the holder of the noun contains exactly 1 thing, say "single ".
-
-Before printing the name of a luminous thing while taking inventory in the dark:
-	say "glowing ".
-
-After deciding the scope of the player while in darkness: 
-	repeat with luminant running through the luminous things:
-		place the luminant in scope.
-
-After printing the description of a dark room:
-	repeat with luminant running through the luminous things:
-		if candlepower of luminant is at most 1cp:
-			do nothing;
-		otherwise:
-			say "[glowingDescription of luminant][line break]";
-		now the luminant is seen;
-		now the luminant is not marked for listing;
-	if there are no tenebrous things contained by the location, stop;
-	repeat with tenebrant running through the tenebrous things:
-		now the tenebrant is marked for listing;
-	say "The [random flicker] [random glow] from the [random luminous thing in the location] [random shine] ";
-	list the contents of the location, as a sentence, listing marked items only;
-	say "."
-	
-Chapter 3 - Rules
-
-Visibility rule when in darkness (this is the luminous exception rule):
-	if the noun is luminous, there is sufficient light;
-	there is insufficient light.
-
-The luminous exception rule is listed instead of the can't act in the dark rule in the visibility rules.
-
-[The MC knows the layout of the ship by heart, even in the dark, so we never want to see "Darkness" as a room name and we want a general indication of the overall light level after the room name (for now)]
-
-Rule for printing the name of a room (called the place) (this is the new room-name rule):
-	let foo be false; [add a flag here so we can trap only specific events to append this text]
-	[if the constructing the status line activity is going on, let foo be true;]
-	if the printing the room-heading activity is going on, let foo be true;
-	[if consulting the room description heading rule, let foo be true;] [need to add an activity to the room heading rules]
-	if foo is true:
-		say "[printed name], in [brightness of place] [if place is lighted]light[otherwise]darkness[end if]";
-	else:
-		say "[printed name]";
-
-[		if brightness of location is:
-		-- blinding: say "[printed name], in blinding light!";
-		-- bright: say "[printed name], in bright light";
-		-- good: say "[printed name], in good light";
-		-- twilit: say "[printed name], in twilight";
-		-- gloomy: say "[printed name], in near darkness";
-		-- black: say "[printed name], in total darkness";
-		-- otherwise: say "[printed name], in a darkness not covered here"; [should never be reached]]		
-			
-Rule for printing the name of a dark room:
-	follow the new room-name rule;
-
-Rule for printing the description of a dark room: 
-	say "[darkDescription of location][line break]";
-	pay attention.
-
-[cf examples 60 and 330 for possible alternatives to this rule]
-Rule for printing a number of something tenebrous (called the tenebrant) when the player is in a dark room:
-	if the listing group size is 1, say "a single [printed name of tenebrant]"; [doesn't work, Inform probably doesn't think of one thing as a group of one]
-	if the listing group size is 2, say "a couple [printed plural name of tenebrant]";
-	if the listing group size is at least 3 and the listing group size is at most 5, say "a few [printed plural name of tenebrant]";
-	if the listing group size is at least 6 and the listing group size is at most 8, say "several [printed plural name of tenebrant]";
-	if the listing group size is at least 9, say "many [printed plural name of tenebrant]".
-
-[maybe switch this to a property called tenebrousName on the object itself? having the same names follow each object makes sense in-world, could use the text substitution rules to allow flexible-static name assignation; would "understand tenebrousName as referring to the noun" work?]
-[disabled because it's a total pain when testing other things]
-[Rule for printing the name of something tenebrous (called the tenebrant) when the player is in a dark room:
-	if the bulk of the tenebrant is at most 4, say "[one of]shape[or]thing[or]object[at random]";
-	if the bulk of the tenebrant is at least 5, say "[one of]hulk[or]form[or]shape[at random]";]
 ]
