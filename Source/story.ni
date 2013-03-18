@@ -88,18 +88,18 @@ Every room has some text called the dark-description. The dark-description is us
 Every thing has some text called the dark-description. The dark-description is usually "The [printed name] has no description in the dark."
 
 [these don't account for shining things being inside opaque containers right now]
-To decide whether the light level is bright:
+To decide if the light level is bright:
 	if the location encloses a shining thing, yes;
 	no.
 	
-To decide whether the light level is dim:
+To decide if the light level is dim:
 	if the location encloses a glowing thing:
 		if the location encloses a shining thing, no;
 		yes;
 	if the location is lighted, yes;
 	no.
 
-To decide whether the light level is dark:
+To decide if the light level is dark:
 	if the location is dark, yes;
 	no.
 
@@ -246,6 +246,27 @@ To pay attention:
 	[say "Sensing value: [foo][line break]"; [NFR]]
 
 Chapter 1 - Listening
+
+[Define where to find the sounds of something and how to tell if something is silent or not]
+Every thing has some text called the sound. The sound of a thing is usually "silence".
+Every thing has some text called the sound-description. The sound-description is usually "This does not make noise."
+Every room has some text called the sound. The sound of a room is usually "silence".
+Every room has some text called the sound-description. The sound-description is usually "Total silence."
+
+Definition: a thing is noisy rather than silent if the sound of it is not "silence".
+Definition: a room is noisy rather than silent if the sound of it is not "silence".
+
+To decide if the noise level is high:
+	do nothing;
+
+[remove the default rules so as to add our own]
+The block listening rule is not listed in any rulebook.
+[The new ambient sound rule is listed instead of the ambient sound rule in the supplying a missing noun rulebook.] [does this need to be here in order to usurp the previous rule?]
+
+Rule for supplying a missing noun while an actor listening (this is the new ambient sound rule):
+	follow the unfocused listening rules.
+	
+The unfocused listening rules is a rulebook.
 
 Part 2 - The Player
 
