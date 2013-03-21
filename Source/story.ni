@@ -254,7 +254,10 @@ Every room has some text called the sound. The sound of a room is usually "silen
 Every room has some text called the sound-description. The sound-description is usually "Total silence."
 
 Definition: a thing is noisy rather than silent if the sound of it is not "silence".
-Definition: a room is noisy rather than silent if the sound of it is not "silence".
+Definition: a room is noisy rather than silent:
+	if it encloses a noisy thing, yes;
+	if the sound of it is not "silence", yes;
+	no.
 
 To decide if the noise level is high:
 	do nothing;
@@ -263,10 +266,22 @@ To decide if the noise level is high:
 The block listening rule is not listed in any rulebook.
 [The new ambient sound rule is listed instead of the ambient sound rule in the supplying a missing noun rulebook.] [does this need to be here in order to usurp the previous rule?]
 
+Check listening to:
+	if the noun is silent, say "You tap the [printed name] on a nearby bulkhead, to no effect." instead;  
+
+[Carry out listening to:]
+	
+Report listening to:
+	say "[sound-description of the noun]";
+
+[These are the bits that will handle "listen" typed without a noun]
 Rule for supplying a missing noun while an actor listening (this is the new ambient sound rule):
 	follow the unfocused listening rules.
 	
 The unfocused listening rules is a rulebook.
+
+The first unfocused listening rule (this is the temporary default rule):
+	now the noun is the location.
 
 Part 2 - The Player
 
