@@ -1,0 +1,275 @@
+***REMINDERS
+--Visibility is calculated, not assigned!
+
+--Things can have priority levels assigned to them! 
+
+SEE 11.8 FOR SWITCH-CASE NOTATION
+> EQUIVALENT TO "is greater than"
+>= EQUIVALENT TO "at least"
+< EQUIVALENT TO "is less than"
+<= EQUIVALENT TO "at most"
+
+Volume
+ Book
+  Part
+   Chapter
+    Section
+
+initial appearance != item's description, see WwI 3.11
+The initial appearance should be used to describe the object when the player /first sees it in the game world/, right up until the player picks it up (the "handled" property). When picked up and x'd, I7 uses the item's description; if dropped and encountered later, it will simply list the item as normal with everything else in the room.
+
+***CLARIFICATIONS
+If trying to work around the "can't use multiple objects with this verb" error use [things] instead of just [thing] in the action definition.
+
+The [room-describing action] is defined as the action that is the reason for the room being described; if a player is simply LOOKing, then it will be the looking action; on the other hand, if the player has just tried GO EAST and landed here, then it will be set to the going action.
+
+Unlike rooms/containers, there is no direct/indirect region containment distinction; thus, to get the most specific region containing the player, use [the map region of the location]. 
+
+"The/A foobar is here." <- The foobar (which is a thing) is put into the last defined room
+"There is a foobar here." <- The foobar (which is a thing) is put OFFSTAGE
+
+"In the study is a desk. In the desk is a sheet of paper."
+Assuming the above:
+-The location of the sheet of paper is "the man"
+-The location of the desk is "the study"
+-The study and the desk both enclose the sheet of paper
+A thing encloses whatever is a part of itself, or inside itself, or on top of itself, and is recursive for multiple containers.
+
+***QUESTIONS -[[
+Can Inform randomly interject bits of text into the ongoing stream, i.e. from a table of phrases? 
+example: "There I was, dangling in space. Not sure what to do next. Was I going to head back? Or just stay out there longer?"
+becomes
+"There I was, dangling in space. Not (you're bad at this) sure what to do next. (you'll never finish) Was I going to head back? Or just stay out there longer?"
+
+A protagonist who can see into the ultraviolet range would be really cool!
+]]-
+
+VISIBILITY/EPISTEMOLOGY -[[
+Currently, "visible" only covers objects that are in a lighted room. Attempting to redefine this appears to involve seriously deep hacking of the visibility calculations.
+
+If a thing is seen, it is known.
+If a thing is familiar, it is known.
+If a thing is not seen or familiar, it is unknown.
+
+Un/seen and un/familiar states can be set AND tested; un/known can only be tested.
+
+The extension tries to automagically mark anything the player encounters as seen, and anything the player /examines/ as both seen and familiar. However, if an object is moved onstage by Inform manually, i.e. to simulate a dust bunny being found only when looking under a rug, the seen status will need to be /manually/ set.
+
+The "subject" kind is provided by the extension to allow actors to be familiar with abstract concepts like love or physics. Subjects are considered familiar by default.
+
+The EPISTAT debug command reveals the epistemic status of an object.
+]]-
+LISTENING -[[
+I7 Default:
+1) Listen cmd is issued
+2) If no noun is supplied, -the ambient sound rule- supplies the location as the noun
+3) I7 checks the -the block listening rule- and stops the action by default, no alternative outcomes possible
+
+ambient sound rule is in the supplying a missing noun rules
+block listening rule is in the Check listening to: rules
+
+OBJECT PROPERTIES:
+sound - The short sound of an object: "You hear [white noise] coming from the radio."
+sound-description - The long sound of an object: "The radio emits a stream of static, broken up occasionally with hissing and popping."
+
+FX DESIRED:
+When the player tries LISTEN:
+If the player supplies a noun, report the sound-description of the noun.
+If the player does not supply a noun:
+) I7 looks into the nearby rooms for anything NOTABLE and NOISY
+) If it finds anything, it adds those items to the list of things to listen to
+) I7 checks the location for ANY NOISY things
+) If it finds anything, it adds those to the list of things to listen to
+) I7 then reports the sounds of everything on the list of things to listen to
+) If nothing was found to listen to, it reports the sound of the location
+) If the location has no sound, it reports an ambient sound from the Table of Ambient Sounds
+
+NEW PROCESSING:
+1) If the player supplies a noun, listen or smell it as per default
+2) If no noun is supplied, I7 checks the surroundings for any NOTABLE sounds/smells ("stimuli")
+	--Sounds that are "noisy" should be audible from the next room over /at least/; maybe sounds have a decibel level that determines how far away it can be heard? On the flip side of that, have certain sounds that are /only/ audible if the player issues a LISTEN command?
+	--Smells do not travel between rooms unless A) it's a strong smell and B) there is an open connection between the location of the smell and the location of the player (certain rooms have air vents that allow this to be circumvented?)
+3) If ANY are found, ALL of them are reported to the player
+4) If NONE are found, I7 supplies a semi-generic "You smell..." message
+	--Not sure yet whether generic sounds should be on a per-room basis (maybe just for notable rooms?) or whether there should be an overall (per-region?) generic sounds table
+
+Old Code -[[
+[*** Listening]
+Everything has some text called the sound. The sound is usually "silence".
+Definition: a thing is audible rather than silent if the sound of it is not "silence".
+Definition: a thing is prominent if it is audible and it is notable.
+Definition: a thing is ambient if it is audible and it is mundane.
+
+Definition: an area is noisy if it encloses a prominent thing.
+Definition: an area is peaceful if it encloses an ambient thing and it does not enclose a prominent thing.
+Definition: an area (called the place) is silent:
+	if the place encloses a prominent thing, no;
+	if the place encloses an ambient thing, no;
+	yes;
+
+[remove the original listening logic entirely]
+The block listening rule is not listed in any rulebook.
+
+To tune in:
+	say "this is the tune in phrase.";
+	let places be a list of areas; [all areas in the region]
+	let houseparty be a list of areas; [all NOISY areas in the region]
+	repeat with bar running through the list of areas contained by the map region of the location:
+		add bar to places;
+	say "added all areas in region to list places";
+	repeat with target running through places:
+		if target is noisy, add target to houseparty;
+	say "[houseparty]";
+
+Check listening:
+	if the location is not noisy:
+		if the location is not peaceful:
+			tune in;
+			say "You hear only the dead silence of a scuttled ship." instead;
+		continue the action;
+	continue the action;
+
+[	say "[the location] - [if noisy]noisy[else if peaceful]peaceful[else if silent]silent[end if][line break]"; [NFR]
+	if the location is silent:
+		say "You hear only the dead silence of a scuttled ship." instead;
+	continue the action;]
+	
+[	if the map region of the location is noisy:
+		say "The region is noisy!"; [just kidding: decide which region to check, decide which rooms, decide which items, play those sounds]]
+
+[Carry out listening:
+	let ducks be the list of audible things in the location;]
+
+Report listening:
+	repeat with duck running through the audible things enclosed by the location:
+		say "You hear [the sound of the duck], coming from the [printed name of the duck].";
+
+Listening is sense behavior.
+]]-
+NOISE/PROMINENCE
+"!silence" = [the sound of a thing] is anything other than "silence"
+notable|mundane = is set manually ("now the thing is mundane")
+			__notable_|_mundane_
+"!silence"	|prominent| ambient|
+"silence"	|  quiet  |  quiet |
+
+prominent:
+	-can be heard from anywhere in the same region
+	-is always noisy
+
+ambient:
+	-can only be heard in the same room
+	-is always noisy
+
+quiet:
+	-has no sound thus cannot be heard (returns failure on specific listen check, never appears in general check)
+
+]]-
+LIGHT -[[
+After parsing a command but before the command is actually performed:
+1) Is the action's noun within the actor's scope?
+2) If so, does the action require light in order to be successful?
+3) If so, is the location dark or lighted?
+4) If dark, is the player carrying a lit thing?
+
+Starry Night Lighting System Presumptions:
+-- A room can be lighted or dark (lighted).
+	-- A room can be dim or bright.
+	-- A bright room should not be dark.
+	-- A dark room should not be bright.
+	-- A room can be dim AS WELL AS dark or lighted
+-- In a bright room:
+	-> I7 should behave as default
+-- In a dim room:
+	-> Tenebrous things with fine detail cannot be examined closely
+	-> Visibility checks fail without a source of direct light
+	-> All objects should be in scope as normal
+-- In a dark room:
+	As dim room, except:
+	-> Only luminous objects should be in scope
+	-> Tenebrous objects are only in scope if the player has encountered them ("You left a widget here...")AND has a source of direct light
+
+-- A thing can be lit or unlit (unlit).
+	-- A lit thing can be diffuse or direct.
+	-- A lit thing can be dim or bright.
+-- A diffuse thing:
+	-- Does not pass visibility checks
+	-- Does not improve scope when searching
+-- A direct thing:
+	-- Can be used to examine fine detail no matter the background light level
+	-- Allows the player to find familiar tenebrous objects in the dark
+-- A bright thing:
+	-- Causes the background light level to act as bright, no matter its actual status
+-- A dim thing:
+	-- Causes the background light level to act as dim, no matter its actual status
+
+HOW DOES FUCKING LIGHT WORK
+	1) Game starts, initial lit/unlit states are defined their primitives
+*******	2) Visibility rulebook is set up
+	3) Gameworld is initialized and player actor placed in scene
+	4) The initial room description is processed
+		Startup rulebook ends, when play begins rulebook is processed
+		Turn sequence rulebook starts
+	5) I7 parses player's command
+*******	6) Deciding the scope activity is run
+	7) Generate action rule consulted: Command is interpreted, action variables are set
+		7.1) Before (action) rulebook is consulted
+*******		7.2) Basic visibility rule consulted: if light is required and not present, can't act in the dark rule is consulted
+	8) Consider the scene changing rules consulted
+	9) Every turn rule consulted
+	10) Timed events are checked, timeline advanced, scene change rules consulted again just in case
+*******	11) Adjust light rule is checked (this is where the I6 primitives regarding light and darkness are invoked)
+	12) Object acquisitions and score changes are checked
+	13) If the game should end here, the shutdown rulebook is checked
+	14) If not, the every turn rulebook is consulted again (step 5) (repeat until shutdown is appropriate)
+
+
+A room can be lighted or dark (lighted).
+A thing can be lit or unlit (unlit).
+
+The specific action-processing rules is a rulebook.
+The specific action-processing rulebook has a truth state called within the player's sight.
+
+Visibility rules is a rulebook.
+Visibility rules have outcomes there is sufficient light (failure) and there is insufficient light (success).
+
+The adjust light rule (an I6 primitive, unfortunately) is listed (2nd from last) in the turn sequence rulebook.
+
+The basic visibility rule is listed in the action-processing rules.
+--The basic visibility rule does this:
+1)checks the action to see if it requires light
+2) if so, 
+2.3)AND if the actor is the player 
+2.6)AND if in darkness, 
+3)asks the visibility rules whether the lack of light should stop the action
+	(by default: yes if dark, no if light)
+--Note that it only acts on the player, not NPCs!
+
+A specific action-processing rule (this is the investigate player's awareness before action rule):
+	consider the player's action awareness rules;
+	if rule succeeded, now within the player's sight is true;
+	otherwise now within the player's sight is false.
+A specific action-processing rule (this is the report stage rule):
+	if within the player's sight is true and action keeping silent is false,
+		consider the specific report rulebook;
+
+The can't act in the dark rule is listed last in the visibility rules.
+The last visibility rule (this is the can't act in the dark rule): if in darkness, rule succeeds. [This causes the action to be blocked!]
+
+ACTIVITIES/RULES
+Printing the name of a dark room is an activity.
+Printing the description of a dark room is an activity.
+Printing the announcement of darkness is an activity.
+Printing the announcement of light is an activity.
+Printing a refusal to act in the dark is an activity.
+The look around once light available rule is listed last in for printing the announcement of light.
+This is the look around once light available rule:
+	try looking.
+	
+Deciding the scope of something (future action) is an activity.
+]]-
+
+"AREA" SPEC:
+description - text used when xing the room when the room is lit
+dark-description - text used when xing the room when the room is dark
+
