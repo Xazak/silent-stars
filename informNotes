@@ -74,15 +74,15 @@ sound-description - The long sound of an object: "The radio emits a stream of st
 
 FX DESIRED:
 When the player tries LISTEN:
-If the player supplies a noun, report the sound-description of the noun.
-If the player does not supply a noun:
-) I7 looks into the nearby rooms for anything NOTABLE and NOISY
-) If it finds anything, it adds those items to the list of things to listen to
-) I7 checks the location for ANY NOISY things
-) If it finds anything, it adds those to the list of things to listen to
-) I7 then reports the sounds of everything on the list of things to listen to
-) If nothing was found to listen to, it reports the sound of the location
-) If the location has no sound, it reports an ambient sound from the Table of Ambient Sounds
+X	If the player supplies a noun, report the sound-description of the noun.
+	If the player does not supply a noun:
+	) I7 looks into the nearby rooms for anything NOTABLE and NOISY
+	) If it finds anything, it adds those items to the list of things to listen to
+	) I7 checks the location for ANY NOISY things
+	) If it finds anything, it adds those to the list of things to listen to
+	) I7 then reports the sounds of everything on the list of things to listen to
+	) If nothing was found to listen to, it reports the sound of the location
+	) If the location has no sound, it reports an ambient sound from the Table of Ambient Sounds
 
 NEW PROCESSING:
 1) If the player supplies a noun, listen or smell it as per default

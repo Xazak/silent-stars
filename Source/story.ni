@@ -7,6 +7,8 @@ Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
 
 [TODO:
+--Player should be able to listen at a specific direction to hear what's in the next room
+--Player should also be able to listen to something notable-audible that is nearby but not in the same room and get a general idea of where the noisemaker is relative to the player's position
 --Message addition: The lit status of the room and any overriding light sources in the room should be communicated to the player via a short message directly previous to the room description and after the heading (if possible). Ex: "The sunrod in your hand does a good job of lighting up the shadows. /n/nThe Medical Bay is..."
 --Message change: "It seems to be locked." when attempting to open a locked door
 --Message change: "It is now pitch dark in here!" when a room moves from lit to dark
@@ -266,13 +268,20 @@ To decide if the noise level is high:
 The block listening rule is not listed in any rulebook.
 [The new ambient sound rule is listed instead of the ambient sound rule in the supplying a missing noun rulebook.] [does this need to be here in order to usurp the previous rule?]
 
-Check listening to:
-	if the noun is silent, say "You tap the [printed name] on a nearby bulkhead, to no effect." instead;  
+[refer to WI 6.15 for multiple object lists for actions]
 
-[Carry out listening to:]
+Understand the command "listen" as something new.
+Understand "listen to [things]" as listening to.
+Understand "listen" as listening to.
+
+Check listening to:
+	if the noun is silent, say "You hear nothing from the [printed name]." instead;  
+
+Carry out listening to:
+	if the 
 	
 Report listening to:
-	say "[sound-description of the noun]";
+	say "[sound-description of the noun][line break]"; [included line break because don't want to insist on punct. here]
 
 [These are the bits that will handle "listen" typed without a noun]
 Rule for supplying a missing noun while an actor listening (this is the new ambient sound rule):
@@ -381,7 +390,7 @@ Carry out switching off the sunrod:
 	now the sunrod is unlit;
 	say "DARKNESS";
 
-[A radio is a device carried by the player. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise".
+A radio is a device carried by the player. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise". The sound-description is "The radio emits an unbroken stream of static."
 Carry out switching on the radio:
 	say "You turn the radio on and static fills the room.";
 	now the radio is notable;
@@ -391,7 +400,7 @@ Carry out switching off the radio:
 	say "You turn the radio off. Silence clears the room.";
 	now the radio is mundane;
 	now the sound of the radio is "silence";
-]
+
 [**********************************]
 [_ _ t THE CODE GRAVEYARD t _t ]
 [
