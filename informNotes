@@ -268,6 +268,11 @@ This is the look around once light available rule:
 	
 Deciding the scope of something (future action) is an activity.
 ]]-
+PROXIMITY -[[
+|           proximate             |
+| immediate  |       nearby       |
+(in location)|(in neighboring room)
+]]-
 
 "AREA" SPEC:
 description - text used when xing the room when the room is lit

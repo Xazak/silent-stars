@@ -7,8 +7,10 @@ Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
 
 [TODO:
+--The indefinite articles in the listening-ambient reports need to be massaged
 --Player should be able to listen at a specific direction to hear what's in the next room
---Player should also be able to listen to something notable-audible that is nearby but not in the same room and get a general idea of where the noisemaker is relative to the player's position
+--Player should also be able to listen to something clamorous that is nearby but not in the same room and get a general idea of where the noisemaker is relative to the player's position
+--Bugfix: moving from lit to dark rooms displays the previous room's name when it should show the current room
 --Message addition: The lit status of the room and any overriding light sources in the room should be communicated to the player via a short message directly previous to the room description and after the heading (if possible). Ex: "The sunrod in your hand does a good job of lighting up the shadows. /n/nThe Medical Bay is..."
 --Message change: "It seems to be locked." when attempting to open a locked door
 --Message change: "It is now pitch dark in here!" when a room moves from lit to dark
@@ -72,6 +74,18 @@ Definition: a thing is large if its bulk is at least 9.
 A person usually has bulk 20.
 
 A room is usually dark.
+
+Neighboring relates rooms to each other.
+The verb to abut (he abuts, they abut, he abutted, it is abutted, he is abutting) implies the neighboring relation.
+
+The verb to be next to implies the neighboring relation.
+
+Definition: a thing is immediate if it is in the location.
+Definition: a thing is nearby if the room enclosing it is next to the location.
+Definition: a thing is proximate:
+	if it is immediate, yes;
+	if it is nearby, yes;
+	no;
 
 Part 3 - Status Line, Game HUD, Misc
 
@@ -159,18 +173,18 @@ This is the shining-glowing exception rule:
 Part 3 - New Activities
 
 [Zeke knows where is in the ship by memory anyway, so don't bother obscuring the names of rooms]
-Rule for printing the name of a room (this is the new room-name rule):
+Rule for printing the name of a room (called the place) (this is the new room-name rule):
 	[only certain actions and activities should get the full light treatment, everything else just gets the room]
 	let light-description-toggle be false;
 	if the current action is looking, now light-description-toggle is true;
-	if light-description-toggle is false, say "[printed name of the location]" instead;
+	if light-description-toggle is false, say "[printed name of the place]" instead;
 	if the light level is dark:
-		say "[printed name of the location], in the [random dark-noun]" instead;
+		say "[printed name of the place], in the [random dark-noun]" instead;
 	if the light level is dim:
-		say "[printed name of the location], in dim light" instead;
+		say "[printed name of the place], in dim light" instead;
 	if the light level is bright:
-		say "[printed name of the location], in the [random light-noun]" instead;
-	say "[printed name of the location]" instead.
+		say "[printed name of the place], in the [random light-noun]" instead;
+	say "[printed name of the place]" instead.
 
 Rule for printing the name of a dark room:
 	follow the new room-name rule instead;
@@ -256,41 +270,60 @@ Every room has some text called the sound. The sound of a room is usually "silen
 Every room has some text called the sound-description. The sound-description is usually "Total silence."
 
 Definition: a thing is noisy rather than silent if the sound of it is not "silence".
+Definition: a thing is clamorous if it is noisy and it is notable.
+
 Definition: a room is noisy rather than silent:
 	if it encloses a noisy thing, yes;
 	if the sound of it is not "silence", yes;
 	no.
 
-To decide if the noise level is high:
-	do nothing;
+Audibility relates a thing (called the duck) to a person (called the listener) when the duck is noisy and the duck is immediate or the duck is clamorous and the duck is nearby. 
+
+The verb to hear (he hears, they hear, he heard, it is heard, he is hearing) implies the audibility relation.
+
+The verb to holla (he hollas, they holla, he holla'd, it holla'd, he is hollin) implies the reversed audibility relation.
 
 [remove the default rules so as to add our own]
 The block listening rule is not listed in any rulebook.
 [The new ambient sound rule is listed instead of the ambient sound rule in the supplying a missing noun rulebook.] [does this need to be here in order to usurp the previous rule?]
 
-[refer to WI 6.15 for multiple object lists for actions]
+[refer to RB 6.15 for multiple object lists for actions]
 
 Understand the command "listen" as something new.
 Understand "listen to [things]" as listening to.
-Understand "listen" as listening to.
 
 Check listening to:
 	if the noun is silent, say "You hear nothing from the [printed name]." instead;  
 
-Carry out listening to:
-	if the 
-	
 Report listening to:
 	say "[sound-description of the noun][line break]"; [included line break because don't want to insist on punct. here]
 
-[These are the bits that will handle "listen" typed without a noun]
-Rule for supplying a missing noun while an actor listening (this is the new ambient sound rule):
-	follow the unfocused listening rules.
-	
-The unfocused listening rules is a rulebook.
+Understand "listen" as listening ambient.
+Listening ambient is an action applying to nothing.
 
-The first unfocused listening rule (this is the temporary default rule):
-	now the noun is the location.
+The listening ambient action has a list of things called ducks.
+
+Check listening ambient:
+	let rooms-next-door be the list of noisy rooms abutting the location;
+	say "neighbors: [rooms-next-door].";[NFR]
+	if rooms-next-door is not empty:
+		repeat with place running through rooms-next-door:
+			repeat with item running through clamorous things in the place:
+				add the item to ducks;
+				say "clamorous: [printed name of item].";[NFR]
+	let geese be the list of noisy things in the location;
+	say "noisy: [geese].";[NFR]
+	if geese is not empty, add geese to ducks;
+	if ducks is empty, say "You hear only the silence of a scuttled ship." instead;
+	say "final list: [ducks].";[NFR]
+
+Carry out listening ambient:
+	do nothing;
+	
+Report listening ambient:
+	repeat with foo running through ducks:
+		if foo is not in the location, say "Nearby, [sound-description of foo][line break]";
+		otherwise say "[sound-description of foo][line break]";
 
 Part 2 - The Player
 
@@ -362,6 +395,10 @@ There is a widget in the Medical Bay.
 [*** Deck A Hallway]
 Hallway A is a room. "Hallway!" Hallway A is in Deck A.
 
+[Once Deck A is set up, use the neighboring relation to establish the correct adjacency of rooms for the listening logic, repeat for each deck]
+
+The Autodoc abuts the Medical Bay. The Medical Bay abuts Hallway A.
+
 Volume 2 - Beginning Play
 
 When play begins:
@@ -376,10 +413,19 @@ Autodoc Escape is a scene. Autodoc Escape begins when play begins. Autodoc Escap
 
 Volume 0 - Not For Release
 
-Understand "LAMBENCY" as current-light-level.
+Book 1 - Testing Commands
+
+Understand "LUMOS" as current-light-level.
 Current-light-level is an action applying to nothing.
-Carry out current-light-level:
+Report current-light-level:
 	say "[The location] is [if the location is bright]bright.[else if the location is dim]dim.[else]dark.";
+
+Understand "AUDIOS" as listen-testing.
+Listen-testing is an action applying to nothing.
+Report listen-testing:
+	say "Insert reporting here.";
+	
+Book 2 - Testing Equipment
 
 A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright.
 Carry out switching on the sunrod:
@@ -390,7 +436,7 @@ Carry out switching off the sunrod:
 	now the sunrod is unlit;
 	say "DARKNESS";
 
-A radio is a device carried by the player. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise". The sound-description is "The radio emits an unbroken stream of static."
+A radio is a device. The radio is in the Medical Bay. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise". The sound-description is "the radio emits an unbroken stream of static."
 Carry out switching on the radio:
 	say "You turn the radio on and static fills the room.";
 	now the radio is notable;
@@ -400,6 +446,8 @@ Carry out switching off the radio:
 	say "You turn the radio off. Silence clears the room.";
 	now the radio is mundane;
 	now the sound of the radio is "silence";
+
+An alarm clock is a device in the Autodoc. The alarm clock is switched on. The sound of the alarm clock is "beeping". The sound-description is "The alarm clock beeps incessantly."
 
 [**********************************]
 [_ _ t THE CODE GRAVEYARD t _t ]
