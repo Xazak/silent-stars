@@ -81,7 +81,7 @@ The verb to abut (he abuts, they abut, he abutted, it is abutted, he is abutting
 The verb to be next to implies the neighboring relation.
 
 Definition: a thing is immediate if it is in the location.
-Definition: a thing is nearby if the room enclosing it is next to the location.
+Definition: a thing (called the item) is nearby if the location of the item is next to the location of the player.
 Definition: a thing is proximate:
 	if it is immediate, yes;
 	if it is nearby, yes;
@@ -277,7 +277,16 @@ Definition: a room is noisy rather than silent:
 	if the sound of it is not "silence", yes;
 	no.
 
-Audibility relates a thing (called the duck) to a person (called the listener) when the duck is noisy and the duck is immediate or the duck is clamorous and the duck is nearby. 
+Definition: a thing is audible:
+	if it is silent, no;
+	if it is clamorous:
+		if it is nearby, yes;
+	if it is immediate, yes;
+	no.
+
+Audibility relates a person (called the listener) to a thing (called the duck) when the duck is audible.
+
+The verb to be able to hear (he is heard) implies the audibility relation.
 
 The verb to hear (he hears, they hear, he heard, it is heard, he is hearing) implies the audibility relation.
 
@@ -285,7 +294,6 @@ The verb to holla (he hollas, they holla, he holla'd, it holla'd, he is hollin) 
 
 [remove the default rules so as to add our own]
 The block listening rule is not listed in any rulebook.
-[The new ambient sound rule is listed instead of the ambient sound rule in the supplying a missing noun rulebook.] [does this need to be here in order to usurp the previous rule?]
 
 [refer to RB 6.15 for multiple object lists for actions]
 
@@ -300,7 +308,6 @@ Report listening to:
 
 Understand "listen" as listening ambient.
 Listening ambient is an action applying to nothing.
-
 The listening ambient action has a list of things called ducks.
 
 Check listening ambient:
@@ -321,10 +328,19 @@ Carry out listening ambient:
 	do nothing;
 	
 Report listening ambient:
+	let report-list be a list of things;
 	repeat with foo running through ducks:
-		if foo is not in the location, say "Nearby, [sound-description of foo][line break]";
-		otherwise say "[sound-description of foo][line break]";
-
+		if foo is nearby:
+			add foo to report-list; [add it to the bottom of the stack]
+		otherwise:
+			add foo at entry 1 in the report-list; [add it to the top of the stack]
+	say report-list;
+	say line break;
+	repeat with bar running through report-list:
+		if bar is nearby, say "Nearby, [sound-description of bar][line break]";
+		otherwise say "[sound-description of bar][line break]";
+	[now run through the sorted report-list and say all of the sounds]
+	
 Part 2 - The Player
 
 The printed name of the player is "Zek Lumien".
@@ -420,10 +436,15 @@ Current-light-level is an action applying to nothing.
 Report current-light-level:
 	say "[The location] is [if the location is bright]bright.[else if the location is dim]dim.[else]dark.";
 
-Understand "AUDIOS" as listen-testing.
-Listen-testing is an action applying to nothing.
+Understand "SOUNDCHECK [any thing]" as listen-testing.
+Listen-testing is an action applying to one visible thing.
 Report listen-testing:
-	say "Insert reporting here.";
+	say "[printed name of noun]:[line break]";
+	say "Is it audible? [if the player can hear the noun]yes[otherwise]no[end if][line break]";
+	say "[if noun is clamorous]Clamorous[else if noisy]Noisy[otherwise]Silent[end if][line break]";
+	say "[location of noun][line break]";
+	say "Heard things: [list of things heard by the player][line break]";
+	say "Audible things: [list of audible things][line break]";
 	
 Book 2 - Testing Equipment
 
