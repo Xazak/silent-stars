@@ -1,254 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x02054830" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x01F04450" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x020832D8"/>
-  <item nodeId="node-0x02054830">
+  <activeNode nodeId="node-0x01F1BC38"/>
+  <item nodeId="node-0x01F04450">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.&#x000A; ...&#x000A; The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.&#x000A;&#x000A;Silent Stars&#x000A;An Interactive Fiction by Zaq Grow&#x000A;Release 1 / Serial number 130322 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Antiseptic Coffin, in the shadows&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The control panel shines on an alarm clock.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.&#x000A; ...&#x000A; The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.&#x000A;&#x000A;Silent Stars&#x000A;An Interactive Fiction by Zaq Grow&#x000A;Release 1 / Serial number 130323 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Antiseptic Coffin, in the gloom&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The control panel reveals an alarm clock.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02054670"/>
-      <child nodeId="node-0x020832D8"/>
-      <child nodeId="node-0x02085810"/>
-      <child nodeId="node-0x020859D0"/>
-      <child nodeId="node-0x02085B20"/>
-      <child nodeId="node-0x02085CE0"/>
-      <child nodeId="node-0x02085FF0"/>
+      <child nodeId="node-0x01F04568"/>
+      <child nodeId="node-0x01F1B8B8"/>
     </children>
   </item>
-  <item nodeId="node-0x02054670">
+  <item nodeId="node-0x01F04568">
     <command xml:space="preserve">press cycle</command>
     <result xml:space="preserve">The button changes to green and blinks "Completed" a couple times.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
+    <played>YES</played>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02062E88"/>
+      <child nodeId="node-0x01F04650"/>
     </children>
   </item>
-  <item nodeId="node-0x02062E88">
+  <item nodeId="node-0x01F04650">
     <command xml:space="preserve">press unlock</command>
     <result xml:space="preserve">The "Unlock Hatch" button changes to green.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
+    <played>YES</played>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02063098"/>
+      <child nodeId="node-0x01F046C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02063098">
+  <item nodeId="node-0x01F046C0">
     <command xml:space="preserve">press exit</command>
     <result xml:space="preserve">A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;You open the hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
+    <played>YES</played>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x020631D0"/>
+      <child nodeId="node-0x01F04730"/>
     </children>
   </item>
-  <item nodeId="node-0x020631D0">
+  <item nodeId="node-0x01F04730">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">&#x000A;&#x000A;Antiseptic Coffin, in the darkness&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
+    <result xml:space="preserve">Medical Bay, in the darkness&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
+    <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02063240"/>
+      <child nodeId="node-0x01F1B0D8"/>
+      <child nodeId="node-0x01F1BB58"/>
     </children>
   </item>
-  <item nodeId="node-0x02063240">
-    <command xml:space="preserve">drop radio</command>
-    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x020632B0"/>
-    </children>
-  </item>
-  <item nodeId="node-0x020632B0">
+  <item nodeId="node-0x01F1B0D8">
     <command xml:space="preserve">in</command>
-    <result xml:space="preserve">&#x000A;Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The control panel shows an alarm clock.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
+    <played>YES</played>
+    <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02063320"/>
+      <child nodeId="node-0x01F1B378"/>
     </children>
   </item>
-  <item nodeId="node-0x02063320">
+  <item nodeId="node-0x01F1B378">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">Antiseptic Coffin, in the shadows&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x01F1B148"/>
+    </children>
+  </item>
+  <item nodeId="node-0x01F1B148">
+    <command xml:space="preserve">in</command>
+    <result xml:space="preserve">Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The lightness from the control panel illuminates an alarm clock.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x01F1B068"/>
+    </children>
+  </item>
+  <item nodeId="node-0x01F1B068">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x01F1AFF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x01F1AFF8">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;&#x000A;[Rule "new room-name rule" applies.]&#x000A;Antiseptic Coffin, in the gloom&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x01F1BB58">
     <command xml:space="preserve">listen</command>
-    <result xml:space="preserve">neighbors: Medical Bay.&#x000A;clamorous: radio.&#x000A;noisy: .&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">the radio emits an unbroken stream of static.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x01F1BAE8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x01F1BAE8">
+    <command xml:space="preserve">soundcheck radio</command>
+    <result xml:space="preserve">radio:&#x000A;Is it audible? yes&#x000A;Clamorous&#x000A;Medical Bay&#x000A;Heard things: radio&#x000A;Audible things: radio&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x01F1BC38"/>
+    </children>
+  </item>
+  <item nodeId="node-0x01F1BC38">
+    <command xml:space="preserve">soundcheck clock</command>
+    <result xml:space="preserve">alarm clock:&#x000A;Is it audible? no&#x000A;Noisy&#x000A;Antiseptic Coffin&#x000A;Heard things: radio&#x000A;Audible things: radio&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x020832D8">
+  <item nodeId="node-0x01F1B8B8">
+    <command xml:space="preserve">listne</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x01F1B848"/>
+    </children>
+  </item>
+  <item nodeId="node-0x01F1B848">
     <command xml:space="preserve">listen</command>
-    <result xml:space="preserve">neighbors: Medical Bay.&#x000A;clamorous: radio.&#x000A;noisy: alarm clock.&#x000A;final list: radio and alarm clock.&#x000A;&#x000A;alarm clock and radio&#x000A;The alarm clock beeps incessantly.&#x000A;Nearby, the radio emits an unbroken stream of static.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x020B6098"/>
-    </children>
-  </item>
-  <item nodeId="node-0x020B6098">
-    <command xml:space="preserve">soundcheck clock</command>
-    <result xml:space="preserve">alarm clock:&#x000A;Is it audible? yes&#x000A;Noisy&#x000A;Antiseptic Coffin&#x000A;alarm clock&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x02085810">
-    <command xml:space="preserve">soundcheck radio'</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The alarm clock beeps incessantly.&#x000A;Nearby, the radio emits an unbroken stream of static.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x020858F0"/>
+      <child nodeId="node-0x01F1B998"/>
     </children>
   </item>
-  <item nodeId="node-0x020858F0">
-    <command xml:space="preserve">soundcheck radio</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x020859D0">
-    <command xml:space="preserve">soundcheck radio</command>
-    <result xml:space="preserve">radio:&#x000A;Is it audible? yes&#x000A;Clamorous&#x000A;Medical Bay&#x000A;Heard things: alarm clock and radio&#x000A;Audible things: alarm clock and radio&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x020B5DF8"/>
-      <child nodeId="node-0x020B6648"/>
-      <child nodeId="node-0x020B6958"/>
-      <child nodeId="node-0x02085F10"/>
-    </children>
-  </item>
-  <item nodeId="node-0x020B5DF8">
-    <command xml:space="preserve">soundcheck clock</command>
-    <result xml:space="preserve">alarm clock:&#x000A;Is it audible? yes&#x000A;Noisy&#x000A;Antiseptic Coffin&#x000A;Heard things: alarm clock&#x000A;Audible things: alarm clock&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x020B6648">
-    <command xml:space="preserve">relations</command>
-    <result xml:space="preserve">Neighboring relates rooms to each other:&#x000A;  The Medical Bay  &lt;=&gt;  the Antiseptic Coffin&#x000A;  Hallway A  &lt;=&gt;  the Medical Bay&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x020B6958">
-    <command xml:space="preserve">showme nearby</command>
-    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x02085F10">
-    <command xml:space="preserve">listen</command>
-    <result xml:space="preserve">neighbors: Medical Bay.&#x000A;clamorous: radio.&#x000A;noisy: alarm clock.&#x000A;final list: radio and alarm clock.&#x000A;&#x000A;Nearby, the radio emits an unbroken stream of static.&#x000A;The alarm clock beeps incessantly.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x02085B20">
-    <command xml:space="preserve">soundcheck alarm clock</command>
-    <result xml:space="preserve">alarm clock:&#x000A;Is it audible? noNoisyAntiseptic Coffin&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x02085CE0">
-    <command xml:space="preserve">soundcheck clock</command>
-    <result xml:space="preserve">alarm clock:&#x000A;Is it audible? yes&#x000A;Noisy&#x000A;Antiseptic Coffin&#x000A;Other audible things: alarm clock&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x02085D50"/>
-      <child nodeId="node-0x020B6028"/>
-    </children>
-  </item>
-  <item nodeId="node-0x02085D50">
-    <command xml:space="preserve">relations</command>
-    <result xml:space="preserve">Neighboring relates rooms to each other:&#x000A;  The Medical Bay  &lt;=&gt;  the Antiseptic Coffin&#x000A;  Hallway A  &lt;=&gt;  the Medical Bay&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x020B6028">
-    <command xml:space="preserve">soundcheck radio</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x02085FF0">
-    <command xml:space="preserve">show relation audibility</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x02086140"/>
-    </children>
-  </item>
-  <item nodeId="node-0x02086140">
-    <command xml:space="preserve">show relation</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x020861B0"/>
-    </children>
-  </item>
-  <item nodeId="node-0x020861B0">
-    <command xml:space="preserve">relations</command>
-    <result xml:space="preserve">Neighboring relates rooms to each other:&#x000A;  The Medical Bay  &lt;=&gt;  the Antiseptic Coffin&#x000A;  Hallway A  &lt;=&gt;  the Medical Bay&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x02086220"/>
-    </children>
-  </item>
-  <item nodeId="node-0x02086220">
-    <command xml:space="preserve">show relation neighboring</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-0x01F1B998">
+    <command xml:space="preserve">listen east</command>
+    <result xml:space="preserve">I only understood you as far as wanting to listen.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
