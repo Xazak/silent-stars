@@ -7,6 +7,7 @@ Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
 
 [TODO:
+--Executing a look action should tell the player what the MC does while looking, e.g. "You steady yourself on the lathe and glance around furtively:"
 --The indefinite articles in the listening-ambient reports need to be massaged
 --Player should be able to listen at a specific direction to hear what's in the next room
 --Player should also be able to listen to something clamorous that is nearby but not in the same room and get a general idea of where the noisemaker is relative to the player's position
@@ -33,6 +34,13 @@ Volume 1 - Setting Things Up
 Book 1 - Abstractions, Generalizations, and Basic Physics
 
 Part 1 - Redefining Standard Rules and Style
+
+[To use these in text, include html-style tags within the text with square brackets: [i]italic type[/i], [b]bold type[/b]]
+
+To say i -- beginning say_i -- running on: (- style underline; -).
+To say /i -- ending say_i -- running on: (- style roman; -).
+To say b -- beginning say_b -- running on: (- style bold; -).
+To say /b -- ending say_b -- running on: (- style roman; -).
 
 Before printing the name of something while listing contents:
 	if the holder of the noun contains exactly 1 thing, say "single ".
@@ -154,12 +162,6 @@ A new-visibility rule (this is the visibility level rule):
 		there is insufficient light. [if none of the above is true, assume the player is in the dark]
 
 [The shining-glowing exception causes a dark room to become lit if the room contains lit things, so by definition a dark room is one that does not contain any lit things, and thus nothing should be in scope. An exception might be made for familiar things the player has dropped; need to do more work]
-[After deciding the scope of the player while in darkness:
-	if the light level is dim:
-		place the location in scope;
-	if the light level is dark:
-		repeat with item running through lit things enclosed by the location:
-			if item is not inside an opaque container, place item in scope;]
 
 [After adjusting the light in the room, check to see how powerful those lit items are and whether the lighted status of the room needs to be adjusted to match]
 The shining-glowing exception rule is listed after the adjust light rule in the turn sequence rulebook.
@@ -230,7 +232,7 @@ A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 [A flicker is a kind of value. The flickers are insubstantial, insufficient, faint, muted, poor, weak, wavering, dim, low, shadowy, wan, subdued, tenuous, shifting, dull, anemic, frail, ghostly, and flickering.]
 
-A panel is a kind of supporter. The description of a panel is "A cheap amber-monochrome touchscreen[if active]. The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]. The display is dark[end if]." The dark-description of a panel is "A control panel glows faintly in the dark." 
+A panel is a kind of supporter. The description of a panel is "A cheap amber-monochrome touchscreen[if active]. The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]. The display is dark[end if]." The dark-description of a panel is "A [printed name] glows faintly in the dark." 
 A panel can be active or inactive. A panel is usually active.
 
 Rule for listing contents of a panel:
@@ -258,7 +260,8 @@ To pay attention:
 	-- 1: try listening;
 	-- 2: try smelling;
 	-- otherwise: say "[line break]".
-	[say "Sensing value: [foo][line break]"; [NFR]]
+
+A person can be asleep or awake. A person is usually awake. The player is asleep.
 
 A person can be concussed or sober. A person is usually sober. The player is concussed.
 
@@ -335,7 +338,6 @@ The listening ambient action has a list of things called ducks.
 
 Check listening ambient:
 	add the list of things heard by the player to ducks;
-	[say "ducks: [ducks].";[NFR]]
 	if ducks is empty, say "You hear only the silence of a scuttled ship." instead;
 
 Carry out listening ambient:
@@ -348,7 +350,6 @@ Report listening ambient:
 			add foo to report-list; [add it to the bottom of the queue]
 		otherwise:
 			add foo at entry 1 in the report-list; [add it to the top of the queue]
-	[say report-list;[NFR]]
 	repeat with bar running through report-list:
 		if bar is nearby, say "Nearby, [sound-description of bar][line break]";
 		otherwise say "[sound-description of bar][line break]";
@@ -359,9 +360,31 @@ The printed name of the player is "Zek Lumien".
 
 A left hand is part of the player. The description of the left hand is "It's your left hand. {if brightness of location is black}You flex it once or twice to make sure it's still there{otherwise}Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits){end if}." It is familiar and seen.
 
-A right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [italic type]crazy[roman type] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
+A right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
 
 Book 5 - The Starlight Dancer
+
+Part 0 - Dreamtime
+
+Dreamspace is a room. The printed name of Dreamspace is "Kitchen". Understand "kitchen" as Dreamspace. "Woven silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spent in your workshop or the little office in the hut out back, this is where you truly feel you're at rest."
+Dreamspace is lighted.
+
+A container called the curtain is here. The curtain is bright, lit, closed and openable. "Woven from unrefined silk."
+
+A window is inside the curtain. The window is scenery. The description is "Outside, you can see your son Victor playing in the garden with the neighbor boy. They're pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it'll make Victor too aggressive when he's older, but you never chastise Victor for it: anything to get him to make friends and play outside."  
+
+[Contents of the kitchen:
+	Curtains (Implement as container for window? Need open/close behavior, window is not in scope unless open)
+X	--A window
+	Cabinets
+	Porcelain sink
+	Gas stove
+	--A whistling teapot
+	Maxie, who is chopping vegetables
+]
+[The description is "Maxie was the one who picked out the slate-and-charcoal tesselated tiles on the floor, the mocha-cream walls and chocolate trim, the matching porcelain sink, but the stainless steel surfaces and ancient gas range were [i]your[/i] idea."]
+
+The player is here.
 
 Part 1 - Deck A
 
@@ -369,8 +392,8 @@ Deck A is a region.
 
 [*** The Autodoc (Starting Area)]
 The Autodoc is a room. "You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes." 
-The player is here. The Autodoc is in Deck A.
 The printed name of the autodoc is "Antiseptic Coffin". Understand "coffin" as the Autodoc. The dark-description of the Autodoc is "It's cold and damp and dark in here."
+The Autodoc is in Deck A.
 Index map with the Autodoc mapped south of the Medical Bay.
 
 There is a panel called the control panel in the Autodoc. "The control panel above you shows a blinking red button." The description is "The edges of the control panel have some biogunk in them." The dark-description is "An amber-colored control panel shines wan light onto your sternum."
@@ -431,13 +454,19 @@ Volume 2 - Beginning Play
 
 When play begins:
 	set the status line;
+	[Introductory text goes here]
 	say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[line break]
 	...[line break]
 	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";
 	
 Volume 3 - Scenes and Stage Movement
 
+Dreaming is a scene. Dreaming begins when the player is asleep. Dreaming ends when the player is awake.
+
 Autodoc Escape is a scene. Autodoc Escape begins when play begins. Autodoc Escape ends when the Medical Bay is visited.
+
+Instead of pushing a button the first time during Autodoc Escape:
+	say "Your weakened body flails uselessly against the control panel." instead;
 
 Volume 0 - Not For Release
 
@@ -469,7 +498,7 @@ Carry out switching off the sunrod:
 	now the sunrod is unlit;
 	say "DARKNESS";
 
-A radio is a device. The radio is in the Medical Bay. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise". The sound-description is "[The printed name] emits an unbroken stream of static."
+[A radio is a device. The radio is in the Medical Bay. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise". The sound-description is "[The printed name] emits an unbroken stream of static."
 Carry out switching on the radio:
 	say "You turn the radio on and static fills the room.";
 	now the radio is notable;
@@ -480,7 +509,7 @@ Carry out switching off the radio:
 	now the radio is mundane;
 	now the sound of the radio is "silence";
 
-An alarm clock is a device in the Autodoc. The alarm clock is switched on. The sound of the alarm clock is "beeping". The sound-description is "The alarm clock beeps incessantly."
+An alarm clock is a device in the Autodoc. The alarm clock is switched on. The sound of the alarm clock is "beeping". The sound-description is "The alarm clock beeps incessantly."]
 
 [**********************************]
 [_ _ t THE CODE GRAVEYARD t _t ]
