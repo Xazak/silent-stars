@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x01F04450" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x02574940" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x01F1BC38"/>
-  <item nodeId="node-0x01F04450">
+  <activeNode nodeId="node-0x033AAF58"/>
+  <item nodeId="node-0x02574940">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.&#x000A; ...&#x000A; The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.&#x000A;&#x000A;Silent Stars&#x000A;An Interactive Fiction by Zaq Grow&#x000A;Release 1 / Serial number 130323 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Antiseptic Coffin, in the gloom&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The control panel reveals an alarm clock.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.&#x000A; ...&#x000A; The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.&#x000A;&#x000A;Silent Stars&#x000A;An Interactive Fiction by Zaq Grow&#x000A;Release 1 / Serial number 130324 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Antiseptic Coffin, in the darkness&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The ctonrol paenl reveals an alram clcok.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x01F04568"/>
-      <child nodeId="node-0x01F1B8B8"/>
+      <child nodeId="node-0x02574670"/>
+      <child nodeId="node-0x025E6508"/>
+      <child nodeId="node-0x033AAD28"/>
     </children>
   </item>
-  <item nodeId="node-0x01F04568">
+  <item nodeId="node-0x02574670">
     <command xml:space="preserve">press cycle</command>
     <result xml:space="preserve">The button changes to green and blinks "Completed" a couple times.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -22,10 +23,10 @@
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x01F04650"/>
+      <child nodeId="node-0x0257EEA8"/>
     </children>
   </item>
-  <item nodeId="node-0x01F04650">
+  <item nodeId="node-0x0257EEA8">
     <command xml:space="preserve">press unlock</command>
     <result xml:space="preserve">The "Unlock Hatch" button changes to green.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -33,21 +34,22 @@
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x01F046C0"/>
+      <child nodeId="node-0x0257F0B8"/>
     </children>
   </item>
-  <item nodeId="node-0x01F046C0">
+  <item nodeId="node-0x0257F0B8">
     <command xml:space="preserve">press exit</command>
-    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;You open the hatch.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;You open the htcah.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x01F04730"/>
+      <child nodeId="node-0x0257F1E0"/>
+      <child nodeId="node-0x033AAEE8"/>
     </children>
   </item>
-  <item nodeId="node-0x01F04730">
+  <item nodeId="node-0x0257F1E0">
     <command xml:space="preserve">out</command>
     <result xml:space="preserve">Medical Bay, in the darkness&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -55,44 +57,82 @@
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x01F1B0D8"/>
-      <child nodeId="node-0x01F1BB58"/>
+      <child nodeId="node-0x0258BD18"/>
+      <child nodeId="node-0x0258B068"/>
     </children>
   </item>
-  <item nodeId="node-0x01F1B0D8">
-    <command xml:space="preserve">in</command>
-    <result xml:space="preserve">Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The control panel shows an alarm clock.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-0x0258BD18">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Medical Bay, in the gloom&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x01F1B378"/>
+      <child nodeId="node-0x0258BC38"/>
     </children>
   </item>
-  <item nodeId="node-0x01F1B378">
-    <command xml:space="preserve">out</command>
-    <result xml:space="preserve">Antiseptic Coffin, in the shadows&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
+  <item nodeId="node-0x0258BC38">
+    <command xml:space="preserve">x radio</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x01F1B148"/>
+      <child nodeId="node-0x0258BA08"/>
     </children>
   </item>
-  <item nodeId="node-0x01F1B148">
-    <command xml:space="preserve">in</command>
-    <result xml:space="preserve">Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The lightness from the control panel illuminates an alarm clock.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-0x0258BA08">
+    <command xml:space="preserve">listen</command>
+    <result xml:space="preserve">radio emits an unbroken stream of static.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x01F1B068"/>
+      <child nodeId="node-0x0258BF48"/>
     </children>
   </item>
-  <item nodeId="node-0x01F1B068">
+  <item nodeId="node-0x0258BF48">
+    <command xml:space="preserve">x radio</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0258B3E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0258B3E8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Medical Bay, in the gloom&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0258BD88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0258BD88">
+    <command xml:space="preserve">turn on sunrod</command>
+    <result xml:space="preserve">LIGHTS&#x000A;You switch the srnoud on.&#x000A;&#x000A;Mdcieal Bay&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;This is the init app of the radio. It emits a constant stream of static.&#x000A;&#x000A;You can also see a Miedacl htcah and a wedigt here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0258B068">
+    <command xml:space="preserve">turn on sunrod</command>
+    <result xml:space="preserve">LIGHTS&#x000A;You switch the suonrd on.&#x000A;&#x000A;Macdeil yaB&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;This is the init app of the radio. It emits a constant stream of static.&#x000A;&#x000A;You can also see a Meicdal hatch and a widget here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x033AAEE8">
     <command xml:space="preserve">rules</command>
     <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -100,72 +140,158 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x01F1AFF8"/>
+      <child nodeId="node-0x033AAF58"/>
     </children>
   </item>
-  <item nodeId="node-0x01F1AFF8">
+  <item nodeId="node-0x033AAF58">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;&#x000A;[Rule "new room-name rule" applies.]&#x000A;Antiseptic Coffin, in the gloom&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;[Rule "new room-name rule" applies.]&#x000A;Medical Bay, in the shadows&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x01F1BB58">
-    <command xml:space="preserve">listen</command>
-    <result xml:space="preserve">the radio emits an unbroken stream of static.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x01F1BAE8"/>
-    </children>
-  </item>
-  <item nodeId="node-0x01F1BAE8">
-    <command xml:space="preserve">soundcheck radio</command>
-    <result xml:space="preserve">radio:&#x000A;Is it audible? yes&#x000A;Clamorous&#x000A;Medical Bay&#x000A;Heard things: radio&#x000A;Audible things: radio&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-0x025E6508">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x01F1BC38"/>
+      <child nodeId="node-0x025E66C8"/>
     </children>
   </item>
-  <item nodeId="node-0x01F1BC38">
-    <command xml:space="preserve">soundcheck clock</command>
-    <result xml:space="preserve">alarm clock:&#x000A;Is it audible? no&#x000A;Noisy&#x000A;Antiseptic Coffin&#x000A;Heard things: radio&#x000A;Audible things: radio&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-0x025E66C8">
+    <command xml:space="preserve">rules off</command>
+    <result xml:space="preserve">Rules tracing now switched off. Type "rules" to switch it on again.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x025E6738"/>
+    </children>
   </item>
-  <item nodeId="node-0x01F1B8B8">
-    <command xml:space="preserve">listne</command>
+  <item nodeId="node-0x025E6738">
+    <command xml:space="preserve">pres scycle</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x01F1B848"/>
+      <child nodeId="node-0x025E67A8"/>
     </children>
   </item>
-  <item nodeId="node-0x01F1B848">
-    <command xml:space="preserve">listen</command>
-    <result xml:space="preserve">The alarm clock beeps incessantly.&#x000A;Nearby, the radio emits an unbroken stream of static.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-0x025E67A8">
+    <command xml:space="preserve">press cycle</command>
+    <result xml:space="preserve">The button changes to green and blinks "Completed" a couple times.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x01F1B998"/>
+      <child nodeId="node-0x025E6818"/>
     </children>
   </item>
-  <item nodeId="node-0x01F1B998">
-    <command xml:space="preserve">listen east</command>
-    <result xml:space="preserve">I only understood you as far as wanting to listen.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-0x025E6818">
+    <command xml:space="preserve">press unlock</command>
+    <result xml:space="preserve">The "Unlock Hatch" button changes to green.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x025E6888"/>
+    </children>
+  </item>
+  <item nodeId="node-0x025E6888">
+    <command xml:space="preserve">press exit</command>
+    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;You open the hctah.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x025E68F8"/>
+      <child nodeId="node-0x033AAAF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x025E68F8">
+    <command xml:space="preserve">rules all</command>
+    <result xml:space="preserve">Rules tracing now switched to "all". Type "rules off" to switch it off again.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x025E6348"/>
+    </children>
+  </item>
+  <item nodeId="node-0x025E6348">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">[Rule "standard set going variables rule" does not apply.]&#x000A;[Rule "determine visibility ceiling rule" does not apply.]&#x000A;[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "Before going through a closed hatch ( called the blocking hatch )" does not apply.]&#x000A;[Rule "Before opening the Autodoc's hatch" does not apply.]&#x000A;[Rule "Instead of pushing the cycle button" does not apply.]&#x000A;[Rule "Instead of pushing the unlock button" does not apply.]&#x000A;[Rule "Instead of pushing the exit button" does not apply.]&#x000A;[Rule "Instead of pushing a button ( called the frobber )" does not apply.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[Rule "determine visibility ceiling rule" does not apply.]&#x000A;[Rule "Setting action variables for exiting" does not apply.]&#x000A;[Rule "Before going through a closed hatch ( called the blocking hatch )" does not apply.]&#x000A;[Rule "Before opening the Autodoc's hatch" does not apply.]&#x000A;[Rule "Instead of pushing the cycle button" does not apply.]&#x000A;[Rule "Instead of pushing the unlock button" does not apply.]&#x000A;[Rule "Instead of pushing the exit button" does not apply.]&#x000A;[Rule "Instead of pushing a button ( called the frobber )" does not apply.]&#x000A;[Rule "stand up before going rule" does not apply.]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "standard set going variables rule" does not apply.]&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "Setting action variables for exiting" does not apply.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;[Rule "new room-name rule" applies.]&#x000A;Medical Bay, in the gloom&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x025E6498"/>
+    </children>
+  </item>
+  <item nodeId="node-0x025E6498">
+    <command xml:space="preserve">turn on sunrod</command>
+    <result xml:space="preserve">[Rule "standard set going variables rule" does not apply.]&#x000A;[Rule "determine visibility ceiling rule" does not apply.]&#x000A;[Rule "Setting action variables for exiting" does not apply.]&#x000A;[Rule "Before going through a closed hatch ( called the blocking hatch )" does not apply.]&#x000A;[Rule "Before opening the Autodoc's hatch" does not apply.]&#x000A;[Rule "Instead of pushing the cycle button" does not apply.]&#x000A;[Rule "Instead of pushing the unlock button" does not apply.]&#x000A;[Rule "Instead of pushing the exit button" does not apply.]&#x000A;[Rule "Instead of pushing a button ( called the frobber )" does not apply.]&#x000A;[Rule "can't switch on unless switchable rule" applies.]&#x000A;[Rule "can't switch on what's already on rule" applies.]&#x000A;[Rule "Carry out switching on the sunrod" applies.]&#x000A;LIGHTS&#x000A;[Rule "Carry out switching on the radio" does not apply.]&#x000A;[Rule "standard switching on rule" applies.]&#x000A;[Rule "standard report switching on rule" applies.]&#x000A;You switch the sonrud on.&#x000A;&#x000A;[Rule "standard set going variables rule" does not apply.]&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "Setting action variables for exiting" does not apply.]&#x000A;[Rule "Before going through a closed hatch ( called the blocking hatch )" does not apply.]&#x000A;[Rule "Before opening the Autodoc's hatch" does not apply.]&#x000A;[Rule "Instead of pushing the cycle button" does not apply.]&#x000A;[Rule "Instead of pushing the unlock button" does not apply.]&#x000A;[Rule "Instead of pushing the exit button" does not apply.]&#x000A;[Rule "Instead of pushing a button ( called the frobber )" does not apply.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;Miedcal yaB&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;This is the init app of the radio. It emits a constant stream of static.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "Rule for listing nondescript items while the light level is dim" does not apply.]&#x000A;You can also see a Midacel hatch and a weigdt here.&#x000A;&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x033AAAF8">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x033AAB68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x033AAB68">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;[Rule "new room-name rule" applies.]&#x000A;Medical Bay, in the shadows&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x033AABD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x033AABD8">
+    <command xml:space="preserve">turn on sunrod</command>
+    <result xml:space="preserve">[Rule "can't switch on unless switchable rule" applies.]&#x000A;[Rule "can't switch on what's already on rule" applies.]&#x000A;[Rule "Carry out switching on the sunrod" applies.]&#x000A;LIGHTS&#x000A;[Rule "standard switching on rule" applies.]&#x000A;[Rule "standard report switching on rule" applies.]&#x000A;You switch the surond on.&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;Micdael yaB&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;This is the init app of the radio. It emits a constant stream of static.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;You can also see a Miacedl hatch and a wgdiet here.&#x000A;&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x033AAD28">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Antiseptic Coffin, in the shadows&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;The ctornol panel shows an aalrm colck.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x033AAD98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x033AAD98">
+    <command xml:space="preserve">exit</command>
+    <result xml:space="preserve">The control panel flashes red and beeps. It seems the hatch is locked shut.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>

@@ -260,6 +260,32 @@ To pay attention:
 	-- otherwise: say "[line break]".
 	[say "Sensing value: [foo][line break]"; [NFR]]
 
+A person can be concussed or sober. A person is usually sober. The player is concussed.
+
+Rule for printing the name of an unfamiliar thing (called the item) when the player is concussed (this is the brain damage rule):
+	let original-name be an indexed text;
+	let name-template be a list of numbers;
+	repeat with baz running from 1 to the number of words in the printed name of the item:
+		now original-name is word number baz in the printed name of the item;
+		let new-name be original-name;
+		let name-length be the number of characters in original-name;
+		now name-template is { };
+		repeat with foo running from 1 to name-length:
+			add foo at entry 1 in name-template;
+		sort name-template in random order;
+		if name-length is at least 4:
+			if entry 1 in name-template is not 1:
+				remove 1 from name-template;
+				add 1 at entry 1 in name-template;
+			if entry name-length in name-template is not name-length:
+				remove name-length from name-template;
+				add name-length to name-template;
+		repeat with foo running from 1 to name-length:
+			let bar be entry foo in name-template;
+			replace character number foo in new-name with character number bar in original-name;
+		if baz is the number of words in the printed name of the item, say "[new-name]";
+		otherwise say "[new-name] ";
+
 Chapter 1 - Listening
 
 [Define where to find the sounds of something and how to tell how loud certain kinds are]
@@ -409,7 +435,7 @@ When play begins:
 	...[line break]
 	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";
 	
-Volume 3 - During Play
+Volume 3 - Scenes and Stage Movement
 
 Autodoc Escape is a scene. Autodoc Escape begins when play begins. Autodoc Escape ends when the Medical Bay is visited.
 
