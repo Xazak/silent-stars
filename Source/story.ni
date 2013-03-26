@@ -35,6 +35,8 @@ Book 1 - Abstractions, Generalizations, and Basic Physics
 
 Part 1 - Redefining Standard Rules and Style
 
+The describe what's on scenery supporters in room descriptions rule is not listed in any rulebook. 
+
 [To use these in text, include html-style tags within the text with square brackets: [i]italic type[/i], [b]bold type[/b]]
 
 To say i -- beginning say_i -- running on: (- style underline; -).
@@ -115,10 +117,10 @@ To decide if the light level is bright:
 	no.
 	
 To decide if the light level is dim:
-	if the location encloses a glowing thing:
-		if the location encloses a shining thing, no;
-		yes;
-	if the location is lighted, yes;
+	if the location is lighted:
+		if the light level is bright, no;
+	yes;
+	if the location encloses a glowing thing and the location does not enclose a shining thing, yes;
 	no.
 
 To decide if the light level is dark:
@@ -127,10 +129,7 @@ To decide if the light level is dark:
 
 Definition: A room is bright if it encloses a shining thing.
 Definition: A room is dim:
-	if it encloses a glowing thing:
-		if it encloses a shining thing, no;
-		yes;
-	if it is lighted, yes.
+	if it encloses a glowing thing and it does not enclose a shining thing, yes;
 
 A thing can be bright or dim. A thing is usually dim.
 A thing can be diffuse or direct. A thing is usually diffuse.
@@ -177,6 +176,7 @@ Rule for printing the name of a room (called the place) (this is the new room-na
 	[only certain actions and activities should get the full light treatment, everything else just gets the room]
 	let light-description-toggle be false;
 	if the current action is looking, now light-description-toggle is true;
+	if the player is in Dreamspace, now light-description-toggle is false;
 	if light-description-toggle is false, say "[printed name of the place]" instead;
 	if the light level is dark:
 		say "[printed name of the place], in the [random dark-noun]" instead;
@@ -263,7 +263,7 @@ To pay attention:
 
 A person can be asleep or awake. A person is usually awake. The player is asleep.
 
-A person can be concussed or sober. A person is usually sober. The player is concussed.
+A person can be concussed or sober. A person is usually sober.
 
 Rule for printing the name of an unfamiliar thing (called the item) when the player is concussed (this is the brain damage rule):
 	let original-name be an indexed text;
@@ -340,9 +340,6 @@ Check listening ambient:
 	add the list of things heard by the player to ducks;
 	if ducks is empty, say "You hear only the silence of a scuttled ship." instead;
 
-Carry out listening ambient:
-	do nothing;
-	
 Report listening ambient:
 	let report-list be a list of things;
 	repeat with foo running through ducks: [sort the ducks by proximity to the player]
@@ -366,21 +363,53 @@ Book 5 - The Starlight Dancer
 
 Part 0 - Dreamtime
 
-Dreamspace is a room. The printed name of Dreamspace is "Kitchen". Understand "kitchen" as Dreamspace. "Woven silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spent in your workshop or the little office in the hut out back, this is where you truly feel you're at rest."
+Dreamspace is a room. The printed name of Dreamspace is "Kitchen". Understand "kitchen" as Dreamspace. "Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest."
+
 Dreamspace is lighted.
 
-A container called the curtain is here. The curtain is bright, lit, closed and openable. "Woven from unrefined silk."
+A container called the curtains is here. The curtains are fixed in place, transparent, closed and openable. "[if closed]Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.[otherwise if open]A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.[end if]"
 
-A window is inside the curtain. The window is scenery. The description is "Outside, you can see your son Victor playing in the garden with the neighbor boy. They're pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it'll make Victor too aggressive when he's older, but you never chastise Victor for it: anything to get him to make friends and play outside."  
+Understand "curtain" as the curtains.
+
+A window is inside the curtains. The window is fixed in place, bright, lit. The description is "Outside, you can see your son Victor playing in the garden with the neighbor boy. They're pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it'll make Victor too aggressive when he's older, but you never chastise Victor for it. [i]Anything[/i] to get him to play outside."
+
+Before examining the window while the curtains are closed: 
+	try opening the curtains;
+	continue the action.
+
+Report opening the curtains: say "You open the curtains, tying them back with the little cord so they hang neatly." instead.
+
+Some cabinets are here. The cabinets are scenery. The description is "The cabinets were Maxie's choice: maple, stained in a dark rocky brown, with sterling silver hardware. Not your first choice, but now you can't imagine a kitchen without them. Max always [i]was[/i] better at color coordination."
+
+Understand "cabinet" or "cupboard" as the cabinets.
+
+Instead of opening the cabinets: say "You reach up to open the closest cupboard, but stop halfway. You can't remember what you needed out of there in the first place."
+
+A device called a gas stove is here. The stove is fixed in place. "A gas range, showpiece of the kitchen and the center of your food obsessions, claims center stage in the middle of the kitchen island[if teapot is on the burner]. A bright red teapot rests on the stove[end if][if the stove is aflame]. The flame under the burner is lit[end if]." The description is "It's a gas range, installed at great expense and peril. Being part of the  Europa Engineer's Scholarship affords certain benefits and special privileges; one must take advantage of them when one can." The stove can be cold or aflame. The stove is aflame.
+
+Carry out switching on the stove: now the stove is aflame.
+Report switching on the stove: say "The igniter ticks a few times and the flame catches with a quiet huff of combustion."
+Carry out switching off the stove: now the stove is cold.
+Report switching off the stove: say "The flame goes out."
+
+Understand "flames" or "flame" as the burner.
+
+A burner is part of the stove. The description is "You always liked the blue hue of those flames."
+
+A red teapot is on the burner. "The hot water left in the teapot is still warm enough to let off some steam." The description is "A cherry-red teapot, shaped like a sphere of jello resting on a plate. Not the ugliest appliance in here, but definitely not the prettiest." The sound is "whistling". The sound-description is "A thin, high keening whistle, much more shrill than a train engine. It's loud enough to throb in your ear, on the edge of painful."
+
+Instead of taking the teapot: say "Can't brew coffee with cold water. That is, not if you want to drink it the same day. Best to leave it on the heat."
 
 [Contents of the kitchen:
-	Curtains (Implement as container for window? Need open/close behavior, window is not in scope unless open)
+X	Curtains
 X	--A window
-	Cabinets
-	Porcelain sink
-	Gas stove
-	--A whistling teapot
-	Maxie, who is chopping vegetables
+X	Cabinets
+?	Porcelain sink
+X	Gas stove
+X	--A whistling teapot
+	Maxie, chopping vegetables
+	Victor (outside), playing with the neighbor boy
+	the neighbor boy
 ]
 [The description is "Maxie was the one who picked out the slate-and-charcoal tesselated tiles on the floor, the mocha-cream walls and chocolate trim, the matching porcelain sink, but the stainless steel surfaces and ancient gas range were [i]your[/i] idea."]
 
@@ -475,18 +504,23 @@ Book 1 - Testing Commands
 Understand "LUMOS" as current-light-level.
 Current-light-level is an action applying to nothing.
 Report current-light-level:
-	say "[The location] is [if the location is bright]bright.[else if the location is dim]dim.[else]dark.";
+	mention the light level;
+	say "{{Light-bearing things: [list of lit things enclosed by the location]}}[line break]";
 
 Understand "SOUNDCHECK [any thing]" as listen-testing.
 Listen-testing is an action applying to one visible thing.
 Report listen-testing:
-	say "[printed name of noun]:[line break]";
-	say "Is it audible? [if the player can hear the noun]yes[otherwise]no[end if][line break]";
-	say "[if noun is clamorous]Clamorous[else if noisy]Noisy[otherwise]Silent[end if][line break]";
-	say "[location of noun][line break]";
-	say "Heard things: [list of things heard by the player][line break]";
-	say "Audible things: [list of audible things][line break]";
-	
+	say "{{[printed name of noun]:[line break]";
+	say "{{Is it audible? [if the player can hear the noun]yes[otherwise]no[end if]}}[line break]";
+	say "{{[if noun is clamorous]Clamorous[else if noisy]Noisy[otherwise]Silent[end if]}}[line break]";
+	say "{{[location of noun]}}[line break]";
+	say "{{Heard things: [list of things heard by the player]}}[line break]";
+	say "{{Audible things: [list of audible things]}}[line break]";
+
+To mention the light level:
+	say "{{The light level in the [location] qualifies for: [if location is bright]bright [end if][if location is dim]dim [end if][if location is dark]dark[end if]}}";
+	say line break;
+
 Book 2 - Testing Equipment
 
 A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright.
