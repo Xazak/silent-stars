@@ -1,825 +1,1496 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x02574940" xmlns="http://www.logicalshift.org.uk/IF/Skein">
-  <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x02574940"/>
-  <item nodeId="node-0x02574940">
+<Skein rootNode="node-0x8f93d48" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>GNOME Inform 7</generator>
+  <activeNode nodeId="node-0x8f93d48"/>
+  <item nodeId="node-0x8f93d48">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.&#x000A; ...&#x000A; The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.&#x000A;&#x000A;Silent Stars&#x000A;An Interactive Fiction by Zaq Grow&#x000A;Release 1 / Serial number 130326 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Kitchen&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.&#x000A;&#x000A;A gas range, showpiece of the kitchen and the center of your food obsessions, claims center stage in the middle of the kitchen island. A bright red teapot rests on the stove. The flame under the burner is lit.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">
+
+
+
+The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can&apos;t feel it because you&apos;re completely numb.
+ ...
+ The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.
+
+Silent Stars
+An Interactive Fiction by Zaq Grow
+Release 1 / Serial number 130327 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+
+Kitchen
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.
+
+A gas range, showpiece of the kitchen and the center of your food obsessions, claims center stage in the middle of the kitchen island. A bright red teapot rests on the stove. The flame under the burner is lit.
+
+Max chops vegetables.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025745C8"/>
-      <child nodeId="node-0x0258BBC8"/>
-      <child nodeId="node-0x0258C108"/>
-      <child nodeId="node-0x0258C1E8"/>
-      <child nodeId="node-0x0258C258"/>
-      <child nodeId="node-0x0258C488"/>
-      <child nodeId="node-0x025B38C0"/>
-      <child nodeId="node-0x025B4490"/>
-      <child nodeId="node-0x025E1BF8"/>
-      <child nodeId="node-0x025E1E28"/>
-      <child nodeId="node-0x025E2368"/>
-      <child nodeId="node-0x025E2448"/>
-      <child nodeId="node-0x025B3FC0"/>
-      <child nodeId="node-0x04811E00"/>
-      <child nodeId="node-0x04811EE0"/>
-      <child nodeId="node-0x04812180"/>
-      <child nodeId="node-0x04812420"/>
+      <child nodeId="node-0x8f93e20"/>
+      <child nodeId="node-0x9eb131e8"/>
+      <child nodeId="node-0x913ac80"/>
+      <child nodeId="node-0x9142a98"/>
+      <child nodeId="node-0x9142b70"/>
+      <child nodeId="node-0x914a2a0"/>
+      <child nodeId="node-0x914a450"/>
+      <child nodeId="node-0x9119380"/>
+      <child nodeId="node-0x9119458"/>
+      <child nodeId="node-0x9119530"/>
+      <child nodeId="node-0x9119608"/>
+      <child nodeId="node-0x91196e0"/>
+      <child nodeId="node-0x9165010"/>
+      <child nodeId="node-0x9165298"/>
+      <child nodeId="node-0x9165370"/>
+      <child nodeId="node-0x91655f8"/>
+      <child nodeId="node-0x918d838"/>
     </children>
   </item>
-  <item nodeId="node-0x025745C8">
+  <item nodeId="node-0x8f93e20">
     <command xml:space="preserve">press cycle</command>
-    <result xml:space="preserve">The button changes to green and blinks "Completed" a couple times.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The button changes to green and blinks &quot;Completed&quot; a couple times.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025746B0"/>
+      <child nodeId="node-0x8f93ef8"/>
     </children>
   </item>
-  <item nodeId="node-0x025746B0">
+  <item nodeId="node-0x8f93ef8">
     <command xml:space="preserve">press unlock</command>
-    <result xml:space="preserve">The "Unlock Hatch" button changes to green.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The &quot;Unlock Hatch&quot; button changes to green.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x02574720"/>
+      <child nodeId="node-0xa22fb800"/>
     </children>
   </item>
-  <item nodeId="node-0x02574720">
+  <item nodeId="node-0xa22fb800">
     <command xml:space="preserve">press exit</command>
-    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;You open the htcah.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc&apos;s hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
+
+You open the htcah.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0257F100"/>
-      <child nodeId="node-0x0258B240"/>
+      <child nodeId="node-0xa22fb8d8"/>
+      <child nodeId="node-0x9eb13038"/>
     </children>
   </item>
-  <item nodeId="node-0x0257F100">
+  <item nodeId="node-0xa22fb8d8">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">Medical Bay, in the darkness&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
+    <result xml:space="preserve">Medical Bay, in the darkness
+The Medical Bay has no description in the dark.
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0257F220"/>
-      <child nodeId="node-0x025A6F58"/>
+      <child nodeId="node-0xa22fb9b0"/>
+      <child nodeId="node-0xa22fbec0"/>
     </children>
   </item>
-  <item nodeId="node-0x0257F220">
+  <item nodeId="node-0xa22fb9b0">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Medical Bay, in the gloom&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
+    <result xml:space="preserve">Medical Bay, in the gloom
+The Medical Bay has no description in the dark.
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0257F290"/>
+      <child nodeId="node-0xa22fba88"/>
     </children>
   </item>
-  <item nodeId="node-0x0257F290">
+  <item nodeId="node-0xa22fba88">
     <command xml:space="preserve">x radio</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025A6A58"/>
+      <child nodeId="node-0xa22fbb60"/>
     </children>
   </item>
-  <item nodeId="node-0x025A6A58">
+  <item nodeId="node-0xa22fbb60">
     <command xml:space="preserve">listen</command>
-    <result xml:space="preserve">radio emits an unbroken stream of static.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">radio emits an unbroken stream of static.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025A6AC8"/>
+      <child nodeId="node-0xa22fbc38"/>
     </children>
   </item>
-  <item nodeId="node-0x025A6AC8">
+  <item nodeId="node-0xa22fbc38">
     <command xml:space="preserve">x radio</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025A6BE8"/>
+      <child nodeId="node-0xa22fbd10"/>
     </children>
   </item>
-  <item nodeId="node-0x025A6BE8">
+  <item nodeId="node-0xa22fbd10">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Medical Bay, in the gloom&#x000A;The Medical Bay has no description in the dark.&#x000A;&gt;</result>
+    <result xml:space="preserve">Medical Bay, in the gloom
+The Medical Bay has no description in the dark.
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025A6EE8"/>
+      <child nodeId="node-0xa22fbde8"/>
     </children>
   </item>
-  <item nodeId="node-0x025A6EE8">
+  <item nodeId="node-0xa22fbde8">
     <command xml:space="preserve">turn on sunrod</command>
-    <result xml:space="preserve">LIGHTS&#x000A;You switch the srnoud on.&#x000A;&#x000A;Mdcieal Bay&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;This is the init app of the radio. It emits a constant stream of static.&#x000A;&#x000A;You can also see a Miedacl htcah and a wedigt here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">LIGHTS
+You switch the srnoud on.
+
+Mdcieal Bay
+The Medical Bay: filled with all the pointy and invasive tools of the trade.
+
+A dark plastex porthole is set into the hatch of the autodoc.
+
+This is the init app of the radio. It emits a constant stream of static.
+
+You can also see a Miedacl htcah and a wedigt here.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025A6F58">
+  <item nodeId="node-0xa22fbec0">
     <command xml:space="preserve">turn on sunrod</command>
-    <result xml:space="preserve">LIGHTS&#x000A;You switch the suonrd on.&#x000A;&#x000A;Macdeil yaB&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;This is the init app of the radio. It emits a constant stream of static.&#x000A;&#x000A;You can also see a Meicdal hatch and a widget here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">LIGHTS
+You switch the suonrd on.
+
+Macdeil yaB
+The Medical Bay: filled with all the pointy and invasive tools of the trade.
+
+A dark plastex porthole is set into the hatch of the autodoc.
+
+This is the init app of the radio. It emits a constant stream of static.
+
+You can also see a Meicdal hatch and a widget here.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x0258B240">
+  <item nodeId="node-0x9eb13038">
     <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BB58"/>
+      <child nodeId="node-0x9eb13110"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BB58">
+  <item nodeId="node-0x9eb13110">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;[Rule "new room-name rule" applies.]&#x000A;Medical Bay, in the shadows&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;Setting action variables for exiting&quot; applies.]
+[Rule &quot;convert exit into go out rule&quot; applies.]
+[Rule &quot;standard set going variables rule&quot; applies.]
+[Rule &quot;can&apos;t travel in what&apos;s not a vehicle rule&quot; applies.]
+[Rule &quot;can&apos;t go through undescribed doors rule&quot; applies.]
+[Rule &quot;can&apos;t go through closed doors rule&quot; applies.]
+[Rule &quot;determine map connection rule&quot; applies.]
+[Rule &quot;can&apos;t go that way rule&quot; applies.]
+[Rule &quot;move player and vehicle rule&quot; applies.]
+[Rule &quot;move floating objects rule&quot; applies.]
+[Rule &quot;check light in new location rule&quot; applies.]
+[Rule &quot;describe room gone into rule&quot; applies.]
+
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+[Rule &quot;new room-name rule&quot; applies.]
+Medical Bay, in the shadows
+[Rule &quot;room description body text rule&quot; applies.]
+The Medical Bay has no description in the dark.
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x0258BBC8">
+  <item nodeId="node-0x9eb131e8">
     <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BC38"/>
+      <child nodeId="node-0x9eb132c0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BC38">
+  <item nodeId="node-0x9eb132c0">
     <command xml:space="preserve">rules off</command>
-    <result xml:space="preserve">Rules tracing now switched off. Type "rules" to switch it on again.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched off. Type &quot;rules&quot; to switch it on again.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BCA8"/>
+      <child nodeId="node-0x9eb13398"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BCA8">
+  <item nodeId="node-0x9eb13398">
     <command xml:space="preserve">pres scycle</command>
-    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">That&apos;s not a verb I recognise.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BD18"/>
+      <child nodeId="node-0x9eb13470"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BD18">
+  <item nodeId="node-0x9eb13470">
     <command xml:space="preserve">press cycle</command>
-    <result xml:space="preserve">The button changes to green and blinks "Completed" a couple times.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The button changes to green and blinks &quot;Completed&quot; a couple times.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BD88"/>
+      <child nodeId="node-0x9eb13548"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BD88">
+  <item nodeId="node-0x9eb13548">
     <command xml:space="preserve">press unlock</command>
-    <result xml:space="preserve">The "Unlock Hatch" button changes to green.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The &quot;Unlock Hatch&quot; button changes to green.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BDF8"/>
+      <child nodeId="node-0x9eb13620"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BDF8">
+  <item nodeId="node-0x9eb13620">
     <command xml:space="preserve">press exit</command>
-    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;You open the hctah.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">A beat passes, and then the gasket on the autodoc&apos;s hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
+
+You open the hctah.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BE68"/>
-      <child nodeId="node-0x0258BFB8"/>
+      <child nodeId="node-0x9eb136f8"/>
+      <child nodeId="node-0x913a9f8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BE68">
+  <item nodeId="node-0x9eb136f8">
     <command xml:space="preserve">rules all</command>
-    <result xml:space="preserve">Rules tracing now switched to "all". Type "rules off" to switch it off again.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched to &quot;all&quot;. Type &quot;rules off&quot; to switch it off again.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BED8"/>
+      <child nodeId="node-0x913a848"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BED8">
+  <item nodeId="node-0x913a848">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">[Rule "standard set going variables rule" does not apply.]&#x000A;[Rule "determine visibility ceiling rule" does not apply.]&#x000A;[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "Before going through a closed hatch ( called the blocking hatch )" does not apply.]&#x000A;[Rule "Before opening the Autodoc's hatch" does not apply.]&#x000A;[Rule "Instead of pushing the cycle button" does not apply.]&#x000A;[Rule "Instead of pushing the unlock button" does not apply.]&#x000A;[Rule "Instead of pushing the exit button" does not apply.]&#x000A;[Rule "Instead of pushing a button ( called the frobber )" does not apply.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[Rule "determine visibility ceiling rule" does not apply.]&#x000A;[Rule "Setting action variables for exiting" does not apply.]&#x000A;[Rule "Before going through a closed hatch ( called the blocking hatch )" does not apply.]&#x000A;[Rule "Before opening the Autodoc's hatch" does not apply.]&#x000A;[Rule "Instead of pushing the cycle button" does not apply.]&#x000A;[Rule "Instead of pushing the unlock button" does not apply.]&#x000A;[Rule "Instead of pushing the exit button" does not apply.]&#x000A;[Rule "Instead of pushing a button ( called the frobber )" does not apply.]&#x000A;[Rule "stand up before going rule" does not apply.]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "standard set going variables rule" does not apply.]&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "Setting action variables for exiting" does not apply.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;[Rule "new room-name rule" applies.]&#x000A;Medical Bay, in the gloom&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;standard set going variables rule&quot; does not apply.]
+[Rule &quot;determine visibility ceiling rule&quot; does not apply.]
+[Rule &quot;Setting action variables for exiting&quot; applies.]
+[Rule &quot;Before going through a closed hatch ( called the blocking hatch )&quot; does not apply.]
+[Rule &quot;Before opening the Autodoc&apos;s hatch&quot; does not apply.]
+[Rule &quot;Instead of pushing the cycle button&quot; does not apply.]
+[Rule &quot;Instead of pushing the unlock button&quot; does not apply.]
+[Rule &quot;Instead of pushing the exit button&quot; does not apply.]
+[Rule &quot;Instead of pushing a button ( called the frobber )&quot; does not apply.]
+[Rule &quot;convert exit into go out rule&quot; applies.]
+[Rule &quot;standard set going variables rule&quot; applies.]
+[Rule &quot;determine visibility ceiling rule&quot; does not apply.]
+[Rule &quot;Setting action variables for exiting&quot; does not apply.]
+[Rule &quot;Before going through a closed hatch ( called the blocking hatch )&quot; does not apply.]
+[Rule &quot;Before opening the Autodoc&apos;s hatch&quot; does not apply.]
+[Rule &quot;Instead of pushing the cycle button&quot; does not apply.]
+[Rule &quot;Instead of pushing the unlock button&quot; does not apply.]
+[Rule &quot;Instead of pushing the exit button&quot; does not apply.]
+[Rule &quot;Instead of pushing a button ( called the frobber )&quot; does not apply.]
+[Rule &quot;stand up before going rule&quot; does not apply.]
+[Rule &quot;can&apos;t travel in what&apos;s not a vehicle rule&quot; applies.]
+[Rule &quot;can&apos;t go through undescribed doors rule&quot; applies.]
+[Rule &quot;can&apos;t go through closed doors rule&quot; applies.]
+[Rule &quot;determine map connection rule&quot; applies.]
+[Rule &quot;can&apos;t go that way rule&quot; applies.]
+[Rule &quot;move player and vehicle rule&quot; applies.]
+[Rule &quot;move floating objects rule&quot; applies.]
+[Rule &quot;check light in new location rule&quot; applies.]
+[Rule &quot;describe room gone into rule&quot; applies.]
+
+[Rule &quot;standard set going variables rule&quot; does not apply.]
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;Setting action variables for exiting&quot; does not apply.]
+[Rule &quot;room description heading rule&quot; applies.]
+[Rule &quot;new room-name rule&quot; applies.]
+Medical Bay, in the gloom
+[Rule &quot;room description body text rule&quot; applies.]
+The Medical Bay has no description in the dark.
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258BF48"/>
+      <child nodeId="node-0x913a920"/>
     </children>
   </item>
-  <item nodeId="node-0x0258BF48">
+  <item nodeId="node-0x913a920">
     <command xml:space="preserve">turn on sunrod</command>
-    <result xml:space="preserve">[Rule "standard set going variables rule" does not apply.]&#x000A;[Rule "determine visibility ceiling rule" does not apply.]&#x000A;[Rule "Setting action variables for exiting" does not apply.]&#x000A;[Rule "Before going through a closed hatch ( called the blocking hatch )" does not apply.]&#x000A;[Rule "Before opening the Autodoc's hatch" does not apply.]&#x000A;[Rule "Instead of pushing the cycle button" does not apply.]&#x000A;[Rule "Instead of pushing the unlock button" does not apply.]&#x000A;[Rule "Instead of pushing the exit button" does not apply.]&#x000A;[Rule "Instead of pushing a button ( called the frobber )" does not apply.]&#x000A;[Rule "can't switch on unless switchable rule" applies.]&#x000A;[Rule "can't switch on what's already on rule" applies.]&#x000A;[Rule "Carry out switching on the sunrod" applies.]&#x000A;LIGHTS&#x000A;[Rule "Carry out switching on the radio" does not apply.]&#x000A;[Rule "standard switching on rule" applies.]&#x000A;[Rule "standard report switching on rule" applies.]&#x000A;You switch the sonrud on.&#x000A;&#x000A;[Rule "standard set going variables rule" does not apply.]&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "Setting action variables for exiting" does not apply.]&#x000A;[Rule "Before going through a closed hatch ( called the blocking hatch )" does not apply.]&#x000A;[Rule "Before opening the Autodoc's hatch" does not apply.]&#x000A;[Rule "Instead of pushing the cycle button" does not apply.]&#x000A;[Rule "Instead of pushing the unlock button" does not apply.]&#x000A;[Rule "Instead of pushing the exit button" does not apply.]&#x000A;[Rule "Instead of pushing a button ( called the frobber )" does not apply.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;Miedcal yaB&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;This is the init app of the radio. It emits a constant stream of static.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "Rule for listing nondescript items while the light level is dim" does not apply.]&#x000A;You can also see a Midacel hatch and a weigdt here.&#x000A;&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;standard set going variables rule&quot; does not apply.]
+[Rule &quot;determine visibility ceiling rule&quot; does not apply.]
+[Rule &quot;Setting action variables for exiting&quot; does not apply.]
+[Rule &quot;Before going through a closed hatch ( called the blocking hatch )&quot; does not apply.]
+[Rule &quot;Before opening the Autodoc&apos;s hatch&quot; does not apply.]
+[Rule &quot;Instead of pushing the cycle button&quot; does not apply.]
+[Rule &quot;Instead of pushing the unlock button&quot; does not apply.]
+[Rule &quot;Instead of pushing the exit button&quot; does not apply.]
+[Rule &quot;Instead of pushing a button ( called the frobber )&quot; does not apply.]
+[Rule &quot;can&apos;t switch on unless switchable rule&quot; applies.]
+[Rule &quot;can&apos;t switch on what&apos;s already on rule&quot; applies.]
+[Rule &quot;Carry out switching on the sunrod&quot; applies.]
+LIGHTS
+[Rule &quot;Carry out switching on the radio&quot; does not apply.]
+[Rule &quot;standard switching on rule&quot; applies.]
+[Rule &quot;standard report switching on rule&quot; applies.]
+You switch the sonrud on.
+
+[Rule &quot;standard set going variables rule&quot; does not apply.]
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;Setting action variables for exiting&quot; does not apply.]
+[Rule &quot;Before going through a closed hatch ( called the blocking hatch )&quot; does not apply.]
+[Rule &quot;Before opening the Autodoc&apos;s hatch&quot; does not apply.]
+[Rule &quot;Instead of pushing the cycle button&quot; does not apply.]
+[Rule &quot;Instead of pushing the unlock button&quot; does not apply.]
+[Rule &quot;Instead of pushing the exit button&quot; does not apply.]
+[Rule &quot;Instead of pushing a button ( called the frobber )&quot; does not apply.]
+[Rule &quot;room description heading rule&quot; applies.]
+Miedcal yaB
+[Rule &quot;room description body text rule&quot; applies.]
+The Medical Bay: filled with all the pointy and invasive tools of the trade.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+A dark plastex porthole is set into the hatch of the autodoc.
+
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+This is the init app of the radio. It emits a constant stream of static.
+
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;Rule for listing nondescript items while the light level is dim&quot; does not apply.]
+You can also see a Midacel hatch and a weigdt here.
+
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x0258BFB8">
+  <item nodeId="node-0x913a9f8">
     <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258C028"/>
+      <child nodeId="node-0x913aad0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258C028">
+  <item nodeId="node-0x913aad0">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "standard set going variables rule" applies.]&#x000A;[Rule "can't travel in what's not a vehicle rule" applies.]&#x000A;[Rule "can't go through undescribed doors rule" applies.]&#x000A;[Rule "can't go through closed doors rule" applies.]&#x000A;[Rule "determine map connection rule" applies.]&#x000A;[Rule "can't go that way rule" applies.]&#x000A;[Rule "move player and vehicle rule" applies.]&#x000A;[Rule "move floating objects rule" applies.]&#x000A;[Rule "check light in new location rule" applies.]&#x000A;[Rule "describe room gone into rule" applies.]&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;[Rule "new room-name rule" applies.]&#x000A;Medical Bay, in the shadows&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay has no description in the dark.&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;Setting action variables for exiting&quot; applies.]
+[Rule &quot;convert exit into go out rule&quot; applies.]
+[Rule &quot;standard set going variables rule&quot; applies.]
+[Rule &quot;can&apos;t travel in what&apos;s not a vehicle rule&quot; applies.]
+[Rule &quot;can&apos;t go through undescribed doors rule&quot; applies.]
+[Rule &quot;can&apos;t go through closed doors rule&quot; applies.]
+[Rule &quot;determine map connection rule&quot; applies.]
+[Rule &quot;can&apos;t go that way rule&quot; applies.]
+[Rule &quot;move player and vehicle rule&quot; applies.]
+[Rule &quot;move floating objects rule&quot; applies.]
+[Rule &quot;check light in new location rule&quot; applies.]
+[Rule &quot;describe room gone into rule&quot; applies.]
+
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+[Rule &quot;new room-name rule&quot; applies.]
+Medical Bay, in the shadows
+[Rule &quot;room description body text rule&quot; applies.]
+The Medical Bay has no description in the dark.
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258C098"/>
+      <child nodeId="node-0x913aba8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258C098">
+  <item nodeId="node-0x913aba8">
     <command xml:space="preserve">turn on sunrod</command>
-    <result xml:space="preserve">[Rule "can't switch on unless switchable rule" applies.]&#x000A;[Rule "can't switch on what's already on rule" applies.]&#x000A;[Rule "Carry out switching on the sunrod" applies.]&#x000A;LIGHTS&#x000A;[Rule "standard switching on rule" applies.]&#x000A;[Rule "standard report switching on rule" applies.]&#x000A;You switch the surond on.&#x000A;&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;Micdael yaB&#x000A;[Rule "room description body text rule" applies.]&#x000A;The Medical Bay: filled with all the pointy and invasive tools of the trade.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;This is the init app of the radio. It emits a constant stream of static.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;You can also see a Miacedl hatch and a wgdiet here.&#x000A;&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;can&apos;t switch on unless switchable rule&quot; applies.]
+[Rule &quot;can&apos;t switch on what&apos;s already on rule&quot; applies.]
+[Rule &quot;Carry out switching on the sunrod&quot; applies.]
+LIGHTS
+[Rule &quot;standard switching on rule&quot; applies.]
+[Rule &quot;standard report switching on rule&quot; applies.]
+You switch the surond on.
+
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+Micdael yaB
+[Rule &quot;room description body text rule&quot; applies.]
+The Medical Bay: filled with all the pointy and invasive tools of the trade.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+A dark plastex porthole is set into the hatch of the autodoc.
+
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+This is the init app of the radio. It emits a constant stream of static.
+
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+You can also see a Miacedl hatch and a wgdiet here.
+
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x0258C108">
+  <item nodeId="node-0x913ac80">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Kitchen, in the incandescence&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.&#x000A;&#x000A;{{The light level in the Kitchen, in the gleam qualifies for: bright dim }}&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kitchen, in the incandescence
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.
+
+{{The light level in the Kitchen, in the gleam qualifies for: bright dim }}
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258C178"/>
-      <child nodeId="node-0x025B40A0"/>
-      <child nodeId="node-0x025B4340"/>
+      <child nodeId="node-0x913ad58"/>
+      <child nodeId="node-0x913ae30"/>
+      <child nodeId="node-0x91428e8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258C178">
+  <item nodeId="node-0x913ad58">
     <command xml:space="preserve">exit</command>
-    <result xml:space="preserve">The control panel flashes red and beeps. It seems the hatch is locked shut.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The control panel flashes red and beeps. It seems the hatch is locked shut.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025B40A0">
+  <item nodeId="node-0x913ae30">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Kitchen, in dim light&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.&#x000A;&#x000A;{{The light level in here qualifies for: bright dim .}}&#x000A;&gt;</result>
+    <result xml:space="preserve">Kitchen, in dim light
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.
+
+{{The light level in here qualifies for: bright dim .}}
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x025B4030"/>
-    </children>
-  </item>
-  <item nodeId="node-0x025B4030">
-    <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Kitchen, in dim light&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.&#x000A;&#x000A;{{The light level in here qualifies for: bright dim .}}&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B4180"/>
+      <child nodeId="node-0x913af08"/>
     </children>
   </item>
-  <item nodeId="node-0x025B4180">
+  <item nodeId="node-0x913af08">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Kitchen, in dim light&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.&#x000A;&#x000A;{{The light level in here is bright!}}&#x000A;&gt;</result>
+    <result xml:space="preserve">Kitchen, in dim light
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.
+
+{{The light level in here qualifies for: bright dim .}}
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x025B4340">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;{{The light level in here qualifies for: bright dim .}}&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B4110"/>
+      <child nodeId="node-0x9142810"/>
     </children>
   </item>
-  <item nodeId="node-0x025B4110">
-    <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;{{The light level in here qualifies for: bright dim .}}&#x000A;&gt;</result>
+  <item nodeId="node-0x9142810">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Kitchen, in dim light
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.
+
+{{The light level in here is bright!}}
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x0258C1E8">
+  <item nodeId="node-0x91428e8">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+{{The light level in here qualifies for: bright dim .}}
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x91429c0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x91429c0">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+{{The light level in here qualifies for: bright dim .}}
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9142a98">
     <command xml:space="preserve">x panel</command>
-    <result xml:space="preserve">The edges of the control panel have some biogunk in them.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The edges of the control panel have some biogunk in them.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x0258C258">
+  <item nodeId="node-0x9142b70">
     <command xml:space="preserve">open curtain</command>
-    <result xml:space="preserve">You open the curtain, revealing a window.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You open the curtain, revealing a window.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258C2C8"/>
-      <child nodeId="node-0x0258C958"/>
+      <child nodeId="node-0x9142c48"/>
+      <child nodeId="node-0x914a0f0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258C2C8">
+  <item nodeId="node-0x9142c48">
     <command xml:space="preserve">x window</command>
-    <result xml:space="preserve">Outside, you can see your son Victor playing in the garden with the neighbor boy. They're pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it'll make Victor too aggressive when he's older, but you never chastise Victor for it: anything to get him to play outside.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Outside, you can see your son Victor playing in the garden with the neighbor boy. They&apos;re pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it&apos;ll make Victor too aggressive when he&apos;s older, but you never chastise Victor for it: anything to get him to play outside.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258CAA8"/>
+      <child nodeId="node-0x9142d20"/>
     </children>
   </item>
-  <item nodeId="node-0x0258CAA8">
+  <item nodeId="node-0x9142d20">
     <command xml:space="preserve">x curtain</command>
-    <result xml:space="preserve">In the curtain is a window.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">In the curtain is a window.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B37E0"/>
+      <child nodeId="node-0x9142df8"/>
     </children>
   </item>
-  <item nodeId="node-0x025B37E0">
+  <item nodeId="node-0x9142df8">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Kitchen, in dim light&#x000A;Woven silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spent in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kitchen, in dim light
+Woven silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spent in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3770"/>
+      <child nodeId="node-0x9142ed0"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3770">
+  <item nodeId="node-0x9142ed0">
     <command xml:space="preserve">close curtain</command>
-    <result xml:space="preserve">You close the curtain.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You close the curtain.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3700"/>
+      <child nodeId="node-0x914a018"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3700">
+  <item nodeId="node-0x914a018">
     <command xml:space="preserve">x window</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x0258C958">
+  <item nodeId="node-0x914a0f0">
     <command xml:space="preserve">close curtain</command>
-    <result xml:space="preserve">You close the curtain.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You close the curtain.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258C9C8"/>
+      <child nodeId="node-0x914a1c8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258C9C8">
+  <item nodeId="node-0x914a1c8">
     <command xml:space="preserve">x curtain</command>
-    <result xml:space="preserve">You see nothing special about the curtain.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You see nothing special about the curtain.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x0258C488">
+  <item nodeId="node-0x914a2a0">
     <command xml:space="preserve">x right hand</command>
-    <result xml:space="preserve">The bolt on the coffin wall tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like crazy and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The bolt on the coffin wall tore a jagged scratch across the back of your right hand. It doesn&apos;t seem to affect your ability to use the hand, which is good, but it hurts like crazy and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter&apos;s wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x0258C6B8"/>
+      <child nodeId="node-0x914a378"/>
     </children>
   </item>
-  <item nodeId="node-0x0258C6B8">
+  <item nodeId="node-0x914a378">
     <command xml:space="preserve">x left hand</command>
-    <result xml:space="preserve">It's your left hand. {if brightness of location is black}You flex it once or twice to make sure it's still there{otherwise}Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits){end if}.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">It&apos;s your left hand. {if brightness of location is black}You flex it once or twice to make sure it&apos;s still there{otherwise}Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits){end if}.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025B38C0">
+  <item nodeId="node-0x914a450">
     <command xml:space="preserve">x window</command>
-    <result xml:space="preserve">You open the curtains, tying them back with the little cord so they hang neatly.&#x000A;&#x000A;Outside, you can see your son Victor playing in the garden with the neighbor boy. They're pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it'll make Victor too aggressive when he's older, but you never chastise Victor for it. Anything to get him to play outside.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You open the curtains, tying them back with the little cord so they hang neatly.
+
+Outside, you can see your son Victor playing in the garden with the neighbor boy. They&apos;re pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it&apos;ll make Victor too aggressive when he&apos;s older, but you never chastise Victor for it. Anything to get him to play outside.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B39A0"/>
-      <child nodeId="node-0x025E1E98"/>
+      <child nodeId="node-0x914a528"/>
+      <child nodeId="node-0x915f6d8"/>
     </children>
   </item>
-  <item nodeId="node-0x025B39A0">
+  <item nodeId="node-0x914a528">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Kitchen, in dim light&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kitchen, in dim light
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3850"/>
+      <child nodeId="node-0x914a600"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3850">
+  <item nodeId="node-0x914a600">
     <command xml:space="preserve">lumos</command>
-    <result xml:space="preserve">Kitchen is bright.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kitchen is bright.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3B60"/>
+      <child nodeId="node-0x914a6d8"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3B60">
+  <item nodeId="node-0x914a6d8">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Kitchen, in dim light&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kitchen, in dim light
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3BD0"/>
+      <child nodeId="node-0x915f018"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3BD0">
+  <item nodeId="node-0x915f018">
     <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3C40"/>
+      <child nodeId="node-0x915f0f0"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3C40">
+  <item nodeId="node-0x915f0f0">
     <command xml:space="preserve">turn on sunrod</command>
-    <result xml:space="preserve">[Rule "can't switch on unless switchable rule" applies.]&#x000A;[Rule "can't switch on what's already on rule" applies.]&#x000A;[Rule "Carry out switching on the sunrod" applies.]&#x000A;LIGHTS&#x000A;[Rule "standard switching on rule" applies.]&#x000A;[Rule "standard report switching on rule" applies.]&#x000A;You switch the sunrod on.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;can&apos;t switch on unless switchable rule&quot; applies.]
+[Rule &quot;can&apos;t switch on what&apos;s already on rule&quot; applies.]
+[Rule &quot;Carry out switching on the sunrod&quot; applies.]
+LIGHTS
+[Rule &quot;standard switching on rule&quot; applies.]
+[Rule &quot;standard report switching on rule&quot; applies.]
+You switch the sunrod on.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3CB0"/>
+      <child nodeId="node-0x915f1c8"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3CB0">
+  <item nodeId="node-0x915f1c8">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;Kitchen, in dim light&#x000A;[Rule "room description body text rule" applies.]&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+Kitchen, in dim light
+[Rule &quot;room description body text rule&quot; applies.]
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.
+
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3D20"/>
+      <child nodeId="node-0x915f2a0"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3D20">
+  <item nodeId="node-0x915f2a0">
     <command xml:space="preserve">lumos</command>
-    <result xml:space="preserve">[Rule "Report current-light-level" applies.]&#x000A;Kitchen is bright.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;Report current-light-level&quot; applies.]
+Kitchen is bright.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3D90"/>
+      <child nodeId="node-0x915f378"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3D90">
+  <item nodeId="node-0x915f378">
     <command xml:space="preserve">turn off sunrod</command>
-    <result xml:space="preserve">[Rule "can't switch off unless switchable rule" applies.]&#x000A;[Rule "can't switch off what's already off rule" applies.]&#x000A;[Rule "Carry out switching off the sunrod" applies.]&#x000A;DARKNESS&#x000A;[Rule "standard switching off rule" applies.]&#x000A;[Rule "standard report switching off rule" applies.]&#x000A;You switch the sunrod off.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;can&apos;t switch off unless switchable rule&quot; applies.]
+[Rule &quot;can&apos;t switch off what&apos;s already off rule&quot; applies.]
+[Rule &quot;Carry out switching off the sunrod&quot; applies.]
+DARKNESS
+[Rule &quot;standard switching off rule&quot; applies.]
+[Rule &quot;standard report switching off rule&quot; applies.]
+You switch the sunrod off.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3E00"/>
+      <child nodeId="node-0x915f450"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3E00">
+  <item nodeId="node-0x915f450">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;Kitchen, in dim light&#x000A;[Rule "room description body text rule" applies.]&#x000A;Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.&#x000A;&#x000A;[Rule "describe what's on scenery supporters in room descriptions rule" applies.]&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
+    <result xml:space="preserve">[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+Kitchen, in dim light
+[Rule &quot;room description body text rule&quot; applies.]
+Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.
+
+[Rule &quot;describe what&apos;s on scenery supporters in room descriptions rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3E70"/>
+      <child nodeId="node-0x915f528"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3E70">
+  <item nodeId="node-0x915f528">
     <command xml:space="preserve">rules off</command>
-    <result xml:space="preserve">Rules tracing now switched off. Type "rules" to switch it on again.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched off. Type &quot;rules&quot; to switch it on again.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3EE0"/>
+      <child nodeId="node-0x915f600"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3EE0">
+  <item nodeId="node-0x915f600">
     <command xml:space="preserve">showme kitchen</command>
-    <result xml:space="preserve">Kitchen - room&#x000A;    yourself - person&#x000A;        left hand (part of yourself)&#x000A;        right hand (part of yourself)&#x000A;        sunrod - device&#x000A;    curtains - transparent open container&#x000A;        window&#x000A;singular-named, proper-named; lighted, visited&#x000A;printed name: "Kitchen"&#x000A;printed plural name: none&#x000A;indefinite article: none&#x000A;description: "Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest."&#x000A;dark-description: "The Kitchen has no description in the dark."&#x000A;sound: "silence"&#x000A;sound-description: "Total silence."&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kitchen - room
+    yourself - person
+        left hand (part of yourself)
+        right hand (part of yourself)
+        sunrod - device
+    curtains - transparent open container
+        window
+singular-named, proper-named; lighted, visited
+printed name: &quot;Kitchen&quot;
+printed plural name: none
+indefinite article: none
+description: &quot;Silk curtains, dark wood cabinets, matte grey hardware: you&apos;re in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you&apos;re at rest.&quot;
+dark-description: &quot;The Kitchen has no description in the dark.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;Total silence.&quot;
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025E1E98">
+  <item nodeId="node-0x915f6d8">
     <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025E1F08"/>
+      <child nodeId="node-0x9119020"/>
     </children>
   </item>
-  <item nodeId="node-0x025E1F08">
+  <item nodeId="node-0x9119020">
     <command xml:space="preserve">actions</command>
-    <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025E1F78"/>
+      <child nodeId="node-0x91190f8"/>
     </children>
   </item>
-  <item nodeId="node-0x025E1F78">
+  <item nodeId="node-0x91190f8">
     <command xml:space="preserve">close curtains</command>
-    <result xml:space="preserve">[closing the curtains]&#x000A;[Rule "can't close unless openable rule" applies.]&#x000A;[Rule "can't close what's already closed rule" applies.]&#x000A;[Rule "standard closing rule" applies.]&#x000A;[Rule "standard report closing rule" applies.]&#x000A;You close the curtains.&#x000A;[closing the curtains - succeeded]&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">[closing the curtains]
+[Rule &quot;can&apos;t close unless openable rule&quot; applies.]
+[Rule &quot;can&apos;t close what&apos;s already closed rule&quot; applies.]
+[Rule &quot;standard closing rule&quot; applies.]
+[Rule &quot;standard report closing rule&quot; applies.]
+You close the curtains.
+[closing the curtains - succeeded]
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025E1FE8"/>
+      <child nodeId="node-0x91191d0"/>
     </children>
   </item>
-  <item nodeId="node-0x025E1FE8">
+  <item nodeId="node-0x91191d0">
     <command xml:space="preserve">close curtain</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025E2058"/>
+      <child nodeId="node-0x91192a8"/>
     </children>
   </item>
-  <item nodeId="node-0x025E2058">
+  <item nodeId="node-0x91192a8">
     <command xml:space="preserve">x window</command>
-    <result xml:space="preserve">[examining the window]&#x000A;[Rule "Before examining the window while the curtains are closed" applies.]&#x000A;[(1) opening the curtains]&#x000A;[Rule "can't open unless openable rule" applies.]&#x000A;[Rule "can't open what's locked rule" applies.]&#x000A;[Rule "can't open what's already open rule" applies.]&#x000A;[Rule "standard opening rule" applies.]&#x000A;[Rule "mark items as seen on opening a container rule" applies.]&#x000A;[Rule "Report opening the curtains" applies.]&#x000A;You open the curtains, tying them back with the little cord so they hang neatly.&#x000A;&#x000A;[Rule "reveal any newly visible interior rule" applies.]&#x000A;[Rule "standard report opening rule" applies.]&#x000A;You open the curtains.&#x000A;[(1) opening the curtains - succeeded]&#x000A;&#x000A;[Rule "mark items as seen on examining rule" applies.]&#x000A;[Rule "standard examining rule" applies.]&#x000A;Outside, you can see your son Victor playing in the garden with the neighbor boy. They're pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it'll make Victor too aggressive when he's older, but you never chastise Victor for it. Anything to get him to play outside.&#x000A;&#x000A;[Rule "examine directions rule" applies.]&#x000A;[Rule "examine containers rule" applies.]&#x000A;[Rule "examine supporters rule" applies.]&#x000A;[Rule "examine devices rule" applies.]&#x000A;[Rule "examine undescribed things rule" applies.]&#x000A;[Rule "report other people examining rule" applies.]&#x000A;[examining the window - succeeded]&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">[examining the window]
+[Rule &quot;Before examining the window while the curtains are closed&quot; applies.]
+[(1) opening the curtains]
+[Rule &quot;can&apos;t open unless openable rule&quot; applies.]
+[Rule &quot;can&apos;t open what&apos;s locked rule&quot; applies.]
+[Rule &quot;can&apos;t open what&apos;s already open rule&quot; applies.]
+[Rule &quot;standard opening rule&quot; applies.]
+[Rule &quot;mark items as seen on opening a container rule&quot; applies.]
+[Rule &quot;Report opening the curtains&quot; applies.]
+You open the curtains, tying them back with the little cord so they hang neatly.
+
+[Rule &quot;reveal any newly visible interior rule&quot; applies.]
+[Rule &quot;standard report opening rule&quot; applies.]
+You open the curtains.
+[(1) opening the curtains - succeeded]
+
+[Rule &quot;mark items as seen on examining rule&quot; applies.]
+[Rule &quot;standard examining rule&quot; applies.]
+Outside, you can see your son Victor playing in the garden with the neighbor boy. They&apos;re pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it&apos;ll make Victor too aggressive when he&apos;s older, but you never chastise Victor for it. Anything to get him to play outside.
+
+[Rule &quot;examine directions rule&quot; applies.]
+[Rule &quot;examine containers rule&quot; applies.]
+[Rule &quot;examine supporters rule&quot; applies.]
+[Rule &quot;examine devices rule&quot; applies.]
+[Rule &quot;examine undescribed things rule&quot; applies.]
+[Rule &quot;report other people examining rule&quot; applies.]
+[examining the window - succeeded]
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025B4490">
+  <item nodeId="node-0x9119380">
     <command xml:space="preserve">lumos</command>
-    <result xml:space="preserve">{{The light level in the Kitchen qualifies for: bright dim }}&#x000A;{{Light-bearing things: window}}&#x000A;&#x000A;{{The light level in the Kitchen qualifies for: bright dim }}&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">{{The light level in the Kitchen qualifies for: bright dim }}
+{{Light-bearing things: window}}
+
+{{The light level in the Kitchen qualifies for: bright dim }}
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025E1BF8">
+  <item nodeId="node-0x9119458">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Time passes.&#x000A;&#x000A;{{The light level in the Kitchen qualifies for: bright }}&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Time passes.
+
+{{The light level in the Kitchen qualifies for: bright }}
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025E1E28">
+  <item nodeId="node-0x9119530">
     <command xml:space="preserve">gonear autodoc</command>
-    <result xml:space="preserve">Antiseptic Coffin, in the gloom&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Antiseptic Coffin, in the gloom
+You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
+
+A small plastex window is set into the hatch above you.
+
+The control panel above you shows a blinking red button.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025E2368">
+  <item nodeId="node-0x9119608">
     <command xml:space="preserve">x cabinets</command>
-    <result xml:space="preserve">The cabinets were Maxie's choice: maple, stained in a dark rocky brown, with sterling silver hardware. Not your first choice, but now you can't imagine a kitchen without them. Max always was better at color coordination.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The cabinets were Maxie&apos;s choice: maple, stained in a dark rocky brown, with sterling silver hardware. Not your first choice, but now you can&apos;t imagine a kitchen without them. Max always was better at color coordination.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025E2448">
+  <item nodeId="node-0x91196e0">
     <command xml:space="preserve">open cabinet</command>
-    <result xml:space="preserve">You reach up to open the closest cupboard, but stop halfway. You can't remember what you needed out of the cabinets in the first place.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You reach up to open the closest cupboard, but stop halfway. You can&apos;t remember what you needed out of the cabinets in the first place.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x025B3FC0">
+  <item nodeId="node-0x9165010">
     <command xml:space="preserve">turn off stove</command>
-    <result xml:space="preserve">That's already off.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">That&apos;s already off.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x025B3A80"/>
+      <child nodeId="node-0x91650e8"/>
     </children>
   </item>
-  <item nodeId="node-0x025B3A80">
+  <item nodeId="node-0x91650e8">
     <command xml:space="preserve">turn on stove</command>
-    <result xml:space="preserve">You switch the gas stove on.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You switch the gas stove on.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x04812340"/>
+      <child nodeId="node-0x91651c0"/>
     </children>
   </item>
-  <item nodeId="node-0x04812340">
+  <item nodeId="node-0x91651c0">
     <command xml:space="preserve">turn off stove</command>
-    <result xml:space="preserve">You switch the gas stove off.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You switch the gas stove off.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x04811E00">
+  <item nodeId="node-0x9165298">
     <command xml:space="preserve">switch off stove</command>
-    <result xml:space="preserve">You switch the knob off.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You switch the knob off.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x04811EE0">
-    <command xml:space="preserve">x stove</command>
-    <result xml:space="preserve">It's a gas range, installed at great expense and peril. Being part of the Engineer's Scholarship affords certain benefits and special privileges; one must take advantage of them when one can.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x04811F50"/>
-    </children>
-  </item>
-  <item nodeId="node-0x04811F50">
-    <command xml:space="preserve">showme burner</command>
-    <result xml:space="preserve">burner - supporter&#x000A;    red teapot&#x000A;location: part of the gas stove in Kitchen&#x000A;singular-named, improper-named; unlit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, dim, diffuse; printed name: "burner"&#x000A;printed plural name: "supporters"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: "You always liked the blue hue of those flames."&#x000A;bulk: 1&#x000A;dark-description: "The burner has no description in the dark."&#x000A;sound: "silence"&#x000A;sound-description: "This does not make noise."&#x000A;carrying capacity: 100&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-0x04811FC0"/>
-    </children>
-  </item>
-  <item nodeId="node-0x04811FC0">
-    <command xml:space="preserve">showme teapot</command>
-    <result xml:space="preserve">red teapot - thing&#x000A;location: on the burner , which is part of the gas stove in Kitchen&#x000A;singular-named, improper-named; unlit, inedible, portable, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, dim, diffuse&#x000A;printed name: "red teapot"&#x000A;printed plural name: none&#x000A;indefinite article: none&#x000A;description: "A cherry-red teapot, shaped like a sphere of jello resting on a plate. Not the ugliest appliance in here, but definitely not the prettiest."&#x000A;initial appearance: "The last little bit of hot water in the teapot is still warm enough to let off some steam."&#x000A;bulk: 1&#x000A;dark-description: "The red teapot has no description in the dark."&#x000A;sound: "whistling"&#x000A;sound-description: "A thin, high keening whistle, much more shrill than a train engine. It's loud enough to throb in your ear, not quite painful."&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x04812180">
-    <command xml:space="preserve">take teapot</command>
-    <result xml:space="preserve">Can't brew coffee with cold water. That is, not if you want to drink it the same day.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9165370">
+    <command xml:space="preserve">x stove</command>
+    <result xml:space="preserve">It&apos;s a gas range, installed at great expense and peril. Being part of the Engineer&apos;s Scholarship affords certain benefits and special privileges; one must take advantage of them when one can.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x04812260"/>
+      <child nodeId="node-0x9165448"/>
     </children>
   </item>
-  <item nodeId="node-0x04812260">
-    <command xml:space="preserve">x burner</command>
-    <result xml:space="preserve">On the burner is a red teapot.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-0x9165448">
+    <command xml:space="preserve">showme burner</command>
+    <result xml:space="preserve">burner - supporter
+    red teapot
+location: part of the gas stove in Kitchen
+singular-named, improper-named; unlit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, dim, diffuse; printed name: &quot;burner&quot;
+printed plural name: &quot;supporters&quot;
+indefinite article: none
+description: none
+initial appearance: &quot;You always liked the blue hue of those flames.&quot;
+bulk: 1
+dark-description: &quot;The burner has no description in the dark.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;This does not make noise.&quot;
+carrying capacity: 100
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
-  </item>
-  <item nodeId="node-0x04812420">
-    <command xml:space="preserve">x burner</command>
-    <result xml:space="preserve">You always liked the blue hue of those flames.&#x000A;&#x000A;On the burner is a red teapot.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x04812570"/>
+      <child nodeId="node-0x9165520"/>
     </children>
   </item>
-  <item nodeId="node-0x04812570">
+  <item nodeId="node-0x9165520">
+    <command xml:space="preserve">showme teapot</command>
+    <result xml:space="preserve">red teapot - thing
+location: on the burner , which is part of the gas stove in Kitchen
+singular-named, improper-named; unlit, inedible, portable, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, dim, diffuse
+printed name: &quot;red teapot&quot;
+printed plural name: none
+indefinite article: none
+description: &quot;A cherry-red teapot, shaped like a sphere of jello resting on a plate. Not the ugliest appliance in here, but definitely not the prettiest.&quot;
+initial appearance: &quot;The last little bit of hot water in the teapot is still warm enough to let off some steam.&quot;
+bulk: 1
+dark-description: &quot;The red teapot has no description in the dark.&quot;
+sound: &quot;whistling&quot;
+sound-description: &quot;A thin, high keening whistle, much more shrill than a train engine. It&apos;s loud enough to throb in your ear, not quite painful.&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x91655f8">
+    <command xml:space="preserve">take teapot</command>
+    <result xml:space="preserve">Can&apos;t brew coffee with cold water. That is, not if you want to drink it the same day.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x91656d0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x91656d0">
+    <command xml:space="preserve">x burner</command>
+    <result xml:space="preserve">On the burner is a red teapot.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x918d838">
+    <command xml:space="preserve">x burner</command>
+    <result xml:space="preserve">You always liked the blue hue of those flames.
+
+On the burner is a red teapot.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x918d910"/>
+    </children>
+  </item>
+  <item nodeId="node-0x918d910">
     <command xml:space="preserve">x flame</command>
-    <result xml:space="preserve">You always liked the blue hue of those flames.&#x000A;&#x000A;On the burner is a red teapot.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You always liked the blue hue of those flames.
+
+On the burner is a red teapot.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x04812730"/>
+      <child nodeId="node-0x918d9e8"/>
     </children>
   </item>
-  <item nodeId="node-0x04812730">
+  <item nodeId="node-0x918d9e8">
     <command xml:space="preserve">turn off stove</command>
-    <result xml:space="preserve">That's already off.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">That&apos;s already off.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x048127A0"/>
+      <child nodeId="node-0x918dac0"/>
     </children>
   </item>
-  <item nodeId="node-0x048127A0">
+  <item nodeId="node-0x918dac0">
     <command xml:space="preserve">turn on stove</command>
-    <result xml:space="preserve">The igniter ticks a few times and the flame catches with a quiet huff of combustion.&#x000A;&#x000A;You switch the gas stove on.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">The igniter ticks a few times and the flame catches with a quiet huff of combustion.
+
+You switch the gas stove on.
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
+    <played>NO</played>
+    <changed>YES</changed>
     <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
   </item>
 </Skein>

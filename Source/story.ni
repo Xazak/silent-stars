@@ -396,11 +396,35 @@ Understand "flames" or "flame" as the burner.
 
 A burner is part of the stove. The description is "You always liked the blue hue of those flames."
 
-A red teapot is on the burner. "The hot water left in the teapot is still warm enough to let off some steam." The description is "A cherry-red teapot, shaped like a sphere of jello resting on a plate. Not the ugliest appliance in here, but definitely not the prettiest." The sound is "whistling". The sound-description is "A thin, high keening whistle, much more shrill than a train engine. It's loud enough to throb in your ear, on the edge of painful."
+A red teapot is on the burner. "The hot water left in the teapot is still warm enough to let off some steam." The description is "A cherry-red teapot, shaped like a sphere of jello resting on a plate. Not the ugliest appliance in here, but definitely not the prettiest." The teapot is notable. [The sound is "whistling". The sound-description is "A thin, high keening whistle, much more shrill than a train engine. It's loud enough to throb in your ear, on the edge of painful."]
 
 Instead of taking the teapot: say "Can't brew coffee with cold water. That is, not if you want to drink it the same day. Best to leave it on the heat."
 
-[Contents of the kitchen:
+A man called Max is here. "Table of Max Actions goes here." 
+
+Understand "Maxie" as Max.
+
+Dreaming is a scene. Dreaming begins when play begins. Dreaming ends when the player is lucid.
+
+To decide if the player is lucid:
+	if the teapot is audible:
+		if the player's right hand is wounded, yes;
+	no;
+
+[TURN SEQUENCE:
+Turn 1: Player enters game world, assesses situation
+Turn 2: Max finishes chopping a vegetable
+Turn 3: Max asks the player for the onion
+Turn 4: Max peels the onion
+Turn 5: Max begins chopping the onion
+Turn 6: Max finishes chopping the onion
+Turn 7: Max tries to show the player the diced vegetables
+
+Conditions for exiting the Dreamscape:
+A) The player must have been wounded by Max's knife
+B) The teapot must have started to make noise
+
+Contents of the kitchen:
 X	Curtains
 X	--A window
 X	Cabinets
@@ -489,8 +513,6 @@ When play begins:
 	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";
 	
 Volume 3 - Scenes and Stage Movement
-
-Dreaming is a scene. Dreaming begins when the player is asleep. Dreaming ends when the player is awake.
 
 Autodoc Escape is a scene. Autodoc Escape begins when play begins. Autodoc Escape ends when the Medical Bay is visited.
 
