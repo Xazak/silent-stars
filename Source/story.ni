@@ -5,6 +5,7 @@ Use dynamic memory allocation of at least 16384.
 Include Bulk Limiter by Eric Eve.
 Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
+Include Phrases For Adaptive Pacing by Ron Newcomb.
 
 [TODO:
 --Executing a look action should tell the player what the MC does while looking, e.g. "You steady yourself on the lathe and glance around furtively:"
@@ -94,6 +95,8 @@ Definition: a thing is proximate:
 	if it is immediate, yes;
 	if it is nearby, yes;
 	no;
+
+A thing can be hot or cold. A thing is usually cold.
 
 Part 3 - Status Line, Game HUD, Misc
 
@@ -261,7 +264,9 @@ To pay attention:
 	-- 2: try smelling;
 	-- otherwise: say "[line break]".
 
-A person can be asleep or awake. A person is usually awake. The player is asleep.
+A person can be asleep or awake. A person is usually awake.
+
+A person can be wounded or healthy. A person is usually healthy. 
 
 A person can be concussed or sober. A person is usually sober.
 
@@ -353,7 +358,7 @@ Report listening ambient:
 	
 Part 2 - The Player
 
-The printed name of the player is "Zek Lumien".
+The printed name of the player is "Erika".
 
 A left hand is part of the player. The description of the left hand is "It's your left hand. {if brightness of location is black}You flex it once or twice to make sure it's still there{otherwise}Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits){end if}." It is familiar and seen.
 
@@ -385,10 +390,10 @@ Understand "cabinet" or "cupboard" as the cabinets.
 
 Instead of opening the cabinets: say "You reach up to open the closest cupboard, but stop halfway. You can't remember what you needed out of there in the first place."
 
-A device called a gas stove is here. The stove is fixed in place. "A gas range, showpiece of the kitchen and the center of your food obsessions, claims center stage in the middle of the kitchen island[if teapot is on the burner]. A bright red teapot rests on the stove[end if][if the stove is aflame]. The flame under the burner is lit[end if]." The description is "It's a gas range, installed at great expense and peril. Being part of the  Europa Engineer's Scholarship affords certain benefits and special privileges; one must take advantage of them when one can." The stove can be cold or aflame. The stove is aflame.
+A device called a gas stove is here. The stove is fixed in place. "A gas range, showpiece of the kitchen and the center of your food obsessions, claims center stage in the middle of the kitchen island[if teapot is on the burner]. A bright red teapot rests on the stove[end if][if the stove is hot]. The flame under the burner is lit[end if]." The description is "It's a gas range, installed at great expense and peril. Being part of the Europa Engineer's Scholarship affords certain benefits and special privileges; one must take advantage of them when one can." The stove is hot.
 
-Carry out switching on the stove: now the stove is aflame.
-Report switching on the stove: say "The igniter ticks a few times and the flame catches with a quiet huff of combustion."
+Carry out switching on the stove: now the stove is hot.
+Report switching on the stove: say "The igniter ticks a few times and the flame catches with a quiet huff."
 Carry out switching off the stove: now the stove is cold.
 Report switching off the stove: say "The flame goes out."
 
@@ -396,20 +401,17 @@ Understand "flames" or "flame" as the burner.
 
 A burner is part of the stove. The description is "You always liked the blue hue of those flames."
 
-A red teapot is on the burner. "The hot water left in the teapot is still warm enough to let off some steam." The description is "A cherry-red teapot, shaped like a sphere of jello resting on a plate. Not the ugliest appliance in here, but definitely not the prettiest." The teapot is notable. [The sound is "whistling". The sound-description is "A thin, high keening whistle, much more shrill than a train engine. It's loud enough to throb in your ear, on the edge of painful."]
+A red teapot is on the burner. "The hot water left in the teapot is still warm enough to let off some steam." The description is "A cherry-red teapot, shaped like a sphere of jello resting on a plate. Not the ugliest appliance in here, but definitely not the prettiest." The teapot is notable, cold.
+[The sound is "whistling". The sound-description is "A thin, high keening whistle, much more shrill than a train engine. It's loud enough to throb in your ear, on the edge of painful."]
 
-Instead of taking the teapot: say "Can't brew coffee with cold water. That is, not if you want to drink it the same day. Best to leave it on the heat."
+Instead of doing something with the cold teapot: say "Can't brew coffee with cold water. That is, not if you want to drink it the same day. Best to leave it be."
 
 A man called Max is here. "Table of Max Actions goes here." 
-
 Understand "Maxie" as Max.
 
-Dreaming is a scene. Dreaming begins when play begins. Dreaming ends when the player is lucid.
-
-To decide if the player is lucid:
-	if the teapot is audible:
-		if the player's right hand is wounded, yes;
-	no;
+Every turn during Dreaming:
+	let turns-elapsed be the number of turns since Dreaming began;
+	say turns-elapsed;
 
 [TURN SEQUENCE:
 Turn 1: Player enters game world, assesses situation
@@ -435,6 +437,14 @@ X	--A whistling teapot
 	Victor (outside), playing with the neighbor boy
 	the neighbor boy
 ]
+
+Dreaming is a scene. Dreaming begins when the player is asleep. Dreaming ends when the player is lucid.
+
+To decide if the player is lucid:
+	if the teapot is audible:
+		if the player is wounded, yes;
+	no;
+	
 [The description is "Maxie was the one who picked out the slate-and-charcoal tesselated tiles on the floor, the mocha-cream walls and chocolate trim, the matching porcelain sink, but the stainless steel surfaces and ancient gas range were [i]your[/i] idea."]
 
 The player is here.
@@ -511,6 +521,7 @@ When play begins:
 	say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[line break]
 	...[line break]
 	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";
+	now the player is asleep;
 	
 Volume 3 - Scenes and Stage Movement
 
