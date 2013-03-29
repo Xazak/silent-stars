@@ -36,7 +36,9 @@ Book 1 - Abstractions, Generalizations, and Basic Physics
 
 Part 1 - Redefining Standard Rules and Style
 
-The describe what's on scenery supporters in room descriptions rule is not listed in any rulebook. 
+The describe what's on scenery supporters in room descriptions rule is not listed in any rulebook.
+
+The block giving rule is not listed in the check giving it to rules. [need to be able to give things away]
 
 [To use these in text, include html-style tags within the text with square brackets: [i]italic type[/i], [b]bold type[/b]]
 
@@ -406,21 +408,52 @@ A red teapot is on the burner. "The hot water left in the teapot is still warm e
 
 Instead of doing something with the cold teapot: say "Can't brew coffee with cold water. That is, not if you want to drink it the same day. Best to leave it be."
 
-A man called Max is here. "Table of Max Actions goes here." 
+The kitchen counter is here. "A [if onion is unpeeled]un[end if]peeled [white onion] lies on the kitchen counter." The description is "Max picked out the slate- and charcoal-colored tiles, but the countertop itself is stainless steel. It was one of the few things you insisted on when putting together the kitchen decor."
+
+A white onion is on the counter. The description is "A run-of-the-mill white onion, about as big as your clenched fist." An onion can be unpeeled or peeled. An onion is unpeeled. An onion can be chopped or uncut.
+
+[Understand the command "peel the [thing]" as peeling. ]
+
+A man called Max is here. "Max is chopping celery." 
 Understand "Maxie" as Max.
 
-Every turn during Dreaming:
-	let turns-elapsed be the number of turns since Dreaming began;
-	say turns-elapsed;
+When Dreaming begins:
+	Max finishes the celery in one turn from now;
+
+At the time when Max finishes the celery:
+	say "Max piles the cut celery into a small bowl and sets it to one side, looking for something.";
+	Max asks for the onion in one turn from now;
+	
+At the time when Max asks for the onion:
+	say "Max notices the onion by you and brightens. 'Would you mind handing me the onion? I left it over there by mistake.' A sardonic grin flits across his face. 'One of these days I might get to be as prepared as you.'";
+
+After giving the onion to Max:
+	if the onion is peeled:
+		say "Max smiles and says 'Aw, thanks. You didn't have to.'";
+		Max chops the onion in one turn from now;
+	otherwise:
+		say "'Thanks, hon.' He picks his knife back up and slices off the top and bottom of the onion.";
+		Max peels the onion in one turn from now;
+		
+At the time when Max peels the onion:
+	say "Max slices the onion in half and pulls the skins off, then sets to with the knifeblade. He still needs practice; those years as an artist didn't come with cooking lessons.";
+	Max chops the onion in one turn from now;
+	
+At the time when Max chops the onion:
+	say "Max takes the diced onion and mounds it into another waiting bowl.";
+	Max shows the onion in one turn from now;
+
+At the time when Max shows the onion:
+	say "He holds the bowl out to you. 'Could you take a look at this, see how I did?'";
 
 [TURN SEQUENCE:
 Turn 1: Player enters game world, assesses situation
-Turn 2: Max finishes chopping a vegetable
-Turn 3: Max asks the player for the onion
-Turn 4: Max peels the onion
-Turn 5: Max begins chopping the onion
-Turn 6: Max finishes chopping the onion
-Turn 7: Max tries to show the player the diced vegetables
+Turn 2: Max finishes chopping a vegetable .. max-finish-celery
+Turn 3: Max asks the player for the onion .. max-ask-onion
+Turn 4: Max peels the onion .. max-peel-onion
+Turn 5: Max begins chopping the onion .. max-chop-onion
+Turn 6: Max finishes chopping the onion .. max-finish-onion
+Turn 7: Max tries to show the player the diced vegetables .. max-show-onion
 
 Conditions for exiting the Dreamscape:
 A) The player must have been wounded by Max's knife
@@ -439,6 +472,8 @@ X	--A whistling teapot
 ]
 
 Dreaming is a scene. Dreaming begins when the player is asleep. Dreaming ends when the player is lucid.
+
+A scene can be top or bottom. Dreaming is top.
 
 To decide if the player is lucid:
 	if the teapot is audible:
