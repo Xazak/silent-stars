@@ -1,4 +1,3 @@
-
 ***REMINDERS
 --Visibility is calculated, not assigned!
 
@@ -19,7 +18,7 @@ Volume
 initial appearance != item's description, see WwI 3.11
 The initial appearance should be used to describe the object when the player /first sees it in the game world/, right up until the player picks it up (the "handled" property). When picked up and x'd, I7 uses the item's description; if dropped and encountered later, it will simply list the item as normal with everything else in the room.
 
-***CLARIFICATIONS
+***CLARIFICATIONS -[[
 If trying to work around the "can't use multiple objects with this verb" error use [things] instead of just [thing] in the action definition.
 
 The [room-describing action] is defined as the action that is the reason for the room being described; if a player is simply LOOKing, then it will be the looking action; on the other hand, if the player has just tried GO EAST and landed here, then it will be set to the going action.
@@ -35,7 +34,7 @@ Assuming the above:
 -The location of the desk is "the study"
 -The study and the desk both enclose the sheet of paper
 A thing encloses whatever is a part of itself, or inside itself, or on top of itself, and is recursive for multiple containers.
-
+]]-
 ***QUESTIONS -[[
 Can Inform randomly interject bits of text into the ongoing stream, i.e. from a table of phrases? 
 example: "There I was, dangling in space. Not sure what to do next. Was I going to head back? Or just stay out there longer?"

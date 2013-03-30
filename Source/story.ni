@@ -5,7 +5,6 @@ Use dynamic memory allocation of at least 16384.
 Include Bulk Limiter by Eric Eve.
 Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
-Include Phrases For Adaptive Pacing by Ron Newcomb.
 
 [TODO:
 --Executing a look action should tell the player what the MC does while looking, e.g. "You steady yourself on the lathe and glance around furtively:"
@@ -38,14 +37,14 @@ Part 1 - Redefining Standard Rules and Style
 
 The describe what's on scenery supporters in room descriptions rule is not listed in any rulebook.
 
-The block giving rule is not listed in the check giving it to rules. [need to be able to give things away]
-
 [To use these in text, include html-style tags within the text with square brackets: [i]italic type[/i], [b]bold type[/b]]
 
 To say i -- beginning say_i -- running on: (- style underline; -).
 To say /i -- ending say_i -- running on: (- style roman; -).
 To say b -- beginning say_b -- running on: (- style bold; -).
 To say /b -- ending say_b -- running on: (- style roman; -).
+
+To say br: say line break; [use "[br]"]
 
 Before printing the name of something while listing contents:
 	if the holder of the noun contains exactly 1 thing, say "single ".
@@ -264,7 +263,7 @@ To pay attention:
 	if foo is:
 	-- 1: try listening;
 	-- 2: try smelling;
-	-- otherwise: say "[line break]".
+	-- otherwise: say "[br]".
 
 A person can be asleep or awake. A person is usually awake.
 
@@ -337,7 +336,7 @@ Check listening to:
 	if the noun is silent, say "You hear nothing from the [printed name]." instead;  
 
 Report listening to:
-	say "[sound-description of the noun][line break]"; [included line break because don't want to insist on punct. here]
+	say "[sound-description of the noun][br]"; [included br because don't want to insist on punct. here]
 
 Understand "listen" as listening ambient.
 Listening ambient is an action applying to nothing.
@@ -355,8 +354,8 @@ Report listening ambient:
 		otherwise:
 			add foo at entry 1 in the report-list; [add it to the top of the queue]
 	repeat with bar running through report-list:
-		if bar is nearby, say "Nearby, [sound-description of bar][line break]";
-		otherwise say "[sound-description of bar][line break]";
+		if bar is nearby, say "Nearby, [sound-description of bar][br]";
+		otherwise say "[sound-description of bar][br]";
 	
 Part 2 - The Player
 
@@ -368,121 +367,52 @@ A right hand is part of the player. The description of the right hand is "The bo
 
 Book 5 - The Starlight Dancer
 
+The player is in Dreamspace.
+
 Part 0 - Dreamtime
 
-Dreamspace is a room. The printed name of Dreamspace is "Kitchen". Understand "kitchen" as Dreamspace. "Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest."
+["Darkness on all sides.[br]
+A stone slips into water.[br]
+Neither makes a sound."]
 
-Dreamspace is lighted.
+Dreamspace is a room. The printed name of Dreamspace is "(Inside)". 
+"[dark-description]". The dark-description of Dreamspace is "Darkness on all sides.[br]Chill water lies at your feet.[br]Nothing lies behind."
 
-A container called the curtains is here. The curtains are fixed in place, transparent, closed and openable. "[if closed]Thin handwoven silk curtains shroud a couple of blurred shapes moving around the yard outside.[otherwise if open]A pair of smart woven silk curtains frame the kitchen window; in the yard outside, Victor and his friend play at being soldiers.[end if]"
+After deciding the scope of the player while the player is in Dreamspace:
+	place the location in scope;
 
-Understand "curtain" as the curtains.
+A thing called the-nothing is here. The printed name of the-nothing is "nothing". Understand "nothing" as the-nothing. Does the player mean examining the-nothing: it is very likely.
+The-nothing is scenery.
+The description is "In nothing, stillness.[br]Fear and curiousity.[br]Turn lightward for now."
 
-A window is inside the curtains. The window is fixed in place, bright, lit. The description is "Outside, you can see your son Victor playing in the garden with the neighbor boy. They're pretending to be soldiers, creeping around and through the plants on belly and forearms, evading imaginary machine-gun fire. Maxie hates this game, says it'll make Victor too aggressive when he's older, but you never chastise Victor for it. [i]Anything[/i] to get him to play outside."
+A container called the water is here. It is transparent, fixed in place, enterable.
+"Still water cools the air.[br]It seems to stretch forever.[br]No waves touch your feet."
+The description is "You dip your fingers.[br]Deathly cold, then painful heat.[br]You flinch back, anxious." 
+The dark-description is "[description]".
 
-Before examining the window while the curtains are closed: 
-	try opening the curtains;
-	continue the action.
+Before doing something with the water:
+	if the current action is examining, continue the action;
+	try examining the water instead;
 
-Report opening the curtains: say "You open the curtains, tying them back with the little cord so they hang neatly." instead.
+[need to rewrite the message shown when describing contents of the water]
+[see above task: describe active lights in a darkened room]
 
-Some cabinets are here. The cabinets are scenery. The description is "The cabinets were Maxie's choice: maple, stained in a dark rocky brown, with sterling silver hardware. Not your first choice, but now you can't imagine a kitchen without them. Max always [i]was[/i] better at color coordination."
+A stone is in the water. The stone is lit. "In water, a stone.[br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat." 
 
-Understand "cabinet" or "cupboard" as the cabinets.
+Before examining the stone:
+	if the player is not holding the stone, say "Admired at range,[br]the stone's glow waxes and wanes[br]like a  tiny moon." instead;
 
-Instead of opening the cabinets: say "You reach up to open the closest cupboard, but stop halfway. You can't remember what you needed out of there in the first place."
+Rule for reaching inside while the player is in Dreamspace:
+	if the player is not in the water:
+		say "[first time]You crouch down and reach.[no line break][br]
+		It's like bare skin in deep space.[no line break][br]
+		Sensation departs.[br][only]
+		Struggling brings nothing.[no line break][br]
+		To reach it, you must dive in.[no line break][br]
+		Commit, all or none.";
+		deny access;
 
-A device called a gas stove is here. The stove is fixed in place. "A gas range, showpiece of the kitchen and the center of your food obsessions, claims center stage in the middle of the kitchen island[if teapot is on the burner]. A bright red teapot rests on the stove[end if][if the stove is hot]. The flame under the burner is lit[end if]." The description is "It's a gas range, installed at great expense and peril. Being part of the Europa Engineer's Scholarship affords certain benefits and special privileges; one must take advantage of them when one can." The stove is hot.
-
-Carry out switching on the stove: now the stove is hot.
-Report switching on the stove: say "The igniter ticks a few times and the flame catches with a quiet huff."
-Carry out switching off the stove: now the stove is cold.
-Report switching off the stove: say "The flame goes out."
-
-Understand "flames" or "flame" as the burner.
-
-A burner is part of the stove. The description is "You always liked the blue hue of those flames."
-
-A red teapot is on the burner. "The hot water left in the teapot is still warm enough to let off some steam." The description is "A cherry-red teapot, shaped like a sphere of jello resting on a plate. Not the ugliest appliance in here, but definitely not the prettiest." The teapot is notable, cold.
-[The sound is "whistling". The sound-description is "A thin, high keening whistle, much more shrill than a train engine. It's loud enough to throb in your ear, on the edge of painful."]
-
-Instead of doing something with the cold teapot: say "Can't brew coffee with cold water. That is, not if you want to drink it the same day. Best to leave it be."
-
-The kitchen counter is here. "A [if onion is unpeeled]un[end if]peeled [white onion] lies on the kitchen counter." The description is "Max picked out the slate- and charcoal-colored tiles, but the countertop itself is stainless steel. It was one of the few things you insisted on when putting together the kitchen decor."
-
-A white onion is on the counter. The description is "A run-of-the-mill white onion, about as big as your clenched fist." An onion can be unpeeled or peeled. An onion is unpeeled. An onion can be chopped or uncut.
-
-[Understand the command "peel the [thing]" as peeling. ]
-
-A man called Max is here. "Max is chopping celery." 
-Understand "Maxie" as Max.
-
-When Dreaming begins:
-	Max finishes the celery in one turn from now;
-
-At the time when Max finishes the celery:
-	say "Max piles the cut celery into a small bowl and sets it to one side, looking for something.";
-	Max asks for the onion in one turn from now;
-	
-At the time when Max asks for the onion:
-	say "Max notices the onion by you and brightens. 'Would you mind handing me the onion? I left it over there by mistake.' A sardonic grin flits across his face. 'One of these days I might get to be as prepared as you.'";
-
-After giving the onion to Max:
-	if the onion is peeled:
-		say "Max smiles and says 'Aw, thanks. You didn't have to.'";
-		Max chops the onion in one turn from now;
-	otherwise:
-		say "'Thanks, hon.' He picks his knife back up and slices off the top and bottom of the onion.";
-		Max peels the onion in one turn from now;
-		
-At the time when Max peels the onion:
-	say "Max slices the onion in half and pulls the skins off, then sets to with the knifeblade. He still needs practice; those years as an artist didn't come with cooking lessons.";
-	Max chops the onion in one turn from now;
-	
-At the time when Max chops the onion:
-	say "Max takes the diced onion and mounds it into another waiting bowl.";
-	Max shows the onion in one turn from now;
-
-At the time when Max shows the onion:
-	say "He holds the bowl out to you. 'Could you take a look at this, see how I did?'";
-
-[TURN SEQUENCE:
-Turn 1: Player enters game world, assesses situation
-Turn 2: Max finishes chopping a vegetable .. max-finish-celery
-Turn 3: Max asks the player for the onion .. max-ask-onion
-Turn 4: Max peels the onion .. max-peel-onion
-Turn 5: Max begins chopping the onion .. max-chop-onion
-Turn 6: Max finishes chopping the onion .. max-finish-onion
-Turn 7: Max tries to show the player the diced vegetables .. max-show-onion
-
-Conditions for exiting the Dreamscape:
-A) The player must have been wounded by Max's knife
-B) The teapot must have started to make noise
-
-Contents of the kitchen:
-X	Curtains
-X	--A window
-X	Cabinets
-?	Porcelain sink
-X	Gas stove
-X	--A whistling teapot
-	Maxie, chopping vegetables
-	Victor (outside), playing with the neighbor boy
-	the neighbor boy
-]
-
-Dreaming is a scene. Dreaming begins when the player is asleep. Dreaming ends when the player is lucid.
-
-A scene can be top or bottom. Dreaming is top.
-
-To decide if the player is lucid:
-	if the teapot is audible:
-		if the player is wounded, yes;
-	no;
-	
-[The description is "Maxie was the one who picked out the slate-and-charcoal tesselated tiles on the floor, the mocha-cream walls and chocolate trim, the matching porcelain sink, but the stainless steel surfaces and ancient gas range were [i]your[/i] idea."]
-
-The player is here.
+[expand entering the water to include DIVE IN, add messages, then scene change to Autodoc]
 
 Part 1 - Deck A
 
@@ -553,8 +483,8 @@ Volume 2 - Beginning Play
 When play begins:
 	set the status line;
 	[Introductory text goes here]
-	say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[line break]
-	...[line break]
+	say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[br]
+	...[br]
 	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";
 	now the player is asleep;
 	
@@ -573,17 +503,17 @@ Understand "LUMOS" as current-light-level.
 Current-light-level is an action applying to nothing.
 Report current-light-level:
 	mention the light level;
-	say "{{Light-bearing things: [list of lit things enclosed by the location]}}[line break]";
+	say "{{Light-bearing things: [list of lit things enclosed by the location]}}[br]";
 
 Understand "SOUNDCHECK [any thing]" as listen-testing.
 Listen-testing is an action applying to one visible thing.
 Report listen-testing:
-	say "{{[printed name of noun]:[line break]";
-	say "{{Is it audible? [if the player can hear the noun]yes[otherwise]no[end if]}}[line break]";
-	say "{{[if noun is clamorous]Clamorous[else if noisy]Noisy[otherwise]Silent[end if]}}[line break]";
-	say "{{[location of noun]}}[line break]";
-	say "{{Heard things: [list of things heard by the player]}}[line break]";
-	say "{{Audible things: [list of audible things]}}[line break]";
+	say "{{[printed name of noun]:[br]";
+	say "{{Is it audible? [if the player can hear the noun]yes[otherwise]no[end if]}}[br]";
+	say "{{[if noun is clamorous]Clamorous[else if noisy]Noisy[otherwise]Silent[end if]}}[br]";
+	say "{{[location of noun]}}[br]";
+	say "{{Heard things: [list of things heard by the player]}}[br]";
+	say "{{Audible things: [list of audible things]}}[br]";
 
 To mention the light level:
 	say "{{The light level in the [location] qualifies for: [if location is bright]bright [end if][if location is dim]dim [end if][if location is dark]dark[end if]}}";
@@ -591,14 +521,14 @@ To mention the light level:
 
 Book 2 - Testing Equipment
 
-A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright.
+[A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright.
 Carry out switching on the sunrod:
 	now the sunrod is lit;
 	say "LIGHTS";
 
 Carry out switching off the sunrod: 
 	now the sunrod is unlit;
-	say "DARKNESS";
+	say "DARKNESS";]
 
 [A radio is a device. The radio is in the Medical Bay. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise". The sound-description is "[The printed name] emits an unbroken stream of static."
 Carry out switching on the radio:
