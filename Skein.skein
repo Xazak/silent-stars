@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0xa252d0d8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0xa251c110" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>GNOME Inform 7</generator>
-  <activeNode nodeId="node-0xae1c108"/>
-  <item nodeId="node-0xa252d0d8">
+  <activeNode nodeId="node-0xa8ca540"/>
+  <item nodeId="node-0xa251c110">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
 
 
-The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can&apos;t feel it because you&apos;re completely numb.
-
- ...
-
- The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.
-
 Silent Stars
 An Interactive Fiction by Zaq Grow
-Release 1 / Serial number 130330 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+Release 1 / Serial number 130331 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
 
-(Inside)
+sharp rocks, in the gloom
 Darkness on all sides.
 Chill water lies at your feet.
 Nothing lies behind.
-
-Still water cools the air.
-It seems to stretch forever.
-No waves touch your feet.
-
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
@@ -34,17 +23,25 @@ No waves touch your feet.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa252d1b0"/>
-      <child nodeId="node-0xa252d510"/>
-      <child nodeId="node-0xa2216c8"/>
-      <child nodeId="node-0xa26cd20"/>
-      <child nodeId="node-0xa26ced0"/>
-      <child nodeId="node-0xa7ad1e8"/>
-      <child nodeId="node-0xa7ad398"/>
-      <child nodeId="node-0xa9ba038"/>
+      <child nodeId="node-0xa251c1e8"/>
+      <child nodeId="node-0xa251c548"/>
+      <child nodeId="node-0x92346d0"/>
+      <child nodeId="node-0x92c4a98"/>
+      <child nodeId="node-0x92d3828"/>
+      <child nodeId="node-0x92d39d8"/>
+      <child nodeId="node-0x92d3b88"/>
+      <child nodeId="node-0x92d3ee8"/>
+      <child nodeId="node-0x93e2b88"/>
+      <child nodeId="node-0x9394008"/>
+      <child nodeId="node-0x9394518"/>
+      <child nodeId="node-0x9394368"/>
+      <child nodeId="node-0x978d9b0"/>
+      <child nodeId="node-0x9b278e8"/>
+      <child nodeId="node-0x9ee72c0"/>
+      <child nodeId="node-0xa7f1830"/>
     </children>
   </item>
-  <item nodeId="node-0xa252d1b0">
+  <item nodeId="node-0xa251c1e8">
     <command xml:space="preserve">press cycle</command>
     <result xml:space="preserve">The button changes to green and blinks &quot;Completed&quot; a couple times.
 
@@ -55,10 +52,10 @@ No waves touch your feet.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa252d288"/>
+      <child nodeId="node-0xa251c2c0"/>
     </children>
   </item>
-  <item nodeId="node-0xa252d288">
+  <item nodeId="node-0xa251c2c0">
     <command xml:space="preserve">press unlock</command>
     <result xml:space="preserve">The &quot;Unlock Hatch&quot; button changes to green.
 
@@ -69,10 +66,10 @@ No waves touch your feet.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa252d360"/>
+      <child nodeId="node-0xa251c398"/>
     </children>
   </item>
-  <item nodeId="node-0xa252d360">
+  <item nodeId="node-0xa251c398">
     <command xml:space="preserve">press exit</command>
     <result xml:space="preserve">A beat passes, and then the gasket on the autodoc&apos;s hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
 
@@ -85,10 +82,10 @@ You open the htcah.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa252d438"/>
+      <child nodeId="node-0xa251c470"/>
     </children>
   </item>
-  <item nodeId="node-0xa252d438">
+  <item nodeId="node-0xa251c470">
     <command xml:space="preserve">out</command>
     <result xml:space="preserve">Medical Bay, in the darkness
 The Medical Bay has no description in the dark.
@@ -99,7 +96,7 @@ The Medical Bay has no description in the dark.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa252d510">
+  <item nodeId="node-0xa251c548">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -110,14 +107,17 @@ The Medical Bay has no description in the dark.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa252d5e8"/>
+      <child nodeId="node-0xa251c620"/>
     </children>
   </item>
-  <item nodeId="node-0xa252d5e8">
+  <item nodeId="node-0xa251c620">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
-Max piles the cut celery into a small bowl and sets it to one side, looking for something.
+cracked rocks, in dim light
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -126,10 +126,11 @@ Max piles the cut celery into a small bowl and sets it to one side, looking for 
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa252d6c0"/>
+      <child nodeId="node-0xa251c6f8"/>
+      <child nodeId="node-0xa57ef08"/>
     </children>
   </item>
-  <item nodeId="node-0xa252d6c0">
+  <item nodeId="node-0xa251c6f8">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -140,14 +141,12 @@ Max piles the cut celery into a small bowl and sets it to one side, looking for 
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa221008"/>
+      <child nodeId="node-0x9234010"/>
     </children>
   </item>
-  <item nodeId="node-0xa221008">
+  <item nodeId="node-0x9234010">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
-
-Max notices the onion by you and brightens. &quot;Would you mind handing me the onion? I left it over there by mistake.&quot; A sardonic grin flits across his face. &quot;One of these days I might get to be as prepared as you.&quot;
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -156,10 +155,11 @@ Max notices the onion by you and brightens. &quot;Would you mind handing me the 
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2210e0"/>
+      <child nodeId="node-0x92340e8"/>
+      <child nodeId="node-0x936be00"/>
     </children>
   </item>
-  <item nodeId="node-0xa2210e0">
+  <item nodeId="node-0x92340e8">
     <command xml:space="preserve">take onion</command>
     <result xml:space="preserve">Taken.
 
@@ -170,10 +170,10 @@ Max notices the onion by you and brightens. &quot;Would you mind handing me the 
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2211b8"/>
+      <child nodeId="node-0x92341c0"/>
     </children>
   </item>
-  <item nodeId="node-0xa2211b8">
+  <item nodeId="node-0x92341c0">
     <command xml:space="preserve">give onion to max</command>
     <result xml:space="preserve">&quot;Thanks, hon.&quot; He picks his knife back up and slices off the top and bottom of the onion.
 
@@ -184,10 +184,10 @@ Max notices the onion by you and brightens. &quot;Would you mind handing me the 
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa221290"/>
+      <child nodeId="node-0x9234298"/>
     </children>
   </item>
-  <item nodeId="node-0xa221290">
+  <item nodeId="node-0x9234298">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -200,10 +200,10 @@ Max slices the onion in half and pulls the skins off, then sets to with the knif
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa221368"/>
+      <child nodeId="node-0x9234370"/>
     </children>
   </item>
-  <item nodeId="node-0xa221368">
+  <item nodeId="node-0x9234370">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -214,10 +214,10 @@ Max slices the onion in half and pulls the skins off, then sets to with the knif
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa221440"/>
+      <child nodeId="node-0x9234448"/>
     </children>
   </item>
-  <item nodeId="node-0xa221440">
+  <item nodeId="node-0x9234448">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -230,10 +230,10 @@ Max takes the diced onion and mounds it into another waiting bowl.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa221518"/>
+      <child nodeId="node-0x9234520"/>
     </children>
   </item>
-  <item nodeId="node-0xa221518">
+  <item nodeId="node-0x9234520">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -244,10 +244,10 @@ Max takes the diced onion and mounds it into another waiting bowl.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2215f0"/>
+      <child nodeId="node-0x92345f8"/>
     </children>
   </item>
-  <item nodeId="node-0xa2215f0">
+  <item nodeId="node-0x92345f8">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -260,13 +260,9 @@ He holds the bowl out to you. &quot;Could you take a look at this, see how I did
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa2216c8">
-    <command xml:space="preserve">x water</command>
-    <result xml:space="preserve">You dip your fingers.
-Deathly cold, then painful heat.
-You flinch back, anxious.
-
-In the water is a stone.
+  <item nodeId="node-0x936be00">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -275,13 +271,190 @@ In the water is a stone.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa26c810"/>
-      <child nodeId="node-0xa391458"/>
-      <child nodeId="node-0xa7ad6f8"/>
-      <child nodeId="node-0xa9ba470"/>
+      <child nodeId="node-0x936bd28"/>
     </children>
   </item>
-  <item nodeId="node-0xa26c810">
+  <item nodeId="node-0x936bd28">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x936bc50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x936bc50">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x936bed8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x936bed8">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x978d800"/>
+    </children>
+  </item>
+  <item nodeId="node-0x978d800">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa381458"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa381458">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa381530"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa381530">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa381608"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa381608">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa3816e0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa3816e0">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa57e848"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa57e848">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa57e920"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa57e920">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa57ef08">
+    <command xml:space="preserve">lumos</command>
+    <result xml:space="preserve">{{The light level in the cracked rocks qualifies for: }}
+{{Light-bearing things: nothing}}
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x92346d0">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x92b4848"/>
+      <child nodeId="node-0x92b4ad0"/>
+      <child nodeId="node-0x92b4e30"/>
+      <child nodeId="node-0x92c48e8"/>
+      <child nodeId="node-0x92f36c0"/>
+      <child nodeId="node-0x93e2c60"/>
+      <child nodeId="node-0x93e2d38"/>
+      <child nodeId="node-0x978da88"/>
+      <child nodeId="node-0x9b279c0"/>
+      <child nodeId="node-0x9e120f8"/>
+      <child nodeId="node-0x9e12530"/>
+      <child nodeId="node-0xa300ee8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x92b4848">
     <command xml:space="preserve">x nothing</command>
     <result xml:space="preserve">In nothing, stillness.
 Fear and curiousity.
@@ -305,10 +478,10 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa391608"/>
+      <child nodeId="node-0x92b4920"/>
     </children>
   </item>
-  <item nodeId="node-0xa391608">
+  <item nodeId="node-0x92b4920">
     <command xml:space="preserve">x water</command>
     <result xml:space="preserve">You must supply a noun.
 
@@ -319,10 +492,10 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa391530"/>
+      <child nodeId="node-0x92b49f8"/>
     </children>
   </item>
-  <item nodeId="node-0xa391530">
+  <item nodeId="node-0x92b49f8">
     <command xml:space="preserve">showme water</command>
     <result xml:space="preserve">water - transparent open container
     stone
@@ -353,7 +526,7 @@ bulk capacity: 10
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa391458">
+  <item nodeId="node-0x92b4ad0">
     <command xml:space="preserve">drink water</command>
     <result xml:space="preserve">You dip your fingers.
 Deathly cold, then painful heat.
@@ -380,10 +553,10 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3916e0"/>
+      <child nodeId="node-0x92b4ba8"/>
     </children>
   </item>
-  <item nodeId="node-0xa3916e0">
+  <item nodeId="node-0x92b4ba8">
     <command xml:space="preserve">take water</command>
     <result xml:space="preserve">You dip your fingers.
 Deathly cold, then painful heat.
@@ -399,10 +572,10 @@ In the water is a stone.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa7ad038"/>
+      <child nodeId="node-0x92b4c80"/>
     </children>
   </item>
-  <item nodeId="node-0xa7ad038">
+  <item nodeId="node-0x92b4c80">
     <command xml:space="preserve">x stone</command>
     <result xml:space="preserve">You see nothing special about the stone.
 
@@ -413,10 +586,10 @@ In the water is a stone.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa7ad110"/>
+      <child nodeId="node-0x92b4d58"/>
     </children>
   </item>
-  <item nodeId="node-0xa7ad110">
+  <item nodeId="node-0x92b4d58">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -427,11 +600,16 @@ In the water is a stone.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa7ad6f8">
+  <item nodeId="node-0x92b4e30">
     <command xml:space="preserve">x stone</command>
     <result xml:space="preserve">Admired at range,
 the stone&apos;s glow waxes and wanes
 like a  tiny moon.
+
+craggy rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -440,10 +618,11 @@ like a  tiny moon.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa9ba620"/>
+      <child nodeId="node-0x92b4f08"/>
+      <child nodeId="node-0xa300828"/>
     </children>
   </item>
-  <item nodeId="node-0xa9ba620">
+  <item nodeId="node-0x92b4f08">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You crouch down and reach.
 
@@ -465,10 +644,10 @@ Commit, all or none.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa9ba6f8"/>
+      <child nodeId="node-0x92c4810"/>
     </children>
   </item>
-  <item nodeId="node-0xa9ba6f8">
+  <item nodeId="node-0x92c4810">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Struggling brings nothing.
 
@@ -483,7 +662,131 @@ Commit, all or none.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa9ba470">
+  <item nodeId="node-0xa300828">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa300900"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa300900">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">
+upper pool
+The upper pool has no description in the dark.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa3009d8"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa3009d8">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">Blacker than midnight.
+The chill reaches through your skin.
+Your limbs feel distant.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+upper pool
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa300ab0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa300ab0">
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">
+gravelly rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa300b88"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa300b88">
+    <command xml:space="preserve">look down</command>
+    <result xml:space="preserve">You gaze downwards.
+
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa300c60"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa300c60">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa300d38"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa300d38">
+    <command xml:space="preserve">look down</command>
+    <result xml:space="preserve">[Rule &quot;After deciding the scope of the player while the location is in Dreamspace&quot; applies.]
+[Rule &quot;standard examining rule&quot; applies.]
+[Rule &quot;new examine directions rule&quot; applies.]
+You gaze downwards.
+
+
+[Rule &quot;examine containers rule&quot; applies.]
+[Rule &quot;examine supporters rule&quot; applies.]
+[Rule &quot;examine devices rule&quot; applies.]
+[Rule &quot;examine undescribed things rule&quot; applies.]
+[Rule &quot;report other people examining rule&quot; applies.]
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x92c48e8">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You crouch down and reach.
 
@@ -505,10 +808,10 @@ Commit, all or none.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa9ba548"/>
+      <child nodeId="node-0x92c49c0"/>
     </children>
   </item>
-  <item nodeId="node-0xa9ba548">
+  <item nodeId="node-0x92c49c0">
     <command xml:space="preserve">x stone</command>
     <result xml:space="preserve">Admired at range,
 the stone&apos;s glow waxes and wanes
@@ -525,7 +828,739 @@ Warmer than skin heat.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa26cd20">
+  <item nodeId="node-0x92f36c0">
+    <command xml:space="preserve">purloin stone</command>
+    <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93e2828"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93e2828">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93e2900"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93e2900">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:
+  a stone (providing light)
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93e29d8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93e29d8">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93e2ab0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93e2ab0">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">[Rule &quot;print empty inventory rule&quot; applies.]
+[Rule &quot;print standard inventory rule&quot; applies.]
+You are carrying:
+  a stone (providing light)
+
+[Rule &quot;report other people taking inventory rule&quot; applies.]
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x93e2c60">
+    <command xml:space="preserve">dive in</command>
+    <result xml:space="preserve">One breath, plus one held.
+
+ Even your bones feel like ice.
+
+ Darkness shrouds your thoughts.
+
+(Inside), in dim light (in the water)
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+In water, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x93e2d38">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">
+upper pool
+The upper pool has no description in the dark.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93e2e10"/>
+      <child nodeId="node-0x939db60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93e2e10">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">
+rocky shore line
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93e2ee8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93e2ee8">
+    <command xml:space="preserve">x down</command>
+    <result xml:space="preserve">You see nothing unexpected in that direction.
+
+rocky shore line
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x939db60">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+upper pool
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x939da88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x939da88">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">
+jagged rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x939d9b0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x939d9b0">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+sharp rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x939dc38"/>
+    </children>
+  </item>
+  <item nodeId="node-0x939dc38">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x939dd10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x939dd10">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+upper pool
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x939dde8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x939dde8">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x939dec0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x939dec0">
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">
+jagged rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9e12020"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9e12020">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x978da88">
+    <command xml:space="preserve">x down</command>
+    <result xml:space="preserve">You gaze downwards.
+
+Still water cools the air.
+It seems to stretch forever.
+No waves touch your feet.
+a rocky shore line
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x978db60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x978db60">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">
+water
+Still water cools the air.
+It seems to stretch forever.
+No waves touch your feet.
+
+In water, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9b279c0">
+    <command xml:space="preserve">showme water</command>
+    <result xml:space="preserve">water - backdrop
+location: out of play
+singular-named, improper-named; unlit, inedible, fixed in place, scenery, neuter, ordinarily enumerated, unseen, unfamiliar, mundane, unexamined, cold, dim, diffuse
+printed name: &quot;water&quot;
+printed plural name: &quot;backdrops&quot;
+indefinite article: &quot;the&quot;
+description: &quot;You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.&quot;
+initial appearance: none
+bulk: 1
+dark-description: &quot;The water has no description in the dark.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;This does not make noise.&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9b27a98"/>
+      <child nodeId="node-0x9b27df8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9b27a98">
+    <command xml:space="preserve">regions</command>
+    <result xml:space="preserve">That&apos;s not a verb I recognise.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9b27b70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9b27b70">
+    <command xml:space="preserve">region</command>
+    <result xml:space="preserve">That&apos;s not a verb I recognise.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9b27c48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9b27c48">
+    <command xml:space="preserve">showme Dreamspace</command>
+    <result xml:space="preserve">Dreamspace - region
+singular-named, improper-named
+printed name: &quot;Dreamspace&quot;
+printed plural name: &quot;regions&quot;
+indefinite article: none
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9b27d20"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9b27d20">
+    <command xml:space="preserve">showme rocky shore</command>
+    <result xml:space="preserve">jagged rocks - room
+    yourself - person
+        left hand (part of yourself)
+        right hand (part of yourself)
+    nothing
+singular-named, improper-named; dark, visited
+printed name: &quot;cracked rocks&quot;
+printed plural name: none
+indefinite article: none
+description: &quot;Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.&quot;
+map region: Dreamspace
+dark-description: &quot;Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;Total silence.&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9b27df8">
+    <command xml:space="preserve">down</command>
+    <result xml:space="preserve">
+upper pool
+The upper pool has no description in the dark.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9b27ed0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9b27ed0">
+    <command xml:space="preserve">up</command>
+    <result xml:space="preserve">
+craggy rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x939d800"/>
+    </children>
+  </item>
+  <item nodeId="node-0x939d800">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+cracked rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x939d8d8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x939d8d8">
+    <command xml:space="preserve">showme water</command>
+    <result xml:space="preserve">water - backdrop
+location: in the sharp rocks
+singular-named, improper-named; unlit, inedible, fixed in place, scenery, neuter, ordinarily enumerated, seen, familiar, mundane, unexamined, cold, dim, diffuse
+printed name: &quot;water&quot;
+printed plural name: &quot;backdrops&quot;
+indefinite article: &quot;the&quot;
+description: &quot;You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.&quot;
+initial appearance: none
+bulk: 1
+dark-description: &quot;The water has no description in the dark.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;This does not make noise.&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9e120f8">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9e121d0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9e121d0">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9e122a8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9e122a8">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+upper pool
+The upper pool has no description in the dark.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9e12380"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9e12380">
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">
+gravelly rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9e12458"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9e12458">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You see nothing special about the water.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9e12530">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+upper pool
+The upper pool has no description in the dark.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9e12608"/>
+      <child nodeId="node-0xa031e18"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9e12608">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9e126e0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9e126e0">
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">
+gravelly rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ee7038"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ee7038">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+sharp rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa031e18">
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">
+craggy rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa031ef0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa031ef0">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+cracked rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa300ee8">
+    <command xml:space="preserve">look down</command>
+    <result xml:space="preserve">You gaze downwards.
+
+The water is still.
+ Shadows crowd in overhead.
+ The silence deafens.
+jagged rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x92c4a98">
     <command xml:space="preserve">x</command>
     <result xml:space="preserve">(nothing)
 In nothing, stillness.
@@ -539,12 +1574,12 @@ Turn lightward for now.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa26cdf8"/>
-      <child nodeId="node-0xa3912a8"/>
-      <child nodeId="node-0xa3910f8"/>
+      <child nodeId="node-0x92c4b70"/>
+      <child nodeId="node-0x92c4c48"/>
+      <child nodeId="node-0x92c4df8"/>
     </children>
   </item>
-  <item nodeId="node-0xa26cdf8">
+  <item nodeId="node-0x92c4b70">
     <command xml:space="preserve">x nothing</command>
     <result xml:space="preserve">In nothing, stillness.
 Fear and curiousity.
@@ -572,7 +1607,7 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa3912a8">
+  <item nodeId="node-0x92c4c48">
     <command xml:space="preserve">nothing</command>
     <result xml:space="preserve">You can&apos;t see any such thing.
 
@@ -583,10 +1618,10 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa3911d0"/>
+      <child nodeId="node-0x92c4d20"/>
     </children>
   </item>
-  <item nodeId="node-0xa3911d0">
+  <item nodeId="node-0x92c4d20">
     <command xml:space="preserve">showme dreamspace</command>
     <result xml:space="preserve">(Inside) - room
     yourself - person
@@ -616,7 +1651,7 @@ sound-description: &quot;Total silence.&quot;
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa3910f8">
+  <item nodeId="node-0x92c4df8">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
@@ -638,10 +1673,10 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa391380"/>
+      <child nodeId="node-0x92c4ed0"/>
     </children>
   </item>
-  <item nodeId="node-0xa391380">
+  <item nodeId="node-0x92c4ed0">
     <command xml:space="preserve">x water</command>
     <result xml:space="preserve">You must supply a noun.
 
@@ -652,7 +1687,7 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa26ced0">
+  <item nodeId="node-0x92d3828">
     <command xml:space="preserve">rules</command>
     <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
 
@@ -663,10 +1698,13 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa391020"/>
+      <child nodeId="node-0x92d3900"/>
+      <child nodeId="node-0x92f35e8"/>
+      <child nodeId="node-0x936b8f0"/>
+      <child nodeId="node-0xa381380"/>
     </children>
   </item>
-  <item nodeId="node-0xa391020">
+  <item nodeId="node-0x92d3900">
     <command xml:space="preserve">x</command>
     <result xml:space="preserve">[Rule &quot;After deciding the scope of the player while the player is in Dreamspace&quot; applies.]
 (the sunrod)
@@ -686,11 +1724,292 @@ The sunrod is currently switched off.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa7ad1e8">
+  <item nodeId="node-0x92f35e8">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">[Rule &quot;After deciding the scope of the player while the player is in Dreamspace&quot; applies.]
+[Rule &quot;Before doing something with the water&quot; applies.]
+[Rule &quot;After deciding the scope of the player while the player is in Dreamspace&quot; applies.]
+[Rule &quot;mark items as seen on examining rule&quot; applies.]
+[Rule &quot;standard examining rule&quot; applies.]
+You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+[Rule &quot;examine directions rule&quot; applies.]
+[Rule &quot;examine containers rule&quot; applies.]
+In the water is a stone.
+
+[Rule &quot;examine supporters rule&quot; applies.]
+[Rule &quot;examine devices rule&quot; applies.]
+[Rule &quot;examine undescribed things rule&quot; applies.]
+[Rule &quot;report other people examining rule&quot; applies.]
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x936b8f0">
+    <command xml:space="preserve">actions</command>
+    <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x936b9c8"/>
+      <child nodeId="node-0x9ee7620"/>
+    </children>
+  </item>
+  <item nodeId="node-0x936b9c8">
+    <command xml:space="preserve">look down</command>
+    <result xml:space="preserve">[Rule &quot;After deciding the scope of the player while the location is in Dreamspace&quot; applies.]
+[examining down]
+[Rule &quot;standard examining rule&quot; applies.]
+[Rule &quot;new examine directions rule&quot; applies.]
+Still water cools the air.
+It seems to stretch forever.
+No waves touch your feet.
+[Rule &quot;examine containers rule&quot; applies.]
+[Rule &quot;examine supporters rule&quot; applies.]
+[Rule &quot;examine devices rule&quot; applies.]
+[Rule &quot;examine undescribed things rule&quot; applies.]
+[Rule &quot;report other people examining rule&quot; applies.]
+[examining down - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x936baa0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x936baa0">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">[Rule &quot;After deciding the scope of the player while the location is in Dreamspace&quot; applies.]
+You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x936bb78"/>
+    </children>
+  </item>
+  <item nodeId="node-0x936bb78">
+    <command xml:space="preserve">jump</command>
+    <result xml:space="preserve">[jumping]
+[Rule &quot;block jumping rule&quot; applies.]
+You jump on the spot, fruitlessly.
+[jumping - failed the block jumping rule]
+
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[looking]
+[Rule &quot;room description heading rule&quot; applies.]
+a rocky shore line
+[Rule &quot;room description body text rule&quot; applies.]
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+[looking - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9ee7620">
+    <command xml:space="preserve">rules all</command>
+    <result xml:space="preserve">Rules tracing now switched to &quot;all&quot;. Type &quot;rules off&quot; to switch it off again.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ee76f8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ee76f8">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[Rule &quot;standard set going variables rule&quot; does not apply.]
+[Rule &quot;determine visibility ceiling rule&quot; does not apply.]
+[Rule &quot;Setting action variables for exiting&quot; does not apply.]
+[waiting]
+[Rule &quot;Before going through a closed hatch ( called the blocking hatch )&quot; does not apply.]
+[Rule &quot;Before examining the stone&quot; does not apply.]
+[Rule &quot;Before opening the Autodoc&apos;s hatch&quot; does not apply.]
+[Rule &quot;Instead of pushing the cycle button&quot; does not apply.]
+[Rule &quot;Instead of pushing the unlock button&quot; does not apply.]
+[Rule &quot;Instead of pushing the exit button&quot; does not apply.]
+[Rule &quot;Instead of pushing a button ( called the frobber )&quot; does not apply.]
+[Rule &quot;standard report waiting rule&quot; applies.]
+Time passes.
+[waiting - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa031830"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa031830">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[Rule &quot;standard set going variables rule&quot; does not apply.]
+[Rule &quot;determine visibility ceiling rule&quot; does not apply.]
+[Rule &quot;Setting action variables for exiting&quot; does not apply.]
+[waiting]
+[Rule &quot;Before going through a closed hatch ( called the blocking hatch )&quot; does not apply.]
+[Rule &quot;Before examining the stone&quot; does not apply.]
+[Rule &quot;Before opening the Autodoc&apos;s hatch&quot; does not apply.]
+[Rule &quot;Instead of pushing the cycle button&quot; does not apply.]
+[Rule &quot;Instead of pushing the unlock button&quot; does not apply.]
+[Rule &quot;Instead of pushing the exit button&quot; does not apply.]
+[Rule &quot;Instead of pushing a button ( called the frobber )&quot; does not apply.]
+[Rule &quot;standard report waiting rule&quot; applies.]
+Time passes.
+[waiting - succeeded]
+
+[Rule &quot;standard set going variables rule&quot; does not apply.]
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;Setting action variables for exiting&quot; does not apply.]
+[looking]
+[Rule &quot;Before going through a closed hatch ( called the blocking hatch )&quot; does not apply.]
+[Rule &quot;Before examining the stone&quot; does not apply.]
+[Rule &quot;Before opening the Autodoc&apos;s hatch&quot; does not apply.]
+[Rule &quot;Instead of pushing the cycle button&quot; does not apply.]
+[Rule &quot;Instead of pushing the unlock button&quot; does not apply.]
+[Rule &quot;Instead of pushing the exit button&quot; does not apply.]
+[Rule &quot;Instead of pushing a button ( called the frobber )&quot; does not apply.]
+[Rule &quot;room description heading rule&quot; applies.]
+jagged rocks
+[Rule &quot;room description body text rule&quot; applies.]
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+[looking - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa381380">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[Rule &quot;standard report waiting rule&quot; applies.]
+Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa3812a8"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa3812a8">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[Rule &quot;standard report waiting rule&quot; applies.]
+Time passes.
+
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+sharp rocks
+[Rule &quot;room description body text rule&quot; applies.]
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x92d39d8">
     <command xml:space="preserve">x stone</command>
-    <result xml:space="preserve">Ivory colored quartz.
-Cloudy, like a summer day.
-Warmer than skin heat.
+    <result xml:space="preserve">Admired at range,
+the stone&apos;s glow waxes and wanes
+like a  tiny moon.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -699,10 +2018,11 @@ Warmer than skin heat.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa7ad2c0"/>
+      <child nodeId="node-0x92d3ab0"/>
+      <child nodeId="node-0x978dde8"/>
     </children>
   </item>
-  <item nodeId="node-0xa7ad2c0">
+  <item nodeId="node-0x92d3ab0">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">(Inside)
 Darkness on all sides.
@@ -722,18 +2042,15 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa7ad398">
-    <command xml:space="preserve">look</command>
-    <result xml:space="preserve">(Inside)
+  <item nodeId="node-0x978dde8">
+    <command xml:space="preserve">x down</command>
+    <result xml:space="preserve">You gaze downwards.
+
+
+craggy rocks
 Darkness on all sides.
 Chill water lies at your feet.
 Nothing lies behind.
-
-
-Still water cools the air.
-It seems to stretch forever.
-No waves touch your feet.
-
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -742,10 +2059,116 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa7ad470"/>
+      <child nodeId="node-0x978dd10"/>
     </children>
   </item>
-  <item nodeId="node-0xa7ad470">
+  <item nodeId="node-0x978dd10">
+    <command xml:space="preserve">x nothing</command>
+    <result xml:space="preserve">In nothing, stillness.
+Fear and curiousity.
+Turn lightward for now.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x978dc38"/>
+    </children>
+  </item>
+  <item nodeId="node-0x978dc38">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x978dec0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x978dec0">
+    <command xml:space="preserve">showme rocky shore</command>
+    <result xml:space="preserve">jagged rocks - room
+    yourself - person
+        left hand (part of yourself)
+        right hand (part of yourself)
+    nothing
+singular-named, improper-named; lighted, visited
+printed name: &quot;sharp rocks&quot;
+printed plural name: none
+indefinite article: none
+description: &quot;Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.&quot;
+map region: Dreamspace
+dark-description: &quot;Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;Total silence.&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9b27810"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9b27810">
+    <command xml:space="preserve">showme water</command>
+    <result xml:space="preserve">water - backdrop
+location: out of play
+singular-named, improper-named; unlit, inedible, fixed in place, scenery, neuter, ordinarily enumerated, unseen, unfamiliar, mundane, unexamined, cold, dim, diffuse
+printed name: &quot;water&quot;
+printed plural name: &quot;backdrops&quot;
+indefinite article: none
+description: &quot;You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.&quot;
+initial appearance: none
+bulk: 1
+dark-description: &quot;The water has no description in the dark.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;This does not make noise.&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x92d3b88">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">cracked rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x92d3c60"/>
+      <child nodeId="node-0xa381020"/>
+    </children>
+  </item>
+  <item nodeId="node-0x92d3c60">
     <command xml:space="preserve">x stone</command>
     <result xml:space="preserve">You see nothing special about the stone.
 
@@ -756,10 +2179,10 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa7ad548"/>
+      <child nodeId="node-0x92d3d38"/>
     </children>
   </item>
-  <item nodeId="node-0xa7ad548">
+  <item nodeId="node-0x92d3d38">
     <command xml:space="preserve">lumos</command>
     <result xml:space="preserve">{{The light level in the (Inside) qualifies for: dim }}
 {{Light-bearing things: stone}}
@@ -771,10 +2194,10 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa7ad620"/>
+      <child nodeId="node-0x92d3e10"/>
     </children>
   </item>
-  <item nodeId="node-0xa7ad620">
+  <item nodeId="node-0x92d3e10">
     <command xml:space="preserve">x water</command>
     <result xml:space="preserve">You dip your fingers.
 Deathly cold, then painful heat.
@@ -790,7 +2213,25 @@ In the water is a stone.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa9ba038">
+  <item nodeId="node-0xa381020">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">cracked rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+jagged rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x92d3ee8">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You crouch down and reach.
  It&apos;s like bare skin in deep space.
@@ -802,16 +2243,16 @@ In the water is a stone.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa9ba110"/>
-      <child nodeId="node-0xae1c030"/>
+      <child nodeId="node-0x92f3000"/>
+      <child nodeId="node-0x92f3360"/>
     </children>
   </item>
-  <item nodeId="node-0xa9ba110">
+  <item nodeId="node-0x92f3000">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying nothing.
 
@@ -822,10 +2263,10 @@ In the water is a stone.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa9ba1e8"/>
+      <child nodeId="node-0x92f30d8"/>
     </children>
   </item>
-  <item nodeId="node-0xa9ba1e8">
+  <item nodeId="node-0x92f30d8">
     <command xml:space="preserve">x stone</command>
     <result xml:space="preserve">Ivory colored quartz.
 Cloudy, like a summer day.
@@ -838,10 +2279,10 @@ Warmer than skin heat.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa9ba2c0"/>
+      <child nodeId="node-0x92f31b0"/>
     </children>
   </item>
-  <item nodeId="node-0xa9ba2c0">
+  <item nodeId="node-0x92f31b0">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -850,10 +2291,10 @@ Warmer than skin heat.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa9ba398"/>
+      <child nodeId="node-0x92f3288"/>
     </children>
   </item>
-  <item nodeId="node-0xa9ba398">
+  <item nodeId="node-0x92f3288">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying nothing.
 
@@ -864,11 +2305,677 @@ Warmer than skin heat.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xae1c030">
+  <item nodeId="node-0x92f3360">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve"> Struggling brings nothing.
  To reach it, you must dive in.
  Commit, all or none.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x92f3438"/>
+    </children>
+  </item>
+  <item nodeId="node-0x92f3438">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+In the water is a stone.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x93e2b88">
+    <command xml:space="preserve">dive in</command>
+    <result xml:space="preserve">(Inside), in the darkness (in the water)
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+In water, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+One breath, plus one held.
+
+ Even your bones feel like ice.
+
+ Darkness shrouds your thoughts.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9394008">
+    <command xml:space="preserve">x down</command>
+    <result xml:space="preserve">You gaze downwards.
+
+The water is still.
+ Shadows close in overhead.
+ Your hair drifts above.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93940e0"/>
+      <child nodeId="node-0xa300e10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93940e0">
+    <command xml:space="preserve">rules x down</command>
+    <result xml:space="preserve">I only understood you as far as wanting to rules.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93941b8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93941b8">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9394290"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9394290">
+    <command xml:space="preserve">x down</command>
+    <result xml:space="preserve">[Rule &quot;After deciding the scope of the player while the location is in Dreamspace&quot; applies.]
+[Rule &quot;standard examining rule&quot; applies.]
+[Rule &quot;new examine directions rule&quot; applies.]
+Still water cools the air.
+It seems to stretch forever.
+No waves touch your feet.
+[Rule &quot;examine containers rule&quot; applies.]
+[Rule &quot;examine supporters rule&quot; applies.]
+[Rule &quot;examine devices rule&quot; applies.]
+[Rule &quot;examine undescribed things rule&quot; applies.]
+You see nothing special about the down.
+
+[Rule &quot;report other people examining rule&quot; applies.]
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+a rocky shore line
+[Rule &quot;room description body text rule&quot; applies.]
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa300e10">
+    <command xml:space="preserve">x up</command>
+    <result xml:space="preserve">In nothing, stillness.
+Fear and curiousity.
+Turn lightward for now.
+
+sharp rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9394518">
+    <command xml:space="preserve">look down</command>
+    <result xml:space="preserve">Still water cools the air.
+It seems to stretch forever.
+No waves touch your feet.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9394440"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9394440">
+    <command xml:space="preserve">x down</command>
+    <result xml:space="preserve">Still water cools the air.
+It seems to stretch forever.
+No waves touch your feet.
+a rocky shore line
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9394368">
+    <command xml:space="preserve">actions</command>
+    <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93945f0"/>
+      <child nodeId="node-0xa031908"/>
+      <child nodeId="node-0xa031b90"/>
+      <child nodeId="node-0xa3810f8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93945f0">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x93946c8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x93946c8">
+    <command xml:space="preserve">look down</command>
+    <result xml:space="preserve">[examining down]
+Still water cools the air.
+It seems to stretch forever.
+No waves touch your feet.
+[examining down - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x936b818"/>
+    </children>
+  </item>
+  <item nodeId="node-0x936b818">
+    <command xml:space="preserve">x down</command>
+    <result xml:space="preserve">[examining down]
+Still water cools the air.
+It seems to stretch forever.
+No waves touch your feet.
+[examining down - succeeded]
+
+[looking]
+a rocky shore line
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+[looking - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa031908">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa0319e0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa0319e0">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[waiting]
+[Rule &quot;standard report waiting rule&quot; applies.]
+Time passes.
+[waiting - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa031ab8"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa031ab8">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[waiting]
+[Rule &quot;standard report waiting rule&quot; applies.]
+Time passes.
+[waiting - succeeded]
+
+[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[looking]
+[Rule &quot;room description heading rule&quot; applies.]
+cracked rocks
+[Rule &quot;room description body text rule&quot; applies.]
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+[looking - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa031b90">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[waiting]
+Time passes.
+[waiting - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa031c68"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa031c68">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[waiting]
+Time passes.
+[waiting - succeeded]
+
+[looking]
+sharp rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+[looking - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa031d40"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa031d40">
+    <command xml:space="preserve">scenes</command>
+    <result xml:space="preserve">Scene &apos;Entire Game&apos; playing (for 2 mins now)
+Scene &apos;Autodoc Escape&apos; playing (for 2 mins now)
+(Scene monitoring now switched on. Type &quot;scenes off&quot; to switch it off again.)
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa3810f8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">[looking]
+gravelly rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+[looking - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa3811d0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa3811d0">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">[looking]
+jagged rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+[looking - succeeded]
+
+[looking]
+cracked rocks
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+[looking - succeeded]
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x978d9b0">
+    <command xml:space="preserve">x darkness</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x978d8d8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x978d8d8">
+    <command xml:space="preserve">x water</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9b278e8">
+    <command xml:space="preserve">showme water</command>
+    <result xml:space="preserve">water - backdrop
+location: out of play
+singular-named, improper-named; unlit, inedible, fixed in place, scenery, neuter, ordinarily enumerated, unseen, unfamiliar, mundane, unexamined, cold, dim, diffuse
+printed name: &quot;water&quot;
+printed plural name: &quot;backdrops&quot;
+indefinite article: none
+description: &quot;You dip your fingers.
+Deathly cold, then painful heat.
+You flinch back, anxious.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.&quot;
+initial appearance: none
+bulk: 1
+dark-description: &quot;The water has no description in the dark.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;This does not make noise.&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9ee72c0">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+upper pool
+The upper pool has no description in the dark.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ee71e8"/>
+      <child nodeId="node-0xa57e9f8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ee71e8">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+upper pool
+The water is still.
+ Shadows crowd in overhead.
+ The silence deafens.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ee7110"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ee7110">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ee7398"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ee7398">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ee7470"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ee7470">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ee7548"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ee7548">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa57e9f8">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa57ead0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa57ead0">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+lower pool
+The bottom is smooth.
+ No signs of life scar the mud.
+ Your guts feel frostbit.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa57eba8"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa57eba8">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa57ec80"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa57ec80">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa57ed58"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa57ed58">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa57ee30"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa57ee30">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa7f1830">
+    <command xml:space="preserve">lumos</command>
+    <result xml:space="preserve">{{The light level in the craggy rocks qualifies for: dark}}
+{{Light-bearing things: nothing}}
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -877,16 +2984,251 @@ Warmer than skin heat.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xae1c108"/>
+      <child nodeId="node-0xa7f1908"/>
     </children>
   </item>
-  <item nodeId="node-0xae1c108">
-    <command xml:space="preserve">x water</command>
-    <result xml:space="preserve">You dip your fingers.
-Deathly cold, then painful heat.
-You flinch back, anxious.
+  <item nodeId="node-0xa7f1908">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
 
-In the water is a stone.
+craggy rocks, in dim light
+Darkness on all sides.
+Chill water lies at your feet.
+Nothing lies behind.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa7f19e0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa7f19e0">
+    <command xml:space="preserve">lumos</command>
+    <result xml:space="preserve">{{The light level in the jagged rocks qualifies for: }}
+{{Light-bearing things: nothing}}
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa7f1ab8"/>
+      <child nodeId="node-0xa7f1d40"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa7f1ab8">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+upper pool, in the gloom
+The upper pool has no description in the dark.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa7f1b90"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa7f1b90">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+upper pool, in dim light
+The water is still.
+ Shadows crowd in overhead.
+ The silence deafens.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa7f1c68"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa7f1c68">
+    <command xml:space="preserve">lumos</command>
+    <result xml:space="preserve">{{The light level in the upper pool qualifies for: }}
+{{Light-bearing things: nothing}}
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa7f1d40">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Time passes.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa7f1e18"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa7f1e18">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+upper pool, in the gloom
+The upper pool has no description in the dark.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa7f1ef0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa7f1ef0">
+    <command xml:space="preserve">lumos</command>
+    <result xml:space="preserve">{{The light level in the upper pool qualifies for: }}
+{{Light-bearing things: nothing}}
+
+upper pool, in dim light
+The water is still.
+ Shadows crowd in overhead.
+ The silence deafens.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa8ca030"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa8ca030">
+    <command xml:space="preserve">lumos</command>
+    <result xml:space="preserve">{{The light level in the upper pool qualifies for: }}
+{{Light-bearing things: nothing}}
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa8ca108"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa8ca108">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+lower pool, in the shadows
+The bottom is smooth.
+ No signs of life scar the mud.
+ Your guts feel frostbit.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa8ca1e0"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa8ca1e0">
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">
+upper pool, in dim light
+The water is still.
+ Shadows crowd in overhead.
+ The silence deafens.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa8ca2b8"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa8ca2b8">
+    <command xml:space="preserve">look down</command>
+    <result xml:space="preserve">You gaze downwards.
+
+The bottom is smooth.
+ No signs of life scar the mud.
+ Your guts feel frostbit.
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa8ca390"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa8ca390">
+    <command xml:space="preserve">d</command>
+    <result xml:space="preserve">
+lower pool, in dim light
+The bottom is smooth.
+ No signs of life scar the mud.
+ Your guts feel frostbit.
+
+Down below, a stone.
+It glows like a faint firefly.
+Pale white, and fading.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa8ca468"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa8ca468">
+    <command xml:space="preserve">take stone</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa8ca540"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa8ca540">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:
+  a stone (providing light)
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>

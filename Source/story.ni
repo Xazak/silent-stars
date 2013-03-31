@@ -7,6 +7,8 @@ Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
 
 [TODO:
+--Two turns into a fresh game, the lighting update triggers a look action no matter what else has been happening prior. How come? Something about the light level changing seems to be triggering it; the light level in the Dreamspace areas does not qualify for /any/ light level when I7 tries to calculate it (try LUMOS before and after the light updates and the look action is executed)
+
 --Executing a look action should tell the player what the MC does while looking, e.g. "You steady yourself on the lathe and glance around furtively:"
 --The indefinite articles in the listening-ambient reports need to be massaged
 --Player should be able to listen at a specific direction to hear what's in the next room
@@ -180,7 +182,7 @@ Rule for printing the name of a room (called the place) (this is the new room-na
 	[only certain actions and activities should get the full light treatment, everything else just gets the room]
 	let light-description-toggle be false;
 	if the current action is looking, now light-description-toggle is true;
-	if the player is in Dreamspace, now light-description-toggle is false;
+	[if the player is in Dreamspace, now light-description-toggle is false;]
 	if light-description-toggle is false, say "[printed name of the place]" instead;
 	if the light level is dark:
 		say "[printed name of the place], in the [random dark-noun]" instead;
@@ -295,7 +297,21 @@ Rule for printing the name of an unfamiliar thing (called the item) when the pla
 		if baz is the number of words in the printed name of the item, say "[new-name]";
 		otherwise say "[new-name] ";
 
-Chapter 1 - Listening
+Chapter 1 - Vision
+
+[does not take windows and open doors into account yet]
+The new examine directions rule is listed instead of the examine directions rule in the carry out examining rules.
+This is the new examine directions rule:
+	if the noun is a direction (called thataway):
+		let place be the room thataway from the location;
+		if the place is nothing:
+			try examining the-nothing instead;
+		otherwise:
+			say "You gaze [thataway]wards.[br]";
+			say the description of the place;
+		now examine text printed is true;
+
+Chapter 2 - Hearing
 
 [Define where to find the sounds of something and how to tell how loud certain kinds are]
 Every thing has some text called the sound. The sound of a thing is usually "silence".
@@ -367,50 +383,45 @@ A right hand is part of the player. The description of the right hand is "The bo
 
 Book 5 - The Starlight Dancer
 
-The player is in Dreamspace.
+The player is in the rocky shore.
 
 Part 0 - Dreamtime
 
-["Darkness on all sides.[br]
-A stone slips into water.[br]
-Neither makes a sound."]
-
-Dreamspace is a room. The printed name of Dreamspace is "(Inside)". 
-"[dark-description]". The dark-description of Dreamspace is "Darkness on all sides.[br]Chill water lies at your feet.[br]Nothing lies behind."
-
-After deciding the scope of the player while the player is in Dreamspace:
+The Dreamspace is a region.
+[override usual scope behaviour while we're here]
+After deciding the scope of the player while the location is in Dreamspace:
+	place the lower pool in scope;
 	place the location in scope;
+	
+A rocky shore is a room. The rocky shore is in the Dreamspace. The printed name of the rocky shore is "[one of]jagged[or]craggy[or]gravelly[or]cracked[or]sharp[at random] rocks";
+"Darkness on all sides.[br]Chill water lies at your feet.[br]Nothing lies behind." 
+The dark-description is "[description]";
 
-A thing called the-nothing is here. The printed name of the-nothing is "nothing". Understand "nothing" as the-nothing. Does the player mean examining the-nothing: it is very likely.
+A thing called the-nothing is here. The printed name of the-nothing is "nothing". Understand "darkness" as the-nothing. Understand "nothing" as the-nothing. Does the player mean examining the-nothing: it is very likely.
 The-nothing is scenery.
 The description is "In nothing, stillness.[br]Fear and curiousity.[br]Turn lightward for now."
 
-A container called the water is here. It is transparent, fixed in place, enterable.
-"Still water cools the air.[br]It seems to stretch forever.[br]No waves touch your feet."
-The description is "You dip your fingers.[br]Deathly cold, then painful heat.[br]You flinch back, anxious." 
-The dark-description is "[description]".
-
-Before doing something with the water:
-	if the current action is examining, continue the action;
-	try examining the water instead;
-
-[need to rewrite the message shown when describing contents of the water]
 [see above task: describe active lights in a darkened room]
+[where does the "(providing light)" message come from when listing inventory?]
+[put the stone in every room, only takeable at the bottom of the pool]
 
-A stone is in the water. The stone is lit. "In water, a stone.[br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat." 
+A backdrop called the water is in the rocky shore, the upper pool, and the lower pool.
+The description is "[if the location is the rocky shore]You dip your fingers.[br]Deathly cold, then painful heat.[br]You flinch back, anxious.[otherwise]Blacker than midnight.[br]The chill reaches through your skin.[br]Your limbs feel distant.[end if][if the stone is in the lower pool][br][br][the initial appearance of the stone][end if]";
+
+Down from the rocky shore is the upper pool. The upper pool is in the Dreamspace.
+"The water is still.[br]
+Shadows crowd in overhead.[br]
+The silence deafens."
+
+Down from the upper pool is the lower pool. The lower pool is in the Dreamspace.
+"The bottom is smooth.[br]
+No signs of life scar the mud.[br]
+Your guts feel frostbit."
+
+A stone is in the lower pool. The stone is lit. "Down below, a stone.[br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat." 
 
 Before examining the stone:
 	if the player is not holding the stone, say "Admired at range,[br]the stone's glow waxes and wanes[br]like a  tiny moon." instead;
-
-Rule for reaching inside while the player is in Dreamspace:
-	if the player is not in the water:
-		say "[first time]You crouch down and reach.[no line break][br]
-		It's like bare skin in deep space.[no line break][br]
-		Sensation departs.[br][only]
-		Struggling brings nothing.[no line break][br]
-		To reach it, you must dive in.[no line break][br]
-		Commit, all or none.";
-		deny access;
 
 [expand entering the water to include DIVE IN, add messages, then scene change to Autodoc]
 
@@ -483,18 +494,17 @@ Volume 2 - Beginning Play
 When play begins:
 	set the status line;
 	[Introductory text goes here]
-	say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[br]
+	[say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[br]
 	...[br]
-	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";
-	now the player is asleep;
+	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";]
 	
 Volume 3 - Scenes and Stage Movement
 
-Autodoc Escape is a scene. Autodoc Escape begins when play begins. Autodoc Escape ends when the Medical Bay is visited.
+[Autodoc Escape is a scene. Autodoc Escape begins when play begins. Autodoc Escape ends when the Medical Bay is visited.
 
 Instead of pushing a button the first time during Autodoc Escape:
 	say "Your weakened body flails uselessly against the control panel." instead;
-
+]
 Volume 0 - Not For Release
 
 Book 1 - Testing Commands
