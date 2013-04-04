@@ -41,7 +41,7 @@ Rule for printing a number of something (called the item):
 
 Part 2 - Space, Time, Physics
 
-The time of day is 01:14 AM.
+The time of day is 01:00 AM.
 [invoke during game text using "[time of day as 24h time]"]
 To say (relevant time - a time) as 24h time:
 	let H be the hours part of relevant time;
@@ -90,9 +90,9 @@ Book 2 - Let There Be Light
 
 Part 1 - Units and Definitions
 
-Every room has some text called the dark-description. The dark-description is usually "The [printed name] has no description in the dark."
+Every room has some text called the dark-description. The dark-description is usually "[description]"
 
-Every thing has some text called the dark-description. The dark-description is usually "The [printed name] has no description in the dark."
+Every thing has some text called the dark-description. The dark-description is usually "[description]"
 
 A thing can be bright or dim. A thing is usually dim.
 A thing can be diffuse or direct. A thing is usually diffuse.
@@ -141,7 +141,7 @@ A new-visibility rule (this is the visibility level rule):
 		if the noun is familiar, there is sufficient light; [we'll make an exception if the player has examined it before]
 		otherwise there is mediocre light;
 	otherwise if the noun is infrared:
-		there is mediocre light; [make an exception for anything else flagged infrared]
+		there is sufficient light; [make an exception for anything else flagged infrared]
 	otherwise:
 		there is insufficient light. [if none of the above is true, the player is probably in the dark]
 
@@ -152,8 +152,8 @@ If a room contains lit objects, AND is dark, it should be made lighted
 If a room has no lit objects inside it, AND it is lighted, it should be made dark
 A room can be forced to be lit by the use of a privately-named scenery object if needed
 The initial "X is lighted/dark" statements should ONLY be used to set the initial lighting state of a given room]
-The shining-glowing exception rule is listed after the adjust light rule in the turn sequence rulebook.
-This is the shining-glowing exception rule:
+The supplementary light adjustment rule is listed after the adjust light rule in the turn sequence rulebook.
+This is the supplementary light adjustment rule:
 	if the location is dark:
 		if the light level is bright or the light level is dim:
 			now the location is lighted;
@@ -376,13 +376,20 @@ Part 0 - Dreamtime
 The Dreamspace is a region.
 [override usual scope behaviour while we're here]
 After deciding the scope of the player while the location is in Dreamspace:
-	place the lower pool in scope;
+	place the location in scope;
 	place the stone in scope; [the glow from this is visible all the way up]
 	
 A rocky shore is a room. The rocky shore is in the Dreamspace. The printed name of the rocky shore is "[one of]jagged[or]craggy[or]gravelly[or]cracked[or]sharp[at random] rocks";
-"Darkness on all sides.[br]Chill water lies at your feet.[br]Nothing lies behind."
-The dark-description is "[description]";
+"1[br]2[br]Nothing lies behind.[br][br]Still water cools the air.[br]It seems to stretch forever.[br]No waves touch your feet."
 
+At 1:00 AM: 
+	say "A shining stone falls.[no line break][br]The water glows with pale light.[no line break][br]Ripples lap the shore.";
+	move the stone to the upper pool;
+
+At 1:01 AM: 
+	say "The pale gleam recedes.[no line break][br]Inky dark cloaks the water.[no line break][br]The waves settle down.";
+	move the stone to the lower pool;
+	
 A thing called the-nothing is here. The printed name of the-nothing is "nothing". Understand "darkness" as the-nothing. Understand "nothing" as the-nothing. Does the player mean examining the-nothing: it is very likely.
 The-nothing is scenery, infrared.
 The description is "In nothing, stillness.[br]Fear and curiousity.[br]Turn lightward for now."
@@ -401,10 +408,20 @@ Down from the upper pool is the lower pool. The lower pool is in the Dreamspace.
 No signs of life scar the mud.[br]
 Your guts feel frostbit."
 
-A stone is in the lower pool. The stone is lit. "Down below, a stone.[br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat." 
+There is a stone here. The stone is lit. "Down below, a stone.[br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat." 
+The stone is infrared.
 
 Before examining the stone:
 	if the player is not holding the stone, say "Admired at range,[br]the stone's glow waxes and wanes[br]like a  tiny moon." instead;
+
+Before taking something while the location is in Dreamspace:
+	if the location is not the upper pool or the location is not the lower pool:
+		say "[first time]You plunge a hand in.[no line break][br]
+		It's like bare skin in deep space.[no line break][br]
+		Sensation departs.[br][only]
+		Struggling brings nothing.[no line break][br]
+		To reach it, you must dive in.[no line break][br]
+		Commit all, or none." instead;
 
 [expand entering the water to include DIVE IN, add messages, then scene change to Autodoc]
 
