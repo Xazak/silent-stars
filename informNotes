@@ -12,6 +12,7 @@
 [ ] Problems involving radiation sickness require similar ways
 
 MESSAGE CHANGES:
+[ ] Remove/Replace: The room description header is reprinted during a light level changeover
 [ ] "Time passes." - after executing WAIT
 [ ] Addition: The light status of the room and any overriding light sources in the room should be communicated to the player via a short message directly previous to the room description and after the heading (if possible). Ex: "The sunrod in your hand does a good job of lighting up the shadows. /n/nThe Medical Bay is..."
 [ ] "(providing light)" message shown while listing inventory
@@ -42,6 +43,8 @@ Assuming the above:
 A thing encloses whatever is a part of itself, or inside itself, or on top of itself, and is recursive for multiple containers.
 ]]-
 ***QUESTIONS -[[
+Does I7 generate a "light status has changed" message when moving from a lit room to a dark one and vice versa?
+
 Can Inform randomly interject bits of text into the ongoing stream, i.e. from a table of phrases? 
 example: "There I was, dangling in space. Not sure what to do next. Was I going to head back? Or just stay out there longer?"
 becomes

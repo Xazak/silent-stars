@@ -90,9 +90,9 @@ Book 2 - Let There Be Light
 
 Part 1 - Units and Definitions
 
-Every room has some text called the dark-description. The dark-description is usually "[description]"
+Every room has some text called the dark-description. The dark-description is usually "(DARK DESC)[br][description][br]"
 
-Every thing has some text called the dark-description. The dark-description is usually "[description]"
+Every thing has some text called the dark-description. The dark-description is usually "(DARK DESC)[br][description][br]"
 
 A thing can be bright or dim. A thing is usually dim.
 A thing can be diffuse or direct. A thing is usually diffuse.
@@ -169,6 +169,7 @@ Rule for printing the name of a room (called the place) (this is the new room-na
 	let light-description-toggle be false;
 	if the current action is looking, now light-description-toggle is true;
 	[if the player is in Dreamspace, now light-description-toggle is false;]
+	if the printing the announcement of light activity is going on, do nothing instead; [if the look action was automatically generated, we're going to skip announcing the name of the room again for now; would be a good place to insert a message later]
 	if light-description-toggle is false, say "[printed name of the place]" instead;
 	if the light level is murky:
 		say "[printed name of the place], in the [random dark-noun]" instead;
@@ -383,13 +384,9 @@ A rocky shore is a room. The rocky shore is in the Dreamspace. The printed name 
 "1[br]2[br]Nothing lies behind.[br][br]Still water cools the air.[br]It seems to stretch forever.[br]No waves touch your feet."
 
 At 1:00 AM: 
-	say "A shining stone falls.[no line break][br]The water glows with pale light.[no line break][br]Ripples lap the shore.";
+	say "[if the player is in the rocky shore]A shining stone falls.[otherwise]Above, a stone falls.[end if]The water glows with pale light.[no line break][br]Ripples lap the shore.";
 	move the stone to the upper pool;
 
-At 1:01 AM: 
-	say "The pale gleam recedes.[no line break][br]Inky dark cloaks the water.[no line break][br]The waves settle down.";
-	move the stone to the lower pool;
-	
 A thing called the-nothing is here. The printed name of the-nothing is "nothing". Understand "darkness" as the-nothing. Understand "nothing" as the-nothing. Does the player mean examining the-nothing: it is very likely.
 The-nothing is scenery, infrared.
 The description is "In nothing, stillness.[br]Fear and curiousity.[br]Turn lightward for now."
@@ -399,31 +396,67 @@ The description is "[if the location is the rocky shore]You dip your fingers.[br
 The water is infrared.
 
 Down from the rocky shore is the upper pool. The upper pool is in the Dreamspace.
-"The water is still.[br]
+"The water [if the time of day is 1:01 AM]grows[otherwise]is[end if] still.[br]
 Shadows crowd in overhead.[br]
 The silence deafens."
+
+Every turn while the location of the stone is below the location of the player:
+	say the initial appearance of the stone;
+
+Every turn while the stone is in the upper pool:
+	move the stone to the lower pool;
+	say "The pale gleam recedes.[no line break][br]Inky dark cloaks the water.[no line break][br]The waves settle down.";
 
 Down from the upper pool is the lower pool. The lower pool is in the Dreamspace.
 "The bottom is smooth.[br]
 No signs of life scar the mud.[br]
 Your guts feel frostbit."
 
-There is a stone here. The stone is lit. "Down below, a stone.[br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat." 
+There is a stone here. The stone is lit. "[if the location encloses the stone]Before you,[otherwise]Down below,[end if] a stone.[br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat."
 The stone is infrared.
 
 Before examining the stone:
 	if the player is not holding the stone, say "Admired at range,[br]the stone's glow waxes and wanes[br]like a  tiny moon." instead;
 
 Before taking something while the location is in Dreamspace:
-	if the location is not the upper pool or the location is not the lower pool:
-		say "[first time]You plunge a hand in.[no line break][br]
+	if the location is the rocky shore:
+		say "You plunge a hand in.[no line break][br]
 		It's like bare skin in deep space.[no line break][br]
-		Sensation departs.[br][only]
-		Struggling brings nothing.[no line break][br]
-		To reach it, you must dive in.[no line break][br]
-		Commit all, or none." instead;
+		Sensation departs."
 
-[expand entering the water to include DIVE IN, add messages, then scene change to Autodoc]
+["if taking the stone didn't work:"
+	say "Struggling brings nothing.[no line break][br]
+	To reach it, you must dive in.[no line break][br]
+	Commit all, or none." instead;]
+
+Understand "dive" or "dive in" or "jump in" as diving in.
+Diving in is an action applying to nothing.
+
+Before diving in:
+	let puddle be the room down from the location;
+	if the puddle is nothing:
+		say "There's nothing to dive into here." instead;
+	otherwise if the puddle is in Dreamspace:
+		if the location is the rocky shore:
+			say "One breath, plus one held.[no line break][br]Even your bones feel like ice.[no line break][br]Darkness shrouds your thoughts.";
+		otherwise:
+			say "The light calls you down.[no line break][br]You kick your legs, jaw clenched.[no line break][br]Frost tightens your chest.";
+	otherwise if the player is underwater:
+		say "You kick your legs hard and dive down a few more feet.";
+	otherwise:
+		say "You set your feet, then take two steps and dive into the {liquid}.";
+		
+Carry out diving in:
+	move the player to the room down from the location;
+
+To decide if the player is underwater:
+	if the location is watery, yes;
+	no;
+	
+A room can be watery or dry. A room is usually dry.
+
+Dreamtime is a scene. Dreamtime begins when play begins. Dreamtime ends when the player is carrying the stone.
+[the player cuts herself when she takes the stone]
 
 Part 1 - Deck A
 
@@ -499,6 +532,8 @@ When play begins:
 	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";]
 	
 Volume 3 - Scenes and Stage Movement
+
+[any overarching every turn rules should go here]
 
 [Autodoc Escape is a scene. Autodoc Escape begins when play begins. Autodoc Escape ends when the Medical Bay is visited.
 
