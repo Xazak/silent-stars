@@ -169,7 +169,7 @@ Rule for printing the name of a room (called the place) (this is the new room-na
 	let light-description-toggle be false;
 	if the current action is looking, now light-description-toggle is true;
 	[if the player is in Dreamspace, now light-description-toggle is false;]
-	if the printing the announcement of light activity is going on, do nothing instead; [if the look action was automatically generated, we're going to skip announcing the name of the room again for now; would be a good place to insert a message later]
+	if the printing the announcement of light activity is going on, say "..." instead; [if the look action was automatically generated, we're going to skip announcing the name of the room again for now; would be a good place to insert a message later]
 	if light-description-toggle is false, say "[printed name of the place]" instead;
 	if the light level is murky:
 		say "[printed name of the place], in the [random dark-noun]" instead;
@@ -402,6 +402,7 @@ The silence deafens."
 
 Every turn while the location of the stone is below the location of the player:
 	say the initial appearance of the stone;
+	say line break;
 
 Every turn while the stone is in the upper pool:
 	move the stone to the lower pool;
@@ -412,7 +413,7 @@ Down from the upper pool is the lower pool. The lower pool is in the Dreamspace.
 No signs of life scar the mud.[br]
 Your guts feel frostbit."
 
-There is a stone here. The stone is lit. "[if the location encloses the stone]Before you,[otherwise]Down below,[end if] a stone.[br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat."
+There is a stone here. The stone is lit. "[if the location encloses the stone]Before you, a stone.[otherwise]A white stone descends.[end if][br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat."
 The stone is infrared.
 
 Before examining the stone:
@@ -457,6 +458,10 @@ A room can be watery or dry. A room is usually dry.
 
 Dreamtime is a scene. Dreamtime begins when play begins. Dreamtime ends when the player is carrying the stone.
 [the player cuts herself when she takes the stone]
+
+When Dreamtime ends:
+	say "This is where things stop!";
+	move the player to the Autodoc;
 
 Part 1 - Deck A
 
