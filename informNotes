@@ -12,6 +12,7 @@
 [ ] Problems involving radiation sickness require similar ways
 
 MESSAGE CHANGES:
+[ ] Addition: hands need alternate description while in dreamtime
 [ ] Remove/Replace: The room description header is reprinted during a light level changeover
 [ ] "Time passes." - after executing WAIT
 [ ] Addition: The light status of the room and any overriding light sources in the room should be communicated to the player via a short message directly previous to the room description and after the heading (if possible). Ex: "The sunrod in your hand does a good job of lighting up the shadows. /n/nThe Medical Bay is..."

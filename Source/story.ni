@@ -2,6 +2,7 @@
 
 Use dynamic memory allocation of at least 16384.
 
+Include Basic Screen Effects by Emily Short.
 Include Bulk Limiter by Eric Eve.
 Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
@@ -78,6 +79,13 @@ Definition: a thing is proximate:
 
 A thing can be hot or cold. A thing is usually cold.
 
+A room can be watery or dry. A room is usually dry.
+
+To decide if the player is underwater:
+	if the location is watery, yes;
+	no;
+	
+
 Part 3 - Status Line, Game HUD, Misc
 
 To set the status line:
@@ -90,9 +98,9 @@ Book 2 - Let There Be Light
 
 Part 1 - Units and Definitions
 
-Every room has some text called the dark-description. The dark-description is usually "(DARK DESC)[br][description][br]"
+Every room has some text called the dark-description. The dark-description is usually "(dark desc is empty)[br][description][br]"
 
-Every thing has some text called the dark-description. The dark-description is usually "(DARK DESC)[br][description][br]"
+Every thing has some text called the dark-description. The dark-description is usually "(dark desc is empty)[br][description][br]"
 
 A thing can be bright or dim. A thing is usually dim.
 A thing can be diffuse or direct. A thing is usually diffuse.
@@ -245,7 +253,7 @@ Instead of pushing a button (called the frobber):
 
 Book 4 - Actors
 
-Part 1 - Bodily Functions
+Part 1 - New Actions
 
 To pay attention:
 	let foo be a random number between 1 and 5;
@@ -260,7 +268,7 @@ A person can be wounded or healthy. A person is usually healthy.
 
 A person can be concussed or sober. A person is usually sober.
 
-Rule for printing the name of an unfamiliar thing (called the item) when the player is concussed (this is the brain damage rule):
+Rule for printing the name of something (called the item) when the player is concussed (this is the brain damage rule):
 	let original-name be an indexed text;
 	let name-template be a list of numbers;
 	repeat with baz running from 1 to the number of words in the printed name of the item:
@@ -359,76 +367,8 @@ Report listening ambient:
 	repeat with bar running through report-list:
 		if bar is nearby, say "Nearby, [sound-description of bar][br]";
 		otherwise say "[sound-description of bar][br]";
-	
-Part 2 - The Player
 
-The printed name of the player is "Erika".
-
-A left hand is part of the player. The description of the left hand is "It's your left hand. {if brightness of location is black}You flex it once or twice to make sure it's still there{otherwise}Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits){end if}." It is familiar and seen.
-
-A right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
-
-Book 5 - The Starlight Dancer
-
-The player is in the rocky shore.
-
-Part 0 - Dreamtime
-
-The Dreamspace is a region.
-[override usual scope behaviour while we're here]
-After deciding the scope of the player while the location is in Dreamspace:
-	place the location in scope;
-	place the stone in scope; [the glow from this is visible all the way up]
-	
-A rocky shore is a room. The rocky shore is in the Dreamspace. The printed name of the rocky shore is "[one of]jagged[or]craggy[or]gravelly[or]cracked[or]sharp[at random] rocks";
-"1[br]2[br]Nothing lies behind.[br][br]Still water cools the air.[br]It seems to stretch forever.[br]No waves touch your feet."
-
-At 1:00 AM: 
-	say "[if the player is in the rocky shore]A shining stone falls.[otherwise]Above, a stone falls.[end if]The water glows with pale light.[no line break][br]Ripples lap the shore.";
-	move the stone to the upper pool;
-
-A thing called the-nothing is here. The printed name of the-nothing is "nothing". Understand "darkness" as the-nothing. Understand "nothing" as the-nothing. Does the player mean examining the-nothing: it is very likely.
-The-nothing is scenery, infrared.
-The description is "In nothing, stillness.[br]Fear and curiousity.[br]Turn lightward for now."
-
-A backdrop called the water is in the rocky shore, the upper pool, and the lower pool.
-The description is "[if the location is the rocky shore]You dip your fingers.[br]Deathly cold, then painful heat.[br]You flinch back, anxious.[otherwise]Blacker than midnight.[br]The chill reaches through your skin.[br]Your limbs feel distant.[end if][if the stone is in the lower pool][br][br][the initial appearance of the stone][end if]";
-The water is infrared.
-
-Down from the rocky shore is the upper pool. The upper pool is in the Dreamspace.
-"The water [if the time of day is 1:01 AM]grows[otherwise]is[end if] still.[br]
-Shadows crowd in overhead.[br]
-The silence deafens."
-
-Every turn while the location of the stone is below the location of the player:
-	say the initial appearance of the stone;
-	say line break;
-
-Every turn while the stone is in the upper pool:
-	move the stone to the lower pool;
-	say "The pale gleam recedes.[no line break][br]Inky dark cloaks the water.[no line break][br]The waves settle down.";
-
-Down from the upper pool is the lower pool. The lower pool is in the Dreamspace.
-"The bottom is smooth.[br]
-No signs of life scar the mud.[br]
-Your guts feel frostbit."
-
-There is a stone here. The stone is lit. "[if the location encloses the stone]Before you, a stone.[otherwise]A white stone descends.[end if][br]It glows like a faint firefly.[br]Pale white, and fading." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat."
-The stone is infrared.
-
-Before examining the stone:
-	if the player is not holding the stone, say "Admired at range,[br]the stone's glow waxes and wanes[br]like a  tiny moon." instead;
-
-Before taking something while the location is in Dreamspace:
-	if the location is the rocky shore:
-		say "You plunge a hand in.[no line break][br]
-		It's like bare skin in deep space.[no line break][br]
-		Sensation departs."
-
-["if taking the stone didn't work:"
-	say "Struggling brings nothing.[no line break][br]
-	To reach it, you must dive in.[no line break][br]
-	Commit all, or none." instead;]
+Chapter 3 - Watersports
 
 Understand "dive" or "dive in" or "jump in" as diving in.
 Diving in is an action applying to nothing.
@@ -450,30 +390,81 @@ Before diving in:
 Carry out diving in:
 	move the player to the room down from the location;
 
-To decide if the player is underwater:
-	if the location is watery, yes;
-	no;
+Part 2 - The Player
+
+The printed name of the player is "Erika".
+
+A left hand is part of the player. The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
+
+A right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
+
+Book 5 - The Starlight Dancer
+
+The player is in the autodoc. [move the player back to the rocky shore before compiling]
+
+Part 0 - Dreamtime
+
+The Dreamspace is a region.
+[override usual scope behaviour while we're here]
+After deciding the scope of the player while the location is in Dreamspace:
+	place the location in scope;
+	place the stone in scope; [the glow from this is visible all the way up]
 	
-A room can be watery or dry. A room is usually dry.
+A rocky shore is a room. The rocky shore is in the Dreamspace. The printed name of the rocky shore is "[one of]jagged[or]craggy[or]gravelly[or]cracked[or]sharp[at random] rocks";
+"Rocks gnaw your bare feet.[br]The darkness is a vast cloak.[br]Nothing lies behind.[br][br]Still water cools the air.[br]It seems to stretch forever.[br]No waves touch your feet."
 
-Dreamtime is a scene. Dreamtime begins when play begins. Dreamtime ends when the player is carrying the stone.
-[the player cuts herself when she takes the stone]
+Before taking something while the location is the rocky shore for the first time:
+	say "You plunge a hand in.[no line break][br]It's like bare skin in deep space.[no line break][br]Sensation departs.";
+	
+At 1:00 AM: 
+	say "[if the player is in the rocky shore]A shining stone falls.[otherwise]Above, a stone falls.[end if]The water glows with pale light.[no line break][br]Ripples lap the shore.";
+	move the stone to the upper pool;
 
-When Dreamtime ends:
-	say "This is where things stop!";
-	move the player to the Autodoc;
+A thing called the-nothing is here. The printed name of the-nothing is "nothing". Understand "darkness" as the-nothing. Understand "nothing" as the-nothing. Does the player mean examining the-nothing: it is very likely.
+The-nothing is scenery, infrared.
+The description is "In nothing, stillness.[br]Fear and curiousity.[br]Turn lightward for now."
+
+A backdrop called the water is in the rocky shore, the upper pool, and the lower pool.
+The description is "[if the location is the rocky shore]You dip your fingers.[br]Deathly cold, then painful heat.[br]You flinch back, anxious.[otherwise]Blacker than midnight.[br]The chill reaches through your skin.[br]Your limbs feel distant.[end if][if the stone is in the lower pool][br][br][the initial appearance of the stone][end if]";
+The water is infrared.
+
+Down from the rocky shore is the upper pool. The upper pool is in the Dreamspace.
+"The water [if the time of day is 1:01 AM]grows[otherwise]is[end if] still.[br]Shadows crowd in overhead.[br]The silence deafens."
+
+Every turn while the location of the stone is below the location of the player:
+	say the initial appearance of the stone;
+	say line break;
+
+Every turn while the stone is in the upper pool:
+	move the stone to the lower pool;
+	say "The pale gleam recedes.[no line break][br]Inky dark cloaks the water.[no line break][br]The waves settle down.";
+
+Down from the upper pool is the lower pool. The lower pool is in the Dreamspace. "The bottom is smooth.[br]No signs of life scar the mud.[br]Your guts feel frostbit."
+
+There is a stone here. The stone is lit. "[if the location encloses the stone]Before you, a stone.[otherwise]Under you, a stone.[end if][br]It glows like a faint firefly.[br]Pale white, and falling." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat."
+The stone is infrared.
+
+Before examining the stone:
+	if the player is not holding the stone, say "Admired at range,[br]the stone's glow waxes and wanes[br]like a  tiny moon." instead;
+
+Before taking the stone:
+	if the stone is not touchable, say "Struggling brings ruin.[no line break][br]The depths are the only way.[no line break][br]Commit all, or none." instead;
+
+Report taking the stone:
+	say "You reach out, eager.[no line break][br]Chains of ice tug at your limbs.[no line break][br]Your chest burns furnace-hot.[no line break][br][br]A veil draws across.[no line break][br]Red on black, crimson silk red.[no line break][br]The bright sting of pain.[no line break][br][br]You gaze at your hand.[no line break][br]Streams of red hang like silk scarves.[no line break][br]The wound glows ruby.[no line break][br][br]";
+	wait for any key;
+	say "The red glow flickers.[no line break]" instead;
 
 Part 1 - Deck A
 
 Deck A is a region.
 
-[*** The Autodoc (Starting Area)]
-The Autodoc is a room. "You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes." 
+The Autodoc is a room. "You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes."
 The printed name of the autodoc is "Antiseptic Coffin". Understand "coffin" as the Autodoc. The dark-description of the Autodoc is "It's cold and damp and dark in here."
 The Autodoc is in Deck A.
 Index map with the Autodoc mapped south of the Medical Bay.
 
-There is a panel called the control panel in the Autodoc. "The control panel above you shows a blinking red button." The description is "The edges of the control panel have some biogunk in them." The dark-description is "An amber-colored control panel shines wan light onto your sternum."
+There is a panel called the control panel in the Autodoc. "The [printed name] above you shows a blinking red button." The description is "The edges of the [printed name] have some biogunk in them." The dark-description is "An amber-colored [printed name] shines wan light onto your sternum."
 The control panel is lit.
 
 [need to adapt the buttons to track their on-off status rather than intercepting their logic wholesale]
@@ -482,13 +473,13 @@ The description of the cycle button is "It's red, and it says 'Surgery Complete?
 Instead of pushing the cycle button:
 	now the control panel is inactive;
 	now the description of the cycle button is "It's green and says 'Select Program'.";
-	say "The button changes to green and blinks 'Completed' a couple times.";
+	say "The [printed name] changes to green and blinks 'Completed' a couple times.";
 
 The unlock button is a button. The unlock button is part of the control panel.
 Instead of pushing the unlock button:
 	if the control panel is inactive:
 		now the autodoc's hatch is unlocked;
-		say "The 'Unlock Hatch' button changes to green.";
+		say "The 'Unlock Hatch' [printed name] changes to green.";
 	otherwise:
 		say "ERROR: Completion of surgery cycle has not been confirmed.";
 
@@ -498,18 +489,18 @@ Instead of pushing the exit button:
 		if the control panel is active:
 			say "ERROR: Completion of surgery cycle has not been confirmed.";
 		otherwise:
-			say "ERROR: Autodoc hatch is locked.";
+			say "ERROR: [printed name of autodoc's hatch] is locked.";
 	otherwise:
 		try opening the autodoc's hatch;
 
-The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex window is set into the hatch above you.[else]A dark plastex porthole is set into the hatch of the autodoc." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
+The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]A dark plastex porthole is set into the hatch of the autodoc." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
 Before opening the Autodoc's hatch:
 	if the Autodoc's hatch is locked:
-		say "The control panel flashes red and beeps. It seems the hatch is locked shut.";
+		say "The control panel flashes red and beeps. It seems the [printed name] is locked shut.";
 		stop the action;
 	otherwise:
-		say "A beat passes, and then the gasket on the autodoc's hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants."	
+		say "A beat passes, and then the gasket on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants."	
 
 The hatch window is part of the Autodoc's hatch. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
 
@@ -532,19 +523,39 @@ Volume 2 - Beginning Play
 When play begins:
 	set the status line;
 	[Introductory text goes here]
-	[say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[br]
-	...[br]
-	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";]
-	
+	[say "At the time, I considered 'Chief Engineer' aboard the Starlight Dancer one of the highlights of my career. It was the first time anyone from the Europan Engineer's Fellowship had been chosen. To be perfectly technical, it wasn't the EEF's fault that Aurita did what she did. We signed waivers, we knew there was experimental tech aboard, the usual boilerplate for bleeding-edge research vessels. It was what we wanted: big toys in a new sandbox and no supervision.";
+	wait for any key;
+	say "[br]I guess we got a little big for our britches. If I never see the inside of a spacecan again it'll be too soon.";
+	wait for any key;
+	say "[br]You know the weirdest part for me was the dreams? A bunch of other vets say the same thing, that cryo does something to your subconscious. Of course the headshrinkers never find real proof of change; that green gel shit they pump into your lungs and around you in the spacecan 'has been proven to prevent tissue damage in all but extraordinarily high fractions of sublight speed', but that doesn't change your dreams back.";
+	wait for any key;
+	say "[br]Nothing does, so far as anyone knows. And these other jokers, they had [i]successful[/i] missions, or even just break-even missions. Their dreams are a little weird, otherwise pleasant or at worst harmless.";
+	wait for any key;
+	say "[br]I'm the only one with a void file, the only one who came back from the Starlight Dancer. My dreams are blackest cold, the chill the sinners lying under Cocytus must feel at night. I can feel the frost reach down my throat, right into the bottom of my lungs where the death rattle must be. The frost never quite melts back out afterward, and right there next to your guts for the rest of your life is a little puddle of ice water.";
+	wait for any key;
+	say "[br]It hurts like [i]crazy.[/i]";]
+
 Volume 3 - Scenes and Stage Movement
 
 [any overarching every turn rules should go here]
 
-[Autodoc Escape is a scene. Autodoc Escape begins when play begins. Autodoc Escape ends when the Medical Bay is visited.
+Dreamtime is a scene. Dreamtime begins when play begins. Dreamtime ends when the player is carrying the stone.
+
+When Dreamtime ends:
+	say "The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.[br]
+	...[br]
+	The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.";
+	wait for any key;
+	move the player to the Autodoc;
+
+Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the player is not concussed.
+
+When Autodoc Escape begins:
+	now the player is concussed;
 
 Instead of pushing a button the first time during Autodoc Escape:
 	say "Your weakened body flails uselessly against the control panel." instead;
-]
+
 Volume 0 - Not For Release
 
 Book 1 - Testing Commands
