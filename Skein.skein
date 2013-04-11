@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0xa1b0e8f0" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x9b8a908" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>GNOME Inform 7</generator>
-  <activeNode nodeId="node-0xa1b0e8f0"/>
-  <item nodeId="node-0xa1b0e8f0">
+  <activeNode nodeId="node-0xa060820"/>
+  <item nodeId="node-0x9b8a908">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
@@ -10,7 +10,7 @@
 
 Silent Stars
 An Interactive Fiction by Zaq Grow
-Release 1 / Serial number 130408 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+Release 1 / Serial number 130411 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
 
 Antiseptic Coffin, in dim light
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -26,16 +26,19 @@ The control panel above you shows a blinking red button.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0e9c8"/>
-      <child nodeId="node-0xa1b0ed28"/>
-      <child nodeId="node-0x9f739d0"/>
-      <child nodeId="node-0x9ffd118"/>
-      <child nodeId="node-0xa00d600"/>
-      <child nodeId="node-0xa01bab8"/>
-      <child nodeId="node-0xa01bef0"/>
+      <child nodeId="node-0x9b8a9e0"/>
+      <child nodeId="node-0x9b8ad40"/>
+      <child nodeId="node-0x9c291d0"/>
+      <child nodeId="node-0x9c98908"/>
+      <child nodeId="node-0x9ca8ec0"/>
+      <child nodeId="node-0x9cb7c50"/>
+      <child nodeId="node-0x9cd7920"/>
+      <child nodeId="node-0x9cd7c80"/>
+      <child nodeId="node-0x9cd7e30"/>
+      <child nodeId="node-0x9ce9848"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0e9c8">
+  <item nodeId="node-0x9b8a9e0">
     <command xml:space="preserve">press cycle</command>
     <result xml:space="preserve">The button changes to green and blinks &quot;Completed&quot; a couple times.
 
@@ -46,10 +49,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0eaa0"/>
+      <child nodeId="node-0x9b8aab8"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0eaa0">
+  <item nodeId="node-0x9b8aab8">
     <command xml:space="preserve">press unlock</command>
     <result xml:space="preserve">The &quot;Unlock Hatch&quot; button changes to green.
 
@@ -60,10 +63,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0eb78"/>
+      <child nodeId="node-0x9b8ab90"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0eb78">
+  <item nodeId="node-0x9b8ab90">
     <command xml:space="preserve">press exit</command>
     <result xml:space="preserve">A beat passes, and then the gasket on the autodoc&apos;s hatch disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
 
@@ -76,10 +79,10 @@ You open the htcah.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0ec50"/>
+      <child nodeId="node-0x9b8ac68"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0ec50">
+  <item nodeId="node-0x9b8ac68">
     <command xml:space="preserve">out</command>
     <result xml:space="preserve">Medical Bay, in the darkness
 The Medical Bay has no description in the dark.
@@ -90,7 +93,7 @@ The Medical Bay has no description in the dark.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa1b0ed28">
+  <item nodeId="node-0x9b8ad40">
     <command xml:space="preserve">x water</command>
     <result xml:space="preserve">You dip your fingers.
 Deathly cold, then painful heat.
@@ -107,10 +110,10 @@ Ripples lap the shore.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0ee00"/>
+      <child nodeId="node-0x9b8ae18"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0ee00">
+  <item nodeId="node-0x9b8ae18">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You plunge a hand in.
 It&apos;s like bare skin in deep space.
@@ -135,10 +138,10 @@ The waves settle down.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0eed8"/>
+      <child nodeId="node-0x9b8aef0"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0eed8">
+  <item nodeId="node-0x9b8aef0">
     <command xml:space="preserve">dive in</command>
     <result xml:space="preserve">One breath, plus one held.
 Even your bones feel like ice.
@@ -161,10 +164,10 @@ Pale white, and fading.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9f73820"/>
+      <child nodeId="node-0x9c29020"/>
     </children>
   </item>
-  <item nodeId="node-0x9f73820">
+  <item nodeId="node-0x9c29020">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">The light calls you down.
 You kick your legs, jaw clenched.
@@ -186,10 +189,10 @@ Pale white, and fading.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9f738f8"/>
+      <child nodeId="node-0x9c290f8"/>
     </children>
   </item>
-  <item nodeId="node-0x9f738f8">
+  <item nodeId="node-0x9c290f8">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Taken.
 
@@ -213,7 +216,7 @@ The control panel above you shows a blinking red button.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x9f739d0">
+  <item nodeId="node-0x9c291d0">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">
 I guess we got a little big for our britches. If I never see the inside of a spacecan again it&apos;ll be too soon.
@@ -224,10 +227,10 @@ I guess we got a little big for our britches. If I never see the inside of a spa
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9f73aa8"/>
+      <child nodeId="node-0x9c292a8"/>
     </children>
   </item>
-  <item nodeId="node-0x9f73aa8">
+  <item nodeId="node-0x9c292a8">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">
 You know the weirdest part for me was the dreams? A bunch of other vets say the same thing, that cryo does something to your subconscious. Of course the headshrinkers never find real proof of change; that green gel shit they pump into your lungs and around you in the spacecan &quot;has been proven to prevent tissue damage in all but extraordinarily high fractions of sublight speed&quot;, but that doesn&apos;t change your dreams back.
@@ -238,10 +241,10 @@ You know the weirdest part for me was the dreams? A bunch of other vets say the 
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9f73b80"/>
+      <child nodeId="node-0x9c29380"/>
     </children>
   </item>
-  <item nodeId="node-0x9f73b80">
+  <item nodeId="node-0x9c29380">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">
 Nothing does, so far as anyone knows. And these other jokers, they had successful missions, or even just break-even missions. Their dreams are a little weird, otherwise pleasant or at worst harmless.
@@ -252,10 +255,10 @@ Nothing does, so far as anyone knows. And these other jokers, they had successfu
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9f73c58"/>
+      <child nodeId="node-0x9c29458"/>
     </children>
   </item>
-  <item nodeId="node-0x9f73c58">
+  <item nodeId="node-0x9c29458">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">
 I&apos;m the only one with a void file, the only one who came back from the Starlight Dancer. My dreams are blackest cold, the chill the sinners lying under Cocytus must feel at night. I can feel the frost reach down my throat, right into the bottom of my lungs where the death rattle must be. The frost never quite melts back out afterward, and right there next to your guts for the rest of your life is a little puddle of ice water.
@@ -266,10 +269,10 @@ I&apos;m the only one with a void file, the only one who came back from the Star
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9f73d30"/>
+      <child nodeId="node-0x9c29530"/>
     </children>
   </item>
-  <item nodeId="node-0x9f73d30">
+  <item nodeId="node-0x9c29530">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">
 It hurts like crazy.
@@ -294,11 +297,11 @@ No waves touch your feet.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9f73e08"/>
-      <child nodeId="node-0x9fce630"/>
+      <child nodeId="node-0x9c29608"/>
+      <child nodeId="node-0x9c6a628"/>
     </children>
   </item>
-  <item nodeId="node-0x9f73e08">
+  <item nodeId="node-0x9c29608">
     <command xml:space="preserve">x water</command>
     <result xml:space="preserve">You dip your fingers.
 Deathly cold, then painful heat.
@@ -315,11 +318,11 @@ Ripples lap the shore.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9f73ee0"/>
-      <child nodeId="node-0x9fbf708"/>
+      <child nodeId="node-0x9c296e0"/>
+      <child nodeId="node-0x9c5bf08"/>
     </children>
   </item>
-  <item nodeId="node-0x9f73ee0">
+  <item nodeId="node-0x9c296e0">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You plunge a hand in.
 It&apos;s like bare skin in deep space.
@@ -344,11 +347,11 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fae830"/>
-      <child nodeId="node-0x9fbf2d0"/>
+      <child nodeId="node-0x9c4b030"/>
+      <child nodeId="node-0x9c5bad0"/>
     </children>
   </item>
-  <item nodeId="node-0x9fae830">
+  <item nodeId="node-0x9c4b030">
     <command xml:space="preserve">dive in</command>
     <result xml:space="preserve">One breath, plus one held.
 Even your bones feel like ice.
@@ -371,11 +374,11 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fae908"/>
-      <child nodeId="node-0x9faeb90"/>
+      <child nodeId="node-0x9c4b108"/>
+      <child nodeId="node-0x9c4b390"/>
     </children>
   </item>
-  <item nodeId="node-0x9fae908">
+  <item nodeId="node-0x9c4b108">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Struggling brings nothing.
 To reach flesh you must dive in.
@@ -392,10 +395,10 @@ Pale white, and fading.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fae9e0"/>
+      <child nodeId="node-0x9c4b1e0"/>
     </children>
   </item>
-  <item nodeId="node-0x9fae9e0">
+  <item nodeId="node-0x9c4b1e0">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">The light calls you down.
 You kick your legs, jaw clenched.
@@ -417,10 +420,10 @@ Pale white, and fading.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9faeab8"/>
+      <child nodeId="node-0x9c4b2b8"/>
     </children>
   </item>
-  <item nodeId="node-0x9faeab8">
+  <item nodeId="node-0x9c4b2b8">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Taken.
 
@@ -444,7 +447,7 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x9faeb90">
+  <item nodeId="node-0x9c4b390">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">The light calls you down.
 You kick your legs, jaw clenched.
@@ -466,10 +469,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9faec68"/>
+      <child nodeId="node-0x9c4b468"/>
     </children>
   </item>
-  <item nodeId="node-0x9faec68">
+  <item nodeId="node-0x9c4b468">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You reach out, eager.
 Chains of ice tug at your limbs.
@@ -490,10 +493,10 @@ The wound glows ruby.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9faed40"/>
+      <child nodeId="node-0x9c4b540"/>
     </children>
   </item>
-  <item nodeId="node-0x9faed40">
+  <item nodeId="node-0x9c4b540">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">The red glow flickers.
 The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can&apos;t feel it because you&apos;re completely numb.
@@ -508,10 +511,10 @@ The smell of burning electronics hits your lizard hindbrain like a rivet gun and
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9faee18"/>
+      <child nodeId="node-0x9c4b618"/>
     </children>
   </item>
-  <item nodeId="node-0x9faee18">
+  <item nodeId="node-0x9c4b618">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">
 Antiseptic Coffin, in dim light
@@ -528,10 +531,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9faeef0"/>
+      <child nodeId="node-0x9c4b6f0"/>
     </children>
   </item>
-  <item nodeId="node-0x9faeef0">
+  <item nodeId="node-0x9c4b6f0">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Antiseptic Coffin, in dim light
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -547,10 +550,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fbf048"/>
+      <child nodeId="node-0x9c5b848"/>
     </children>
   </item>
-  <item nodeId="node-0x9fbf048">
+  <item nodeId="node-0x9c5b848">
     <command xml:space="preserve">showme erika</command>
     <result xml:space="preserve">There seems to be no such object anywhere in the model world.
 
@@ -561,10 +564,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fbf120"/>
+      <child nodeId="node-0x9c5b920"/>
     </children>
   </item>
-  <item nodeId="node-0x9fbf120">
+  <item nodeId="node-0x9c5b920">
     <command xml:space="preserve">showme player</command>
     <result xml:space="preserve">There seems to be no such object anywhere in the model world.
 
@@ -575,10 +578,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fbf1f8"/>
+      <child nodeId="node-0x9c5b9f8"/>
     </children>
   </item>
-  <item nodeId="node-0x9fbf1f8">
+  <item nodeId="node-0x9c5b9f8">
     <command xml:space="preserve">showme self</command>
     <result xml:space="preserve">Erika - person
     left hand (part of Eirka)
@@ -607,7 +610,7 @@ bulk capacity: 100
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x9fbf2d0">
+  <item nodeId="node-0x9c5bad0">
     <command xml:space="preserve">x stone</command>
     <result xml:space="preserve">Admired at range,
 the stone&apos;s glow waxes and wanes
@@ -620,10 +623,10 @@ like a  tiny moon.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fbf3a8"/>
+      <child nodeId="node-0x9c5bba8"/>
     </children>
   </item>
-  <item nodeId="node-0x9fbf3a8">
+  <item nodeId="node-0x9c5bba8">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">One breath, plus one held.
 Even your bones feel like ice.
@@ -646,10 +649,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fbf480"/>
+      <child nodeId="node-0x9c5bc80"/>
     </children>
   </item>
-  <item nodeId="node-0x9fbf480">
+  <item nodeId="node-0x9c5bc80">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">The light calls you down.
 You kick your legs, jaw clenched.
@@ -671,10 +674,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fbf558"/>
+      <child nodeId="node-0x9c5bd58"/>
     </children>
   </item>
-  <item nodeId="node-0x9fbf558">
+  <item nodeId="node-0x9c5bd58">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You reach out, eager.
 Chains of ice tug at your limbs.
@@ -695,10 +698,10 @@ The wound glows ruby.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fbf630"/>
+      <child nodeId="node-0x9c5be30"/>
     </children>
   </item>
-  <item nodeId="node-0x9fbf630">
+  <item nodeId="node-0x9c5be30">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">The red glow flickers.
 The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can&apos;t feel it because you&apos;re completely numb.
@@ -721,7 +724,7 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x9fbf708">
+  <item nodeId="node-0x9c5bf08">
     <command xml:space="preserve">x stone</command>
     <result xml:space="preserve">Admired at range,
 the stone&apos;s glow waxes and wanes
@@ -742,10 +745,10 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fce048"/>
+      <child nodeId="node-0x9c6a040"/>
     </children>
   </item>
-  <item nodeId="node-0x9fce048">
+  <item nodeId="node-0x9c6a040">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You plunge a hand in.
 It&apos;s like bare skin in deep space.
@@ -762,10 +765,10 @@ Commit all, or none.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fce120"/>
+      <child nodeId="node-0x9c6a118"/>
     </children>
   </item>
-  <item nodeId="node-0x9fce120">
+  <item nodeId="node-0x9c6a118">
     <command xml:space="preserve">dive in</command>
     <result xml:space="preserve">One breath, plus one held.
 Even your bones feel like ice.
@@ -788,10 +791,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fce1f8"/>
+      <child nodeId="node-0x9c6a1f0"/>
     </children>
   </item>
-  <item nodeId="node-0x9fce1f8">
+  <item nodeId="node-0x9c6a1f0">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Struggling brings nothing.
 To reach flesh you must dive in.
@@ -808,10 +811,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fce2d0"/>
+      <child nodeId="node-0x9c6a2c8"/>
     </children>
   </item>
-  <item nodeId="node-0x9fce2d0">
+  <item nodeId="node-0x9c6a2c8">
     <command xml:space="preserve">showme stone</command>
     <result xml:space="preserve">stone here - thing
 location: in the lower pool
@@ -841,10 +844,10 @@ sound-description: &quot;This does not make noise.&quot;
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fce3a8"/>
+      <child nodeId="node-0x9c6a3a0"/>
     </children>
   </item>
-  <item nodeId="node-0x9fce3a8">
+  <item nodeId="node-0x9c6a3a0">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Struggling brings nothing.
 To reach flesh you must dive in.
@@ -861,10 +864,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fce480"/>
+      <child nodeId="node-0x9c6a478"/>
     </children>
   </item>
-  <item nodeId="node-0x9fce480">
+  <item nodeId="node-0x9c6a478">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">The light calls you down.
 You kick your legs, jaw clenched.
@@ -886,10 +889,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fce558"/>
+      <child nodeId="node-0x9c6a550"/>
     </children>
   </item>
-  <item nodeId="node-0x9fce558">
+  <item nodeId="node-0x9c6a550">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You reach out, eager.
 
@@ -936,7 +939,7 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x9fce630">
+  <item nodeId="node-0x9c6a628">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">I beg your pardon?
 
@@ -947,10 +950,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fce708"/>
+      <child nodeId="node-0x9c6a700"/>
     </children>
   </item>
-  <item nodeId="node-0x9fce708">
+  <item nodeId="node-0x9c6a700">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">I beg your pardon?
 
@@ -961,10 +964,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee038"/>
+      <child nodeId="node-0x9c8a028"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee038">
+  <item nodeId="node-0x9c8a028">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">I beg your pardon?
 
@@ -975,10 +978,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee110"/>
+      <child nodeId="node-0x9c8a100"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee110">
+  <item nodeId="node-0x9c8a100">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">I beg your pardon?
 
@@ -989,10 +992,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee1e8"/>
+      <child nodeId="node-0x9c8a1d8"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee1e8">
+  <item nodeId="node-0x9c8a1d8">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">I beg your pardon?
 
@@ -1003,10 +1006,10 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee2c0"/>
+      <child nodeId="node-0x9c8a2b0"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee2c0">
+  <item nodeId="node-0x9c8a2b0">
     <command xml:space="preserve">x water</command>
     <result xml:space="preserve">You dip your fingers.
 Deathly cold, then painful heat.
@@ -1023,10 +1026,10 @@ Ripples lap the shore.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee398"/>
+      <child nodeId="node-0x9c8a388"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee398">
+  <item nodeId="node-0x9c8a388">
     <command xml:space="preserve">x stone</command>
     <result xml:space="preserve">Admired at range,
 the stone&apos;s glow waxes and wanes
@@ -1047,10 +1050,10 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee470"/>
+      <child nodeId="node-0x9c8a460"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee470">
+  <item nodeId="node-0x9c8a460">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You plunge a hand in.
 It&apos;s like bare skin in deep space.
@@ -1067,10 +1070,10 @@ Commit all, or none.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee548"/>
+      <child nodeId="node-0x9c8a538"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee548">
+  <item nodeId="node-0x9c8a538">
     <command xml:space="preserve">dive in</command>
     <result xml:space="preserve">One breath, plus one held.
 Even your bones feel like ice.
@@ -1093,10 +1096,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee620"/>
+      <child nodeId="node-0x9c8a610"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee620">
+  <item nodeId="node-0x9c8a610">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Struggling brings ruin.
 The depths are the only way.
@@ -1113,10 +1116,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9fee6f8"/>
+      <child nodeId="node-0x9c8a6e8"/>
     </children>
   </item>
-  <item nodeId="node-0x9fee6f8">
+  <item nodeId="node-0x9c8a6e8">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">The light calls you down.
 You kick your legs, jaw clenched.
@@ -1138,10 +1141,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9ffd040"/>
+      <child nodeId="node-0x9c98830"/>
     </children>
   </item>
-  <item nodeId="node-0x9ffd040">
+  <item nodeId="node-0x9c98830">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You reach out, eager.
 Chains of ice tug at your limbs.
@@ -1179,21 +1182,22 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x9ffd118">
+  <item nodeId="node-0x9c98908">
     <command xml:space="preserve">x</command>
-    <result xml:space="preserve">
-I guess we got a little big for our britches. If I never see the inside of a spacecan again it&apos;ll be too soon.
-</result>
+    <result xml:space="preserve">What do you want to examine?
+
+&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9ffd1f0"/>
+      <child nodeId="node-0x9c989e0"/>
+      <child nodeId="node-0x9ca8de8"/>
     </children>
   </item>
-  <item nodeId="node-0x9ffd1f0">
+  <item nodeId="node-0x9c989e0">
     <command xml:space="preserve">x</command>
     <result xml:space="preserve">
 You know the weirdest part for me was the dreams? A bunch of other vets say the same thing, that cryo does something to your subconscious. Of course the headshrinkers never find real proof of change; that green gel shit they pump into your lungs and around you in the spacecan &quot;has been proven to prevent tissue damage in all but extraordinarily high fractions of sublight speed&quot;, but that doesn&apos;t change your dreams back.
@@ -1204,10 +1208,10 @@ You know the weirdest part for me was the dreams? A bunch of other vets say the 
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9ffd2c8"/>
+      <child nodeId="node-0x9c98ab8"/>
     </children>
   </item>
-  <item nodeId="node-0x9ffd2c8">
+  <item nodeId="node-0x9c98ab8">
     <command xml:space="preserve">x</command>
     <result xml:space="preserve">
 Nothing does, so far as anyone knows. And these other jokers, they had successful missions, or even just break-even missions. Their dreams are a little weird, otherwise pleasant or at worst harmless.
@@ -1218,10 +1222,10 @@ Nothing does, so far as anyone knows. And these other jokers, they had successfu
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9ffd3a0"/>
+      <child nodeId="node-0x9c98b90"/>
     </children>
   </item>
-  <item nodeId="node-0x9ffd3a0">
+  <item nodeId="node-0x9c98b90">
     <command xml:space="preserve">x</command>
     <result xml:space="preserve">
 I&apos;m the only one with a void file, the only one who came back from the Starlight Dancer. My dreams are blackest cold, the chill the sinners lying under Cocytus must feel at night. I can feel the frost reach down my throat, right into the bottom of my lungs where the death rattle must be. The frost never quite melts back out afterward, and right there next to your guts for the rest of your life is a little puddle of ice water.
@@ -1232,10 +1236,10 @@ I&apos;m the only one with a void file, the only one who came back from the Star
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9ffd478"/>
+      <child nodeId="node-0x9c98c68"/>
     </children>
   </item>
-  <item nodeId="node-0x9ffd478">
+  <item nodeId="node-0x9c98c68">
     <command xml:space="preserve">x</command>
     <result xml:space="preserve">
 It hurts like crazy.
@@ -1260,10 +1264,10 @@ No waves touch your feet.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9ffd550"/>
+      <child nodeId="node-0x9c98d40"/>
     </children>
   </item>
-  <item nodeId="node-0x9ffd550">
+  <item nodeId="node-0x9c98d40">
     <command xml:space="preserve">x left hand</command>
     <result xml:space="preserve">It is pitch dark, and you can&apos;t see a thing.
 
@@ -1278,10 +1282,10 @@ Ripples lap the shore.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9ffd628"/>
+      <child nodeId="node-0x9c98e18"/>
     </children>
   </item>
-  <item nodeId="node-0x9ffd628">
+  <item nodeId="node-0x9c98e18">
     <command xml:space="preserve">x left hand</command>
     <result xml:space="preserve">It is pitch dark, and you can&apos;t see a thing.
 
@@ -1300,10 +1304,10 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x9ffd700"/>
+      <child nodeId="node-0x9c98ef0"/>
     </children>
   </item>
-  <item nodeId="node-0x9ffd700">
+  <item nodeId="node-0x9c98ef0">
     <command xml:space="preserve">dive in</command>
     <result xml:space="preserve">One breath, plus one held.
 Even your bones feel like ice.
@@ -1326,10 +1330,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa00d018"/>
+      <child nodeId="node-0x9ca8800"/>
     </children>
   </item>
-  <item nodeId="node-0xa00d018">
+  <item nodeId="node-0x9ca8800">
     <command xml:space="preserve">x left hand</command>
     <result xml:space="preserve">It is pitch dark, and you can&apos;t see a thing.
 
@@ -1344,10 +1348,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa00d0f0"/>
+      <child nodeId="node-0x9ca88d8"/>
     </children>
   </item>
-  <item nodeId="node-0xa00d0f0">
+  <item nodeId="node-0x9ca88d8">
     <command xml:space="preserve">down</command>
     <result xml:space="preserve">
 lower pool, in dim light
@@ -1366,10 +1370,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa00d1c8"/>
+      <child nodeId="node-0x9ca89b0"/>
     </children>
   </item>
-  <item nodeId="node-0xa00d1c8">
+  <item nodeId="node-0x9ca89b0">
     <command xml:space="preserve">x left hand</command>
     <result xml:space="preserve">It&apos;s your left hand. Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits).
 
@@ -1380,10 +1384,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa00d2a0"/>
+      <child nodeId="node-0x9ca8a88"/>
     </children>
   </item>
-  <item nodeId="node-0xa00d2a0">
+  <item nodeId="node-0x9ca8a88">
     <command xml:space="preserve">dive in</command>
     <result xml:space="preserve">There&apos;s nothing to dive into here.
 
@@ -1394,10 +1398,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa00d378"/>
+      <child nodeId="node-0x9ca8b60"/>
     </children>
   </item>
-  <item nodeId="node-0xa00d378">
+  <item nodeId="node-0x9ca8b60">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">There&apos;s nothing to dive into here.
 
@@ -1408,10 +1412,10 @@ Pale white, and falling.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa00d450"/>
+      <child nodeId="node-0x9ca8c38"/>
     </children>
   </item>
-  <item nodeId="node-0xa00d450">
+  <item nodeId="node-0x9ca8c38">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You reach out, eager.
 Chains of ice tug at your limbs.
@@ -1432,10 +1436,10 @@ The wound glows ruby.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa00d528"/>
+      <child nodeId="node-0x9ca8d10"/>
     </children>
   </item>
-  <item nodeId="node-0xa00d528">
+  <item nodeId="node-0x9ca8d10">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">The red glow flickers.
 The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can&apos;t feel it because you&apos;re completely numb.
@@ -1450,7 +1454,26 @@ The smell of burning electronics hits your lizard hindbrain like a rivet gun and
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa00d600">
+  <item nodeId="node-0x9ca8de8">
+    <command xml:space="preserve">panel</command>
+    <result xml:space="preserve">The edges of the control panel have some biogunk in them.
+
+Under you, a stone.
+It glows like a faint firefly.
+Pale white, and falling.
+
+Above, a stone falls.
+The water glows with pale light.
+Ripples lap the shore.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9ca8ec0">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Antiseptic Coffin, in dim light
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -1474,10 +1497,11 @@ Ripples lap the shore.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa00d6d8"/>
+      <child nodeId="node-0x9cb7818"/>
+      <child nodeId="node-0x9cb7b78"/>
     </children>
   </item>
-  <item nodeId="node-0xa00d6d8">
+  <item nodeId="node-0x9cb7818">
     <command xml:space="preserve">x</command>
     <result xml:space="preserve">What do you want to examine?
 
@@ -1488,10 +1512,10 @@ Ripples lap the shore.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa01b830"/>
+      <child nodeId="node-0x9cb78f0"/>
     </children>
   </item>
-  <item nodeId="node-0xa01b830">
+  <item nodeId="node-0x9cb78f0">
     <command xml:space="preserve">panel</command>
     <result xml:space="preserve">The edges of the control panel have some biogunk in them.
 
@@ -1506,10 +1530,10 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa01b908"/>
+      <child nodeId="node-0x9cb79c8"/>
     </children>
   </item>
-  <item nodeId="node-0xa01b908">
+  <item nodeId="node-0x9cb79c8">
     <command xml:space="preserve">showme self</command>
     <result xml:space="preserve">Eirka - person
     left hand (part of Eikra)
@@ -1537,10 +1561,10 @@ bulk capacity: 100
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa01b9e0"/>
+      <child nodeId="node-0x9cb7aa0"/>
     </children>
   </item>
-  <item nodeId="node-0xa01b9e0">
+  <item nodeId="node-0x9cb7aa0">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Antiseptic Coffin, in dim light
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -1556,13 +1580,44 @@ The control panel above you shows a blinking red button.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa01bab8">
+  <item nodeId="node-0x9cb7b78">
+    <command xml:space="preserve">showme self</command>
+    <result xml:space="preserve">!Ekria - person
+    !lfet !hnad (part of !Eikra)
+    !rghit !hand (part of !Erika)
+location: in the Antiseptic Coffin
+singular-named, proper-named; unlit, inedible, portable, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; male, awake, healthy, concussed
+printed name: &quot;Erika&quot;
+printed plural name: &quot;people&quot;
+indefinite article: none
+description: &quot;As good-looking as ever.&quot;
+initial appearance: none
+bulk: 20
+dark-description: &quot;(dark desc is empty)
+As good-looking as ever.
+&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;This does not make noise.&quot;
+carrying capacity: 100
+bulk capacity: 100
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9cb7c50">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.
 
 Under you, a stone.
 It glows like a faint firefly.
 Pale white, and falling.
+
+
+*** Run-time problem P31: Attempt to use a property of the &apos;nothing&apos; non-object: property actual-name
 
 Above, a stone falls.
 The water glows with pale light.
@@ -1575,10 +1630,10 @@ Ripples lap the shore.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa01bb90"/>
+      <child nodeId="node-0x9cb7d28"/>
     </children>
   </item>
-  <item nodeId="node-0xa01bb90">
+  <item nodeId="node-0x9cb7d28">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Antiseptic Coffin, in dim light
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -1591,6 +1646,9 @@ The pale gleam recedes.
 Inky dark cloaks the water.
 The waves settle down.
 
+
+*** Run-time problem P31: Attempt to use a property of the &apos;nothing&apos; non-object: property actual-name
+
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
@@ -1598,10 +1656,10 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa01bc68"/>
+      <child nodeId="node-0x9cb7e00"/>
     </children>
   </item>
-  <item nodeId="node-0xa01bc68">
+  <item nodeId="node-0x9cb7e00">
     <command xml:space="preserve">x</command>
     <result xml:space="preserve">What do you want to examine?
 
@@ -1612,10 +1670,10 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa01bd40"/>
+      <child nodeId="node-0x9cb7ed8"/>
     </children>
   </item>
-  <item nodeId="node-0xa01bd40">
+  <item nodeId="node-0x9cb7ed8">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?
 
@@ -1626,10 +1684,10 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa01be18"/>
+      <child nodeId="node-0x9cd7848"/>
     </children>
   </item>
-  <item nodeId="node-0xa01be18">
+  <item nodeId="node-0x9cd7848">
     <command xml:space="preserve">listen</command>
     <result xml:space="preserve">You hear only the silence of a scuttled ship.
 
@@ -1640,11 +1698,11 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa01bef0">
+  <item nodeId="node-0x9cd7920">
     <command xml:space="preserve">showme self</command>
-    <result xml:space="preserve">Eikra - person
-    lfet hnad (part of Erkia)
-    rhgit hnad (part of Erkia)
+    <result xml:space="preserve">!Ekria - person
+    !left !hnad (part of !Eikra)
+    !right !hand (part of !Ekria)
 location: in the Antiseptic Coffin
 singular-named, proper-named; unlit, inedible, portable, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; male, awake, healthy, concussed
 printed name: &quot;Erika&quot;
@@ -1668,10 +1726,10 @@ bulk capacity: 100
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa03b048"/>
+      <child nodeId="node-0x9cd79f8"/>
     </children>
   </item>
-  <item nodeId="node-0xa03b048">
+  <item nodeId="node-0x9cd79f8">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Antiseptic Coffin, in dim light
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -1695,10 +1753,10 @@ Ripples lap the shore.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa03b120"/>
+      <child nodeId="node-0x9cd7ad0"/>
     </children>
   </item>
-  <item nodeId="node-0xa03b120">
+  <item nodeId="node-0x9cd7ad0">
     <command xml:space="preserve">x panel</command>
     <result xml:space="preserve">The edges of the control panel have some biogunk in them.
 
@@ -1713,12 +1771,311 @@ The waves settle down.
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa03b1f8"/>
+      <child nodeId="node-0x9cd7ba8"/>
     </children>
   </item>
-  <item nodeId="node-0xa03b1f8">
+  <item nodeId="node-0x9cd7ba8">
     <command xml:space="preserve">x panel</command>
     <result xml:space="preserve">The edges of the control panel have some biogunk in them.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9cd7c80">
+    <command xml:space="preserve">showme autodoc</command>
+    <result xml:space="preserve">Antiseptic Coffin - room
+    !hacth - hatch
+        !hacth !wdoinw (part of !hctah)
+    !Ekira - person
+        !lfet !hnad (part of !Ekira)
+        !right !hand (part of !Ekira)
+    !ctnrool !peanl - panel
+        !clcye !bttoun (part of !ctonrol !pnael) - button
+        !uocnlk !botutn (part of !cotonrl !peanl) - button
+        !eixt !bttoun (part of !cotrnol !paenl) - button
+singular-named, improper-named; dark, visited, dry
+printed name: &quot;Antiseptic Coffin&quot;
+printed plural name: none
+indefinite article: none
+description: &quot;You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.&quot;
+map region: Deck A
+dark-description: &quot;It&apos;s cold and damp and dark in here.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;Total silence.&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9cd7d58"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9cd7d58">
+    <command xml:space="preserve">x panel</command>
+    <result xml:space="preserve">The edges of the control panel have some biogunk in them.
+
+Under you, a stone.
+It glows like a faint firefly.
+Pale white, and falling.
+
+Above, a stone falls.
+The water glows with pale light.
+Ripples lap the shore.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9cd7e30">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:
+  a !surond
+
+Under you, a stone.
+It glows like a faint firefly.
+Pale white, and falling.
+
+Above, a stone falls.
+The water glows with pale light.
+Ripples lap the shore.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9cd7f08"/>
+      <child nodeId="node-0x9ce9ba8"/>
+      <child nodeId="node-0x9ce9c80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9cd7f08">
+    <command xml:space="preserve">x button</command>
+    <result xml:space="preserve">Which do you mean, the !cclye !bttoun, the !uonclk !bouttn or the !eixt !btuotn?
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9ce9ba8">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">There are none at all available!
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9ce9c80">
+    <command xml:space="preserve">actions</command>
+    <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ce9d58"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ce9d58">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">[looking]
+Antiseptic Coffin, in dim light
+You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
+
+A small plastex hatch window is set into the hatch above you.
+
+The control panel above you shows a blinking red button.
+
+[looking - succeeded]
+
+The pale gleam recedes.
+Inky dark cloaks the water.
+The waves settle down.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ce9e30"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ce9e30">
+    <command xml:space="preserve">actions off</command>
+    <result xml:space="preserve">Actions listing off.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ce9f08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ce9f08">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0xa060820"/>
+    </children>
+  </item>
+  <item nodeId="node-0xa060820">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+Antiseptic Coffin, in dim light
+[Rule &quot;room description body text rule&quot; applies.]
+You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+A small plastex hatch window is set into the hatch above you.
+
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+The control panel above you shows a blinking red button.
+
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x9ce9848">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ce9920"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ce9920">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">[Rule &quot;determine visibility ceiling rule&quot; applies.]
+[Rule &quot;room description heading rule&quot; applies.]
+Antiseptic Coffin, in dim light
+[Rule &quot;room description body text rule&quot; applies.]
+You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
+
+[Rule &quot;room description paragraphs about objects rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+A small plastex hatch window is set into the hatch above you.
+
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
+[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
+[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
+[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
+[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
+The control panel above you shows a blinking red button.
+
+[Rule &quot;replacement arrival check rule&quot; applies.]
+[Rule &quot;mark items as seen when looking rule&quot; applies.]
+[Rule &quot;other people looking rule&quot; applies.]
+[Rule &quot;Every turn while the location of the stone is below the location of the player&quot; applies.]
+Under you, a stone.
+It glows like a faint firefly.
+Pale white, and falling.
+
+Above, a stone falls.
+The water glows with pale light.
+Ripples lap the shore.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ce99f8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ce99f8">
+    <command xml:space="preserve">activities</command>
+    <result xml:space="preserve">That&apos;s not a verb I recognise.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x9ce9ad0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x9ce9ad0">
+    <command xml:space="preserve">activity</command>
+    <result xml:space="preserve">That&apos;s not a verb I recognise.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>

@@ -39,154 +39,154 @@
     </dict>
     <key>5</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>89</integer>
+        <key>Line</key><integer>88</integer>
         <key>Title</key><string>Part 3 - Status Line, Game HUD, Misc</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>6</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>97</integer>
+        <key>Line</key><integer>96</integer>
         <key>Title</key><string>Book 2 - Let There Be Light</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>7</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>99</integer>
+        <key>Line</key><integer>98</integer>
         <key>Title</key><string>Part 1 - Units and Definitions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>8</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>132</integer>
+        <key>Line</key><integer>131</integer>
         <key>Title</key><string>Part 2 - New Rules</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>9</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>172</integer>
+        <key>Line</key><integer>171</integer>
         <key>Title</key><string>Part 3 - New Activities</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>10</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>218</integer>
+        <key>Line</key><integer>217</integer>
         <key>Title</key><string>Book 3 - Scenery, Furniture, and Props</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>11</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>220</integer>
+        <key>Line</key><integer>219</integer>
         <key>Title</key><string>Part 1 - Transitional Things</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>12</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>228</integer>
+        <key>Line</key><integer>227</integer>
         <key>Title</key><string>Part 2 - Kinds of Objects</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>13</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>254</integer>
+        <key>Line</key><integer>255</integer>
         <key>Title</key><string>Book 4 - Actors</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>14</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>256</integer>
+        <key>Line</key><integer>257</integer>
         <key>Title</key><string>Part 1 - New Actions</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>15</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>295</integer>
+        <key>Line</key><integer>306</integer>
         <key>Title</key><string>Chapter 1 - Vision</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>16</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>309</integer>
+        <key>Line</key><integer>320</integer>
         <key>Title</key><string>Chapter 2 - Hearing</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>17</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>371</integer>
+        <key>Line</key><integer>382</integer>
         <key>Title</key><string>Chapter 3 - Watersports</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>18</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>393</integer>
+        <key>Line</key><integer>404</integer>
         <key>Title</key><string>Part 2 - The Player</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>19</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>401</integer>
+        <key>Line</key><integer>412</integer>
         <key>Title</key><string>Book 5 - The Starlight Dancer</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>20</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>405</integer>
+        <key>Line</key><integer>416</integer>
         <key>Title</key><string>Part 0 - Dreamtime</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>21</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>458</integer>
+        <key>Line</key><integer>469</integer>
         <key>Title</key><string>Part 1 - Deck A</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>3</integer>
     </dict>
     <key>22</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>521</integer>
+        <key>Line</key><integer>532</integer>
         <key>Title</key><string>Volume 2 - Beginning Play</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>23</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>538</integer>
+        <key>Line</key><integer>549</integer>
         <key>Title</key><string>Volume 3 - Scenes and Stage Movement</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>24</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>559</integer>
+        <key>Line</key><integer>570</integer>
         <key>Title</key><string>Volume 0 - Not For Release</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>25</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>561</integer>
+        <key>Line</key><integer>572</integer>
         <key>Title</key><string>Book 1 - Testing Commands</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>26</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>583</integer>
+        <key>Line</key><integer>594</integer>
         <key>Title</key><string>Book 2 - Testing Equipment</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>

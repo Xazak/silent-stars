@@ -84,7 +84,6 @@ A room can be watery or dry. A room is usually dry.
 To decide if the player is underwater:
 	if the location is watery, yes;
 	no;
-	
 
 Part 3 - Status Line, Game HUD, Misc
 
@@ -236,6 +235,8 @@ A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 A panel is a kind of supporter. The description of a panel is "A cheap amber-monochrome touchscreen[if active]. The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]. The display is dark[end if]." The dark-description of a panel is "A [printed name] glows faintly in the dark." 
 A panel can be active or inactive. A panel is usually active.
 
+[needs logic here to disable the sub-parts of a panel when the panel is inactive]
+
 Rule for listing contents of a panel:
 	say "[Number of buttons on the panel in words] rhombus-shaped buttons are outlined: [list of buttons on the panel with indefinite articles]";
 
@@ -266,13 +267,26 @@ A person can be asleep or awake. A person is usually awake.
 
 A person can be wounded or healthy. A person is usually healthy. 
 
-A person can be concussed or sober. A person is usually sober.
+A person can be concussed or sober. A person is usually sober. The player is concussed.
 
-Rule for printing the name of something (called the item) when the player is concussed (this is the brain damage rule):
+[in order to get a global-level name scrambler, i need to find a way to tell I7 /which/ name (the normal or the scrambled) to put into the "printed name" property, so that other properties that refer to it will properly use the name]
+
+[scramble-normal checks:
+-when the player first becomes concussed
+-when the player changes rooms
+-when the player sobers up
+]
+ 
+Brain Damage is a scene. Brain Damage begins when the player is concussed. Brain Damage ends when the player is sober.
+
+Rule for printing the name of something (called the item) during Brain Damage:
+	say the printed name of the item mangled;
+		
+To say (T - text) mangled (this is mangling):
 	let original-name be an indexed text;
 	let name-template be a list of numbers;
-	repeat with baz running from 1 to the number of words in the printed name of the item:
-		now original-name is word number baz in the printed name of the item;
+	repeat with baz running from 1 to the number of words in T:
+		now original-name is word number baz in T;
 		let new-name be original-name;
 		let name-length be the number of characters in original-name;
 		now name-template is { };
@@ -289,9 +303,10 @@ Rule for printing the name of something (called the item) when the player is con
 		repeat with foo running from 1 to name-length:
 			let bar be entry foo in name-template;
 			replace character number foo in new-name with character number bar in original-name;
-		if baz is the number of words in the printed name of the item, say "[new-name]";
+		let new-name be "![new-name]";
+		if baz is the number of words in T, say "[new-name]";
 		otherwise say "[new-name] ";
-
+		
 Chapter 1 - Vision
 
 [does not take windows and open doors into account yet]
@@ -550,8 +565,8 @@ When Dreamtime ends:
 
 Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the player is not concussed.
 
-When Autodoc Escape begins:
-	now the player is concussed;
+[When Autodoc Escape begins:
+	now the player is concussed;]
 
 Instead of pushing a button the first time during Autodoc Escape:
 	say "Your weakened body flails uselessly against the control panel." instead;
@@ -582,14 +597,14 @@ To mention the light level:
 
 Book 2 - Testing Equipment
 
-[A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright.
+A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright.
 Carry out switching on the sunrod:
 	now the sunrod is lit;
 	say "LIGHTS";
 
 Carry out switching off the sunrod: 
 	now the sunrod is unlit;
-	say "DARKNESS";]
+	say "DARKNESS";
 
 [A radio is a device. The radio is in the Medical Bay. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise". The sound-description is "[The printed name] emits an unbroken stream of static."
 Carry out switching on the radio:
