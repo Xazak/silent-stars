@@ -1,3 +1,51 @@
+A person can be concussed or sober. A person is usually sober. The player is concussed.
+
+[in order to get a global-level name scrambler, i need to find a way to tell I7 /which/ name (the normal or the scrambled) to put into the "printed name" property, so that other properties that refer to it will properly use the name]
+
+[scramble-normal checks:
+-when the player first becomes concussed
+-when the player changes rooms
+-when the player sobers up
+]
+
+Brain Damage is a scene. Brain Damage begins when the player is concussed. Brain Damage ends when the player is sober.
+
+Every thing has some text called the real name. The real name is usually "[printed name]". Every thing has some text called the scramble name. The scramble name is usually "[printed name]".
+
+When Brain Damage begins:
+	repeat with item running through the list of things enclosed by the location:
+		now the real name of the item is the printed name of the item;
+		mangle the name of the item;
+		
+To mangle the name of (item - a thing) (this is mangling):
+	let alias be the printed name of the item;
+	let order-template be a list of numbers;
+	let new-word be an indexed text;
+	let final-replacement be an indexed text;
+	let final-replacement be the alias;
+	repeat with foo running from 1 to the number of words in the alias:
+		let word-bucket be word number foo in the alias;
+		let new-word be word-bucket;
+		let word-length be the number of characters in word-bucket;
+		now order-template is { }; [make sure the template is empty]
+		repeat with bar running from 1 to word-length: [populate the template with the length of the word]
+			add bar at entry 1 in order-template;
+		sort order-template in random order; [scramble the template]
+		if word-length is at least 4:
+			if entry 1 in order-template is not 1:
+				remove 1 from order-template;
+				add 1 at entry 1 in order-template;
+			if entry word-length in order-template is not word-length:
+				remove word-length from order-template;
+				add word-length to order-template;
+		repeat with baz running from 1 to word-length:
+			let template-reference be entry baz in order-template;
+			replace character number baz in new-word with character number template-reference in word-bucket;
+		let new-word be "![new-word]"; [NFR]
+		replace word number foo in final-replacement with new-word;
+	now the scramble name of the item is "[final-replacement]";
+	
+***
 Dreamspace is a room. The printed name of Dreamspace is "Kitchen". Understand "kitchen" as Dreamspace. "Silk curtains, dark wood cabinets, matte grey hardware: you're in the kitchen of your family home. No matter how much time you spend in your workshop or the little office in the hut out back, this is where you truly feel you're at rest."
 
 Dreamspace is lighted.

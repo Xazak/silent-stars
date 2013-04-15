@@ -7,8 +7,6 @@ Include Bulk Limiter by Eric Eve.
 Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
 
-[see the inform notes you're taking for the todo list]
-
 Volume 1 - Setting Things Up
 
 Book 1 - Abstractions, Generalizations, and Basic Physics
@@ -232,25 +230,36 @@ A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 [A flicker is a kind of value. The flickers are insubstantial, insufficient, faint, muted, poor, weak, wavering, dim, low, shadowy, wan, subdued, tenuous, shifting, dull, anemic, frail, ghostly, and flickering.]
 
-A panel is a kind of supporter. The description of a panel is "A cheap amber-monochrome touchscreen[if active]. The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]. The display is dark[end if]." The dark-description of a panel is "A [printed name] glows faintly in the dark." 
+A panel is a kind of supporter.
+The description of a panel is "A cheap amber-monochrome touchscreen. [if active]The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]The display is dark[end if]."
+The dark-description of a panel is "A [printed name] glows faintly in the dark." 
+A panel has some text called the readout. The readout is usually "Awaiting Input".
+
+[button count is not capitalized]
+Report examining a panel:
+	say "[printed name in title case] Readout: '[readout]'[br]";
+	say "[Number of buttons enclosed by the panel in words] rhombus-shaped buttons are outlined: [list of buttons enclosed by the panel with indefinite articles].";
+	
 A panel can be active or inactive. A panel is usually active.
 
 [needs logic here to disable the sub-parts of a panel when the panel is inactive]
 
-Rule for listing contents of a panel:
-	say "[Number of buttons on the panel in words] rhombus-shaped buttons are outlined: [list of buttons on the panel with indefinite articles]";
-
 A button is a kind of device. "A simple button." It is fixed in place and switched off.
 
-Instead of pushing a button (called the frobber):
+The button-pushing rule is listed instead of the can't push what's fixed in place rule in the check pushing rules.
+This is the button-pushing rule:
+	if the noun is a button:
+		continue the action;
+	otherwise:
+		consider the can't push what's fixed in place rule.
+
+[For a button with discrete on/off states, use "Carry out switching on/off the $BUTTON" for either button state; for a single-state, use "Carry out pushing the $BUTTON"]
+
+Carry out pushing a button (called the frobber):
 	if the frobber is switched on:
 		now the frobber is switched off;
-		beep;
-		say "[printed name of frobber] is now off.";
 	otherwise:
 		now the frobber is switched on;
-		beep;
-		say "[printed name of frobber] is now on."
 
 Book 4 - Actors
 
@@ -267,46 +276,6 @@ A person can be asleep or awake. A person is usually awake.
 
 A person can be wounded or healthy. A person is usually healthy. 
 
-A person can be concussed or sober. A person is usually sober. The player is concussed.
-
-[in order to get a global-level name scrambler, i need to find a way to tell I7 /which/ name (the normal or the scrambled) to put into the "printed name" property, so that other properties that refer to it will properly use the name]
-
-[scramble-normal checks:
--when the player first becomes concussed
--when the player changes rooms
--when the player sobers up
-]
- 
-Brain Damage is a scene. Brain Damage begins when the player is concussed. Brain Damage ends when the player is sober.
-
-Rule for printing the name of something (called the item) during Brain Damage:
-	say the printed name of the item mangled;
-		
-To say (T - text) mangled (this is mangling):
-	let original-name be an indexed text;
-	let name-template be a list of numbers;
-	repeat with baz running from 1 to the number of words in T:
-		now original-name is word number baz in T;
-		let new-name be original-name;
-		let name-length be the number of characters in original-name;
-		now name-template is { };
-		repeat with foo running from 1 to name-length:
-			add foo at entry 1 in name-template;
-		sort name-template in random order;
-		if name-length is at least 4:
-			if entry 1 in name-template is not 1:
-				remove 1 from name-template;
-				add 1 at entry 1 in name-template;
-			if entry name-length in name-template is not name-length:
-				remove name-length from name-template;
-				add name-length to name-template;
-		repeat with foo running from 1 to name-length:
-			let bar be entry foo in name-template;
-			replace character number foo in new-name with character number bar in original-name;
-		let new-name be "![new-name]";
-		if baz is the number of words in T, say "[new-name]";
-		otherwise say "[new-name] ";
-		
 Chapter 1 - Vision
 
 [does not take windows and open doors into account yet]
@@ -479,43 +448,66 @@ The printed name of the autodoc is "Antiseptic Coffin". Understand "coffin" as t
 The Autodoc is in Deck A.
 Index map with the Autodoc mapped south of the Medical Bay.
 
-There is a panel called the control panel in the Autodoc. "The [printed name] above you shows a blinking red button." The description is "The edges of the [printed name] have some biogunk in them." The dark-description is "An amber-colored [printed name] shines wan light onto your sternum."
+There is a panel called the control panel in the Autodoc. 
+"[if active]A flashing red button on the control panel above you casts flickering shadows[otherwise]The control panel above you awaits input[end if]."
+The description is "The edges of the [printed name] have some biogunk in them."
+The dark-description is "An amber-colored [printed name] shines wan light onto your sternum."
+The readout is "Confirm Amputation Surgery Cycle Has Completed". 
 The control panel is lit.
+[control panel active == autodoc is running]
 
 [need to adapt the buttons to track their on-off status rather than intercepting their logic wholesale]
-The cycle button is a button. The cycle button is part of the control panel.
-The description of the cycle button is "It's red, and it says 'Surgery Complete?' in blinking letters." 
-Instead of pushing the cycle button:
+The cycle button is a button. The cycle button is part of the control panel. The cycle button is switched on.
+The description of the cycle button is "It's red and flashing 'Confirm?' in big letters." 
+Carry out switching on the cycle button:
+	now the control panel is active;
+	now the readout of the control panel is "Please Select A Diagnostic Routine (there's none to select)";
+	now the description of the cycle button is "It's green and says 'Start Cycle?'"
+	
+Carry out switching off the cycle button:
 	now the control panel is inactive;
-	now the description of the cycle button is "It's green and says 'Select Program'.";
-	say "The [printed name] changes to green and blinks 'Completed' a couple times.";
+	now the readout of the control panel is "Autodoc Inactive";
+	now the description of the cycle button is "The button is inactive."; 
+
+Report pushing the cycle button:
+	say "The [printed name] fades from red to green and blinks 'Cycle Complete' a couple times." instead;
 
 The unlock button is a button. The unlock button is part of the control panel.
-Instead of pushing the unlock button:
-	if the control panel is inactive:
-		now the autodoc's hatch is unlocked;
-		say "The 'Unlock Hatch' [printed name] changes to green.";
-	otherwise:
-		say "ERROR: Completion of surgery cycle has not been confirmed.";
+Check pushing the unlock button:
+	if the control panel is active:
+		say "ERROR: Completion of surgery cycle has not been confirmed." instead;
+
+Carry out pushing the unlock button:
+	now the autodoc's hatch is unlocked;
+
+Report pushing the unlock button:
+	say "The 'Unlock Hatch' [printed name] changes to green.";
 
 The exit button is a button. The exit button is part of the control panel.
-Instead of pushing the exit button:
+Check pushing the exit button:
 	if the autodoc's hatch is locked:
 		if the control panel is active:
-			say "ERROR: Completion of surgery cycle has not been confirmed.";
+			say "ERROR: Completion of surgery cycle has not been confirmed." instead;
 		otherwise:
-			say "ERROR: [printed name of autodoc's hatch] is locked.";
-	otherwise:
-		try opening the autodoc's hatch;
+			say "ERROR: [printed name of autodoc's hatch] is locked." instead;
+
+Carry out pushing the exit button:
+	now the autodoc's hatch is open;
+
+Report pushing the exit button:
+	say "A beat passes, and then the gasket on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.";
 
 The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]A dark plastex porthole is set into the hatch of the autodoc." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
-Before opening the Autodoc's hatch:
-	if the Autodoc's hatch is locked:
-		say "The control panel flashes red and beeps. It seems the [printed name] is locked shut.";
-		stop the action;
-	otherwise:
-		say "A beat passes, and then the gasket on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants."	
+Instead of opening the autodoc's hatch:
+	say "(by pressing the exit button)[command clarification break]"; 
+	try pushing the exit button;
+
+Report closing the autodoc's hatch:
+	say "There is a hiss of air as the hatch seals pressurize." instead;
+
+Report going through the autodoc's hatch to the Medical Bay:
+	say "You sit up, shouldering open the hatch, and climb over the edge. The fall to the ground is short, thankfully.";
 
 The hatch window is part of the Autodoc's hatch. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
 
@@ -563,13 +555,10 @@ When Dreamtime ends:
 	wait for any key;
 	move the player to the Autodoc;
 
-Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the player is not concussed.
+Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the Medical Bay is visited.
 
 [When Autodoc Escape begins:
 	now the player is concussed;]
-
-Instead of pushing a button the first time during Autodoc Escape:
-	say "Your weakened body flails uselessly against the control panel." instead;
 
 Volume 0 - Not For Release
 
