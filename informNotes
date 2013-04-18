@@ -1,4 +1,6 @@
 ***TODO -[[
+[ ] Toggle switches do not have "flip switch" implemented
+[ ] Provide logic to control panels that causes any sub-parts of the panel to become unresponsive if the panel itself is inactive
 [ ] Executing a look action should tell the player what the MC does while looking, e.g. "You steady yourself on the lathe and glance around furtively:"
 [ ] The indefinite articles in the listening-ambient reports need to be massaged
 [ ] Player should be able to listen at a specific direction to hear what's in the next room

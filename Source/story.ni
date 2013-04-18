@@ -102,6 +102,7 @@ Every thing has some text called the dark-description. The dark-description is u
 A thing can be bright or dim. A thing is usually dim.
 A thing can be diffuse or direct. A thing is usually diffuse.
 A thing can be infrared. [this is a flag to allow unlit things to be visible in the dark regardless of actual light level]
+Color is a kind of value. The colors are red, orange, yellow, green, blue, indigo, violet, grey, silver, pink, white, and black. A thing has color. A thing is usually silver. Understand the color property as describing a thing.
 
 Definition: a thing is shining if it is lit and it is bright.
 Definition: a thing is glowing if it is lit and it is dim.
@@ -236,30 +237,42 @@ The dark-description of a panel is "A [printed name] glows faintly in the dark."
 A panel has some text called the readout. The readout is usually "Awaiting Input".
 
 [button count is not capitalized]
-Report examining a panel:
+Report examining a panel (called the board):
 	say "[printed name in title case] Readout: '[readout]'[br]";
-	say "[Number of buttons enclosed by the panel in words] rhombus-shaped buttons are outlined: [list of buttons enclosed by the panel with indefinite articles].";
+	say "[Number of controls incorporated by the panel in words] rhombus-shaped buttons are outlined: [list of controls incorporated by the panel with indefinite articles].";
 	
 A panel can be active or inactive. A panel is usually active.
 
-[needs logic here to disable the sub-parts of a panel when the panel is inactive]
+[DEVICE TYPES:
+button - single outcome, responds to PUSH (single outcome)
+toggle - two outcomes, works via ON/OFF states (two outcomes)
+dial - selects a value from N to X (three or more outcomes)
+]
 
-A button is a kind of device. "A simple button." It is fixed in place and switched off.
+A control is a kind of thing. A control is scenery.
+A control can be flashing or steady. A control is usually steady. Understand the flashing property as describing a control. 
 
-The button-pushing rule is listed instead of the can't push what's fixed in place rule in the check pushing rules.
-This is the button-pushing rule:
-	if the noun is a button:
-		continue the action;
-	otherwise:
-		consider the can't push what's fixed in place rule.
+A pushbutton is a kind of control. The description is "A simple button."
 
-[For a button with discrete on/off states, use "Carry out switching on/off the $BUTTON" for either button state; for a single-state, use "Carry out pushing the $BUTTON"]
+The button pushing rule is listed instead of the can't push what's fixed in place rule in the check pushing rules.
+This is the button pushing rule:
+	if the noun is a pushbutton, continue the action;
+	otherwise consider the can't push what's fixed in place rule.
 
-Carry out pushing a button (called the frobber):
-	if the frobber is switched on:
-		now the frobber is switched off;
-	otherwise:
-		now the frobber is switched on;
+Report pushing a button: beep.
+	
+A toggle is a kind of control. The description is "A small plastic switch."
+A toggle can be switched on or switched off.
+
+Check pushing a toggle (called the frobber):
+	if the frobber is switched on, try switching off the frobber instead;
+	otherwise try switching on the frobber instead;
+
+A dial is a kind of control. The description is "A selector dial; a small screen beside it indicates it is set to [setting]."
+A dial has some text called the setting. The setting is usually "foo".
+
+[Carry out setting a dial (called the frobber) to something:
+	now the setting of the frobber is the second noun;]
 
 Book 4 - Actors
 
@@ -457,22 +470,26 @@ The control panel is lit.
 [control panel active == autodoc is running]
 
 [need to adapt the buttons to track their on-off status rather than intercepting their logic wholesale]
-The cycle button is a button. The cycle button is part of the control panel. The cycle button is switched on.
+The cycle button is a flashing red toggle. The cycle button is part of the control panel. The cycle button is switched on.
 The description of the cycle button is "It's red and flashing 'Confirm?' in big letters." 
 Carry out switching on the cycle button:
 	now the control panel is active;
 	now the readout of the control panel is "Please Select A Diagnostic Routine (there's none to select)";
-	now the description of the cycle button is "It's green and says 'Start Cycle?'"
+	now the cycle button is flashing;
+	now the cycle button is red;
+	now the description of the cycle button is "It's [color] and says 'Select Routine'."
 	
 Carry out switching off the cycle button:
 	now the control panel is inactive;
 	now the readout of the control panel is "Autodoc Inactive";
-	now the description of the cycle button is "The button is inactive."; 
+	now the cycle button is steady;
+	now the cycle button is grey;
+	now the description of the cycle button is "It's now a blank [color] button.";
 
-Report pushing the cycle button:
+Report pushing the cycle button for the first time:
 	say "The [printed name] fades from red to green and blinks 'Cycle Complete' a couple times." instead;
 
-The unlock button is a button. The unlock button is part of the control panel.
+The unlock button is a pushbutton. The unlock button is part of the control panel.
 Check pushing the unlock button:
 	if the control panel is active:
 		say "ERROR: Completion of surgery cycle has not been confirmed." instead;
@@ -481,9 +498,9 @@ Carry out pushing the unlock button:
 	now the autodoc's hatch is unlocked;
 
 Report pushing the unlock button:
-	say "The 'Unlock Hatch' [printed name] changes to green.";
+	say "The button flashes a couple times; there is a metallic [i]click[/i] as the locks disengage.";
 
-The exit button is a button. The exit button is part of the control panel.
+The exit button is a pushbutton. The exit button is part of the control panel.
 Check pushing the exit button:
 	if the autodoc's hatch is locked:
 		if the control panel is active:
@@ -500,14 +517,14 @@ Report pushing the exit button:
 The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]A dark plastex porthole is set into the hatch of the autodoc." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
 Instead of opening the autodoc's hatch:
-	say "(by pressing the exit button)[command clarification break]"; 
+	say "You reach up and push the exit button to disengage the hatch seals.[command clarification break]"; 
 	try pushing the exit button;
 
 Report closing the autodoc's hatch:
 	say "There is a hiss of air as the hatch seals pressurize." instead;
 
 Report going through the autodoc's hatch to the Medical Bay:
-	say "You sit up, shouldering open the hatch, and climb over the edge. The fall to the ground is short, thankfully.";
+	say "You sit up, shouldering open the hatch, and climb over the edge. The fall to the ground is short.";
 
 The hatch window is part of the Autodoc's hatch. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
 
@@ -534,7 +551,7 @@ When play begins:
 	wait for any key;
 	say "[br]I guess we got a little big for our britches. If I never see the inside of a spacecan again it'll be too soon.";
 	wait for any key;
-	say "[br]You know the weirdest part for me was the dreams? A bunch of other vets say the same thing, that cryo does something to your subconscious. Of course the headshrinkers never find real proof of change; that green gel shit they pump into your lungs and around you in the spacecan 'has been proven to prevent tissue damage in all but extraordinarily high fractions of sublight speed', but that doesn't change your dreams back.";
+	say "[br]You know the weirdest part for me was the dreams? A bunch of other vets say the same thing, that cryo does something to your subconscious. Of course the headshrinkers never find real proof of change; that green gel shit they pump into your lungs and into the spacecan 'has been proven to prevent tissue damage in all but extraordinarily high fractions of sublight speed', but that doesn't change your dreams back.";
 	wait for any key;
 	say "[br]Nothing does, so far as anyone knows. And these other jokers, they had [i]successful[/i] missions, or even just break-even missions. Their dreams are a little weird, otherwise pleasant or at worst harmless.";
 	wait for any key;
