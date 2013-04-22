@@ -249,7 +249,7 @@ toggle - two outcomes, works via ON/OFF states (two outcomes)
 dial - selects a value from N to X (three or more outcomes)
 ]
 
-A control is a kind of thing. A control is scenery.
+A control is a kind of thing. A control is fixed in place.
 A control can be flashing or steady. A control is usually steady. Understand the flashing property as describing a control. 
 
 A pushbutton is a kind of control. The description is "A simple button."
@@ -259,7 +259,7 @@ This is the button pushing rule:
 	if the noun is a pushbutton, continue the action;
 	otherwise consider the can't push what's fixed in place rule.
 
-Report pushing a button: beep.
+Report pushing a pushbutton: beep instead.
 	
 A toggle is a kind of control. The description is "A small plastic switch."
 A toggle can be switched on or switched off.
@@ -478,27 +478,31 @@ Carry out switching on the cycle button:
 	now the cycle button is flashing;
 	now the cycle button is red;
 	now the description of the cycle button is "It's [color] and says 'Select Routine'."
-	
+
 Carry out switching off the cycle button:
 	now the control panel is inactive;
 	now the readout of the control panel is "Autodoc Inactive";
 	now the cycle button is steady;
 	now the cycle button is grey;
-	now the description of the cycle button is "It's now a blank [color] button.";
+	now the description of the cycle button is "It's [first time]now[only] a blank [color] button.";
+	now the unlock button is flashing;
 
-Report pushing the cycle button for the first time:
+Report switching off the cycle button:
 	say "The [printed name] fades from red to green and blinks 'Cycle Complete' a couple times." instead;
 
 The unlock button is a pushbutton. The unlock button is part of the control panel.
 Check pushing the unlock button:
 	if the control panel is active:
 		say "ERROR: Completion of surgery cycle has not been confirmed." instead;
+	if the autodoc's hatch is unlocked:
+		say "ERROR: Autodoc hatch is not sealed." instead;
 
 Carry out pushing the unlock button:
 	now the autodoc's hatch is unlocked;
+	now the exit button is flashing;
 
 Report pushing the unlock button:
-	say "The button flashes a couple times; there is a metallic [i]click[/i] as the locks disengage.";
+	say "The button flashes a couple times; there is a metallic [i]click[/i] as the locks disengage." instead;
 
 The exit button is a pushbutton. The exit button is part of the control panel.
 Check pushing the exit button:
@@ -510,9 +514,10 @@ Check pushing the exit button:
 
 Carry out pushing the exit button:
 	now the autodoc's hatch is open;
+	now the exit button is steady;
 
 Report pushing the exit button:
-	say "A beat passes, and then the gasket on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.";
+	say "A beat passes, and then the gasket on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants." instead;
 
 The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]A dark plastex porthole is set into the hatch of the autodoc." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
@@ -523,13 +528,23 @@ Instead of opening the autodoc's hatch:
 Report closing the autodoc's hatch:
 	say "There is a hiss of air as the hatch seals pressurize." instead;
 
-Report going through the autodoc's hatch to the Medical Bay:
-	say "You sit up, shouldering open the hatch, and climb over the edge. The fall to the ground is short.";
+Report going through the autodoc's hatch to the Medical Bay during Autodoc Escape:
+	say "You sit up, shouldering open the hatch, and roll over the lip of the autodoc. The fall to the ground is short.";
 
 The hatch window is part of the Autodoc's hatch. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
 
 [*** The Medical Bay]
-The Medical Bay is a room. "The Medical Bay: filled with all the pointy and invasive tools of the trade." The Medical Bay is in Deck A. The Medical Bay is dark.
+The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark.
+"'Disarray' is maybe putting it mildly: every single cabinet in the room is open and empty; some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood." 
+The dark-description is "."
+
+[notable furniture:
+-- a set of lockers, one of which contains the player's needed gear and is locked
+-- a giant puddle of blood on the floor
+-- a corpse bearing strange wounds
+-- emergency lighting, which casts bloodred shadows
+]
+[The first time the player enters the bay: "When you lift your head to look around, a bright flash of panic runs through your skull: your right arm is scarlet red from fingertips to elbow. The autodoc's drug-induced haze parts, and as you lift your arm, you realize there is a [i]massive[/i] pool of blood on the floor.";]
 
 The Medical hatch is a hatch. It is west of Hallway A and east of the Medical Bay. 
 

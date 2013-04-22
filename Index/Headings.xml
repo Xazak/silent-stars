@@ -158,35 +158,35 @@
     </dict>
     <key>22</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>545</integer>
+        <key>Line</key><integer>560</integer>
         <key>Title</key><string>Volume 2 - Beginning Play</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>23</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>562</integer>
+        <key>Line</key><integer>577</integer>
         <key>Title</key><string>Volume 3 - Scenes and Stage Movement</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>24</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>580</integer>
+        <key>Line</key><integer>595</integer>
         <key>Title</key><string>Volume 0 - Not For Release</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>25</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>582</integer>
+        <key>Line</key><integer>597</integer>
         <key>Title</key><string>Book 1 - Testing Commands</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>26</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>604</integer>
+        <key>Line</key><integer>619</integer>
         <key>Title</key><string>Book 2 - Testing Equipment</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
