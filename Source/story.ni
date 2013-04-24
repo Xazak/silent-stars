@@ -223,13 +223,21 @@ Before going through a closed hatch (called the blocking hatch):
 	if the blocking hatch is closed:
 		stop the action.
 
-Part 2 - Kinds of Objects
+Part 2 - New Kinds
 
 A light-noun is a kind of value. The light-nouns are lightness, glow, gleam, glimmer, lambency, and incandescence.
 A light-verb is a kind of value. The light-verbs are shows, illuminates, limns, reveals, and shines on.
 A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 [A flicker is a kind of value. The flickers are insubstantial, insufficient, faint, muted, poor, weak, wavering, dim, low, shadowy, wan, subdued, tenuous, shifting, dull, anemic, frail, ghostly, and flickering.]
+
+A lightsource is a kind of device.
+
+Carry out switching on the lightsource:
+	now the lightsource is lit;
+
+Carry out switching off the lightsource:
+	now the lightsource is unlit; 
 
 A panel is a kind of supporter.
 The description of a panel is "A cheap amber-monochrome touchscreen. [if active]The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]The display is dark[end if]."
@@ -535,8 +543,18 @@ The hatch window is part of the Autodoc's hatch. The description of the hatch wi
 
 [*** The Medical Bay]
 The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark.
-"'Disarray' is maybe putting it mildly: every single cabinet in the room is open and empty; some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood." 
+"'Disarray' is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood." 
 The dark-description is "."
+
+A lightsource called emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
+The description is "A long chunk of red plastex with cheap lights sunk into it every couple inches. The matte surface keeps the scarlet light from being harsh; lightstrips like these are standard on all ships made after 21XX."
+
+Instead of doing something with the emergency light strip: do nothing instead.
+
+[The first time the player enters the bay: "When you lift your head to look around, a bright flash of panic runs through your skull: your right arm is scarlet red from fingertips to elbow. The autodoc's drug-induced haze parts, and as you lift your arm, you realize there is a [i]massive[/i] pool of blood on the floor.";]
+
+[the first time the player visits the Medical Bay from the autodoc/when autodoc escape ends?:
+	say "You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your drug-addled head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall."]
 
 [notable furniture:
 -- a set of lockers, one of which contains the player's needed gear and is locked
@@ -544,11 +562,8 @@ The dark-description is "."
 -- a corpse bearing strange wounds
 -- emergency lighting, which casts bloodred shadows
 ]
-[The first time the player enters the bay: "When you lift your head to look around, a bright flash of panic runs through your skull: your right arm is scarlet red from fingertips to elbow. The autodoc's drug-induced haze parts, and as you lift your arm, you realize there is a [i]massive[/i] pool of blood on the floor.";]
 
 The Medical hatch is a hatch. It is west of Hallway A and east of the Medical Bay. 
-
-There is a widget in the Medical Bay.
 
 [*** Deck A Hallway]
 Hallway A is a room. "Hallway!" Hallway A is in Deck A.
