@@ -202,14 +202,11 @@ This is the replacement arrival check rule:
 		now the darkness witnessed is true;
 		
 [Changes the "You also see..." message written during room description to be a little more flexible]
-Rule for listing nondescript items while the light level is dim:
-	if the location does not enclose a lit thing:
-		say "The ambient [random light-noun] [random light-verb] ";
-	else:
-		let foo be a random number from 1 to 2;
-		if foo is:
-			-- 1: say "The [random lit thing] [random light-verb] "; [The glowing blorb shines on a sprocket.]
-			-- 2: say "The [random light-noun] from [a random lit thing] [random light-verb] "; [The shifting light from the glowing blorb illuminates a sprocket.]
+Rule for listing nondescript items while the light level is dim (this is the illumination rule):
+	let foo be a random number from 1 to 2;
+	if foo is:
+		-- 1: say "The [random lit visible thing] [random light-verb] "; [The glowing blorb shines on a sprocket.]
+		-- 2: say "The [random light-noun] from [a random lit visible thing] [random light-verb] "; [The shifting light from the glowing blorb illuminates a sprocket.]
 	list the contents of the location, as a sentence, listing marked items only;
 	say ".";
 
@@ -233,11 +230,11 @@ A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 A lightsource is a kind of device.
 
-Carry out switching on the lightsource:
-	now the lightsource is lit;
+Carry out switching on the lightsource (called the flash):
+	now the flash is lit;
 
-Carry out switching off the lightsource:
-	now the lightsource is unlit; 
+Carry out switching off the lightsource (called the flash):
+	now the flash is unlit; 
 
 A panel is a kind of supporter.
 The description of a panel is "A cheap amber-monochrome touchscreen. [if active]The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]The display is dark[end if]."
@@ -405,7 +402,7 @@ A right hand is part of the player. The description of the right hand is "The bo
 
 Book 5 - The Starlight Dancer
 
-The player is in the autodoc. [move the player back to the rocky shore before compiling]
+The player is in the autodoc. [move the player back to the rocky shore before releasing]
 
 Part 0 - Dreamtime
 
@@ -446,7 +443,7 @@ Every turn while the stone is in the upper pool:
 
 Down from the upper pool is the lower pool. The lower pool is in the Dreamspace. "The bottom is smooth.[br]No signs of life scar the mud.[br]Your guts feel frostbit."
 
-There is a stone here. The stone is lit. "[if the location encloses the stone]Before you, a stone.[otherwise]Under you, a stone.[end if][br]It glows like a faint firefly.[br]Pale white, and falling." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat."
+There is a stone in the lower pool. The stone is lit. "[if the location encloses the stone]Before you, a stone.[otherwise]Under you, a stone.[end if][br]It glows like a faint firefly.[br]Pale white, and falling." The description is "Ivory colored quartz.[br]Cloudy, like a summer day.[br]Warmer than skin heat."
 The stone is infrared.
 
 Before examining the stone:
@@ -463,6 +460,8 @@ Report taking the stone:
 Part 1 - Deck A
 
 Deck A is a region.
+
+Chapter 1 - The Autodoc
 
 The Autodoc is a room. "You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes."
 The printed name of the autodoc is "Antiseptic Coffin". Understand "coffin" as the Autodoc. The dark-description of the Autodoc is "It's cold and damp and dark in here."
@@ -527,7 +526,7 @@ Carry out pushing the exit button:
 Report pushing the exit button:
 	say "A beat passes, and then the gasket on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants." instead;
 
-The Autodoc's hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]A dark plastex porthole is set into the hatch of the autodoc." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
+The autodoc hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]The dark hulk of the autodoc crouches in one corner." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
 Instead of opening the autodoc's hatch:
 	say "You reach up and push the exit button to disengage the hatch seals.[command clarification break]"; 
@@ -541,31 +540,34 @@ Report going through the autodoc's hatch to the Medical Bay during Autodoc Escap
 
 The hatch window is part of the Autodoc's hatch. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
 
-[*** The Medical Bay]
+Chapter 2 - The Medical Bay
+
 The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark.
-"'Disarray' is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood." 
-The dark-description is "."
-
-A lightsource called emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
-The description is "A long chunk of red plastex with cheap lights sunk into it every couple inches. The matte surface keeps the scarlet light from being harsh; lightstrips like these are standard on all ships made after 21XX."
-
-Instead of doing something with the emergency light strip: do nothing instead.
-
-[The first time the player enters the bay: "When you lift your head to look around, a bright flash of panic runs through your skull: your right arm is scarlet red from fingertips to elbow. The autodoc's drug-induced haze parts, and as you lift your arm, you realize there is a [i]massive[/i] pool of blood on the floor.";]
-
-[the first time the player visits the Medical Bay from the autodoc/when autodoc escape ends?:
-	say "You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your drug-addled head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall."]
+"[first time]You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.[br][br][only]
+'Disarray' is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood."
 
 [notable furniture:
+-- the autodoc (curr. using the autodoc hatch as the standin prop)
+-- a chemical shower
 -- a set of lockers, one of which contains the player's needed gear and is locked
+-- a pile of mangled cabinet doors and junk
 -- a giant puddle of blood on the floor
 -- a corpse bearing strange wounds
 -- emergency lighting, which casts bloodred shadows
 ]
 
-The Medical hatch is a hatch. It is west of Hallway A and east of the Medical Bay. 
+An enterable openable container called a chemical shower is here. "A green vinyl curtain is drawn across the entrance to a small chemical shower."
+The description is "Standard on all spaceships, the humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system."
 
-[*** Deck A Hallway]
+A lightsource called an emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
+The description is "A long chunk of red plastex with cheap lights sunk into it every couple inches. The matte surface keeps the scarlet light from being harsh; lightstrips like these are standard on all ships made after 21XX."
+
+Instead of doing something other than examining the emergency lightstrip, say "Nope!"
+
+The medical hatch is a hatch. It is west of Hallway A and east of the Medical Bay. 
+
+Chapter 3 - Hallway A
+
 Hallway A is a room. "Hallway!" Hallway A is in Deck A.
 
 [Once Deck A is set up, use the neighboring relation to establish the correct adjacency of rooms for the listening logic, repeat for each deck]

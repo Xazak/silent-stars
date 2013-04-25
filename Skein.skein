@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0xa2a28d8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x8d330e0" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>GNOME Inform 7</generator>
-  <activeNode nodeId="node-0xa2a28d8"/>
-  <item nodeId="node-0xa2a28d8">
+  <activeNode nodeId="node-0x8d33440"/>
+  <item nodeId="node-0x8d330e0">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
@@ -10,7 +10,7 @@
 
 Silent Stars
 An Interactive Fiction by Zaq Grow
-Release 1 / Serial number 130422 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+Release 1 / Serial number 130425 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
 
 Antiseptic Coffin, in dim light
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -26,29 +26,13 @@ A flashing red button on the control panel above you casts flickering shadows.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2a29b0"/>
-      <child nodeId="node-0xa2a2d10"/>
-      <child nodeId="node-0xa3331f0"/>
-      <child nodeId="node-0xa3332c8"/>
-      <child nodeId="node-0xa3333a0"/>
-      <child nodeId="node-0xa333478"/>
-      <child nodeId="node-0xa347c68"/>
-      <child nodeId="node-0xa386028"/>
-      <child nodeId="node-0xa3862b0"/>
-      <child nodeId="node-0xa386388"/>
+      <child nodeId="node-0x8d331b8"/>
+      <child nodeId="node-0x8d33518"/>
     </children>
   </item>
-  <item nodeId="node-0xa2a29b0">
+  <item nodeId="node-0x8d331b8">
     <command xml:space="preserve">press cycle</command>
-    <result xml:space="preserve">SWITCH OFF.
-
-You switch the cycle button off.
-
-The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-Under you, a stone.
-It glows like a faint firefly.
-Pale white, and falling.
+    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
 
 Above, a stone falls.
 The water glows with pale light.
@@ -56,23 +40,17 @@ Ripples lap the shore.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
+    <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2a2a88"/>
+      <child nodeId="node-0x8d33290"/>
     </children>
   </item>
-  <item nodeId="node-0xa2a2a88">
+  <item nodeId="node-0x8d33290">
     <command xml:space="preserve">press unlock</command>
-    <result xml:space="preserve">SWITCH ON.
-
-You switch the unlock button on.
-
-The &quot;Unlock Hatch&quot; unlock button changes to green.
-
-Nothing obvious happens.
+    <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.
 
 The pale gleam recedes.
 Inky dark cloaks the water.
@@ -80,50 +58,294 @@ The waves settle down.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
+    <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2a2b60"/>
+      <child nodeId="node-0x8d33368"/>
     </children>
   </item>
-  <item nodeId="node-0xa2a2b60">
+  <item nodeId="node-0x8d33368">
     <command xml:space="preserve">press exit</command>
-    <result xml:space="preserve">SWITCH ON.
-
-You switch the exit button on.
-
-A beat passes, and then the gasket on the exit button disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
-
-Nothing obvious happens.
+    <result xml:space="preserve">A beat passes, and then the gasket on the exit button disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
+    <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2a2c38"/>
+      <child nodeId="node-0x8d33440"/>
     </children>
   </item>
-  <item nodeId="node-0xa2a2c38">
+  <item nodeId="node-0x8d33440">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">You sit up, shouldering open the hatch, and climb over the edge. The fall to the ground is short.
+    <result xml:space="preserve">You sit up, shouldering open the hatch, and roll over the lip of the autodoc. The fall to the ground is short.
 
-Medical Bay, in the gloom
-(dark desc is empty)
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
+Medical Bay, in dim light
+You make a splash instead of a thud when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.
+
+ &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
+
+A dark plastex porthole is set into the hatch of the autodoc.
+
+The glow from emergency lightstrip limns a Medical hatch.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8e26c78"/>
+      <child nodeId="node-0x8fc56d0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8e26c78">
+    <command xml:space="preserve">in</command>
+    <result xml:space="preserve">
+Antiseptic Coffin, in dim light
+You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
+
+A small plastex hatch window is set into the hatch above you.
+
+The control panel above you awaits input.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
-    <temporary score="0">NO</temporary>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8e26d50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8e26d50">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">
+Medical Bay, in dim light
+ &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
+
+A dark plastex porthole is set into the hatch of the autodoc.
+
+The lightness from the control panel limns a Medical hatch.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8e26e28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8e26e28">
+    <command xml:space="preserve">lumos</command>
+    <result xml:space="preserve">{{The light level in the Medical Bay qualifies for: dim }}
+{{Light-bearing things: emergency lightstrip}}
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8e26f00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8e26f00">
+    <command xml:space="preserve">showme panel</command>
+    <result xml:space="preserve">control panel - panel
+    cycle button (part of control panel) - toggle
+    unlock button (part of control panel) - pushbutton
+    exit button (part of control panel) - pushbutton
+location: in the Antiseptic Coffin
+singular-named, improper-named; lit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; inactive
+printed name: &quot;control panel&quot;
+printed plural name: &quot;panels&quot;
+indefinite article: &quot;the&quot;
+description: &quot;The edges of the control panel have some biogunk in them.&quot;
+initial appearance: &quot;The control panel above you awaits input.&quot;
+bulk: 1
+dark-description: &quot;An amber-colored control panel shines wan light onto your sternum.&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;This does not make noise.&quot;
+color: silver
+carrying capacity: 100
+readout: &quot;Autodoc Inactive&quot;
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8fc5010"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8fc5010">
+    <command xml:space="preserve">close autodoc</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8fc50e8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8fc50e8">
+    <command xml:space="preserve">close hatch</command>
+    <result xml:space="preserve">Which do you mean, the hatch, the hatch window or the Medical hatch?
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8fc51c0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8fc51c0">
+    <command xml:space="preserve">autodoc&apos;s hatch</command>
+    <result xml:space="preserve">There is a hiss of air as the hatch seals pressurize.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8fc5298"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8fc5298">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Medical Bay, in dim light
+ &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
+
+A dark plastex porthole is set into the hatch of the autodoc.
+
+The gleam from the control panel reveals a Medical hatch.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8fc5370"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8fc5370">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Medical Bay, in dim light
+ &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
+
+A dark plastex porthole is set into the hatch of the autodoc.
+
+The control panel shines on a Medical hatch.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8fc5448"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8fc5448">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Medical Bay, in dim light
+ &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
+
+A dark plastex porthole is set into the hatch of the autodoc.
+
+The stone here limns a Medical hatch.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8fc5520"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8fc5520">
+    <command xml:space="preserve">showme stone</command>
+    <result xml:space="preserve">stone here - thing
+location: in the lower pool
+singular-named, improper-named; lit, inedible, portable, neuter, ordinarily enumerated, unseen, unfamiliar, mundane, unexamined, cold, dim, diffuse, infrared
+printed name: &quot;stone here&quot;
+printed plural name: none
+indefinite article: none
+description: &quot;Ivory colored quartz.
+Cloudy, like a summer day.
+Warmer than skin heat.&quot;
+initial appearance: &quot;Under you, a stone.
+It glows like a faint firefly.
+Pale white, and falling.&quot;
+bulk: 1
+dark-description: &quot;(dark desc is empty)
+Ivory colored quartz.
+Cloudy, like a summer day.
+Warmer than skin heat.
+&quot;
+sound: &quot;silence&quot;
+sound-description: &quot;This does not make noise.&quot;
+color: silver
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+    <children>
+      <child nodeId="node-0x8fc55f8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x8fc55f8">
+    <command xml:space="preserve">x lightstrip</command>
+    <result xml:space="preserve">Nope!
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa2a2d10">
+  <item nodeId="node-0x8fc56d0">
+    <command xml:space="preserve">x stone</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x8d33518">
     <command xml:space="preserve">x water</command>
     <result xml:space="preserve">You dip your fingers.
 Deathly cold, then painful heat.
@@ -140,10 +362,10 @@ Ripples lap the shore.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2a2de8"/>
+      <child nodeId="node-0x8d335f0"/>
     </children>
   </item>
-  <item nodeId="node-0xa2a2de8">
+  <item nodeId="node-0x8d335f0">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You plunge a hand in.
 It&apos;s like bare skin in deep space.
@@ -168,10 +390,10 @@ The waves settle down.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa2a2ec0"/>
+      <child nodeId="node-0x8d336c8"/>
     </children>
   </item>
-  <item nodeId="node-0xa2a2ec0">
+  <item nodeId="node-0x8d336c8">
     <command xml:space="preserve">dive in</command>
     <result xml:space="preserve">One breath, plus one held.
 Even your bones feel like ice.
@@ -194,10 +416,10 @@ Pale white, and fading.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa333040"/>
+      <child nodeId="node-0x8dc2800"/>
     </children>
   </item>
-  <item nodeId="node-0xa333040">
+  <item nodeId="node-0x8dc2800">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">The light calls you down.
 You kick your legs, jaw clenched.
@@ -219,10 +441,10 @@ Pale white, and fading.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa333118"/>
+      <child nodeId="node-0x8dc28d8"/>
     </children>
   </item>
-  <item nodeId="node-0xa333118">
+  <item nodeId="node-0x8dc28d8">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Taken.
 
@@ -244,809 +466,6 @@ The control panel above you shows a blinking red button.
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa3331f0">
-    <command xml:space="preserve">push unlock button</command>
-    <result xml:space="preserve">ERROR: Completion of surgery cycle has not been confirmed.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa3332c8">
-    <command xml:space="preserve">press red button</command>
-    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-Under you, a stone.
-It glows like a faint firefly.
-Pale white, and falling.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa3333a0">
-    <command xml:space="preserve">press flashing button</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa333478">
-    <command xml:space="preserve">push flashing button</command>
-    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-Under you, a stone.
-It glows like a faint firefly.
-Pale white, and falling.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa333550"/>
-      <child nodeId="node-0xa333628"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa333550">
-    <command xml:space="preserve">push steady button</command>
-    <result xml:space="preserve">Which do you mean, the cycle button, the unlock button or the exit button?
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa333628">
-    <command xml:space="preserve">out</command>
-    <result xml:space="preserve">(by pressing the exit button)
-ERROR: Completion of surgery cycle has not been confirmed.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa333700"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa333700">
-    <command xml:space="preserve">showme control panel</command>
-    <result xml:space="preserve">control panel - panel
-    cycle button (part of control panel) - button
-    unlock button (part of control panel) - button
-    exit button (part of control panel) - button
-location: in the Antiseptic Coffin
-singular-named, improper-named; lit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; active
-printed name: &quot;control panel&quot;
-printed plural name: &quot;panels&quot;
-indefinite article: &quot;the&quot;
-description: &quot;The edges of the control panel have some biogunk in them.&quot;
-initial appearance: &quot;A flashing red button on the control panel above you casts flickering shadows.&quot;
-bulk: 1
-dark-description: &quot;An amber-colored control panel shines wan light onto your sternum.&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: silver
-carrying capacity: 100
-readout: &quot;Confirm Amputation Surgery Cycle Has Completed&quot;
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa347830"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa347830">
-    <command xml:space="preserve">showme cycle button</command>
-    <result xml:space="preserve">cycle button - button
-location: part of the control panel in the Antiseptic Coffin
-singular-named, improper-named; unlit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; switched off; flashing
-printed name: &quot;cycle button&quot;
-printed plural name: &quot;buttons&quot;
-indefinite article: none
-description: &quot;It&apos;s red and flashing &quot;Confirm?&quot; in big letters.&quot;
-initial appearance: &quot;A simple button.&quot;
-bulk: 1
-dark-description: &quot;(dark desc is empty)
-It&apos;s red and flashing &quot;Confirm?&quot; in big letters.
-&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: red
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa347908"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa347908">
-    <command xml:space="preserve">push cycle button</command>
-    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa3479e0"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa3479e0">
-    <command xml:space="preserve">showme cycle button</command>
-    <result xml:space="preserve">cycle button - button
-location: part of the control panel in the Antiseptic Coffin
-singular-named, improper-named; unlit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; switched on; flashing
-printed name: &quot;cycle button&quot;
-printed plural name: &quot;buttons&quot;
-indefinite article: none
-description: &quot;It&apos;s red and flashing &quot;Confirm?&quot; in big letters.&quot;
-initial appearance: &quot;A simple button.&quot;
-bulk: 1
-dark-description: &quot;(dark desc is empty)
-It&apos;s red and flashing &quot;Confirm?&quot; in big letters.
-&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: red
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa347ab8"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa347ab8">
-    <command xml:space="preserve">x cycle button</command>
-    <result xml:space="preserve">It&apos;s red and flashing &quot;Confirm?&quot; in big letters.
-
-The cycle button is currently switched on.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa347b90"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa347b90">
-    <command xml:space="preserve">push cycle button</command>
-    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa347c68">
-    <command xml:space="preserve">push cycle button</command>
-    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-Under you, a stone.
-It glows like a faint firefly.
-Pale white, and falling.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa347d40"/>
-      <child nodeId="node-0xa347ef0"/>
-      <child nodeId="node-0xa3579f8"/>
-      <child nodeId="node-0xa357f08"/>
-      <child nodeId="node-0xa3668e8"/>
-      <child nodeId="node-0xa366d20"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa347d40">
-    <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa347e18"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa347e18">
-    <command xml:space="preserve">push cycle button</command>
-    <result xml:space="preserve">[Rule &quot;can&apos;t push scenery rule&quot; applies.]
-[Rule &quot;can&apos;t push people rule&quot; applies.]
-[Rule &quot;Carry out pushing a button ( called the frobber )&quot; applies.]
-[Rule &quot;Report pushing the cycle button&quot; applies.]
-The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-[Rule &quot;Every turn while the stone is in the upper pool&quot; applies.]
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa347ef0">
-    <command xml:space="preserve">showme cycle button</command>
-    <result xml:space="preserve">cycle button - button
-location: part of the control panel in the Antiseptic Coffin
-singular-named, improper-named; unlit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; switched off; flashing
-printed name: &quot;cycle button&quot;
-printed plural name: &quot;buttons&quot;
-indefinite article: none
-description: &quot;It&apos;s red and flashing &quot;Confirm?&quot; in big letters.&quot;
-initial appearance: &quot;A simple button.&quot;
-bulk: 1
-dark-description: &quot;(dark desc is empty)
-It&apos;s red and flashing &quot;Confirm?&quot; in big letters.
-&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: red
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa357848"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa357848">
-    <command xml:space="preserve">push cycle button</command>
-    <result xml:space="preserve">SWITCH ON.
-
-The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa357920"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa357920">
-    <command xml:space="preserve">showme cycle button</command>
-    <result xml:space="preserve">cycle button - button
-location: part of the control panel in the Antiseptic Coffin
-singular-named, improper-named; unlit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; switched on; flashing
-printed name: &quot;cycle button&quot;
-printed plural name: &quot;buttons&quot;
-indefinite article: none
-description: &quot;It&apos;s red and flashing &quot;Confirm?&quot; in big letters.&quot;
-initial appearance: &quot;A simple button.&quot;
-bulk: 1
-dark-description: &quot;(dark desc is empty)
-It&apos;s red and flashing &quot;Confirm?&quot; in big letters.
-&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: red
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa3579f8">
-    <command xml:space="preserve">x cycle button</command>
-    <result xml:space="preserve">It&apos;s now a blank grey button.
-
-The cycle button is currently switched off.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa357ad0"/>
-      <child nodeId="node-0xa357d58"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa357ad0">
-    <command xml:space="preserve">push cycle butotn</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa357ba8"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa357ba8">
-    <command xml:space="preserve">push cycle button</command>
-    <result xml:space="preserve">SWITCH ON.
-
-You switch the cycle button on.
-
-The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa357c80"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa357c80">
-    <command xml:space="preserve">x cycle button</command>
-    <result xml:space="preserve">It&apos;s green and says &quot;Start Cycle?&quot;
-
-The cycle button is currently switched on.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa357d58">
-    <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa357e30"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa357e30">
-    <command xml:space="preserve">x cycle button</command>
-    <result xml:space="preserve">[Rule &quot;mark items as seen on examining rule&quot; applies.]
-[Rule &quot;standard examining rule&quot; applies.]
-It&apos;s now a blank grey button.
-
-[Rule &quot;new examine directions rule&quot; applies.]
-[Rule &quot;examine containers rule&quot; applies.]
-[Rule &quot;examine supporters rule&quot; applies.]
-[Rule &quot;examine devices rule&quot; applies.]
-The cycle button is currently switched off.
-
-[Rule &quot;examine undescribed things rule&quot; applies.]
-[Rule &quot;report other people examining rule&quot; applies.]
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa357f08">
-    <command xml:space="preserve">actions</command>
-    <result xml:space="preserve">Actions listing on.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa366810"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa366810">
-    <command xml:space="preserve">push cycle button</command>
-    <result xml:space="preserve">[pushing the cycle button]
-[(1) switching on the cycle button]
-You switch the cycle button on.
-[(1) switching on the cycle button - succeeded]
-
-[pushing the cycle button - succeeded]
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa3668e8">
-    <command xml:space="preserve">push unlock button</command>
-    <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.
-
-Nothing obvious happens.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa3669c0"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa3669c0">
-    <command xml:space="preserve">actions</command>
-    <result xml:space="preserve">Actions listing on.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa366a98"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa366a98">
-    <command xml:space="preserve">push unlock button</command>
-    <result xml:space="preserve">[pushing the unlock button]
-The button flashes a couple times; there is a metallic click as the locks disengage.
-
-Nothing obvious happens.
-[pushing the unlock button - succeeded]
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa366b70"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa366b70">
-    <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa366c48"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa366c48">
-    <command xml:space="preserve">push unlock button</command>
-    <result xml:space="preserve">[pushing the unlock button]
-[Rule &quot;Check pushing the unlock button&quot; applies.]
-[Rule &quot;can&apos;t push scenery rule&quot; applies.]
-[Rule &quot;can&apos;t push people rule&quot; applies.]
-[Rule &quot;Carry out pushing the unlock button&quot; applies.]
-[Rule &quot;Report pushing the unlock button&quot; applies.]
-The button flashes a couple times; there is a metallic click as the locks disengage.
-
-[Rule &quot;report pushing rule&quot; applies.]
-Nothing obvious happens.
-[pushing the unlock button - succeeded]
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa366d20">
-    <command xml:space="preserve">push unlock buttn</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa366df8"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa366df8">
-    <command xml:space="preserve">push unlock button</command>
-    <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.
-
-Beep!
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa366ed0"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa366ed0">
-    <command xml:space="preserve">x cycle button</command>
-    <result xml:space="preserve">It&apos;s now a blank grey button.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa386028">
-    <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa386100"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa386100">
-    <command xml:space="preserve">press cycle button</command>
-    <result xml:space="preserve">[Rule &quot;can&apos;t push scenery rule&quot; applies.]
-[Rule &quot;can&apos;t push people rule&quot; applies.]
-[Rule &quot;Carry out pushing a button ( called the frobber )&quot; applies.]
-SWITCH OFF.
-
-[Rule &quot;can&apos;t switch off unless switchable rule&quot; applies.]
-[Rule &quot;can&apos;t switch off what&apos;s already off rule&quot; applies.]
-[Rule &quot;Carry out switching off the cycle button&quot; applies.]
-[Rule &quot;standard switching off rule&quot; applies.]
-[Rule &quot;standard report switching off rule&quot; applies.]
-You switch the cycle button off.
-
-[Rule &quot;Report pushing the cycle button&quot; applies.]
-The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-[Rule &quot;Every turn while the location of the stone is below the location of the player&quot; applies.]
-Under you, a stone.
-It glows like a faint firefly.
-Pale white, and falling.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa3861d8"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa3861d8">
-    <command xml:space="preserve">press unlock button</command>
-    <result xml:space="preserve">[Rule &quot;Check pushing the unlock button&quot; applies.]
-[Rule &quot;can&apos;t push scenery rule&quot; applies.]
-[Rule &quot;can&apos;t push people rule&quot; applies.]
-[Rule &quot;Carry out pushing the unlock button&quot; applies.]
-[Rule &quot;Carry out pushing a button ( called the frobber )&quot; applies.]
-SWITCH ON.
-
-[Rule &quot;can&apos;t switch on unless switchable rule&quot; applies.]
-[Rule &quot;can&apos;t switch on what&apos;s already on rule&quot; applies.]
-[Rule &quot;standard switching on rule&quot; applies.]
-[Rule &quot;standard report switching on rule&quot; applies.]
-You switch the unlock button on.
-
-[Rule &quot;Report pushing the unlock button&quot; applies.]
-The &quot;Unlock Hatch&quot; unlock button changes to green.
-
-[Rule &quot;report pushing rule&quot; applies.]
-Nothing obvious happens.
-
-[Rule &quot;Every turn while the stone is in the upper pool&quot; applies.]
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa3862b0">
-    <command xml:space="preserve">x panel</command>
-    <result xml:space="preserve">The edges of the control panel have some biogunk in them.
-
-Control Panel Readout: &quot;Confirm Amputation Surgery Cycle Has Completed&quot;
-three rhombus-shaped buttons are outlined: a cycle button, an unlock button and an exit button.
-
-Under you, a stone.
-It glows like a faint firefly.
-Pale white, and falling.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0xa386388">
-    <command xml:space="preserve">press cycle button</command>
-    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-Under you, a stone.
-It glows like a faint firefly.
-Pale white, and falling.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa386460"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa386460">
-    <command xml:space="preserve">push unlock button</command>
-    <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa386538"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa386538">
-    <command xml:space="preserve">push exit button</command>
-    <result xml:space="preserve">A beat passes, and then the gasket on the exit button disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
-
-Beep!
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-    <children>
-      <child nodeId="node-0xa386610"/>
-    </children>
-  </item>
-  <item nodeId="node-0xa386610">
-    <command xml:space="preserve">out</command>
-    <result xml:space="preserve">You sit up, shouldering open the hatch, and climb over the edge. The fall to the ground is short.
-
-Medical Bay, in the darkness
-(dark desc is empty)
-The Medical Bay: filled with all the pointy and invasive tools of the trade.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
 </Skein>

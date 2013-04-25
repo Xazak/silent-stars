@@ -203,3 +203,7 @@ Before diving:
 Carry out diving:
 	now the player is inside the water;
 
+[The first time the player enters the bay: "When you lift your head to look around, a bright flash of panic runs through your skull: your right arm is scarlet red from fingertips to elbow. The autodoc's drug-induced haze parts, and as you lift your arm, you realize there is a [i]massive[/i] pool of blood on the floor.";]
+
+[the first time the player visits the Medical Bay from the autodoc/when autodoc escape ends?:
+	say "You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your drug-addled head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall."]

@@ -1,4 +1,6 @@
 ***TODO -[[
+[x] The subroutine that tells the player about a lit thing shining on an unlit thing seems to accept things /outside/ the location
+[ ] The only controls for the autodoc are on the inside
 [ ] Toggle switches do not have "flip switch" implemented
 [ ] Provide logic to control panels that causes any sub-parts of the panel to become unresponsive if the panel itself is inactive
 [ ] Executing a look action should tell the player what the MC does while looking, e.g. "You steady yourself on the lathe and glance around furtively:"
@@ -14,6 +16,7 @@
 [ ] Problems involving radiation sickness require similar ways
 
 MESSAGE CHANGES:
+[ ] Adjust: Rewrite the illumination rule to take advantage of the color of a thing
 [ ] Addition: hands need alternate description while in dreamtime
 [ ] Remove/Replace: The room description header is reprinted during a light level changeover
 [ ] "Time passes." - after executing WAIT
@@ -35,8 +38,8 @@ The [room-describing action] is defined as the action that is the reason for the
 
 Unlike rooms/containers, there is no direct/indirect region containment distinction; thus, to get the most specific region containing the player, use [the map region of the location]. 
 
-"The/A foobar is here." <- The foobar (which is a thing) is put into the last defined room
-"There is a foobar here." <- The foobar (which is a thing) is put OFFSTAGE
+"The/A foobar is here." <- Makes a thing called a "foobar" and puts it into the last-referred room
+"There is a foobar here." <- Makes a thing called a "foobar here" and puts it offstage
 
 "In the study is a desk. In the desk is a sheet of paper."
 Assuming the above:
