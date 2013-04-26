@@ -501,11 +501,11 @@ The unlock button is a pushbutton. The unlock button is part of the control pane
 Check pushing the unlock button:
 	if the control panel is active:
 		say "ERROR: Completion of surgery cycle has not been confirmed." instead;
-	if the autodoc's hatch is unlocked:
+	if the autodoc hatch is unlocked:
 		say "ERROR: Autodoc hatch is not sealed." instead;
 
 Carry out pushing the unlock button:
-	now the autodoc's hatch is unlocked;
+	now the autodoc hatch is unlocked;
 	now the exit button is flashing;
 
 Report pushing the unlock button:
@@ -513,14 +513,14 @@ Report pushing the unlock button:
 
 The exit button is a pushbutton. The exit button is part of the control panel.
 Check pushing the exit button:
-	if the autodoc's hatch is locked:
+	if the autodoc hatch is locked:
 		if the control panel is active:
 			say "ERROR: Completion of surgery cycle has not been confirmed." instead;
 		otherwise:
 			say "ERROR: [printed name of autodoc's hatch] is locked." instead;
 
 Carry out pushing the exit button:
-	now the autodoc's hatch is open;
+	now the autodoc hatch is open;
 	now the exit button is steady;
 
 Report pushing the exit button:
@@ -528,17 +528,17 @@ Report pushing the exit button:
 
 The autodoc hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]The dark hulk of the autodoc crouches in one corner." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
-Instead of opening the autodoc's hatch:
+Instead of opening the autodoc hatch:
 	say "You reach up and push the exit button to disengage the hatch seals.[command clarification break]"; 
 	try pushing the exit button;
 
-Report closing the autodoc's hatch:
+Report closing the autodoc hatch:
 	say "There is a hiss of air as the hatch seals pressurize." instead;
 
-Report going through the autodoc's hatch to the Medical Bay during Autodoc Escape:
-	say "You sit up, shouldering open the hatch, and roll over the lip of the autodoc. The fall to the ground is short.";
+Report going through the autodoc hatch to the Medical Bay during Autodoc Escape:
+	say "You sit up, lift open the hatch with one shoulder, and roll over the lip of the autodoc. The fall to the ground is thankfully short.";
 
-The hatch window is part of the Autodoc's hatch. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
+The hatch window is part of the autodoc hatch. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
 
 Chapter 2 - The Medical Bay
 
@@ -556,11 +556,25 @@ The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark
 -- emergency lighting, which casts bloodred shadows
 ]
 
-An enterable openable container called a chemical shower is here. "A green vinyl curtain is drawn across the entrance to a small chemical shower."
-The description is "Standard on all spaceships, the humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system."
+A openable enterable container called a chemical shower is here.
+"A green vinyl curtain is drawn across the entrance to a small chemical shower."
+The description is "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system."
+
+A vinyl shower curtain is part of the chemical shower. The curtain is green and scenery. The curtain can be closed.
+The description is "A sheet of emerald plastic hung from a curtain rod."
+
+Before entering the chemical shower:
+	if the shower curtain is closed:
+		try opening the shower curtain;
+		say "(first opening the shower curtain)[command clarification break]"; 
+
+A curtain rod is part of the vinyl curtain. The rod is grey and scenery.
+The description is "A metal rod has been bolted into either side of the chemical shower, where it continues to hold the shower curtain in place."
 
 A lightsource called an emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
-The description is "A long chunk of red plastex with cheap lights sunk into it every couple inches. The matte surface keeps the scarlet light from being harsh; lightstrips like these are standard on all ships made after 21XX."
+The description is "
+
+A long chunk of red plastex with cheap lights sunk into it every couple inches. The matte surface keeps the scarlet light from being harsh."
 
 Instead of doing something other than examining the emergency lightstrip, say "Nope!"
 

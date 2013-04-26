@@ -172,42 +172,42 @@
     </dict>
     <key>24</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>566</integer>
+        <key>Line</key><integer>583</integer>
         <key>Title</key><string>Chapter 3 - Hallway A</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>4</integer>
     </dict>
     <key>25</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>574</integer>
+        <key>Line</key><integer>591</integer>
         <key>Title</key><string>Volume 2 - Beginning Play</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>26</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>591</integer>
+        <key>Line</key><integer>608</integer>
         <key>Title</key><string>Volume 3 - Scenes and Stage Movement</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>27</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>609</integer>
+        <key>Line</key><integer>626</integer>
         <key>Title</key><string>Volume 0 - Not For Release</string>
         <key>Level</key><integer>1</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>28</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>611</integer>
+        <key>Line</key><integer>628</integer>
         <key>Title</key><string>Book 1 - Testing Commands</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>29</key><dict>
         <key>Filename</key><string>/home/xazak/Inform/Projects/silent-stars.inform/Source/story.ni</string>
-        <key>Line</key><integer>633</integer>
+        <key>Line</key><integer>650</integer>
         <key>Title</key><string>Book 2 - Testing Equipment</string>
         <key>Level</key><integer>2</integer>
         <key>Indentation</key><integer>2</integer>

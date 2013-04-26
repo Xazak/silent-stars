@@ -1,5 +1,5 @@
-***TODO -[[
-[x] The subroutine that tells the player about a lit thing shining on an unlit thing seems to accept things /outside/ the location
+TODO -[[
+BUGS:
 [ ] The only controls for the autodoc are on the inside
 [ ] Toggle switches do not have "flip switch" implemented
 [ ] Provide logic to control panels that causes any sub-parts of the panel to become unresponsive if the panel itself is inactive
@@ -31,7 +31,7 @@ Needed objects:
 Doortypes: hatches, blast doors
 Objects: bandage, styptic powder? antiseptic?
 ]]-
-***CLARIFICATIONS -[[
+CLARIFICATIONS -[[
 If trying to work around the "can't use multiple objects with this verb" error use [things] instead of just [thing] in the action definition.
 
 The [room-describing action] is defined as the action that is the reason for the room being described; if a player is simply LOOKing, then it will be the looking action; on the other hand, if the player has just tried GO EAST and landed here, then it will be set to the going action.
@@ -48,7 +48,7 @@ Assuming the above:
 -The study and the desk both enclose the sheet of paper
 A thing encloses whatever is a part of itself, or inside itself, or on top of itself, and is recursive for multiple containers.
 ]]-
-***QUESTIONS -[[
+QUESTIONS -[[
 Does I7 generate a "light status has changed" message when moving from a lit room to a dark one and vice versa?
 
 Can Inform randomly interject bits of text into the ongoing stream, i.e. from a table of phrases? 
@@ -58,7 +58,55 @@ becomes
 
 A protagonist who can see into the ultraviolet range would be really cool!
 ]]-
+PUZZLE SPECS
+Deck A/Medical Bay -[[
+PUZZLE: Player is trapped inside the autodoc and must get out
+	COMPLICATIONS: 
+	-- Recent mysterious injuries and attendant treatments has left the PC's brain fuzzy, the controls are hard to read
+	-- If the player takes too long inside the autodoc, a cleaning cycle will start and the player will drown(?)
+	SOLUTION:
+	-1 push cycle button
+	-2 push unlock button
+	-3 push exit button
+	-4 exit 
+	NOTES:
+	-- still need to work out how to scramble all the button names, problem is rather intractable and has been shelved until i can ascertain whether or not i will want to reuse the scrambler function later on
+	-- might be able to use [mangle][/mangle] tags in order to get the job done, would rather scramble names by way of a rulebook
 
+PUZZLE: The player needs to wash off all this blood
+	COMPLICATIONS:
+	-- The massive pool of blood covering the medbay floor is preventing the shower from working
+	-- There is a drain in the shower and another sunk into the floor but both are blocked
+		-- Unblocking the chemshower drain only allows the shower to work; the player immediately becomes dirty after getting out
+			-- There isn't enough room inside the shower for the player to hold their things without them getting wet
+	SOLUTION:
+	-- Unblock medbay floor drain
+
+PUZZLE: The player needs to bandage the wound on their hand
+	COMPLICATIONS:
+	-- If there's any medical equipment in the room, it's inside a locked locker
+	-- The player is stark naked and has nothing to improvise with
+	SOLUTION:
+	-- Gain access to the player's gear locker
+	-- Use the medical kit inside to clean and bandage the wound
+
+PUZZLE: The player's gear is inside a locked locker
+	COMPLICATIONS:
+	-- There is blood all over the room and the PC is reluctant to get their things dirty
+	-- The PC is struggling to recall the combination for the lock, due to the anesthesia
+	SOLUTION:
+	-- REMEMBER the combination to the lock
+
+PUZZLE: The medbay door is stuck shut
+	COMPLICATIONS:
+	-- The lock cannot be disengaged normally because the control panel is broken
+	-- The player has a pocket terminal that will allow secondary access but it's inside a gear locker
+		!! The handcomp's battery is only just charged enough to allow this puzzle to be completed; it requires a recharge directly after
+	SOLUTION:
+	-- Use the handcomp to bypass the door control panel
+]]-
+
+THEORY
 VISIBILITY/EPISTEMOLOGY -[[
 Currently, "visible" only covers objects that are in a lighted room. Attempting to redefine this appears to involve seriously deep hacking of the visibility calculations.
 
