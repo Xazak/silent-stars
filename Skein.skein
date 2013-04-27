@@ -1,784 +1,399 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0xa1b0d118" xmlns="http://www.logicalshift.org.uk/IF/Skein">
-  <generator>GNOME Inform 7</generator>
-  <activeNode nodeId="node-0xa64f628"/>
-  <item nodeId="node-0xa1b0d118">
+<Skein rootNode="node-0x01BBF598" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x01E9AF08"/>
+  <item nodeId="node-0x01BBF598">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">
-
-
-
-Silent Stars
-An Interactive Fiction by Zaq Grow
-Release 1 / Serial number 130426 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
-
-Antiseptic Coffin, in dim light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A small plastex hatch window is set into the hatch above you.
-
-A flashing red button on the control panel above you casts flickering shadows.
-
-&gt;</result>
+    <result xml:space="preserve">Silent Stars&#x000A;An Interactive Fiction by Zaq Grow&#x000A;Release 1 / Serial number 130426 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex hatch window is set into the hatch above you.&#x000A;&#x000A;A flashing red button on the control panel above you casts flickering shadows.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0d1f0"/>
-      <child nodeId="node-0xa54b118"/>
+      <child nodeId="node-0x01BBF878"/>
+      <child nodeId="node-0x01E9A808"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0d1f0">
+  <item nodeId="node-0x01BBF878">
     <command xml:space="preserve">press cycle</command>
-    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
+    <result xml:space="preserve">The cycle button fades from red to green and blinks "Cycle Complete" a couple times.&#x000A;&#x000A;Above, a stone falls.&#x000A;The water glows with pale light.&#x000A;Ripples lap the shore.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0d2c8"/>
+      <child nodeId="node-0x01BBF8E8"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0d2c8">
+  <item nodeId="node-0x01BBF8E8">
     <command xml:space="preserve">press unlock</command>
-    <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
+    <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.&#x000A;&#x000A;The pale gleam recedes.&#x000A;Inky dark cloaks the water.&#x000A;The waves settle down.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0d3a0"/>
+      <child nodeId="node-0x01EBDBD0"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0d3a0">
+  <item nodeId="node-0x01EBDBD0">
     <command xml:space="preserve">press exit</command>
-    <result xml:space="preserve">A beat passes, and then the gasket on the exit button disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
-
-&gt;</result>
+    <result xml:space="preserve">A beat passes, and then the gasket on the exit button disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0d478"/>
+      <child nodeId="node-0x01EBDC40"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0d478">
+  <item nodeId="node-0x01EBDC40">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">You sit up, lift open the hatch with one shoulder, and roll over the lip of the autodoc. The fall to the ground is thankfully short.
-
-Medical Bay, in dim light
-You make a splash instead of a thud when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.
-
- &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
-
-The dark hulk of the autodoc crouches in one corner.
-
-A green vinyl curtain is drawn across the entrance to a small chemical shower.
-
-The gleam from an emergency lightstrip limns a medical hatch.
-
-&gt;</result>
+    <result xml:space="preserve">You sit up, lift open the hatch with one shoulder, and roll over the lip of the autodoc. The fall to the ground is thankfully short.&#x000A;&#x000A;Medical Bay, in dim light&#x000A;You make a splash instead of a thud when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.&#x000A;&#x000A; {{"Disarray" is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;The dark hulk of the autodoc crouches in one corner.&#x000A;&#x000A;A green vinyl curtain is drawn across the entrance to a small chemical shower.&#x000A;&#x000A;A rack of gear lockers along one wall have received a similar treatment as the cabinets. Three of them appear to be intact, though locked.&#x000A;&#x000A;A giant pile of debris lies more or less in the corner.&#x000A;&#x000A;The lambency from an emergency lightstrip illuminates a medical hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0d550"/>
-      <child nodeId="node-0xa54b040"/>
-      <child nodeId="node-0xa54b550"/>
-      <child nodeId="node-0xa64f478"/>
+      <child nodeId="node-0x01EBDF78"/>
+      <child nodeId="node-0x01E9A2C8"/>
+      <child nodeId="node-0x01E9A338"/>
+      <child nodeId="node-0x01E9A6B8"/>
+      <child nodeId="node-0x01E9AE28"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0d550">
+  <item nodeId="node-0x01EBDF78">
     <command xml:space="preserve">in</command>
-    <result xml:space="preserve">
-Antiseptic Coffin, in dim light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A small plastex hatch window is set into the hatch above you.
-
-The control panel above you awaits input.
-
-&gt;</result>
+    <result xml:space="preserve">&#x000A;Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex hatch window is set into the hatch above you.&#x000A;&#x000A;The control panel above you awaits input.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0d628"/>
+      <child nodeId="node-0x01EBDFE8"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0d628">
+  <item nodeId="node-0x01EBDFE8">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">
-Medical Bay, in dim light
- &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
-
-A dark plastex porthole is set into the hatch of the autodoc.
-
-The lightness from the control panel limns a Medical hatch.
-
-&gt;</result>
+    <result xml:space="preserve">&#x000A;Medical Bay, in dim light&#x000A; "Disarray" is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;The lightness from the control panel limns a Medical hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa1b0d700"/>
+      <child nodeId="node-0x01EBE058"/>
     </children>
   </item>
-  <item nodeId="node-0xa1b0d700">
+  <item nodeId="node-0x01EBE058">
     <command xml:space="preserve">lumos</command>
-    <result xml:space="preserve">{{The light level in the Medical Bay qualifies for: dim }}
-{{Light-bearing things: emergency lightstrip}}
-
-&gt;</result>
+    <result xml:space="preserve">{{The light level in the Medical Bay qualifies for: dim }}&#x000A;{{Light-bearing things: emergency lightstrip}}&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa541028"/>
+      <child nodeId="node-0x01EBFF20"/>
     </children>
   </item>
-  <item nodeId="node-0xa541028">
+  <item nodeId="node-0x01EBFF20">
     <command xml:space="preserve">showme panel</command>
-    <result xml:space="preserve">control panel - panel
-    cycle button (part of control panel) - toggle
-    unlock button (part of control panel) - pushbutton
-    exit button (part of control panel) - pushbutton
-location: in the Antiseptic Coffin
-singular-named, improper-named; lit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; inactive
-printed name: &quot;control panel&quot;
-printed plural name: &quot;panels&quot;
-indefinite article: &quot;the&quot;
-description: &quot;The edges of the control panel have some biogunk in them.&quot;
-initial appearance: &quot;The control panel above you awaits input.&quot;
-bulk: 1
-dark-description: &quot;An amber-colored control panel shines wan light onto your sternum.&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: silver
-carrying capacity: 100
-readout: &quot;Autodoc Inactive&quot;
-
-&gt;</result>
+    <result xml:space="preserve">control panel - panel&#x000A;    cycle button (part of control panel) - toggle&#x000A;    unlock button (part of control panel) - pushbutton&#x000A;    exit button (part of control panel) - pushbutton&#x000A;location: in the Antiseptic Coffin&#x000A;singular-named, improper-named; lit, inedible, fixed in place, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; inactive&#x000A;printed name: "control panel"&#x000A;printed plural name: "panels"&#x000A;indefinite article: "the"&#x000A;description: "The edges of the control panel have some biogunk in them."&#x000A;initial appearance: "The control panel above you awaits input."&#x000A;bulk: 1&#x000A;dark-description: "An amber-colored control panel shines wan light onto your sternum."&#x000A;sound: "silence"&#x000A;sound-description: "This does not make noise."&#x000A;color: silver&#x000A;carrying capacity: 100&#x000A;readout: "Autodoc Inactive"&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa541100"/>
+      <child nodeId="node-0x01EC1C60"/>
     </children>
   </item>
-  <item nodeId="node-0xa541100">
+  <item nodeId="node-0x01EC1C60">
     <command xml:space="preserve">close autodoc</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa5411d8"/>
+      <child nodeId="node-0x01EC1D78"/>
     </children>
   </item>
-  <item nodeId="node-0xa5411d8">
+  <item nodeId="node-0x01EC1D78">
     <command xml:space="preserve">close hatch</command>
-    <result xml:space="preserve">Which do you mean, the hatch, the hatch window or the Medical hatch?
-
-&gt;</result>
+    <result xml:space="preserve">Which do you mean, the hatch, the hatch window or the Medical hatch?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa5412b0"/>
+      <child nodeId="node-0x01EC1E78"/>
     </children>
   </item>
-  <item nodeId="node-0xa5412b0">
-    <command xml:space="preserve">autodoc&apos;s hatch</command>
-    <result xml:space="preserve">There is a hiss of air as the hatch seals pressurize.
-
-&gt;</result>
+  <item nodeId="node-0x01EC1E78">
+    <command xml:space="preserve">autodoc's hatch</command>
+    <result xml:space="preserve">There is a hiss of air as the hatch seals pressurize.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa541388"/>
+      <child nodeId="node-0x01E9A098"/>
     </children>
   </item>
-  <item nodeId="node-0xa541388">
+  <item nodeId="node-0x01E9A098">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Medical Bay, in dim light
- &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
-
-A dark plastex porthole is set into the hatch of the autodoc.
-
-The gleam from the control panel reveals a Medical hatch.
-
-&gt;</result>
+    <result xml:space="preserve">Medical Bay, in dim light&#x000A; "Disarray" is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;The gleam from the control panel reveals a Medical hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa541460"/>
+      <child nodeId="node-0x01E9A108"/>
     </children>
   </item>
-  <item nodeId="node-0xa541460">
+  <item nodeId="node-0x01E9A108">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Medical Bay, in dim light
- &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
-
-A dark plastex porthole is set into the hatch of the autodoc.
-
-The control panel shines on a Medical hatch.
-
-&gt;</result>
+    <result xml:space="preserve">Medical Bay, in dim light&#x000A; "Disarray" is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;The control panel shines on a Medical hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa541538"/>
+      <child nodeId="node-0x01E9A178"/>
     </children>
   </item>
-  <item nodeId="node-0xa541538">
+  <item nodeId="node-0x01E9A178">
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Medical Bay, in dim light
- &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
-
-A dark plastex porthole is set into the hatch of the autodoc.
-
-The stone here limns a Medical hatch.
-
-&gt;</result>
+    <result xml:space="preserve">Medical Bay, in dim light&#x000A; "Disarray" is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;A dark plastex porthole is set into the hatch of the autodoc.&#x000A;&#x000A;The stone here limns a Medical hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa541610"/>
+      <child nodeId="node-0x01E9A1E8"/>
     </children>
   </item>
-  <item nodeId="node-0xa541610">
+  <item nodeId="node-0x01E9A1E8">
     <command xml:space="preserve">showme stone</command>
-    <result xml:space="preserve">stone here - thing
-location: in the lower pool
-singular-named, improper-named; lit, inedible, portable, neuter, ordinarily enumerated, unseen, unfamiliar, mundane, unexamined, cold, dim, diffuse, infrared
-printed name: &quot;stone here&quot;
-printed plural name: none
-indefinite article: none
-description: &quot;Ivory colored quartz.
-Cloudy, like a summer day.
-Warmer than skin heat.&quot;
-initial appearance: &quot;Under you, a stone.
-It glows like a faint firefly.
-Pale white, and falling.&quot;
-bulk: 1
-dark-description: &quot;(dark desc is empty)
-Ivory colored quartz.
-Cloudy, like a summer day.
-Warmer than skin heat.
-&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: silver
-
-&gt;</result>
+    <result xml:space="preserve">stone here - thing&#x000A;location: in the lower pool&#x000A;singular-named, improper-named; lit, inedible, portable, neuter, ordinarily enumerated, unseen, unfamiliar, mundane, unexamined, cold, dim, diffuse, infrared&#x000A;printed name: "stone here"&#x000A;printed plural name: none&#x000A;indefinite article: none&#x000A;description: "Ivory colored quartz.&#x000A;Cloudy, like a summer day.&#x000A;Warmer than skin heat."&#x000A;initial appearance: "Under you, a stone.&#x000A;It glows like a faint firefly.&#x000A;Pale white, and falling."&#x000A;bulk: 1&#x000A;dark-description: "(dark desc is empty)&#x000A;Ivory colored quartz.&#x000A;Cloudy, like a summer day.&#x000A;Warmer than skin heat.&#x000A;"&#x000A;sound: "silence"&#x000A;sound-description: "This does not make noise."&#x000A;color: silver&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa5416e8"/>
+      <child nodeId="node-0x01E9A258"/>
     </children>
   </item>
-  <item nodeId="node-0xa5416e8">
+  <item nodeId="node-0x01E9A258">
     <command xml:space="preserve">x lightstrip</command>
-    <result xml:space="preserve">Nope!
-
-&gt;</result>
+    <result xml:space="preserve">Nope!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa54b040">
+  <item nodeId="node-0x01E9A2C8">
     <command xml:space="preserve">x stone</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa54b550">
+  <item nodeId="node-0x01E9A338">
     <command xml:space="preserve">enter shower</command>
-    <result xml:space="preserve">(the chemical shower)
-That&apos;s not something you can open.
-
-(first opening the shower curtain)
-You get into the chemical shower.
-
-&gt;</result>
+    <result xml:space="preserve">(the chemical shower)&#x000A;That's not something you can open.&#x000A;&#x000A;(first opening the shower curtain)&#x000A;You get into the chemical shower.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa54b628"/>
+      <child nodeId="node-0x01E9A3A8"/>
     </children>
   </item>
-  <item nodeId="node-0xa54b628">
+  <item nodeId="node-0x01E9A3A8">
     <command xml:space="preserve">open shower</command>
-    <result xml:space="preserve">(the chemical shower)
-That&apos;s not something you can open.
-
-&gt;</result>
+    <result xml:space="preserve">(the chemical shower)&#x000A;That's not something you can open.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa54b700"/>
+      <child nodeId="node-0x01E9A418"/>
     </children>
   </item>
-  <item nodeId="node-0xa54b700">
+  <item nodeId="node-0x01E9A418">
     <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
-
-&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa64f040"/>
+      <child nodeId="node-0x01E9A488"/>
     </children>
   </item>
-  <item nodeId="node-0xa64f040">
+  <item nodeId="node-0x01E9A488">
     <command xml:space="preserve">open shower</command>
-    <result xml:space="preserve">(the chemical shower)
-[Rule &quot;can&apos;t open unless openable rule&quot; applies.]
-That&apos;s not something you can open.
-
-&gt;</result>
+    <result xml:space="preserve">(the chemical shower)&#x000A;[Rule "can't open unless openable rule" applies.]&#x000A;That's not something you can open.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa64f118"/>
+      <child nodeId="node-0x01E9A4F8"/>
     </children>
   </item>
-  <item nodeId="node-0xa64f118">
+  <item nodeId="node-0x01E9A4F8">
     <command xml:space="preserve">enter shower</command>
-    <result xml:space="preserve">(the chemical shower)
-[Rule &quot;Before entering the chemical shower&quot; applies.]
-[Rule &quot;can&apos;t open unless openable rule&quot; applies.]
-That&apos;s not something you can open.
-
-(first opening the shower curtain)
-[Rule &quot;convert enter door into go rule&quot; applies.]
-[Rule &quot;convert enter compass direction into go rule&quot; applies.]
-[Rule &quot;can&apos;t enter what&apos;s already entered rule&quot; applies.]
-But you&apos;re already in the chemical shower.
-
-&gt;</result>
+    <result xml:space="preserve">(the chemical shower)&#x000A;[Rule "Before entering the chemical shower" applies.]&#x000A;[Rule "can't open unless openable rule" applies.]&#x000A;That's not something you can open.&#x000A;&#x000A;(first opening the shower curtain)&#x000A;[Rule "convert enter door into go rule" applies.]&#x000A;[Rule "convert enter compass direction into go rule" applies.]&#x000A;[Rule "can't enter what's already entered rule" applies.]&#x000A;But you're already in the chemical shower.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa64f1f0"/>
+      <child nodeId="node-0x01E9A568"/>
     </children>
   </item>
-  <item nodeId="node-0xa64f1f0">
+  <item nodeId="node-0x01E9A568">
     <command xml:space="preserve">out</command>
-    <result xml:space="preserve">[Rule &quot;Setting action variables for exiting&quot; applies.]
-[Rule &quot;convert exit into go out rule&quot; applies.]
-[Rule &quot;can&apos;t exit when not inside anything rule&quot; applies.]
-[Rule &quot;can&apos;t exit closed containers rule&quot; applies.]
-[Rule &quot;convert exit into get off rule&quot; applies.]
-[Rule &quot;standard exiting rule&quot; applies.]
-[Rule &quot;standard report exiting rule&quot; applies.]
-You get out of the chemical shower.
-
-[Rule &quot;describe room emerged into rule&quot; applies.]
-[Rule &quot;determine visibility ceiling rule&quot; applies.]
-[Rule &quot;room description heading rule&quot; applies.]
-Medical Bay, in dim light
-[Rule &quot;room description body text rule&quot; applies.]
- &quot;Disarray&quot; is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
-
-[Rule &quot;room description paragraphs about objects rule&quot; applies.]
-[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
-[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
-[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
-[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
-[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
-[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
-[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
-[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
-[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
-[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
-The dark hulk of the autodoc crouches in one corner.
-
-[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
-[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
-[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
-[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
-A green vinyl curtain is drawn across the entrance to a small chemical shower.
-
-[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
-[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
-[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
-[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
-[Rule &quot;illumination rule&quot; applies.]
-The glow from an emergency lightstrip reveals a medical hatch.
-
-[Rule &quot;replacement arrival check rule&quot; applies.]
-[Rule &quot;mark items as seen when looking rule&quot; applies.]
-[Rule &quot;other people looking rule&quot; applies.]
-&gt;</result>
+    <result xml:space="preserve">[Rule "Setting action variables for exiting" applies.]&#x000A;[Rule "convert exit into go out rule" applies.]&#x000A;[Rule "can't exit when not inside anything rule" applies.]&#x000A;[Rule "can't exit closed containers rule" applies.]&#x000A;[Rule "convert exit into get off rule" applies.]&#x000A;[Rule "standard exiting rule" applies.]&#x000A;[Rule "standard report exiting rule" applies.]&#x000A;You get out of the chemical shower.&#x000A;&#x000A;[Rule "describe room emerged into rule" applies.]&#x000A;[Rule "determine visibility ceiling rule" applies.]&#x000A;[Rule "room description heading rule" applies.]&#x000A;Medical Bay, in dim light&#x000A;[Rule "room description body text rule" applies.]&#x000A; "Disarray" is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;[Rule "room description paragraphs about objects rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;The dark hulk of the autodoc crouches in one corner.&#x000A;&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;A green vinyl curtain is drawn across the entrance to a small chemical shower.&#x000A;&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;[Rule "illumination rule" applies.]&#x000A;The glow from an emergency lightstrip reveals a medical hatch.&#x000A;&#x000A;[Rule "replacement arrival check rule" applies.]&#x000A;[Rule "mark items as seen when looking rule" applies.]&#x000A;[Rule "other people looking rule" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa64f2c8"/>
+      <child nodeId="node-0x01E9A5D8"/>
     </children>
   </item>
-  <item nodeId="node-0xa64f2c8">
+  <item nodeId="node-0x01E9A5D8">
     <command xml:space="preserve">enter shower</command>
-    <result xml:space="preserve">(the chemical shower)
-[Rule &quot;Before entering the chemical shower&quot; applies.]
-[Rule &quot;can&apos;t open unless openable rule&quot; applies.]
-That&apos;s not something you can open.
-
-(first opening the shower curtain)
-[Rule &quot;convert enter door into go rule&quot; applies.]
-[Rule &quot;convert enter compass direction into go rule&quot; applies.]
-[Rule &quot;can&apos;t enter what&apos;s already entered rule&quot; applies.]
-[Rule &quot;can&apos;t enter what&apos;s not enterable rule&quot; applies.]
-[Rule &quot;can&apos;t enter closed containers rule&quot; applies.]
-[Rule &quot;can&apos;t enter something carried rule&quot; applies.]
-[Rule &quot;implicitly pass through other barriers rule&quot; applies.]
-[Rule &quot;standard entering rule&quot; applies.]
-[Rule &quot;standard report entering rule&quot; applies.]
-You get into the chemical shower.
-
-[Rule &quot;describe contents entered into rule&quot; applies.]
-[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
-[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
-[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
-[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
-&gt;</result>
+    <result xml:space="preserve">(the chemical shower)&#x000A;[Rule "Before entering the chemical shower" applies.]&#x000A;[Rule "can't open unless openable rule" applies.]&#x000A;That's not something you can open.&#x000A;&#x000A;(first opening the shower curtain)&#x000A;[Rule "convert enter door into go rule" applies.]&#x000A;[Rule "convert enter compass direction into go rule" applies.]&#x000A;[Rule "can't enter what's already entered rule" applies.]&#x000A;[Rule "can't enter what's not enterable rule" applies.]&#x000A;[Rule "can't enter closed containers rule" applies.]&#x000A;[Rule "can't enter something carried rule" applies.]&#x000A;[Rule "implicitly pass through other barriers rule" applies.]&#x000A;[Rule "standard entering rule" applies.]&#x000A;[Rule "standard report entering rule" applies.]&#x000A;You get into the chemical shower.&#x000A;&#x000A;[Rule "describe contents entered into rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa64f3a0"/>
+      <child nodeId="node-0x01E9A648"/>
     </children>
   </item>
-  <item nodeId="node-0xa64f3a0">
+  <item nodeId="node-0x01E9A648">
     <command xml:space="preserve">showme shower</command>
-    <result xml:space="preserve">(the chemical shower)
-chemical shower - open container
-    vinyl shower curtain (part of chemical shower)
-        curtain rod (part of vinyl shower curtain)
-    yourself - person
-        left hand (part of yourself)
-        right hand (part of yourself)
-        sunrod - device
-location: in the Medical Bay
-singular-named, improper-named; unlit, inedible, portable, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; enterable, opaque, open, unopenable, unlocked
-printed name: &quot;chemical shower&quot;
-printed plural name: &quot;containers&quot;
-indefinite article: none
-description: &quot;The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system.&quot;
-initial appearance: &quot;A green vinyl curtain is drawn across the entrance to a small chemical shower.&quot;
-bulk: 1
-dark-description: &quot;(dark desc is empty)
-The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system.
-&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: silver
-carrying capacity: 100
-bulk capacity: 10
-
-&gt;</result>
+    <result xml:space="preserve">(the chemical shower)&#x000A;chemical shower - open container&#x000A;    vinyl shower curtain (part of chemical shower)&#x000A;        curtain rod (part of vinyl shower curtain)&#x000A;    yourself - person&#x000A;        left hand (part of yourself)&#x000A;        right hand (part of yourself)&#x000A;        sunrod - device&#x000A;location: in the Medical Bay&#x000A;singular-named, improper-named; unlit, inedible, portable, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; enterable, opaque, open, unopenable, unlocked&#x000A;printed name: "chemical shower"&#x000A;printed plural name: "containers"&#x000A;indefinite article: none&#x000A;description: "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system."&#x000A;initial appearance: "A green vinyl curtain is drawn across the entrance to a small chemical shower."&#x000A;bulk: 1&#x000A;dark-description: "(dark desc is empty)&#x000A;The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system.&#x000A;"&#x000A;sound: "silence"&#x000A;sound-description: "This does not make noise."&#x000A;color: silver&#x000A;carrying capacity: 100&#x000A;bulk capacity: 10&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa64f478">
+  <item nodeId="node-0x01E9A6B8">
     <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
-
-&gt;</result>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa64f550"/>
+      <child nodeId="node-0x01E9A728"/>
     </children>
   </item>
-  <item nodeId="node-0xa64f550">
+  <item nodeId="node-0x01E9A728">
     <command xml:space="preserve">enter shower</command>
-    <result xml:space="preserve">(the chemical shower)
-[Rule &quot;Before entering the chemical shower&quot; applies.]
-[Rule &quot;can&apos;t open unless openable rule&quot; applies.]
-That&apos;s not something you can open.
-
-(first opening the shower curtain)
-[Rule &quot;convert enter door into go rule&quot; applies.]
-[Rule &quot;convert enter compass direction into go rule&quot; applies.]
-[Rule &quot;can&apos;t enter what&apos;s already entered rule&quot; applies.]
-[Rule &quot;can&apos;t enter what&apos;s not enterable rule&quot; applies.]
-[Rule &quot;can&apos;t enter closed containers rule&quot; applies.]
-[Rule &quot;can&apos;t enter something carried rule&quot; applies.]
-[Rule &quot;implicitly pass through other barriers rule&quot; applies.]
-[Rule &quot;standard entering rule&quot; applies.]
-[Rule &quot;standard report entering rule&quot; applies.]
-You get into the chemical shower.
-
-[Rule &quot;describe contents entered into rule&quot; applies.]
-[Rule &quot;don&apos;t mention player&apos;s supporter in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention scenery in room descriptions rule&quot; applies.]
-[Rule &quot;don&apos;t mention undescribed items in room descriptions rule&quot; applies.]
-[Rule &quot;set pronouns from items in room descriptions rule&quot; applies.]
-[Rule &quot;offer items to writing a paragraph about rule&quot; applies.]
-[Rule &quot;use initial appearance in room descriptions rule&quot; applies.]
-&gt;</result>
+    <result xml:space="preserve">(the chemical shower)&#x000A;[Rule "Before entering the chemical shower" applies.]&#x000A;[Rule "can't open unless openable rule" applies.]&#x000A;That's not something you can open.&#x000A;&#x000A;(first opening the shower curtain)&#x000A;[Rule "convert enter door into go rule" applies.]&#x000A;[Rule "convert enter compass direction into go rule" applies.]&#x000A;[Rule "can't enter what's already entered rule" applies.]&#x000A;[Rule "can't enter what's not enterable rule" applies.]&#x000A;[Rule "can't enter closed containers rule" applies.]&#x000A;[Rule "can't enter something carried rule" applies.]&#x000A;[Rule "implicitly pass through other barriers rule" applies.]&#x000A;[Rule "standard entering rule" applies.]&#x000A;[Rule "standard report entering rule" applies.]&#x000A;You get into the chemical shower.&#x000A;&#x000A;[Rule "describe contents entered into rule" applies.]&#x000A;[Rule "don't mention player's supporter in room descriptions rule" applies.]&#x000A;[Rule "don't mention scenery in room descriptions rule" applies.]&#x000A;[Rule "don't mention undescribed items in room descriptions rule" applies.]&#x000A;[Rule "set pronouns from items in room descriptions rule" applies.]&#x000A;[Rule "offer items to writing a paragraph about rule" applies.]&#x000A;[Rule "use initial appearance in room descriptions rule" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa64f628"/>
+      <child nodeId="node-0x01E9A798"/>
     </children>
   </item>
-  <item nodeId="node-0xa64f628">
+  <item nodeId="node-0x01E9A798">
     <command xml:space="preserve">showme shower</command>
-    <result xml:space="preserve">(the chemical shower)
-chemical shower - open container
-    vinyl shower curtain (part of chemical shower)
-        curtain rod (part of vinyl shower curtain)
-    yourself - person
-        left hand (part of yourself)
-        right hand (part of yourself)
-        sunrod - device
-location: in the Medical Bay
-singular-named, improper-named; unlit, inedible, portable, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; enterable, opaque, open, openable, unlocked
-printed name: &quot;chemical shower&quot;
-printed plural name: &quot;containers&quot;
-indefinite article: none
-description: &quot;The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system.&quot;
-initial appearance: &quot;A green vinyl curtain is drawn across the entrance to a small chemical shower.&quot;
-bulk: 1
-dark-description: &quot;(dark desc is empty)
-The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system.
-&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: silver
-carrying capacity: 100
-bulk capacity: 10
-
-&gt;</result>
+    <result xml:space="preserve">(the chemical shower)&#x000A;chemical shower - open container&#x000A;    vinyl shower curtain (part of chemical shower)&#x000A;        curtain rod (part of vinyl shower curtain)&#x000A;    yourself - person&#x000A;        left hand (part of yourself)&#x000A;        right hand (part of yourself)&#x000A;        sunrod - device&#x000A;location: in the Medical Bay&#x000A;singular-named, improper-named; unlit, inedible, portable, neuter, ordinarily enumerated, seen, unfamiliar, mundane, unexamined, cold, dim, diffuse; enterable, opaque, open, openable, unlocked&#x000A;printed name: "chemical shower"&#x000A;printed plural name: "containers"&#x000A;indefinite article: none&#x000A;description: "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system."&#x000A;initial appearance: "A green vinyl curtain is drawn across the entrance to a small chemical shower."&#x000A;bulk: 1&#x000A;dark-description: "(dark desc is empty)&#x000A;The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system.&#x000A;"&#x000A;sound: "silence"&#x000A;sound-description: "This does not make noise."&#x000A;color: silver&#x000A;carrying capacity: 100&#x000A;bulk capacity: 10&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0xa54b118">
+  <item nodeId="node-0x01E9AE28">
+    <command xml:space="preserve">x debris</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x01E9AE98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x01E9AE98">
+    <command xml:space="preserve">x junk</command>
+    <result xml:space="preserve">Most of it looks to be wreckage from whatever went berserk in here. Strange, that all of it's been piled up here in the corner.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x01E9AF08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x01E9AF08">
+    <command xml:space="preserve">x junk</command>
+    <result xml:space="preserve">Most of it looks to be wreckage from whatever went berserk in here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x01E9A808">
     <command xml:space="preserve">x water</command>
-    <result xml:space="preserve">You dip your fingers.
-Deathly cold, then painful heat.
-You flinch back, anxious.
-
-A shining stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
+    <result xml:space="preserve">You dip your fingers.&#x000A;Deathly cold, then painful heat.&#x000A;You flinch back, anxious.&#x000A;&#x000A;A shining stone falls.&#x000A;The water glows with pale light.&#x000A;Ripples lap the shore.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa54b1f0"/>
+      <child nodeId="node-0x01E9A878"/>
     </children>
   </item>
-  <item nodeId="node-0xa54b1f0">
+  <item nodeId="node-0x01E9A878">
     <command xml:space="preserve">take stone</command>
-    <result xml:space="preserve">You plunge a hand in.
-It&apos;s like bare skin in deep space.
-Sensation departs.
-
-Struggling brings nothing.
-To reach flesh you must dive in.
-Commit all, or none.
-
-A white stone descends.
-It glows like a faint firefly.
-Pale white, and fading.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
+    <result xml:space="preserve">You plunge a hand in.&#x000A;It's like bare skin in deep space.&#x000A;Sensation departs.&#x000A;&#x000A;Struggling brings nothing.&#x000A;To reach flesh you must dive in.&#x000A;Commit all, or none.&#x000A;&#x000A;A white stone descends.&#x000A;It glows like a faint firefly.&#x000A;Pale white, and fading.&#x000A;&#x000A;The pale gleam recedes.&#x000A;Inky dark cloaks the water.&#x000A;The waves settle down.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa54b2c8"/>
+      <child nodeId="node-0x01E9A8E8"/>
     </children>
   </item>
-  <item nodeId="node-0xa54b2c8">
+  <item nodeId="node-0x01E9A8E8">
     <command xml:space="preserve">dive in</command>
-    <result xml:space="preserve">One breath, plus one held.
-Even your bones feel like ice.
-Darkness shrouds your thoughts.
-
-upper pool, in the darkness
-(DARK DESC)
-The water is still.
- Shadows crowd in overhead.
- The silence deafens.
-
-A white stone descends.
-It glows like a faint firefly.
-Pale white, and fading.
-
-&gt;</result>
+    <result xml:space="preserve">One breath, plus one held.&#x000A;Even your bones feel like ice.&#x000A;Darkness shrouds your thoughts.&#x000A;&#x000A;upper pool, in the darkness&#x000A;(DARK DESC)&#x000A;The water is still.&#x000A; Shadows crowd in overhead.&#x000A; The silence deafens.&#x000A;&#x000A;A white stone descends.&#x000A;It glows like a faint firefly.&#x000A;Pale white, and fading.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa54b3a0"/>
+      <child nodeId="node-0x01E9A958"/>
     </children>
   </item>
-  <item nodeId="node-0xa54b3a0">
+  <item nodeId="node-0x01E9A958">
     <command xml:space="preserve">dive</command>
-    <result xml:space="preserve">The light calls you down.
-You kick your legs, jaw clenched.
-Frost tightens your chest.
-
-lower pool, in dim light
-The bottom is smooth.
- No signs of life scar the mud.
- Your guts feel frostbit.
-
-Before you, a stone.
-It glows like a faint firefly.
-Pale white, and fading.
-
-&gt;</result>
+    <result xml:space="preserve">The light calls you down.&#x000A;You kick your legs, jaw clenched.&#x000A;Frost tightens your chest.&#x000A;&#x000A;lower pool, in dim light&#x000A;The bottom is smooth.&#x000A; No signs of life scar the mud.&#x000A; Your guts feel frostbit.&#x000A;&#x000A;Before you, a stone.&#x000A;It glows like a faint firefly.&#x000A;Pale white, and fading.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa54b478"/>
+      <child nodeId="node-0x01E9A9C8"/>
     </children>
   </item>
-  <item nodeId="node-0xa54b478">
+  <item nodeId="node-0x01E9A9C8">
     <command xml:space="preserve">take stone</command>
-    <result xml:space="preserve">Taken.
-
-The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can&apos;t feel it because you&apos;re completely numb.
-
- ...
-
- The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.
-
-Antiseptic Coffin, in dim light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A small plastex window is set into the hatch above you.
-
-The control panel above you shows a blinking red button.
-
-&gt;</result>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.&#x000A;&#x000A; ...&#x000A;&#x000A; The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.&#x000A;&#x000A;Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
 </Skein>

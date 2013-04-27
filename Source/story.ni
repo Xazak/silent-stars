@@ -544,16 +544,16 @@ Chapter 2 - The Medical Bay
 
 The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark.
 "[first time]You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.[br][br][only]
-'Disarray' is putting it mildly: every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood."
+{{'Disarray' is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood."
 
 [notable furniture:
--- the autodoc (curr. using the autodoc hatch as the standin prop)
--- a chemical shower
--- a set of lockers, one of which contains the player's needed gear and is locked
--- a pile of mangled cabinet doors and junk
--- a giant puddle of blood on the floor
--- a corpse bearing strange wounds
--- emergency lighting, which casts bloodred shadows
+__ the autodoc (curr. using the autodoc hatch as the standin prop)
+x_ a chemical shower
+__ a set of lockers, one of which contains the player's needed gear and is locked
+__ a pile of mangled cabinet doors and junk
+__ a giant puddle of blood on the floor
+__ a corpse bearing strange wounds
+x_ emergency lighting, which casts bloodred shadows
 ]
 
 A openable enterable container called a chemical shower is here.
@@ -571,10 +571,24 @@ Before entering the chemical shower:
 A curtain rod is part of the vinyl curtain. The rod is grey and scenery.
 The description is "A metal rod has been bolted into either side of the chemical shower, where it continues to hold the shower curtain in place."
 
-A lightsource called an emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
-The description is "
+A container called some lockers is here. The lockers are red, closed and locked.
+"A rack of gear lockers along one wall have received a similar treatment as the cabinets. Three of them appear to be intact, though locked."
+The description is "A bank of lockers, two high by ten wide, with nameplates on the outside. They're intended to be temporary gear storage for those needing the attention of the 'doc. Three of the lockers are closed: the locks glow red."
 
-A long chunk of red plastex with cheap lights sunk into it every couple inches. The matte surface keeps the scarlet light from being harsh."
+A pile of mangled junk is here. The junk is fixed in place.
+"A giant pile of debris lies more or less in the corner."
+The description is "Most of it looks to be wreckage from whatever went berserk in here[first time]. Strange, that all of it's been piled up here in the corner[only]."
+Understand "debris" as the junk.
+
+A pool of blood is here. The blood is fixed in place.
+"The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much."
+The description is "The emergency lighting makes it look near-black, with a monochrome sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
+
+A mysterious corpse is here.
+"Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place."
+
+A lightsource called an emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
+The description is "A series of cheap lights have been sunk into a chunk of red plastex about three feet long. The matte surface keeps the scarlet light from being harsh. Three of them are spaced across the ceiling."
 
 Instead of doing something other than examining the emergency lightstrip, say "Nope!"
 
