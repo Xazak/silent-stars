@@ -289,15 +289,18 @@ Check pushing a toggle (called the frobber):
 	otherwise try switching on the frobber instead;
 
 A dial is a kind of control. The description is "A selector dial; a small screen beside it indicates it is set to [setting]."
-A dial has some text called the setting. The setting is usually "foo".
+A dial has an indexed text called the setting. The setting is usually "foo".
 
 The new block setting rule is listed instead of the block setting it to rule in the check setting it to rules.
 
 This is the new block setting rule:
-	if the noun is not a dial, say "You can't set that to anything, much less '[the text understood]'." instead;
+	if the noun is not a dial, say "You can't set that to anything, much less [the topic understood]." instead;
 
-[Carry out setting a dial (called the frobber) to text:
-	now the dial-setting of the frobber is the text understood;]
+Carry out setting a dial (called the frobber) to:
+	now the setting of the frobber is the topic understood;
+
+Report setting a dial (called the frobber) to:
+	say "You set [the frobber] to '[the setting of the frobber]'."
 
 Book 4 - Actors
 
@@ -591,28 +594,43 @@ Instead of switching off the chemical lamp: say "It can't be switched off."
 
 A showerhead is inside the shower. The showerhead is scenery. The description is "A metal shower head. It hangs directly above, and appears to thread onto a pipe."
 
-A drain is inside the shower. The drain is scenery. The description is "An eight-inch round metal grate has been set into the floor."
+A drainspout is inside the shower. The drainspout is scenery. The description is "An eight-inch round metal grate has been set into the floor."
 
 A container called some lockers is here. The lockers are open and not openable.
 "A bank of gear lockers along one wall have received a similar treatment as the cabinets."
 The description is "The crew lockers are busted to hell, though they're usually empty anyway. They're only meant as temporary storage, until the assigned crewman gets back on their feet[first time].[br][br]The locker on the far end appears to be intact: the lock panel on its face glows red[only]."
 
 After examining some lockers for the first time:
-	move my locker to the Medical Bay;
-	now my locker is seen;
+	move the personal locker to the Medical Bay;
+	now the personal locker is seen;
 	now some lockers are scenery;
 
-Instead of inserting something into some lockers: say "None of the other lockers look like they will support weight."
+Instead of inserting something into some lockers: say "None of the [if personal locker is familiar]other [end if]lockers look like they will support weight."
 
-My locker is a container. My locker is locked and fixed in place.
+Does the player mean doing something with some lockers: it is unlikely.
+
+Personal locker is a container. The personal locker is locked and fixed in place.
 "One of the gear lockers is still intact; the controls glow [color of combo lock]."
 The description is "The nameplate reads 'E. Lumien'. It looks like it's [if unlocked]un[end if]locked."
 
-After examining my locker for the first time:
-	now the initial appearance of my locker is "Your gear locker sits at the end of the row, controls glowing [color of combo lock]."
+After examining the personal locker for the first time:
+	now the initial appearance of the personal locker is "Your gear locker sits at the end of the row, controls glowing [color of combo lock]."
 
-A dial called the combo lock is part of my locker. The combo lock is red.
-The description is "The locker will open provided you enter the correct 4-digit PIN. The lock is currently [color of combo lock]: the locker is [if unlocked]un[end if]locked."
+A dial called the combo lock is part of the personal locker. The combo lock is red.
+The description is "The locker will open provided you enter the correct 4-digit PIN. The lock is currently [color of combo lock]: the locker is [if personal locker is unlocked]un[end if]locked."
+
+After setting the combo lock to "4444":
+	now the personal locker is unlocked;
+	now the personal locker is open;
+	now the color of the combo lock is green;
+	say "The locker door pops open.";
+
+After closing the personal locker:
+	now the personal locker is locked;
+	now the color of the combo lock is red;
+	say "There is a [i]click[/i] as the lock engages. The readout blurs from green to red.";
+
+Got My Gear Back is a scene. Got My Gear Back begins when Autodoc Escape ends. Got My Gear Back ends when the personal locker is open.
 
 A pile of mangled junk is here. The junk is fixed in place.
 "A giant pile of debris lies more or less in the corner."
@@ -621,7 +639,14 @@ Understand "debris" as the junk.
 
 A pool of blood is here. The blood is fixed in place.
 "The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much."
-The description is "The emergency lighting makes it look near-black, with a monochrome sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
+The description is "The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
+
+A closed unopenable container called a drain is here. The drain is fixed in place.
+"A bit of steel mesh has been set into the middle of the tile floor[if the clot is in the drain]. Something seems to be blocking the flow[end if]."
+
+A clot is in the drain.
+
+Drained The Blood is a scene. Drained The Blood begins when Autodoc Escape ends. Drained The Blood ends when the pool of blood is in the drain.
 
 A mysterious corpse is here.
 "Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place."
