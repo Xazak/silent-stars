@@ -15,6 +15,19 @@ Part 1 - Redefining Standard Rules and Style
 
 The describe what's on scenery supporters in room descriptions rule is not listed in any rulebook.
 
+The container interior rule is listed before the room description body text rule in the carry out looking rules. 
+
+This is the container interior rule:
+	if the actor is the player and the player is in an enterable thing (called current cage), say the inside-description of the current cage.
+
+A container has some text called the inside-description. The inside-description is usually "How'd you get in here?" 
+
+Before entering an enterable thing (called the cage):
+	if the cage is closed, try opening the cage;
+
+Before exiting:
+	if the actor is inside a container, try opening the container exited from;
+
 [To use these in text, include html-style tags within the text with square brackets: [i]italic type[/i], [b]bold type[/b]]
 
 To say i -- beginning say_i -- running on: (- style underline; -).
@@ -52,7 +65,6 @@ Definition: a supporter is occupied if something is on it.
 Definition: a container is occupied if something is in it. [added for completion's sake, dunno if I need it]
 
 A thing can be notable or mundane. A thing is usually mundane.
-A thing can be examined or unexamined. A thing is usually unexamined. 
 
 Definition: a thing is miniscule if its bulk is 0.
 Definition: a thing is tiny if its bulk is 1.
@@ -60,6 +72,8 @@ Definition: a thing is small if its bulk is at least 2 and its bulk is at most 4
 Definition: a thing is midsized if its bulk is at least 5 and its bulk is at most 8.
 Definition: a thing is large if its bulk is at least 9.
 A person usually has bulk 20.
+
+Color is a kind of value. The colors are red, orange, yellow, green, blue, indigo, violet, grey, silver, pink, white, and black. A thing has color. A thing is usually silver. Understand the color property as describing a thing.
 
 A room is usually dark.
 
@@ -99,10 +113,11 @@ Every room has some text called the dark-description. The dark-description is us
 
 Every thing has some text called the dark-description. The dark-description is usually "(dark desc is empty)[br][description][br]"
 
-A thing can be bright or dim. A thing is usually dim.
-A thing can be diffuse or direct. A thing is usually diffuse.
+A thing can be bright or dim. A thing is usually dim. [how much light?]
+A thing can be diffuse or direct. A thing is usually diffuse. [is it a flashlight or a lantern?]
 A thing can be infrared. [this is a flag to allow unlit things to be visible in the dark regardless of actual light level]
-Color is a kind of value. The colors are red, orange, yellow, green, blue, indigo, violet, grey, silver, pink, white, and black. A thing has color. A thing is usually silver. Understand the color property as describing a thing.
+
+A container can be translucent. [this will allow light to travel into a container from the parent room, but prevent visibility otherwise(as soon as i get around to writing that part)]
 
 Definition: a thing is shining if it is lit and it is bright.
 Definition: a thing is glowing if it is lit and it is dim.
@@ -228,7 +243,7 @@ A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 [A flicker is a kind of value. The flickers are insubstantial, insufficient, faint, muted, poor, weak, wavering, dim, low, shadowy, wan, subdued, tenuous, shifting, dull, anemic, frail, ghostly, and flickering.]
 
-A lightsource is a kind of device.
+A lightsource is a kind of device. A lightsource is usually red, lit, and switched on.
 
 Carry out switching on the lightsource (called the flash):
 	now the flash is lit;
@@ -276,8 +291,13 @@ Check pushing a toggle (called the frobber):
 A dial is a kind of control. The description is "A selector dial; a small screen beside it indicates it is set to [setting]."
 A dial has some text called the setting. The setting is usually "foo".
 
-[Carry out setting a dial (called the frobber) to something:
-	now the setting of the frobber is the second noun;]
+The new block setting rule is listed instead of the block setting it to rule in the check setting it to rules.
+
+This is the new block setting rule:
+	if the noun is not a dial, say "You can't set that to anything, much less '[the text understood]'." instead;
+
+[Carry out setting a dial (called the frobber) to text:
+	now the dial-setting of the frobber is the text understood;]
 
 Book 4 - Actors
 
@@ -546,34 +566,53 @@ The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark
 "[first time]You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.[br][br][only]
 {{'Disarray' is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood."
 
-[notable furniture:
-__ the autodoc (curr. using the autodoc hatch as the standin prop)
-x_ a chemical shower
-__ a set of lockers, one of which contains the player's needed gear and is locked
-__ a pile of mangled cabinet doors and junk
-__ a giant puddle of blood on the floor
-__ a corpse bearing strange wounds
-x_ emergency lighting, which casts bloodred shadows
-]
+Does the player mean entering the shower: it is likely.
 
-A openable enterable container called a chemical shower is here.
+A container called a chemical shower is here. The shower is [transparent, ]openable, enterable, and closed.
 "A green vinyl curtain is drawn across the entrance to a small chemical shower."
-The description is "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system."
+The description is "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
+The inside-description is "The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a drain underfoot must be where it goes. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
+[the room description should appear slightly shrouded when the curtain is closed]
 
-A vinyl shower curtain is part of the chemical shower. The curtain is green and scenery. The curtain can be closed.
-The description is "A sheet of emerald plastic hung from a curtain rod."
+Report opening the shower: say "The plastic rustles as you push the curtain aside." instead;
 
-Before entering the chemical shower:
-	if the shower curtain is closed:
-		try opening the shower curtain;
-		say "(first opening the shower curtain)[command clarification break]"; 
+Report closing the shower: say "You tug the curtain across the entrance." instead; 
+
+A vinyl curtain is part of the chemical shower. The curtain is green and scenery.
+The description is "A sheet of emerald plastic hangs from a curtain rod."
 
 A curtain rod is part of the vinyl curtain. The rod is grey and scenery.
 The description is "A metal rod has been bolted into either side of the chemical shower, where it continues to hold the shower curtain in place."
 
-A container called some lockers is here. The lockers are red, closed and locked.
-"A rack of gear lockers along one wall have received a similar treatment as the cabinets. Three of them appear to be intact, though locked."
-The description is "A bank of lockers, two high by ten wide, with nameplates on the outside. They're intended to be temporary gear storage for those needing the attention of the 'doc. Three of the lockers are closed: the locks glow red."
+A lightsource called a chemical lamp is inside the shower. The lamp is yellow and scenery.
+The description is "A simple chemical light is glued to the roof of the shower. They say these are supposed to be good for a couple centuries; you suppose this one has at least another century and nine-tenths to go before it burns out."
+
+Instead of switching off the chemical lamp: say "It can't be switched off."
+
+A showerhead is inside the shower. The showerhead is scenery. The description is "A metal shower head. It hangs directly above, and appears to thread onto a pipe."
+
+A drain is inside the shower. The drain is scenery. The description is "An eight-inch round metal grate has been set into the floor."
+
+A container called some lockers is here. The lockers are open and not openable.
+"A bank of gear lockers along one wall have received a similar treatment as the cabinets."
+The description is "The crew lockers are busted to hell, though they're usually empty anyway. They're only meant as temporary storage, until the assigned crewman gets back on their feet[first time].[br][br]The locker on the far end appears to be intact: the lock panel on its face glows red[only]."
+
+After examining some lockers for the first time:
+	move my locker to the Medical Bay;
+	now my locker is seen;
+	now some lockers are scenery;
+
+Instead of inserting something into some lockers: say "None of the other lockers look like they will support weight."
+
+My locker is a container. My locker is locked and fixed in place.
+"One of the gear lockers is still intact; the controls glow [color of combo lock]."
+The description is "The nameplate reads 'E. Lumien'. It looks like it's [if unlocked]un[end if]locked."
+
+After examining my locker for the first time:
+	now the initial appearance of my locker is "Your gear locker sits at the end of the row, controls glowing [color of combo lock]."
+
+A dial called the combo lock is part of my locker. The combo lock is red.
+The description is "The locker will open provided you enter the correct 4-digit PIN. The lock is currently [color of combo lock]: the locker is [if unlocked]un[end if]locked."
 
 A pile of mangled junk is here. The junk is fixed in place.
 "A giant pile of debris lies more or less in the corner."
@@ -589,8 +628,6 @@ A mysterious corpse is here.
 
 A lightsource called an emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
 The description is "A series of cheap lights have been sunk into a chunk of red plastex about three feet long. The matte surface keeps the scarlet light from being harsh. Three of them are spaced across the ceiling."
-
-Instead of doing something other than examining the emergency lightstrip, say "Nope!"
 
 The medical hatch is a hatch. It is west of Hallway A and east of the Medical Bay. 
 
@@ -640,6 +677,11 @@ Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends
 Volume 0 - Not For Release
 
 Book 1 - Testing Commands
+
+Understand "WHEREAMI" as get-location.
+Get-location is an action applying to nothing.
+Report get-location:
+	say "Current location: [location].";
 
 Understand "LUMOS" as current-light-level.
 Current-light-level is an action applying to nothing.
