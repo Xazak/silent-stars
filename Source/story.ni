@@ -601,15 +601,14 @@ A container called some lockers is here. The lockers are open and not openable.
 The description is "The crew lockers are busted to hell, though they're usually empty anyway. They're only meant as temporary storage, until the assigned crewman gets back on their feet[first time].[br][br]The locker on the far end appears to be intact: the lock panel on its face glows red[only]."
 
 After examining some lockers for the first time:
-	move the personal locker to the Medical Bay;
-	now the personal locker is seen;
+	now the personal locker is not scenery;
 	now some lockers are scenery;
 
 Instead of inserting something into some lockers: say "None of the [if personal locker is familiar]other [end if]lockers look like they will support weight."
 
 Does the player mean doing something with some lockers: it is unlikely.
 
-Personal locker is a container. The personal locker is locked and fixed in place.
+A container called the personal locker is here. The personal locker is locked and fixed in place.
 "One of the gear lockers is still intact; the controls glow [color of combo lock]."
 The description is "The nameplate reads 'E. Lumien'. It looks like it's [if unlocked]un[end if]locked."
 
@@ -630,7 +629,7 @@ After closing the personal locker:
 	now the color of the combo lock is red;
 	say "There is a [i]click[/i] as the lock engages. The readout blurs from green to red.";
 
-Got My Gear Back is a scene. Got My Gear Back begins when Autodoc Escape ends. Got My Gear Back ends when the personal locker is open.
+Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
 
 A pile of mangled junk is here. The junk is fixed in place.
 "A giant pile of debris lies more or less in the corner."
@@ -641,12 +640,19 @@ A pool of blood is here. The blood is fixed in place.
 "The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much."
 The description is "The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
 
+Drain The Blood is a scene. Drain The Blood begins when Autodoc Escape ends. Drain The Blood ends when the pool of blood is in the drain.
+
+Every turn during Drain The Blood:
+	if a random chance of 1 in 3 succeeds:
+		say "[one of]The ichor gurgles and splashes partway up your calf.[or]
+		You shiver and slap your forearms, trying to keep blood circulating through your hands.[or]
+		A coil of stench unwinds into your nostrils: you gag and keep down the dry heaves.[or]
+		A foot slips on something slick as you move through the room. You keep your footing, but only just.[then at random]";
+
 A closed unopenable container called a drain is here. The drain is fixed in place.
 "A bit of steel mesh has been set into the middle of the tile floor[if the clot is in the drain]. Something seems to be blocking the flow[end if]."
 
 A clot is in the drain.
-
-Drained The Blood is a scene. Drained The Blood begins when Autodoc Escape ends. Drained The Blood ends when the pool of blood is in the drain.
 
 A mysterious corpse is here.
 "Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place."
