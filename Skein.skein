@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0xa242c118" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0xa25128d8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>GNOME Inform 7</generator>
-  <activeNode nodeId="node-0x8891d50"/>
-  <item nodeId="node-0xa242c118">
+  <activeNode nodeId="node-0xa25128d8"/>
+  <item nodeId="node-0xa25128d8">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
@@ -10,7 +10,7 @@
 
 Silent Stars
 An Interactive Fiction by Zaq Grow
-Release 1 / Serial number 130430 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+Release 1 / Serial number 130501 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
 
 Antiseptic Coffin, in dim light
 You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
@@ -26,11 +26,12 @@ A flashing red button on the control panel above you casts flickering shadows.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa242c1f0"/>
-      <child nodeId="node-0x885e558"/>
+      <child nodeId="node-0xa25129b0"/>
+      <child nodeId="node-0x87cf5f8"/>
+      <child nodeId="node-0xa2570028"/>
     </children>
   </item>
-  <item nodeId="node-0xa242c1f0">
+  <item nodeId="node-0xa25129b0">
     <command xml:space="preserve">press cycle</command>
     <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
 
@@ -40,15 +41,15 @@ Ripples lap the shore.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa242c2c8"/>
+      <child nodeId="node-0xa2512a88"/>
     </children>
   </item>
-  <item nodeId="node-0xa242c2c8">
+  <item nodeId="node-0xa2512a88">
     <command xml:space="preserve">press unlock</command>
     <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.
 
@@ -58,29 +59,29 @@ The waves settle down.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa242c3a0"/>
+      <child nodeId="node-0xa2512b60"/>
     </children>
   </item>
-  <item nodeId="node-0xa242c3a0">
+  <item nodeId="node-0xa2512b60">
     <command xml:space="preserve">press exit</command>
     <result xml:space="preserve">A beat passes, and then the gasket on the exit button disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa242c478"/>
+      <child nodeId="node-0xa2512c38"/>
     </children>
   </item>
-  <item nodeId="node-0xa242c478">
+  <item nodeId="node-0xa2512c38">
     <command xml:space="preserve">out</command>
     <result xml:space="preserve">You sit up, lift open the hatch with one shoulder, and roll over the lip of the autodoc. The fall to the ground is thankfully short.
 
@@ -105,21 +106,22 @@ A bit of steel mesh has been set into the middle of the tile floor. Something se
 
 Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren&apos;t for the shipsuit, you&apos;d never know it was a corpse in the first place.
 
-The emergency lightstrip reveals a medical hatch.
+The glimmer from an emergency lightstrip illuminates the medbay door.
+
+The ichor gurgles and splashes partway up your calf.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
+    <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa242c550"/>
-      <child nodeId="node-0x885e120"/>
-      <child nodeId="node-0x8891d50"/>
+      <child nodeId="node-0xa2512d10"/>
+      <child nodeId="node-0x87b3558"/>
     </children>
   </item>
-  <item nodeId="node-0xa242c550">
+  <item nodeId="node-0xa2512d10">
     <command xml:space="preserve">enter shower</command>
     <result xml:space="preserve">The plastic rustles as you push the curtain aside.
 
@@ -132,10 +134,10 @@ You get into the chemical shower.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa242c628"/>
+      <child nodeId="node-0xa2512de8"/>
     </children>
   </item>
-  <item nodeId="node-0xa242c628">
+  <item nodeId="node-0xa2512de8">
     <command xml:space="preserve">close shower</command>
     <result xml:space="preserve">You tug the curtain across the entrance.
 
@@ -146,10 +148,10 @@ You get into the chemical shower.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0xa242c700"/>
+      <child nodeId="node-0xa2512ec0"/>
     </children>
   </item>
-  <item nodeId="node-0xa242c700">
+  <item nodeId="node-0xa2512ec0">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">The chemical shower
 The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a drain underfoot must be where it goes. 
@@ -162,10 +164,10 @@ A green vinyl curtain is drawn across the entrance.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x885e048"/>
+      <child nodeId="node-0x87cf010"/>
     </children>
   </item>
-  <item nodeId="node-0x885e048">
+  <item nodeId="node-0x87cf010">
     <command xml:space="preserve">exit</command>
     <result xml:space="preserve">The plastic rustles as you push the curtain aside.
 
@@ -197,11 +199,9 @@ The gleam from an emergency lightstrip limns a medical hatch.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x885e120">
-    <command xml:space="preserve">x lockers</command>
-    <result xml:space="preserve">The crew lockers are busted to hell, though they&apos;re usually empty anyway. They&apos;re only meant as temporary storage, until the assigned crewman gets back on their feet.
-
-The locker on the far end appears to be intact: the lock panel on its face glows red.
+  <item nodeId="node-0x87b3558">
+    <command xml:space="preserve">x door</command>
+    <result xml:space="preserve">Which do you mean, the medbay door or the autodoc door?
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -210,14 +210,12 @@ The locker on the far end appears to be intact: the lock panel on its face glows
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x885e1f8"/>
-      <child nodeId="node-0x885e3a8"/>
-      <child nodeId="node-0x885e480"/>
+      <child nodeId="node-0x87b3630"/>
     </children>
   </item>
-  <item nodeId="node-0x885e1f8">
-    <command xml:space="preserve">set combo lock to 1234</command>
-    <result xml:space="preserve">The readout on the combo lock says &quot;1234&quot;.
+  <item nodeId="node-0x87b3630">
+    <command xml:space="preserve">medbay door</command>
+    <result xml:space="preserve">You see nothing special about the medbay door.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -226,27 +224,12 @@ The locker on the far end appears to be intact: the lock panel on its face glows
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x885e2d0"/>
+      <child nodeId="node-0x87b3708"/>
     </children>
   </item>
-  <item nodeId="node-0x885e2d0">
-    <command xml:space="preserve">showme combo lock</command>
-    <result xml:space="preserve">combo lock - dial
-location: part of Personal locker in the Medical Bay
-singular-named, improper-named; unlit, inedible, fixed in place, neuter, ordinarily enumerated, unseen, unfamiliar, mundane, cold, dim, diffuse; steady
-printed name: &quot;combo lock&quot;
-printed plural name: &quot;dials&quot;
-indefinite article: &quot;the&quot;
-description: &quot;The locker will open provided you enter the correct 4-digit PIN. The lock is currently red: the locker is locked.&quot;
-initial appearance: none
-bulk: 1
-dark-description: &quot;(dark desc is empty)
-The locker will open provided you enter the correct 4-digit PIN. The lock is currently red: the locker is locked.
-&quot;
-sound: &quot;silence&quot;
-sound-description: &quot;This does not make noise.&quot;
-color: red
-setting: 1234
+  <item nodeId="node-0x87b3708">
+    <command xml:space="preserve">x blood</command>
+    <result xml:space="preserve">The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You&apos;d prefer the smell of machine oil over this organic reek, come to that.
 
 &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -255,57 +238,7 @@ setting: 1234
     <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
-  <item nodeId="node-0x885e3a8">
-    <command xml:space="preserve">set combo lock to 4444</command>
-    <result xml:space="preserve">Tada!
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0x885e480">
-    <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Medical Bay, in dim light
- {{&quot;Disarray&quot; is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
-
-The dark hulk of the autodoc crouches in one corner.
-
-A green vinyl curtain is drawn across the entrance to a small chemical shower.
-
-One of the gear lockers is still intact; the controls glow red.
-
-A giant pile of debris lies more or less in the corner.
-
-The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much.
-
-A bit of steel mesh has been set into the middle of the tile floor. Something seems to be blocking the flow.
-
-Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren&apos;t for the shipsuit, you&apos;d never know it was a corpse in the first place.
-
-The emergency lightstrip shines on a medical hatch.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0x8891d50">
-    <command xml:space="preserve">x drain</command>
-    <result xml:space="preserve">You see nothing special about the drain.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
-  </item>
-  <item nodeId="node-0x885e558">
+  <item nodeId="node-0x87cf5f8">
     <command xml:space="preserve">x water</command>
     <result xml:space="preserve">You dip your fingers.
 Deathly cold, then painful heat.
@@ -322,10 +255,10 @@ Ripples lap the shore.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x885e630"/>
+      <child nodeId="node-0x87cf6d0"/>
     </children>
   </item>
-  <item nodeId="node-0x885e630">
+  <item nodeId="node-0x87cf6d0">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">You plunge a hand in.
 It&apos;s like bare skin in deep space.
@@ -350,10 +283,10 @@ The waves settle down.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x885e708"/>
+      <child nodeId="node-0x87b3048"/>
     </children>
   </item>
-  <item nodeId="node-0x885e708">
+  <item nodeId="node-0x87b3048">
     <command xml:space="preserve">dive in</command>
     <result xml:space="preserve">One breath, plus one held.
 Even your bones feel like ice.
@@ -376,10 +309,10 @@ Pale white, and fading.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x8891840"/>
+      <child nodeId="node-0x87b3120"/>
     </children>
   </item>
-  <item nodeId="node-0x8891840">
+  <item nodeId="node-0x87b3120">
     <command xml:space="preserve">dive</command>
     <result xml:space="preserve">The light calls you down.
 You kick your legs, jaw clenched.
@@ -401,10 +334,10 @@ Pale white, and fading.
     <temporary score="0">NO</temporary>
     <annotation xml:space="preserve"></annotation>
     <children>
-      <child nodeId="node-0x8891918"/>
+      <child nodeId="node-0x87b31f8"/>
     </children>
   </item>
-  <item nodeId="node-0x8891918">
+  <item nodeId="node-0x87b31f8">
     <command xml:space="preserve">take stone</command>
     <result xml:space="preserve">Taken.
 
@@ -426,6 +359,23 @@ The control panel above you shows a blinking red button.
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
+    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0xa2570028">
+    <command xml:space="preserve">touch self</command>
+    <result xml:space="preserve">There&apos;ll be time for that later.
+
+If you think that&apos;ll help.
+
+Above, a stone falls.
+The water glows with pale light.
+Ripples lap the shore.
+
+&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
     <annotation xml:space="preserve"></annotation>
   </item>
 </Skein>

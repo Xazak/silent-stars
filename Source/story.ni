@@ -15,19 +15,6 @@ Part 1 - Redefining Standard Rules and Style
 
 The describe what's on scenery supporters in room descriptions rule is not listed in any rulebook.
 
-The container interior rule is listed before the room description body text rule in the carry out looking rules. 
-
-This is the container interior rule:
-	if the actor is the player and the player is in an enterable thing (called current cage), say the inside-description of the current cage.
-
-A container has some text called the inside-description. The inside-description is usually "How'd you get in here?" 
-
-Before entering an enterable thing (called the cage):
-	if the cage is closed, try opening the cage;
-
-Before exiting:
-	if the actor is inside a container, try opening the container exited from;
-
 [To use these in text, include html-style tags within the text with square brackets: [i]italic type[/i], [b]bold type[/b]]
 
 To say i -- beginning say_i -- running on: (- style underline; -).
@@ -227,13 +214,30 @@ Rule for listing nondescript items while the light level is dim (this is the ill
 
 Book 3 - Scenery, Furniture, and Props
 
-Part 1 - Transitional Things
+Part 1 - Platonic Solids
 
-A hatch is a kind of door. A hatch is usually unlocked and closed. A hatch has bulk 20.
-Before going through a closed hatch (called the blocking hatch):
-	silently try opening the blocking hatch;
-	if the blocking hatch is closed:
+Chapter 1 - Doors
+
+A door usually has bulk 20.
+Before going through a closed door (called the blocking door):
+	silently try opening the blocking door;
+	if the blocking door is closed:
 		stop the action.
+
+Chapter 2 - Containers
+
+The container interior rule is listed before the room description body text rule in the carry out looking rules. 
+
+This is the container interior rule:
+	if the actor is the player and the player is in an enterable thing (called current cage), say the inside-description of the current cage.
+
+A container has some text called the inside-description. The inside-description is usually "How'd you get in here?" 
+
+Before entering an enterable thing (called the cage):
+	if the cage is closed, try opening the cage;
+
+Before exiting:
+	if the actor is inside a container, try opening the container exited from;
 
 Part 2 - New Kinds
 
@@ -305,6 +309,8 @@ Report setting a dial (called the frobber) to:
 Book 4 - Actors
 
 Part 1 - New Actions
+
+Report touching yourself: say "There'll be time for that later." instead.
 
 To pay attention:
 	let foo be a random number between 1 and 5;
@@ -393,7 +399,11 @@ Report listening ambient:
 		if bar is nearby, say "Nearby, [sound-description of bar][br]";
 		otherwise say "[sound-description of bar][br]";
 
-Chapter 3 - Watersports
+Chapter 3 - Touching
+
+[three rules already exist in SR: report touching yourself, report touching other people, and report touching things]
+
+Chapter 4 - New Verbs
 
 Understand "dive" or "dive in" or "jump in" as diving in.
 Diving in is an action applying to nothing.
@@ -423,11 +433,11 @@ A left hand is part of the player. The description of the left hand is "It's you
 
 A right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
 
-Book 5 - The Starlight Dancer
+Volume 2 - The Starlight Dancer
 
 The player is in the autodoc. [move the player back to the rocky shore before releasing]
 
-Part 0 - Dreamtime
+Book 1 - Dreamtime
 
 The Dreamspace is a region.
 [override usual scope behaviour while we're here]
@@ -480,11 +490,11 @@ Report taking the stone:
 	wait for any key;
 	say "The red glow flickers.[no line break]" instead;
 
-Part 1 - Deck A
+Book 2 - Deck A
 
 Deck A is a region.
 
-Chapter 1 - The Autodoc
+Part 1 - The Autodoc
 
 The Autodoc is a room. "You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes."
 The printed name of the autodoc is "Antiseptic Coffin". Understand "coffin" as the Autodoc. The dark-description of the Autodoc is "It's cold and damp and dark in here."
@@ -524,11 +534,11 @@ The unlock button is a pushbutton. The unlock button is part of the control pane
 Check pushing the unlock button:
 	if the control panel is active:
 		say "ERROR: Completion of surgery cycle has not been confirmed." instead;
-	if the autodoc hatch is unlocked:
+	if the autodoc door is unlocked:
 		say "ERROR: Autodoc hatch is not sealed." instead;
 
 Carry out pushing the unlock button:
-	now the autodoc hatch is unlocked;
+	now the autodoc door is unlocked;
 	now the exit button is flashing;
 
 Report pushing the unlock button:
@@ -536,34 +546,34 @@ Report pushing the unlock button:
 
 The exit button is a pushbutton. The exit button is part of the control panel.
 Check pushing the exit button:
-	if the autodoc hatch is locked:
+	if the autodoc door is locked:
 		if the control panel is active:
 			say "ERROR: Completion of surgery cycle has not been confirmed." instead;
 		otherwise:
 			say "ERROR: [printed name of autodoc's hatch] is locked." instead;
 
 Carry out pushing the exit button:
-	now the autodoc hatch is open;
+	now the autodoc door is open;
 	now the exit button is steady;
 
 Report pushing the exit button:
 	say "A beat passes, and then the gasket on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants." instead;
 
-The autodoc hatch is a hatch. It is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]The dark hulk of the autodoc crouches in one corner." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
+A door called the autodoc door is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]The dark hulk of the autodoc crouches in one corner." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
-Instead of opening the autodoc hatch:
+Instead of opening the autodoc door:
 	say "You reach up and push the exit button to disengage the hatch seals.[command clarification break]"; 
 	try pushing the exit button;
 
-Report closing the autodoc hatch:
+Report closing the autodoc door:
 	say "There is a hiss of air as the hatch seals pressurize." instead;
 
-Report going through the autodoc hatch to the Medical Bay during Autodoc Escape:
+Report going through the autodoc door to the Medical Bay during Autodoc Escape:
 	say "You sit up, lift open the hatch with one shoulder, and roll over the lip of the autodoc. The fall to the ground is thankfully short.";
 
-The hatch window is part of the autodoc hatch. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
+The hatch window is part of the autodoc door. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
 
-Chapter 2 - The Medical Bay
+Part 2 - The Medical Bay
 
 The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark.
 "[first time]You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.[br][br][only]
@@ -629,8 +639,6 @@ After closing the personal locker:
 	now the color of the combo lock is red;
 	say "There is a [i]click[/i] as the lock engages. The readout blurs from green to red.";
 
-Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
-
 A pile of mangled junk is here. The junk is fixed in place.
 "A giant pile of debris lies more or less in the corner."
 The description is "Most of it looks to be wreckage from whatever went berserk in here[first time]. Strange, that all of it's been piled up here in the corner[only]."
@@ -640,17 +648,18 @@ A pool of blood is here. The blood is fixed in place.
 "The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much."
 The description is "The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
 
-Drain The Blood is a scene. Drain The Blood begins when Autodoc Escape ends. Drain The Blood ends when the pool of blood is in the drain.
+After examining the pool of blood:
+	move the drain to the Medical Bay;
+	if the medbay door is familiar:
+		now the drain is familiar;
+		say "You plunge both hands into the murk and find the drain after a few moments' search. Something that feels unpleasantly organic is clogging it. The blood makes it impossible to see what it might be.";
+	otherwise:
+		say "Something underfoot feels unpleasantly organic, slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile. The mere thought of falling on your ass in here is enough to make your gorge rise.";
 
-Every turn during Drain The Blood:
-	if a random chance of 1 in 3 succeeds:
-		say "[one of]The ichor gurgles and splashes partway up your calf.[or]
-		You shiver and slap your forearms, trying to keep blood circulating through your hands.[or]
-		A coil of stench unwinds into your nostrils: you gag and keep down the dry heaves.[or]
-		A foot slips on something slick as you move through the room. You keep your footing, but only just.[then at random]";
+There is a closed unopenable container called a drain. The drain is fixed in place.
+"[if the pool of blood is not in the drain]A clogged drain lies under the rippling surface of the pool.[else]A steel mesh drain has been set into the middle of the tile floor."
 
-A closed unopenable container called a drain is here. The drain is fixed in place.
-"A bit of steel mesh has been set into the middle of the tile floor[if the clot is in the drain]. Something seems to be blocking the flow[end if]."
+[when the blood is drained out, it's vented directly into space? since it's waste anyway? maybe into water reclamation (taking dropped things with it)?]
 
 A clot is in the drain.
 
@@ -660,9 +669,12 @@ A mysterious corpse is here.
 A lightsource called an emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
 The description is "A series of cheap lights have been sunk into a chunk of red plastex about three feet long. The matte surface keeps the scarlet light from being harsh. Three of them are spaced across the ceiling."
 
-The medical hatch is a hatch. It is west of Hallway A and east of the Medical Bay. 
+A door called the medbay door is west of Hallway A and east of the Medical Bay. It is locked and unopenable.
+The description is "The door out of the Medical Bay is coated with the same dried blood as everything else in the room. The lights on the control panel glow [color of medbay-door panel]."
 
-Chapter 3 - Hallway A
+A panel called the medbay-door panel is part of the medbay door. It is red.
+
+Part 3 - Hallway A
 
 Hallway A is a room. "Hallway!" Hallway A is in Deck A.
 
@@ -670,7 +682,9 @@ Hallway A is a room. "Hallway!" Hallway A is in Deck A.
 
 The Autodoc abuts the Medical Bay. The Medical Bay abuts Hallway A.
 
-Volume 2 - Beginning Play
+Volume 3 - Before, During, and After
+
+Book 1 - Before
 
 When play begins:
 	set the status line;
@@ -687,9 +701,11 @@ When play begins:
 	wait for any key;
 	say "[br]It hurts like [i]crazy.[/i]";]
 
-Volume 3 - Scenes and Stage Movement
+Book 2 - During
 
 [any overarching every turn rules should go here]
+
+Part 1 - Dreamtime
 
 Dreamtime is a scene. Dreamtime begins when play begins. Dreamtime ends when the player is carrying the stone.
 
@@ -700,10 +716,27 @@ When Dreamtime ends:
 	wait for any key;
 	move the player to the Autodoc;
 
+Part 2 - Opening Moves
+
 Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the Medical Bay is visited.
 
 [When Autodoc Escape begins:
 	now the player is concussed;]
+
+Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
+
+Drain The Blood is a scene. Drain The Blood begins when Autodoc Escape ends. Drain The Blood ends when the pool of blood is in the drain.
+
+Every turn during Drain The Blood:
+	if a random chance of 1 in 3 succeeds:
+		say "[one of]The syrupy ichor gurgles and splashes partway up your calf as you move through the room.[or]
+		You shiver and slap your forearms, trying to keep blood circulating through your hands.[or]
+		A coil of stench unwinds into your nostrils: you gag and fight back the dry heaves.[or]
+		A foot slips on something slick as you move through the room. You keep your footing, but only just.[then at random]";
+
+Book 3 - After
+
+[nothing here yet obviously]
 
 Volume 0 - Not For Release
 

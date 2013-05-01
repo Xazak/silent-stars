@@ -38,9 +38,6 @@ The [room-describing action] is defined as the action that is the reason for the
 
 Unlike rooms/containers, there is no direct/indirect region containment distinction; thus, to get the most specific region containing the player, use [the map region of the location]. 
 
-"The/A foobar is here." <- Makes a thing called a "foobar" and puts it into the last-referred room
-"There is a foobar here." <- Makes a thing called a "foobar here" and puts it offstage
-
 "In the study is a desk. In the desk is a sheet of paper."
 Assuming the above:
 -The location of the sheet of paper is "the man"
@@ -349,6 +346,9 @@ SEE 11.8 FOR SWITCH-CASE NOTATION
 >= EQUIVALENT TO "at least"
 < EQUIVALENT TO "is less than"
 <= EQUIVALENT TO "at most"
+
+"The/A foobar is here." <- Makes a thing called a "foobar" and puts it into the last-referred room
+"There is a foobar here." <- Makes a thing called a "foobar here" and puts it offstage
 
 Volume
  Book
