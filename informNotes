@@ -15,6 +15,9 @@ BUGS:
 [ ] Problems involving hypothermia require a way to measure the ambient temp and the player temp
 [ ] Problems involving radiation sickness require similar ways
 
+IMPROVEMENTS:
+[ ] Set up the "using" and "using it on" verbs as a syntactic stand-in for the most appropriate verb to be used with a thing
+
 MESSAGE CHANGES:
 [ ] Adjust: Rewrite the illumination rule to take advantage of the color of a thing
 [ ] Addition: hands need alternate description while in dreamtime

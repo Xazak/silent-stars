@@ -48,8 +48,8 @@ To say (relevant time - a time) as 24h time:
 	say "[if H is less than 10]0[end if][H]:[if M is less than 10]0[end if][M]".
 
 Definition: a number is round if the remainder after dividing it by 10 is 0.
-Definition: a supporter is occupied if something is on it.
-Definition: a container is occupied if something is in it. [added for completion's sake, dunno if I need it]
+Definition: a supporter is occupied rather than empty if something is on it.
+Definition: a container is occupied rather than empty if something is in it.
 
 A thing can be notable or mundane. A thing is usually mundane.
 
@@ -641,22 +641,32 @@ After closing the personal locker:
 
 A pile of mangled junk is here. The junk is fixed in place.
 "A giant pile of debris lies more or less in the corner."
-The description is "Most of it looks to be wreckage from whatever went berserk in here[first time]. Strange, that all of it's been piled up here in the corner[only]."
+The description is "Most of it looks to be wreckage from whatever went berserk in here[first time]. Strangely, all of it's been piled up here in the corner[only]."
 Understand "debris" as the junk.
 
+A piece of scrap is in the pile of junk. "This is the init app of the piece of scrap."
+The description is "A piece of flat metal shaped something like a capital J. The curved end has a rather pointy tip."
+
+Report the player taking the piece of scrap:
+	say "You find and take a handy-looking bit of metal[if the drain is familiar]. This should be just the thing to unclog that drain with[end if]." instead;
+
+After examining the pile of junk:
+	if the drain is familiar and the pile of junk is occupied:
+		try the player taking the piece of scrap;
+		
 A pool of blood is here. The blood is fixed in place.
 "The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much."
 The description is "The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
 
 After examining the pool of blood:
 	move the drain to the Medical Bay;
+	now the drain is familiar;
 	if the medbay door is familiar:
-		now the drain is familiar;
 		say "You plunge both hands into the murk and find the drain after a few moments' search. Something that feels unpleasantly organic is clogging it. The blood makes it impossible to see what it might be.";
 	otherwise:
-		say "Something underfoot feels unpleasantly organic, slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile. The mere thought of falling on your ass in here is enough to make your gorge rise.";
+		say "Right about where you'd expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It's slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.[br]Seems there's something clogging the drain shut. The mere thought of [i]what[/i] is enough to make your gorge rise.";
 
-There is a closed unopenable container called a drain. The drain is fixed in place.
+There is a closed container called a drain. The drain is fixed in place.
 "[if the pool of blood is not in the drain]A clogged drain lies under the rippling surface of the pool.[else]A steel mesh drain has been set into the middle of the tile floor."
 
 [when the blood is drained out, it's vented directly into space? since it's waste anyway? maybe into water reclamation (taking dropped things with it)?]
