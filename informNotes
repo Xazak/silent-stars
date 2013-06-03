@@ -17,6 +17,8 @@ BUGS:
 
 IMPROVEMENTS:
 [ ] Set up the "using" and "using it on" verbs as a syntactic stand-in for the most appropriate verb to be used with a thing
+[ ] "Take shower" needs to be made correctly implicit
+[ ] Implement WEEP "(weeping salt tears like a tiny baby)" as a derogatory synonym for HINT
 
 MESSAGE CHANGES:
 [ ] Adjust: Rewrite the illumination rule to take advantage of the color of a thing
