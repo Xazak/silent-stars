@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <Skein rootNode="node-0xa5d18d8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>GNOME Inform 7</generator>
   <activeNode nodeId="node-0xa5d18d8"/>
@@ -20,64 +21,79 @@ A small plastex hatch window is set into the hatch above you.
 A flashing red button on the control panel above you casts flickering shadows.
 
 &gt;</result>
+=======
+<Skein rootNode="node-0x02158D70" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x0219E530"/>
+  <item nodeId="node-0x02158D70">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Silent Stars&#x000A;An Interactive Fiction by Zaq Grow&#x000A;Release 1 / Serial number 130602 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex hatch window is set into the hatch above you.&#x000A;&#x000A;A flashing red button on the control panel above you casts flickering shadows.&#x000A;&#x000A;&gt;</result>
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa5d19b0"/>
       <child nodeId="node-0xa66e450"/>
       <child nodeId="node-0xa67e108"/>
     </children>
   </item>
   <item nodeId="node-0xa5d19b0">
+=======
+      <child nodeId="node-0x02158F48"/>
+      <child nodeId="node-0x0212B050"/>
+      <child nodeId="node-0x0212B280"/>
+      <child nodeId="node-0x0219E300"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02158F48">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">press cycle</command>
-    <result xml:space="preserve">The cycle button fades from red to green and blinks &quot;Cycle Complete&quot; a couple times.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
+    <result xml:space="preserve">The cycle button fades from red to green and blinks "Cycle Complete" a couple times.&#x000A;&#x000A;Above, a stone falls.&#x000A;The water glows with pale light.&#x000A;Ripples lap the shore.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa5d1a88"/>
     </children>
   </item>
   <item nodeId="node-0xa5d1a88">
+=======
+      <child nodeId="node-0x02114518"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02114518">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">press unlock</command>
-    <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
+    <result xml:space="preserve">The button flashes a couple times; there is a metallic click as the locks disengage.&#x000A;&#x000A;The pale gleam recedes.&#x000A;Inky dark cloaks the water.&#x000A;The waves settle down.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa5d1b60"/>
     </children>
   </item>
   <item nodeId="node-0xa5d1b60">
+=======
+      <child nodeId="node-0x021146F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x021146F8">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">press exit</command>
-    <result xml:space="preserve">A beat passes, and then the gasket on the exit button disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.
-
-&gt;</result>
+    <result xml:space="preserve">A beat passes, and then the gasket on the exit button disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa5d1c38"/>
     </children>
   </item>
@@ -107,12 +123,20 @@ Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit
 The lightness from an emergency lightstrip reveals the medbay door.
 
 &gt;</result>
+=======
+      <child nodeId="node-0x021563C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x021563C8">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">You sit up, lift open the hatch with one shoulder, and roll over the lip of the autodoc. The fall to the ground is thankfully short.&#x000A;&#x000A;Medical Bay, in dim light&#x000A;You make a splash instead of a thud when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.&#x000A;&#x000A; {{"Disarray" is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;The dark hulk of the autodoc crouches in one corner.&#x000A;&#x000A;A green vinyl curtain is drawn across the entrance to a small chemical shower.&#x000A;&#x000A;A bank of gear lockers along one wall have received a similar treatment as the cabinets.&#x000A;&#x000A;One of the gear lockers is still intact; the controls glow red.&#x000A;&#x000A;A giant pile of debris lies more or less in the corner.&#x000A;&#x000A;The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much.&#x000A;&#x000A;Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place.&#x000A;&#x000A;The red incandescence from an emergency lightstrip shows the medbay door.&#x000A;&#x000A;&gt;</result>
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa5d1d10"/>
       <child nodeId="node-0xa629100"/>
       <child nodeId="node-0xa629388"/>
@@ -121,454 +145,451 @@ The lightness from an emergency lightstrip reveals the medbay door.
     </children>
   </item>
   <item nodeId="node-0xa5d1d10">
+=======
+      <child nodeId="node-0x02156508"/>
+      <child nodeId="node-0x021569E8"/>
+      <child nodeId="node-0x02156BB8"/>
+      <child nodeId="node-0x0212ACD0"/>
+      <child nodeId="node-0x0212AF00"/>
+      <child nodeId="node-0x0212B750"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02156508">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">enter shower</command>
-    <result xml:space="preserve">The plastic rustles as you push the curtain aside.
-
-You get into the chemical shower.
-
-&gt;</result>
+    <result xml:space="preserve">The plastic rustles as you push the curtain aside.&#x000A;&#x000A;You get into the chemical shower.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa5d1de8"/>
     </children>
   </item>
   <item nodeId="node-0xa5d1de8">
+=======
+      <child nodeId="node-0x021565E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x021565E8">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">close shower</command>
-    <result xml:space="preserve">You tug the curtain across the entrance.
-
-&gt;</result>
+    <result xml:space="preserve">You tug the curtain across the entrance.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa5d1ec0"/>
     </children>
   </item>
   <item nodeId="node-0xa5d1ec0">
+=======
+      <child nodeId="node-0x02156878"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02156878">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">look</command>
-    <result xml:space="preserve">The chemical shower
-The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a drain underfoot must be where it goes. 
-
-A green vinyl curtain is drawn across the entrance.
-&gt;</result>
+    <result xml:space="preserve">The chemical shower&#x000A;The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a drain underfoot must be where it goes. &#x000A;&#x000A;A green vinyl curtain is drawn across the entrance.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa629028"/>
     </children>
   </item>
   <item nodeId="node-0xa629028">
+=======
+      <child nodeId="node-0x021568E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x021568E8">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">exit</command>
-    <result xml:space="preserve">The plastic rustles as you push the curtain aside.
-
-You get out of the chemical shower.
-
-Medical Bay, in dim light
- {{&quot;Disarray&quot; is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.
-
-The dark hulk of the autodoc crouches in one corner.
-
-A green vinyl curtain is drawn across the entrance to a small chemical shower.
-
-A bank of gear lockers along one wall have received a similar treatment as the cabinets.
-
-The locker on the end is still intact; the controls glow red.
-
-A giant pile of debris lies more or less in the corner.
-
-The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much.
-
-Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren&apos;t for the shipsuit, you&apos;d never know it was a corpse in the first place.
-
-The gleam from an emergency lightstrip limns a medical hatch.
-
-&gt;</result>
+    <result xml:space="preserve">The plastic rustles as you push the curtain aside.&#x000A;&#x000A;You get out of the chemical shower.&#x000A;&#x000A;Medical Bay, in dim light&#x000A; {{"Disarray" is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;The dark hulk of the autodoc crouches in one corner.&#x000A;&#x000A;A green vinyl curtain is drawn across the entrance to a small chemical shower.&#x000A;&#x000A;A bank of gear lockers along one wall have received a similar treatment as the cabinets.&#x000A;&#x000A;The locker on the end is still intact; the controls glow red.&#x000A;&#x000A;A giant pile of debris lies more or less in the corner.&#x000A;&#x000A;The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much.&#x000A;&#x000A;Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place.&#x000A;&#x000A;The gleam from an emergency lightstrip limns a medical hatch.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
+<<<<<<< HEAD
   <item nodeId="node-0xa629100">
+=======
+  <item nodeId="node-0x021569E8">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">x door</command>
-    <result xml:space="preserve">Which do you mean, the medbay door or the autodoc door?
-
-&gt;</result>
+    <result xml:space="preserve">Which do you mean, the medbay door or the autodoc door?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa6291d8"/>
     </children>
   </item>
   <item nodeId="node-0xa6291d8">
+=======
+      <child nodeId="node-0x02156AD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02156AD8">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">medbay door</command>
-    <result xml:space="preserve">You see nothing special about the medbay door.
-
-&gt;</result>
+    <result xml:space="preserve">You see nothing special about the medbay door.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa6292b0"/>
     </children>
   </item>
   <item nodeId="node-0xa6292b0">
-    <command xml:space="preserve">x blood</command>
-    <result xml:space="preserve">The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You&apos;d prefer the smell of machine oil over this organic reek, come to that.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
+=======
+      <child nodeId="node-0x02156B48"/>
+    </children>
   </item>
-  <item nodeId="node-0xa629388">
+  <item nodeId="node-0x02156B48">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">x blood</command>
-    <result xml:space="preserve">The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You&apos;d prefer the smell of machine oil over this organic reek, come to that.
-
-Something underfoot feels unpleasantly organic, slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile. The mere thought of falling on your ass in here is enough to make your gorge rise.
-
-&gt;</result>
+    <result xml:space="preserve">The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
+  </item>
+<<<<<<< HEAD
+  <item nodeId="node-0xa629388">
+=======
+  <item nodeId="node-0x02156BB8">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
+    <command xml:space="preserve">x blood</command>
+    <result xml:space="preserve">The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that.&#x000A;&#x000A;Something underfoot feels unpleasantly organic, slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile. The mere thought of falling on your ass in here is enough to make your gorge rise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa629460"/>
     </children>
   </item>
   <item nodeId="node-0xa629460">
-    <command xml:space="preserve">open drain</command>
-    <result xml:space="preserve">That&apos;s not something you can open.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
+=======
+      <child nodeId="node-0x0212AC60"/>
+    </children>
   </item>
-  <item nodeId="node-0xa629538">
-    <command xml:space="preserve">x pile of debris</command>
-    <result xml:space="preserve">Most of it looks to be wreckage from whatever went berserk in here. Strangely, all of it&apos;s been piled up here in the corner.
-
-In the pile of mangled junk is a piece of scrap.
-
-&gt;</result>
+  <item nodeId="node-0x0212AC60">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
+    <command xml:space="preserve">open drain</command>
+    <result xml:space="preserve">That's not something you can open.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
+  </item>
+<<<<<<< HEAD
+  <item nodeId="node-0xa629538">
+=======
+  <item nodeId="node-0x0212ACD0">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
+    <command xml:space="preserve">x pile of debris</command>
+    <result xml:space="preserve">Most of it looks to be wreckage from whatever went berserk in here. Strangely, all of it's been piled up here in the corner.&#x000A;&#x000A;In the pile of mangled junk is a piece of scrap.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa629610"/>
     </children>
   </item>
   <item nodeId="node-0xa629610">
+=======
+      <child nodeId="node-0x0212AD40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212AD40">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">x blood</command>
-    <result xml:space="preserve">The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You&apos;d prefer the smell of machine oil over this organic reek, come to that.
-
-Right about where you&apos;d expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It&apos;s slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.
-
-Seems there&apos;s something clogging the drain shut. The mere thought of what is enough to make your gorge rise.
-
- You shiver and slap your forearms, trying to keep blood circulating through your hands.
-
-&gt;</result>
+    <result xml:space="preserve">The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that.&#x000A;&#x000A;Right about where you'd expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It's slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.&#x000A;&#x000A;Seems there's something clogging the drain shut. The mere thought of what is enough to make your gorge rise.&#x000A;&#x000A; You shiver and slap your forearms, trying to keep blood circulating through your hands.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa6296e8"/>
     </children>
   </item>
   <item nodeId="node-0xa6296e8">
+=======
+      <child nodeId="node-0x0212ADB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212ADB0">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">x pile of debris</command>
-    <result xml:space="preserve">Most of it looks to be wreckage from whatever went berserk in here.
-
-In the pile of mangled junk is a piece of scrap.
-
-You find and take a handy-looking bit of metal. This should be just the thing to unclog that drain with.
-
- A coil of stench unwinds into your nostrils: you gag and fight back the dry heaves.
-
-&gt;</result>
+    <result xml:space="preserve">Most of it looks to be wreckage from whatever went berserk in here.&#x000A;&#x000A;In the pile of mangled junk is a piece of scrap.&#x000A;&#x000A;You find and take a handy-looking bit of metal. This should be just the thing to unclog that drain with.&#x000A;&#x000A; A coil of stench unwinds into your nostrils: you gag and fight back the dry heaves.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa66e018"/>
     </children>
   </item>
   <item nodeId="node-0xa66e018">
+=======
+      <child nodeId="node-0x0212AE20"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212AE20">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">i</command>
-    <result xml:space="preserve">You are carrying:
-  a piece of scrap
-  a sunrod
-
- A foot slips on something slick as you move through the room. You keep your footing, but only just.
-
-&gt;</result>
+    <result xml:space="preserve">You are carrying:&#x000A;  a piece of scrap&#x000A;  a sunrod&#x000A;&#x000A; A foot slips on something slick as you move through the room. You keep your footing, but only just.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa66e0f0"/>
     </children>
   </item>
   <item nodeId="node-0xa66e0f0">
-    <command xml:space="preserve">use</command>
-    <result xml:space="preserve">That&apos;s not a verb I recognise.
-
-&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>NO</played>
-    <changed>YES</changed>
-    <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
+=======
+      <child nodeId="node-0x0212AE90"/>
+    </children>
   </item>
-  <item nodeId="node-0xa66e1c8">
-    <command xml:space="preserve">rules</command>
-    <result xml:space="preserve">Rules tracing now switched on. Type &quot;rules off&quot; to switch it off again, or &quot;rules all&quot; to include even rules which do not apply.
-
-&gt;</result>
+  <item nodeId="node-0x0212AE90">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
+    <command xml:space="preserve">use</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
+  </item>
+<<<<<<< HEAD
+  <item nodeId="node-0xa66e1c8">
+=======
+  <item nodeId="node-0x0212AF00">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>NO</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa66e2a0"/>
     </children>
   </item>
   <item nodeId="node-0xa66e2a0">
+=======
+      <child nodeId="node-0x0212AF70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212AF70">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">x blood</command>
-    <result xml:space="preserve">[Rule &quot;mark items as seen on examining rule&quot; applies.]
-[Rule &quot;standard examining rule&quot; applies.]
-The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You&apos;d prefer the smell of machine oil over this organic reek, come to that.
-
-[Rule &quot;new examine directions rule&quot; applies.]
-[Rule &quot;examine containers rule&quot; applies.]
-[Rule &quot;examine supporters rule&quot; applies.]
-[Rule &quot;examine devices rule&quot; applies.]
-[Rule &quot;examine undescribed things rule&quot; applies.]
-[Rule &quot;After examining the pool of blood&quot; applies.]
-Right about where you&apos;d expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It&apos;s slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.
-
-Seems there&apos;s something clogging the drain shut. The mere thought of what is enough to make your gorge rise.
-
-[Rule &quot;Every turn during Drain The Blood&quot; applies.]
-&gt;</result>
+    <result xml:space="preserve">[Rule "mark items as seen on examining rule" applies.]&#x000A;[Rule "standard examining rule" applies.]&#x000A;The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that.&#x000A;&#x000A;[Rule "new examine directions rule" applies.]&#x000A;[Rule "examine containers rule" applies.]&#x000A;[Rule "examine supporters rule" applies.]&#x000A;[Rule "examine devices rule" applies.]&#x000A;[Rule "examine undescribed things rule" applies.]&#x000A;[Rule "After examining the pool of blood" applies.]&#x000A;Right about where you'd expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It's slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.&#x000A;&#x000A;Seems there's something clogging the drain shut. The mere thought of what is enough to make your gorge rise.&#x000A;&#x000A;[Rule "Every turn during Drain The Blood" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa66e378"/>
     </children>
   </item>
   <item nodeId="node-0xa66e378">
+=======
+      <child nodeId="node-0x0212AFE0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212AFE0">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">x pile of debris</command>
-    <result xml:space="preserve">[Rule &quot;mark items as seen on examining rule&quot; applies.]
-[Rule &quot;standard examining rule&quot; applies.]
-Most of it looks to be wreckage from whatever went berserk in here. Strangely, all of it&apos;s been piled up here in the corner.
-
-[Rule &quot;new examine directions rule&quot; applies.]
-[Rule &quot;examine containers rule&quot; applies.]
-In the pile of mangled junk is a piece of scrap.
-
-[Rule &quot;examine supporters rule&quot; applies.]
-[Rule &quot;examine devices rule&quot; applies.]
-[Rule &quot;examine undescribed things rule&quot; applies.]
-[Rule &quot;After examining the pile of junk&quot; applies.]
-[Rule &quot;person bulk test rule&quot; applies.]
-[Rule &quot;can&apos;t take yourself rule&quot; applies.]
-[Rule &quot;can&apos;t take other people rule&quot; applies.]
-[Rule &quot;can&apos;t take component parts rule&quot; applies.]
-[Rule &quot;can&apos;t take people&apos;s possessions rule&quot; applies.]
-[Rule &quot;can&apos;t take items out of play rule&quot; applies.]
-[Rule &quot;can&apos;t take what you&apos;re inside rule&quot; applies.]
-[Rule &quot;can&apos;t take what&apos;s already taken rule&quot; applies.]
-[Rule &quot;can&apos;t take scenery rule&quot; applies.]
-[Rule &quot;can only take things rule&quot; applies.]
-[Rule &quot;can&apos;t take what&apos;s fixed in place rule&quot; applies.]
-[Rule &quot;use player&apos;s holdall to avoid exceeding carrying capacity rule&quot; applies.]
-[Rule &quot;can&apos;t exceed carrying capacity rule&quot; applies.]
-[Rule &quot;standard taking rule&quot; applies.]
-[Rule &quot;Report the player taking the piece of scrap&quot; applies.]
-You find and take a handy-looking bit of metal. This should be just the thing to unclog that drain with.
-
-[Rule &quot;Every turn during Drain The Blood&quot; applies.]
-The syrupy ichor gurgles and splashes partway up your calf as you move through the room.
-
-&gt;</result>
+    <result xml:space="preserve">[Rule "mark items as seen on examining rule" applies.]&#x000A;[Rule "standard examining rule" applies.]&#x000A;Most of it looks to be wreckage from whatever went berserk in here. Strangely, all of it's been piled up here in the corner.&#x000A;&#x000A;[Rule "new examine directions rule" applies.]&#x000A;[Rule "examine containers rule" applies.]&#x000A;In the pile of mangled junk is a piece of scrap.&#x000A;&#x000A;[Rule "examine supporters rule" applies.]&#x000A;[Rule "examine devices rule" applies.]&#x000A;[Rule "examine undescribed things rule" applies.]&#x000A;[Rule "After examining the pile of junk" applies.]&#x000A;[Rule "person bulk test rule" applies.]&#x000A;[Rule "can't take yourself rule" applies.]&#x000A;[Rule "can't take other people rule" applies.]&#x000A;[Rule "can't take component parts rule" applies.]&#x000A;[Rule "can't take people's possessions rule" applies.]&#x000A;[Rule "can't take items out of play rule" applies.]&#x000A;[Rule "can't take what you're inside rule" applies.]&#x000A;[Rule "can't take what's already taken rule" applies.]&#x000A;[Rule "can't take scenery rule" applies.]&#x000A;[Rule "can only take things rule" applies.]&#x000A;[Rule "can't take what's fixed in place rule" applies.]&#x000A;[Rule "use player's holdall to avoid exceeding carrying capacity rule" applies.]&#x000A;[Rule "can't exceed carrying capacity rule" applies.]&#x000A;[Rule "standard taking rule" applies.]&#x000A;[Rule "Report the player taking the piece of scrap" applies.]&#x000A;You find and take a handy-looking bit of metal. This should be just the thing to unclog that drain with.&#x000A;&#x000A;[Rule "Every turn during Drain The Blood" applies.]&#x000A;The syrupy ichor gurgles and splashes partway up your calf as you move through the room.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
+<<<<<<< HEAD
   <item nodeId="node-0xa66e450">
+=======
+  <item nodeId="node-0x0212B750">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Medical Bay, in dim light&#x000A; {{"Disarray" is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;The dark hulk of the autodoc crouches in one corner.&#x000A;&#x000A;A green vinyl curtain is drawn across the entrance to a small chemical shower.&#x000A;&#x000A;A bank of gear lockers along one wall have received a similar treatment as the cabinets.&#x000A;&#x000A;One of the gear lockers is still intact; the controls glow red.&#x000A;&#x000A;A giant pile of debris lies more or less in the corner.&#x000A;&#x000A;The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much.&#x000A;&#x000A;Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place.&#x000A;&#x000A;The emergency lightstrip reveals the medbay door.&#x000A;&#x000A;The syrupy ichor gurgles and splashes partway up your calf as you move through the room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0212B6E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212B6E0">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Medical Bay, in dim light&#x000A; {{"Disarray" is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood.&#x000A;&#x000A;The dark hulk of the autodoc crouches in one corner.&#x000A;&#x000A;A green vinyl curtain is drawn across the entrance to a small chemical shower.&#x000A;&#x000A;A bank of gear lockers along one wall have received a similar treatment as the cabinets.&#x000A;&#x000A;One of the gear lockers is still intact; the controls glow red.&#x000A;&#x000A;A giant pile of debris lies more or less in the corner.&#x000A;&#x000A;The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much.&#x000A;&#x000A;Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place.&#x000A;&#x000A;The &#x000A;*** Run-time problem P31: Attempt to use a property of the 'nothing' non-object: property color&#x000A;&#x000A;&lt;illegal color&gt; incandescence from an emergency lightstrip limns the medbay door.&#x000A;&#x000A; You shiver and slap your forearms, trying to keep blood circulating through your hands.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0212B050">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">x water</command>
-    <result xml:space="preserve">You dip your fingers.
-Deathly cold, then painful heat.
-You flinch back, anxious.
-
-A shining stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
+    <result xml:space="preserve">You dip your fingers.&#x000A;Deathly cold, then painful heat.&#x000A;You flinch back, anxious.&#x000A;&#x000A;A shining stone falls.&#x000A;The water glows with pale light.&#x000A;Ripples lap the shore.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa66e528"/>
     </children>
   </item>
   <item nodeId="node-0xa66e528">
+=======
+      <child nodeId="node-0x0212B0C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212B0C0">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">take stone</command>
-    <result xml:space="preserve">You plunge a hand in.
-It&apos;s like bare skin in deep space.
-Sensation departs.
-
-Struggling brings nothing.
-To reach flesh you must dive in.
-Commit all, or none.
-
-A white stone descends.
-It glows like a faint firefly.
-Pale white, and fading.
-
-The pale gleam recedes.
-Inky dark cloaks the water.
-The waves settle down.
-
-&gt;</result>
+    <result xml:space="preserve">You plunge a hand in.&#x000A;It's like bare skin in deep space.&#x000A;Sensation departs.&#x000A;&#x000A;Struggling brings nothing.&#x000A;To reach flesh you must dive in.&#x000A;Commit all, or none.&#x000A;&#x000A;A white stone descends.&#x000A;It glows like a faint firefly.&#x000A;Pale white, and fading.&#x000A;&#x000A;The pale gleam recedes.&#x000A;Inky dark cloaks the water.&#x000A;The waves settle down.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa66e600"/>
     </children>
   </item>
   <item nodeId="node-0xa66e600">
+=======
+      <child nodeId="node-0x0212B130"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212B130">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">dive in</command>
-    <result xml:space="preserve">One breath, plus one held.
-Even your bones feel like ice.
-Darkness shrouds your thoughts.
-
-upper pool, in the darkness
-(DARK DESC)
-The water is still.
- Shadows crowd in overhead.
- The silence deafens.
-
-A white stone descends.
-It glows like a faint firefly.
-Pale white, and fading.
-
-&gt;</result>
+    <result xml:space="preserve">One breath, plus one held.&#x000A;Even your bones feel like ice.&#x000A;Darkness shrouds your thoughts.&#x000A;&#x000A;upper pool, in the darkness&#x000A;(DARK DESC)&#x000A;The water is still.&#x000A; Shadows crowd in overhead.&#x000A; The silence deafens.&#x000A;&#x000A;A white stone descends.&#x000A;It glows like a faint firefly.&#x000A;Pale white, and fading.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa66e6d8"/>
     </children>
   </item>
   <item nodeId="node-0xa66e6d8">
+=======
+      <child nodeId="node-0x0212B1A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212B1A0">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">dive</command>
-    <result xml:space="preserve">The light calls you down.
-You kick your legs, jaw clenched.
-Frost tightens your chest.
-
-lower pool, in dim light
-The bottom is smooth.
- No signs of life scar the mud.
- Your guts feel frostbit.
-
-Before you, a stone.
-It glows like a faint firefly.
-Pale white, and fading.
-
-&gt;</result>
+    <result xml:space="preserve">The light calls you down.&#x000A;You kick your legs, jaw clenched.&#x000A;Frost tightens your chest.&#x000A;&#x000A;lower pool, in dim light&#x000A;The bottom is smooth.&#x000A; No signs of life scar the mud.&#x000A; Your guts feel frostbit.&#x000A;&#x000A;Before you, a stone.&#x000A;It glows like a faint firefly.&#x000A;Pale white, and fading.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
     <children>
+<<<<<<< HEAD
       <child nodeId="node-0xa67e030"/>
     </children>
   </item>
   <item nodeId="node-0xa67e030">
+=======
+      <child nodeId="node-0x0212B210"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0212B210">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">take stone</command>
-    <result xml:space="preserve">Taken.
-
-The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can&apos;t feel it because you&apos;re completely numb.
-
- ...
-
- The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.
-
-Antiseptic Coffin, in dim light
-You&apos;re lying down inside a metal coffin that isn&apos;t much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it&apos;s keeping away a headache from all the fumes.
-
-A small plastex window is set into the hatch above you.
-
-The control panel above you shows a blinking red button.
-
-&gt;</result>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;The smell of burning electronics hits your lizard hindbrain like a rivet gun and you awaken almost immediately, limbs flailing against the sides of the coffin. A badly-milled bolt opens a bloody streak on the back of your wrist, and several seconds pass before you realize you can't feel it because you're completely numb.&#x000A;&#x000A; ...&#x000A;&#x000A; The smoke smell drifts by your nose again, a little stronger. You startle and bark your forehead on the plastex window above you. The pain keeps you awake this time.&#x000A;&#x000A;Antiseptic Coffin, in dim light&#x000A;You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes.&#x000A;&#x000A;A small plastex window is set into the hatch above you.&#x000A;&#x000A;The control panel above you shows a blinking red button.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
-    <annotation xml:space="preserve"></annotation>
   </item>
+<<<<<<< HEAD
   <item nodeId="node-0xa67e108">
+=======
+  <item nodeId="node-0x0212B280">
+>>>>>>> 6eba326fcf0547a57080062c54c787ef1b3b58c5
     <command xml:space="preserve">touch self</command>
-    <result xml:space="preserve">There&apos;ll be time for that later.
-
-If you think that&apos;ll help.
-
-Above, a stone falls.
-The water glows with pale light.
-Ripples lap the shore.
-
-&gt;</result>
+    <result xml:space="preserve">There'll be time for that later.&#x000A;&#x000A;If you think that'll help.&#x000A;&#x000A;Above, a stone falls.&#x000A;The water glows with pale light.&#x000A;Ripples lap the shore.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>NO</played>
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
-    <annotation xml:space="preserve"></annotation>
+  </item>
+  <item nodeId="node-0x0219E300">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">This is the waiting message.&#x000A;&#x000A;Above, a stone falls.&#x000A;The water glows with pale light.&#x000A;Ripples lap the shore.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0219E370"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0219E370">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">This is the waiting message.&#x000A;&#x000A;The pale gleam recedes.&#x000A;Inky dark cloaks the water.&#x000A;The waves settle down.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0219E3E0"/>
+      <child nodeId="node-0x0219E530"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0219E3E0">
+    <command xml:space="preserve">rules</command>
+    <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0219E450"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0219E450">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">[Rule "standard report waiting rule" applies.]&#x000A;Time passes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0219E530">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">This is the waiting message.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
   </item>
 </Skein>

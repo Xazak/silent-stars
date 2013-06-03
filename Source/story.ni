@@ -84,7 +84,17 @@ To decide if the player is underwater:
 	if the location is watery, yes;
 	no;
 
-Part 3 - Status Line, Game HUD, Misc
+Part 3 - Standard Actions
+
+The standard report waiting rule is not listed in any rulebook.
+
+Report an actor waiting:
+	if the player is in Dreamspace:
+		say "This is the waiting haiku." instead;
+	else:
+		say "This is the waiting message." instead;
+
+Part 4 - Status Line, Game HUD, Misc
 
 To set the status line:
 	now the right hand status line is "[time of day as 24h time]";
@@ -208,7 +218,7 @@ Rule for listing nondescript items while the light level is dim (this is the ill
 	let foo be a random number from 1 to 2;
 	if foo is:
 		-- 1: say "The [random lit visible thing] [random light-verb] "; [The glowing blorb shines on a sprocket.]
-		-- 2: say "The [random light-noun] from [a random lit visible thing] [random light-verb] "; [The shifting light from the glowing blorb illuminates a sprocket.]
+		-- 2: say "The [color of random lit visible thing] [random light-noun] from [a random lit visible thing] [random light-verb] "; [The shifting light from the glowing blorb illuminates a sprocket.]
 	list the contents of the location, as a sentence, listing marked items only;
 	say ".";
 
@@ -429,9 +439,14 @@ Part 2 - The Player
 
 The printed name of the player is "Erika".
 
+A hand is a kind of thing.
+
 A left hand is part of the player. The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
 
 A right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
+
+Report examining a hand while in Dreamspace:
+	say "This is the hand haiku."
 
 Volume 2 - The Starlight Dancer
 
