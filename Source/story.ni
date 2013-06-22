@@ -273,7 +273,10 @@ A panel has some text called the readout. The readout is usually "Awaiting Input
 [button count is not capitalized]
 Report examining a panel (called the board):
 	say "[printed name in title case] Readout: '[readout]'[br]";
-	say "[Number of controls incorporated by the panel in words] rhombus-shaped buttons are outlined: [list of controls incorporated by the panel with indefinite articles].";
+	if the number of controls incorporated by the board is at least 1:
+		say "[Number of controls incorporated by the panel in words] rhombus-shaped buttons are outlined: [list of controls incorporated by the panel with indefinite articles].";
+	otherwise:
+		do nothing;
 	
 A panel can be active or inactive. A panel is usually active.
 
