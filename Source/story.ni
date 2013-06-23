@@ -181,7 +181,7 @@ This is the supplementary light adjustment rule:
 
 Part 3 - New Activities
 
-[Zeke knows where is in the ship by memory anyway, so don't bother obscuring the names of rooms]
+[Erika knows where is in the ship by memory anyway, so don't bother obscuring the names of rooms]
 Rule for printing the name of a room (called the place) (this is the new room-name rule):
 	[only certain actions and activities should get the full light treatment, everything else just gets the room]
 	let light-description-toggle be false;
@@ -684,12 +684,16 @@ After examining the pool of blood:
 	otherwise:
 		say "Right about where you'd expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It's slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.[br]Seems there's something clogging the drain shut. The mere thought of [i]what[/i] is enough to make your gorge rise.";
 
-There is a closed container called a drain. The drain is fixed in place.
+There is a closed locked container called a drain. The drain is fixed in place.
 "[if the pool of blood is not in the drain]A clogged drain lies under the rippling surface of the pool.[else]A steel mesh drain has been set into the middle of the tile floor."
+The matching key of the drain is the piece of scrap.
 
+After unlocking the drain with the piece of scrap:
+	move the pool of blood to the drain;
+	say "You use the hook-shaped scrap to tug the clog out, splashing more filth up your arms and chest. The pool of blood gurgles as it whirls down the drain.";
+
+[perhaps fix the action-on-drain issue by putting it into scope when applicable? would probably suit the inform outlook better]
 [when the blood is drained out, it's vented directly into space? since it's waste anyway? maybe into water reclamation (taking dropped things with it)?]
-
-A clot is in the drain.
 
 A mysterious corpse is here.
 "Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place."
