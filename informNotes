@@ -64,6 +64,7 @@ A protagonist who can see into the ultraviolet range would be really cool!
 PUZZLE SPECS
 Deck A/Medical Bay -[[
 PUZZLE: Player is trapped inside the autodoc and must get out
+	STATUS: Mechanics are partially written, has been shelved as incomplete (see notes)
 	COMPLICATIONS: 
 	-- Recent mysterious injuries and attendant treatments has left the PC's brain fuzzy, the controls are hard to read
 	-- If the player takes too long inside the autodoc, a cleaning cycle will start and the player will drown(?)
@@ -78,11 +79,12 @@ PUZZLE: Player is trapped inside the autodoc and must get out
 	-- still need to work out how to scramble all the button names, problem is rather intractable and has been shelved until i can ascertain whether or not i will want to reuse the scrambler function later on
 	-- might be able to use [mangle][/mangle] tags in order to get the job done, would rather scramble names by way of a rulebook
 
-PUZZLE: The player needs to drain off all this blood
+PUZZLE: The player needs to clean off all this blood
+	STATUS: Mechanics are written, needs testing and editing
 	COMPLICATIONS:
-	-- The massive pool of blood covering the medbay floor is preventing the shower from working
-	-- There is a drain in the shower and another sunk into the floor but both are blocked
-		-- Unblocking the chemshower drain only allows the shower to work; the player immediately becomes dirty after getting out
+	-- The massive pool of blood covering the medbay floor renders any attempts to get clean worthless
+	-- There is a drain sunk into the floor but it is blocked and requires a tool to be unlocked
+		-- The player can use the chemshower at any time but will immediately get dirty if the blood's not drained
 	SOLUTION:
 	.. (player gets out of autodoc)
 	1- x blood [soft move: augurs the drain]
@@ -92,24 +94,29 @@ PUZZLE: The player needs to drain off all this blood
 	4- get $TOOL
 	5- unblock drain with $TOOL [clog is destroyed, blood is moved into the drain]
 
-PUZZLE: The player needs to clean and bandage the wound on their hand
-	COMPLICATIONS:
-	-- If there's any medical equipment in the room, it's inside the gear locker
-	-- The player is stark naked and has nothing to improvise with
-	-- The pool of blood in the room makes cleaning the wound a very dicey proposition
-	SOLUTION:
-	-- Gain access to the player's gear locker
-	-- Use the medical kit inside to clean and bandage the wound
-
 PUZZLE: The player's gear is inside a locked locker and they are naked
+	OBSTACLES:
+	-- The pool of blood all over the room needs to be drained or the contents of the locker will get dirty
 	COMPLICATIONS:
-	-- There is blood all over the room and the PC is reluctant to get their things dirty
-	-- The PC is struggling to recall the combination for the lock, due to the anesthesia
+	-- The player needs to take a shower before putting on any clothes
 	SOLUTION:
+	-- TAKE a shower
 	-- REMEMBER the combination to the lock
+	-- SET the combo lock
+	-- GET the stuff inside
 	NOTES:
 	-- see example 287: Safety for a simple dial-combination lock 
 		-- the 'text' and 'number' types are too general to allow 'the text understood', so a token like "channel" needs to be set up to allow the code to understand what is meant by "the channel understood"
+
+PUZZLE: The player needs to clean and bandage the wound on their hand
+	OBSTACLES:
+	-- If there's any medical equipment in the room, it's inside the gear locker
+	-- The pool of blood in the room makes cleaning the wound a dicey proposition
+	COMPLICATIONS:
+	-- The player is stark naked and has nothing to improvise with
+	SOLUTION:
+	-- Gain access to the player's gear locker
+	-- Use the medical kit inside to clean and bandage the wound
 
 PUZZLE: The medbay door is stuck shut
 	COMPLICATIONS:

@@ -676,17 +676,28 @@ A pool of blood is here. The blood is fixed in place.
 "The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much."
 The description is "The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
 
-After examining the pool of blood:
+After examining the pool of blood for the first time:
+	say "You can't see a drain through the murky surface, but if you had to guess it'd be right about in the middle of the floor. You'll have to search for it a bit though."
+
+Instead of searching the blood:
 	move the drain to the Medical Bay;
 	now the drain is familiar;
-	if the medbay door is familiar:
+	say "You take a breath and hold it before plunging both hands into the murk and feeling your way across the floor. The drain is (fortunately) right where you expected. However, your hand grazes something obscenely organic clogging the drainspout, slick and coarse and squelchy-wet. The sensation makes you recoil in disgust; you slip an inch or two on the tile and almost go over into the ichor.[br]"
+	
+[	if the medbay door is familiar:
 		say "You plunge both hands into the murk and find the drain after a few moments' search. Something that feels unpleasantly organic is clogging it. The blood makes it impossible to see what it might be.";
 	otherwise:
-		say "Right about where you'd expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It's slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.[br]Seems there's something clogging the drain shut. The mere thought of [i]what[/i] is enough to make your gorge rise.";
-
+		say "Right about where you'd expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It's slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.[br]Seems there's something clogging the drain shut. The mere thought of [i]what[/i] is enough to make your gorge rise.";]
+		
 There is a closed locked container called a drain. The drain is fixed in place.
 "[if the pool of blood is not in the drain]A clogged drain lies under the rippling surface of the pool.[else]A steel mesh drain has been set into the middle of the tile floor."
+The description is "[if the drain is locked]You gingerly reach out and touch the drain, trying not to brush up against that disgusting clog too much. [end if]The drain is about six inches across and made of punched steel; they're a standard fixture on all starships."
 The matching key of the drain is the piece of scrap.
+
+Understand "unclog [something] with [something]" as unlocking it with.
+
+Before unlocking the drain with nothing:
+	say "Even if you were willing to tear that clog out by hand - the mere thought sends a frisson of disgust up your spine - you doubt you could. You'll need some kind of a hook or tool to unclog the drain."
 
 After unlocking the drain with the piece of scrap:
 	move the pool of blood to the drain;
@@ -694,6 +705,7 @@ After unlocking the drain with the piece of scrap:
 
 [perhaps fix the action-on-drain issue by putting it into scope when applicable? would probably suit the inform outlook better]
 [when the blood is drained out, it's vented directly into space? since it's waste anyway? maybe into water reclamation (taking dropped things with it)?]
+[what to do with that disgusting piece of scrap now?]
 
 A mysterious corpse is here.
 "Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place."
