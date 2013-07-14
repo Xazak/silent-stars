@@ -3,6 +3,7 @@
 Use dynamic memory allocation of at least 16384.
 
 Include Basic Screen Effects by Emily Short.
+Include Locksmith by Emily Short. Use sequential action.
 Include Bulk Limiter by Eric Eve.
 Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
@@ -229,10 +230,10 @@ Part 1 - Platonic Solids
 Chapter 1 - Doors
 
 A door usually has bulk 20.
-Before going through a closed door (called the blocking door):
+[Before going through a closed door (called the blocking door):
 	silently try opening the blocking door;
 	if the blocking door is closed:
-		stop the action.
+		stop the action.]
 
 Chapter 2 - Containers
 
@@ -444,9 +445,9 @@ The printed name of the player is "Erika".
 
 A hand is a kind of thing.
 
-A left hand is part of the player. The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
+Your left hand is part of the player. The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
 
-A right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
+Your right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
 
 Report examining a hand while in Dreamspace:
 	say "This is the hand haiku."
@@ -575,13 +576,13 @@ Carry out pushing the exit button:
 	now the exit button is steady;
 
 Report pushing the exit button:
-	say "A beat passes, and then the gasket on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants." instead;
+	say "A beat passes, and then the hatch seal on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants." instead;
 
 A door called the autodoc door is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]The dark hulk of the autodoc crouches in one corner." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
 
-Instead of opening the autodoc door:
-	say "You reach up and push the exit button to disengage the hatch seals.[command clarification break]"; 
-	try pushing the exit button;
+Before opening the autodoc door:
+	say "You reach up and push the exit button.[command clarification break]"; 
+	try pushing the exit button instead;
 
 Report closing the autodoc door:
 	say "There is a hiss of air as the hatch seals pressurize." instead;
@@ -696,8 +697,11 @@ The matching key of the drain is the piece of scrap.
 
 Understand "unclog [something] with [something]" as unlocking it with.
 
-Before unlocking the drain with nothing:
-	say "Even if you were willing to tear that clog out by hand - the mere thought sends a frisson of disgust up your spine - you doubt you could. You'll need some kind of a hook or tool to unclog the drain."
+Understand "unclog [something]" as unlocking it with your left hand.
+
+Check unlocking the drain with something (called the drainsnake):
+	if the drainsnake is not the piece of scrap:
+		say "Even if you were willing to tear that clog out by hand - the mere thought sends a frisson of disgust up your spine - you doubt you could. You'll need some kind of a hook or tool to unclog the drain." instead;
 
 After unlocking the drain with the piece of scrap:
 	move the pool of blood to the drain;

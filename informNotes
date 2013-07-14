@@ -20,6 +20,8 @@ IMPROVEMENTS:
 [ ] "Take shower" needs to be made correctly implicit
 [ ] Implement WEEP "(weeping salt tears like a tiny baby)" as a derogatory synonym for HINT
 [ ] "Set locker to ####" should be made to implicitly mean the lock of the locker
+[ ] Make sure to use the [last action] token in any scenery-action rules (i.e. "The syrupy ichor splashes partway up your leg as you [last action]."
+[ ] Improve the implicit noun supplication for UNCLOG DRAIN
 
 MESSAGE CHANGES:
 [X] Adjust: Rewrite the illumination rule to take advantage of the color of a thing
@@ -67,7 +69,7 @@ PUZZLE: Player is trapped inside the autodoc and must get out
 	STATUS: Mechanics are partially written, has been shelved as incomplete (see notes)
 	COMPLICATIONS: 
 	-- Recent mysterious injuries and attendant treatments has left the PC's brain fuzzy, the controls are hard to read
-	-- If the player takes too long inside the autodoc, a cleaning cycle will start and the player will drown(?)
+	?? If the player takes too long inside the autodoc, a cleaning cycle will start and the player will drown
 	SOLUTION:
 	1- push cycle button
 	2- push unlock button
@@ -79,7 +81,7 @@ PUZZLE: Player is trapped inside the autodoc and must get out
 	-- still need to work out how to scramble all the button names, problem is rather intractable and has been shelved until i can ascertain whether or not i will want to reuse the scrambler function later on
 	-- might be able to use [mangle][/mangle] tags in order to get the job done, would rather scramble names by way of a rulebook
 
-PUZZLE: The player needs to clean off all this blood
+PUZZLE: The floor has about a three-inch-deep pool of blood and the drain is blocked
 	STATUS: Mechanics are written, needs testing and editing
 	COMPLICATIONS:
 	-- The massive pool of blood covering the medbay floor renders any attempts to get clean worthless
