@@ -7,7 +7,7 @@ BUGS:
 [ ] The indefinite articles in the listening-ambient reports need to be massaged
 [ ] Player should be able to listen at a specific direction to hear what's in the next room
 [ ] Player should also be able to listen to something clamorous that is nearby but not in the same room and get a general idea of where the noisemaker is relative to the player's position
-[ ] The player should be able to use the RECALL (aka REMEMBER) command to remember where a given thing is located in the ship; if the player tries to recall something that has been destroyed or lost, that should be made clear also
+[ ] The player should be able to use the RECALL (aka REMEMBER) command to remember where a given thing is located in the ship; if the player tries to recall something that has been destroyed or lost, that should be made clear also; second, the player should be able to ask for abstractions - "REMEMBER THE BEST THING, REMEMBER FOOD" etc - and I7 will retrieve the appropriate memory
 [ ] Need to restrict movement inside the autodoc, see ex381: might be too heavyweight for what I want to do?
 [ ] Not sure how to get rid of the "On the [supporter]..." part of the message created when examining a supporter
 [ ] Shipboard directions can be assigned compass directions easily ("Understand "fore" as north." &c) but the map does not correctly draw these relationships. The easy way out would be to use compass directions long enough to get the game done and the map exported, and then search-replace all of the compass directions into shipboard ones while leaving the shipboard-compass direction assignment intact. I'd rather use the shipboard dirs from the start though.
@@ -22,6 +22,7 @@ IMPROVEMENTS:
 [ ] "Set locker to ####" should be made to implicitly mean the lock of the locker
 [ ] Make sure to use the [last action] token in any scenery-action rules (i.e. "The syrupy ichor splashes partway up your leg as you [last action]."
 [ ] Improve the implicit noun supplication for UNCLOG DRAIN
+[ ] The player should receive brief lightning-flashes of memory as the PC wanders about interacting; performing these little drops should happen via an activity that is activated both passively as background ambiance and actively in response to particular stimuli
 
 MESSAGE CHANGES:
 [X] Adjust: Rewrite the illumination rule to take advantage of the color of a thing
@@ -84,7 +85,6 @@ PUZZLE: Player is trapped inside the autodoc and must get out
 PUZZLE: The floor has about a three-inch-deep pool of blood and the drain is blocked
 	STATUS: Mechanics are written, needs testing and editing
 	COMPLICATIONS:
-	-- The massive pool of blood covering the medbay floor renders any attempts to get clean worthless
 	-- There is a drain sunk into the floor but it is blocked and requires a tool to be unlocked
 		-- The player can use the chemshower at any time but will immediately get dirty if the blood's not drained
 	SOLUTION:
@@ -96,12 +96,30 @@ PUZZLE: The floor has about a three-inch-deep pool of blood and the drain is blo
 	4- get $TOOL
 	5- unblock drain with $TOOL [clog is destroyed, blood is moved into the drain]
 
+PUZZLE: The player needs to take a shower and wash all this blood off
+	STATUS: nothing
+	COMPLICATIONS:
+	-- The massive pool of blood covering the medbay floor renders any attempts to get clean worthless
+	SOLUTION:
+	.. (player drains the blood out of the room)
+	1- enter shower
+	2- press cycle button
+	3- exit
+	.. (player opens the locker)
+	4- take towel
+	5- dry off
+	6- wear jumpsuit
+
 PUZZLE: The player's gear is inside a locked locker and they are naked
 	OBSTACLES:
 	-- The pool of blood all over the room needs to be drained or the contents of the locker will get dirty
 	COMPLICATIONS:
 	-- The player needs to take a shower before putting on any clothes
 	SOLUTION:
+	.. (player takes a shower)
+	1- x lockers
+	2- x locker
+
 	-- TAKE a shower
 	-- REMEMBER the combination to the lock
 	-- SET the combo lock

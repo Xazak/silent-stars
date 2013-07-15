@@ -443,7 +443,7 @@ Part 2 - The Player
 
 The printed name of the player is "Erika".
 
-A hand is a kind of thing.
+A hand is a kind of thing. Two hands are part of the player.
 
 Your left hand is part of the player. The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
 
@@ -451,6 +451,10 @@ Your right hand is part of the player. The description of the right hand is "The
 
 Report examining a hand while in Dreamspace:
 	say "This is the hand haiku."
+
+A person can be dirty or clean. The player is dirty.
+
+Definition: a person is naked rather than clothed if he is not wearing something.
 
 Volume 2 - The Starlight Dancer
 
@@ -625,6 +629,15 @@ A showerhead is inside the shower. The showerhead is scenery. The description is
 
 A drainspout is inside the shower. The drainspout is scenery. The description is "An eight-inch round metal grate has been set into the floor."
 
+A pushbutton called the shower cycle button is inside the chemical shower. The printed name is "cycle button". "The only controls in here are a fist-sized button labeled 'PUSH' in big block letters." The description is "A single black rubberized button, large enough to hit blindly in a panic if need be.[first time][br]A lightning-flash of memory: eyes burning pain eating around eye sockets like the devil's fingers scooping the -[br]You stifle that thought even as remembering it triggers a quick squirt of adrenaline like a cold hand trailing down your spine.[only]"
+
+Carry out pushing the shower cycle button:
+	now the chemical shower is closed;
+	now the player is clean;
+
+Report pushing the shower cycle button:
+	say "You pull the curtain closed and slap the cycle activation button. The warm water on your corpse-chilled flesh stings at first, but a moment or two later and it's the best thing you can remember feeling in a long time.[br]The water stops, and you realize you haven't actually scrubbed down. You hit the cycle button again (tamping down a brief pang of guilt - 'Water is liquid gold aboard a starship!') and use the little plastic scrubber to get all the nooks and crannies.[br][i]Much[/i], much better." instead;
+
 A container called some lockers is here. The lockers are open and not openable.
 "A bank of gear lockers along one wall have received a similar treatment as the cabinets."
 The description is "The crew lockers are busted to hell, though they're usually empty anyway. They're only meant as temporary storage, until the assigned crewman gets back on their feet[first time].[br][br]The locker on the far end appears to be intact: the lock panel on its face glows red[only]."
@@ -637,12 +650,14 @@ Instead of inserting something into some lockers: say "None of the [if personal 
 
 Does the player mean doing something with some lockers: it is unlikely.
 
-A container called the personal locker is here. The personal locker is locked and fixed in place.
+A container called the personal locker is here. The personal locker is locked and fixed in place. The color of the personal locker is "[color of the combo lock]".
 "One of the gear lockers is still intact; the controls glow [color of combo lock]."
 The description is "The nameplate reads 'E. Lumien'. It looks like it's [if unlocked]un[end if]locked."
 
 After examining the personal locker for the first time:
 	now the initial appearance of the personal locker is "Your gear locker sits at the end of the row, controls glowing [color of combo lock]."
+
+Understand "far/my locker" as referring to the personal locker.
 
 A dial called the combo lock is part of the personal locker. The combo lock is red.
 The description is "The locker will open provided you enter the correct 4-digit PIN. The lock is currently [color of combo lock]: the locker is [if personal locker is unlocked]un[end if]locked."
@@ -685,11 +700,6 @@ Instead of searching the blood:
 	now the drain is familiar;
 	say "You take a breath and hold it before plunging both hands into the murk and feeling your way across the floor. The drain is (fortunately) right where you expected. However, your hand grazes something obscenely organic clogging the drainspout, slick and coarse and squelchy-wet. The sensation makes you recoil in disgust; you slip an inch or two on the tile and almost go over into the ichor.[br]"
 	
-[	if the medbay door is familiar:
-		say "You plunge both hands into the murk and find the drain after a few moments' search. Something that feels unpleasantly organic is clogging it. The blood makes it impossible to see what it might be.";
-	otherwise:
-		say "Right about where you'd expect to find a drain pipe, in the middle of the room, you feel something unpleasantly organic underfoot. It's slick and coarse and cold-squelchy-wet all at the same time. You recoil in surprise and nearly slip on the tile.[br]Seems there's something clogging the drain shut. The mere thought of [i]what[/i] is enough to make your gorge rise.";]
-		
 There is a closed locked container called a drain. The drain is fixed in place.
 "[if the pool of blood is not in the drain]A clogged drain lies under the rippling surface of the pool.[else]A steel mesh drain has been set into the middle of the tile floor."
 The description is "[if the drain is locked]You gingerly reach out and touch the drain, trying not to brush up against that disgusting clog too much. [end if]The drain is about six inches across and made of punched steel; they're a standard fixture on all starships."
@@ -697,7 +707,7 @@ The matching key of the drain is the piece of scrap.
 
 Understand "unclog [something] with [something]" as unlocking it with.
 
-Understand "unclog [something]" as unlocking it with your left hand.
+[Does the player mean unlocking the drain with your right hand: it is likely.]
 
 Check unlocking the drain with something (called the drainsnake):
 	if the drainsnake is not the piece of scrap:
