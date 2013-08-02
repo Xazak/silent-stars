@@ -61,7 +61,15 @@ Definition: a thing is midsized if its bulk is at least 5 and its bulk is at mos
 Definition: a thing is large if its bulk is at least 9.
 A person usually has bulk 20.
 
-Color is a kind of value. The colors are red, orange, yellow, green, blue, indigo, violet, grey, silver, pink, white, and black. A thing has color. A thing is usually silver. Understand the color property as describing a thing.
+Color is a kind of value. The colors are translucent, red, orange, yellow, green, blue, indigo, violet, grey, silver, pink, white, and black. A thing has color. A thing is usually silver. Understand the color property as describing a thing.
+
+[rain suggested trapping the putting X in/taking X out events to change the color accordingly, wouldn't work for initial setup]
+[To say the color of (item - a translucent thing):
+	if the item encloses something:
+		let bleen be the color of a random thing enclosed by the item;
+		say "[bleen]";
+	otherwise:
+		say "transparent";]
 
 A room is usually dark.
 
@@ -115,7 +123,7 @@ A thing can be bright or dim. A thing is usually dim. [how much light?]
 A thing can be diffuse or direct. A thing is usually diffuse. [is it a flashlight or a lantern?]
 A thing can be infrared. [this is a flag to allow unlit things to be visible in the dark regardless of actual light level]
 
-A container can be translucent. [this will allow light to travel into a container from the parent room, but prevent visibility otherwise(as soon as i get around to writing that part)]
+[A container can be translucent. [this will allow light to travel into a container from the parent room, but prevent visibility otherwise(as soon as i get around to writing that part)]]
 
 Definition: a thing is shining if it is lit and it is bright.
 Definition: a thing is glowing if it is lit and it is dim.
@@ -441,13 +449,13 @@ Carry out diving in:
 
 Part 2 - The Player
 
-The printed name of the player is "Erika".
+The printed name of the player is "Erika". The player is female.
 
-A hand is a kind of thing. Two hands are part of the player.
+A hand is a kind of thing.
 
-Your left hand is part of the player. The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
+A hand called your left hand is part of the player. The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
 
-Your right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
+A hand called your right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
 
 Report examining a hand while in Dreamspace:
 	say "This is the hand haiku."
@@ -650,14 +658,14 @@ Instead of inserting something into some lockers: say "None of the [if personal 
 
 Does the player mean doing something with some lockers: it is unlikely.
 
-A container called the personal locker is here. The personal locker is locked and fixed in place. The color of the personal locker is "[color of the combo lock]".
+A container called the personal locker is here. The personal locker is locked and fixed in place. The color of the personal locker is red.
 "One of the gear lockers is still intact; the controls glow [color of combo lock]."
 The description is "The nameplate reads 'E. Lumien'. It looks like it's [if unlocked]un[end if]locked."
 
 After examining the personal locker for the first time:
-	now the initial appearance of the personal locker is "Your gear locker sits at the end of the row, controls glowing [color of combo lock]."
+	now the initial appearance of the personal locker is "Your gear locker sits at the end of the row, controls glowing [color of personal locker]."
 
-Understand "far/my locker" as referring to the personal locker.
+Understand "far/my locker" as the personal locker.
 
 A dial called the combo lock is part of the personal locker. The combo lock is red.
 The description is "The locker will open provided you enter the correct 4-digit PIN. The lock is currently [color of combo lock]: the locker is [if personal locker is unlocked]un[end if]locked."
@@ -665,13 +673,20 @@ The description is "The locker will open provided you enter the correct 4-digit 
 After setting the combo lock to "4444":
 	now the personal locker is unlocked;
 	now the personal locker is open;
+	now the color of the personal locker is green;
 	now the color of the combo lock is green;
 	say "The locker door pops open.";
 
 After closing the personal locker:
 	now the personal locker is locked;
+	now the color of the personal locker is green;
 	now the color of the combo lock is red;
 	say "There is a [i]click[/i] as the lock engages. The readout blurs from green to red.";
+
+A jumpsuit is inside the personal locker. The jumpsuit is wearable and indigo. "A clean and folded jumpsuit rests on the shelf of the locker." The description is "It's a standard crew shipsuit, colored indigo, with the Starlight Dancer's black-and-gold insignia on the left shoulder."  
+
+Check an actor wearing something(this is the clean clothing rule):
+	if the actor is dirty, say "You're too dirty to put that on. You'll need to get cleaned off first." instead;
 
 A pile of mangled junk is here. The junk is fixed in place.
 "A giant pile of debris lies more or less in the corner."
@@ -707,7 +722,8 @@ The matching key of the drain is the piece of scrap.
 
 Understand "unclog [something] with [something]" as unlocking it with.
 
-[Does the player mean unlocking the drain with your right hand: it is likely.]
+Does the player mean unlocking the drain with the piece of scrap: it is very likely.
+Does the player mean unlocking the drain with your right hand: it is likely.
 
 Check unlocking the drain with something (called the drainsnake):
 	if the drainsnake is not the piece of scrap:

@@ -53,6 +53,8 @@ Assuming the above:
 -The location of the desk is "the study"
 -The study and the desk both enclose the sheet of paper
 A thing encloses whatever is a part of itself, or inside itself, or on top of itself, and is recursive for multiple containers.
+
+See if there's a way to make the locked status of a thing describe it.
 ]]-
 QUESTIONS -[[
 Does I7 generate a "light status has changed" message when moving from a lit room to a dark one and vice versa?
@@ -127,7 +129,7 @@ PUZZLE: The player's gear is inside a locked locker and they are naked
 	NOTES:
 	-- see example 287: Safety for a simple dial-combination lock 
 		-- the 'text' and 'number' types are too general to allow 'the text understood', so a token like "channel" needs to be set up to allow the code to understand what is meant by "the channel understood"
-
+XXX
 PUZZLE: The player needs to clean and bandage the wound on their hand
 	OBSTACLES:
 	-- If there's any medical equipment in the room, it's inside the gear locker
