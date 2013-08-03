@@ -610,13 +610,16 @@ The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark
 "[first time]You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.[br][br][only]
 {{'Disarray' is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood."
 
-Does the player mean entering the shower: it is likely.
-
 A container called a chemical shower is here. The shower is [transparent, ]openable, enterable, and closed.
 "A green vinyl curtain is drawn across the entrance to a small chemical shower."
 The description is "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
 The inside-description is "The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a drain underfoot must be where it goes. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
 [the room description should appear slightly shrouded when the curtain is closed]
+
+Does the player mean entering the shower: it is likely.
+
+Check taking the shower:
+	try pushing the shower cycle button instead;
 
 Report opening the shower: say "The plastic rustles as you push the curtain aside." instead;
 
@@ -639,12 +642,16 @@ A drainspout is inside the shower. The drainspout is scenery. The description is
 
 A pushbutton called the shower cycle button is inside the chemical shower. The printed name is "cycle button". "The only controls in here are a fist-sized button labeled 'PUSH' in big block letters." The description is "A single black rubberized button, large enough to hit blindly in a panic if need be.[first time][br]A lightning-flash of memory: eyes burning pain eating around eye sockets like the devil's fingers scooping the -[br]You stifle that thought even as remembering it triggers a quick squirt of adrenaline like a cold hand trailing down your spine.[only]"
 
+Check pushing the shower cycle button:
+	if Drain The Blood has not ended:
+		say "You can practically feel that shower already, but the slick wall-to-wall scarlet pool on the floor stays your hand. No matter how clean you get, stepping back into that murk is going to make you just as dirty as before." instead;
+
 Carry out pushing the shower cycle button:
 	now the chemical shower is closed;
 	now the player is clean;
 
 Report pushing the shower cycle button:
-	say "You pull the curtain closed and slap the cycle activation button. The warm water on your corpse-chilled flesh stings at first, but a moment or two later and it's the best thing you can remember feeling in a long time.[br]The water stops, and you realize you haven't actually scrubbed down. You hit the cycle button again (tamping down a brief pang of guilt - 'Water is liquid gold aboard a starship!') and use the little plastic scrubber to get all the nooks and crannies.[br][i]Much[/i], much better." instead;
+	say "You [if the shower is open]pull the curtain closed and [end if]slap the cycle activation button. The warm water on your corpse-chilled flesh stings at first, but a moment or two later and it's the best thing you can remember feeling in a long time.[br]The water stops, and you realize you haven't actually scrubbed down. You hit the cycle button again (tamping down a brief pang of guilt - 'Water is liquid gold aboard a starship!') and use the little plastic scrubber to get all the nooks and crannies.[br][i]Much[/i], much better." instead;
 
 A container called some lockers is here. The lockers are open and not openable.
 "A bank of gear lockers along one wall have received a similar treatment as the cabinets."
