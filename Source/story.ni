@@ -7,6 +7,7 @@ Include Locksmith by Emily Short. Use sequential action.
 Include Bulk Limiter by Eric Eve.
 Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
+Include 
 
 Volume 1 - Setting Things Up
 
@@ -57,9 +58,8 @@ A thing can be notable or mundane. A thing is usually mundane.
 Definition: a thing is miniscule if its bulk is 0.
 Definition: a thing is tiny if its bulk is 1.
 Definition: a thing is small if its bulk is at least 2 and its bulk is at most 4.
-Definition: a thing is midsized if its bulk is at least 5 and its bulk is at most 8.
-Definition: a thing is large if its bulk is at least 9.
-A person usually has bulk 20.
+Definition: a thing is midsized if its bulk is at least 5 and its bulk is at most 9.
+Definition: a thing is large if its bulk is at least 10.
 
 Color is a kind of value. The colors are translucent, red, orange, yellow, green, blue, indigo, violet, grey, silver, pink, white, and black. A thing has color. A thing is usually silver. Understand the color property as describing a thing.
 
@@ -330,7 +330,38 @@ Report setting a dial (called the frobber) to:
 
 Book 4 - Actors
 
-Part 1 - New Actions
+Part 1 - The Body
+
+A limb is a kind of thing. 
+An injury level is a kind of value. The injury levels are fine, scratched, damaged, critical, and destroyed.
+[corresponding to std triage colors (white, green, yellow, red, and black)]
+
+Some limbs part of the player are defined by the Table of Body Parts. The description of a limb is usually "[printed name]: [injury level of noun]."
+
+Table of Body Parts
+Limb	Injury Level
+head	fine
+left arm	fine
+left hand	fine
+right arm	fine
+right hand	fine
+chest	fine
+abdomen	fine
+pelvis	fine
+left leg	fine
+left foot	fine
+right leg	fine
+right foot	fine
+
+Understand "your" as a thing when the item described is enclosed by the person asked.
+
+The triage rules are a rulebook.
+
+The triage rulebook has a list of texts called the diagnostic.  
+
+A triage rule: say "You are wounded here and there."
+
+Part 2 - New Actions
 
 Report touching yourself: say "There'll be time for that later." instead.
 
@@ -449,13 +480,11 @@ Carry out diving in:
 
 Part 2 - The Player
 
-The printed name of the player is "Erika". The player is female.
+The printed name of the player is "Erika". The player is female. The bulk of the player is 20. The carrying capacity of the player is 2. The bulk capacity of the player is 25.
 
-A hand is a kind of thing.
+[A hand called your left hand is part of the player. ]The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
 
-A hand called your left hand is part of the player. The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
-
-A hand called your right hand is part of the player. The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
+[A hand called your right hand is part of the player. ]The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
 
 Report examining a hand while in Dreamspace:
 	say "This is the hand haiku."
@@ -466,7 +495,7 @@ Definition: a person is naked rather than clothed if he is not wearing something
 
 Volume 2 - The Starlight Dancer
 
-The player is in the autodoc. [move the player back to the rocky shore before releasing]
+The player is in the autodoc.[move the player back to the rocky shore before releasing]
 
 Book 1 - Dreamtime
 
@@ -692,6 +721,10 @@ After closing the personal locker:
 
 A jumpsuit is inside the personal locker. The jumpsuit is wearable and indigo. "A clean and folded jumpsuit rests on the shelf of the locker." The description is "It's a standard crew shipsuit, colored indigo, with the Starlight Dancer's black-and-gold insignia on the left shoulder."  
 
+A bandage is inside the personal locker. The bandage is wearable. "A sterile adhesive bandage, still in its wrapper, lies on the shelf of the locker." The description is "Your basic adhesive bandage. This one is basically a fancy extra-big bandaid; the long adhesive strips let you get it on practically anywhere you need it."
+
+[Insert a rule here to override the usual error checking if the bandage is worn/applied to a specific limb]
+
 Check an actor wearing something(this is the clean clothing rule):
 	if the actor is dirty, say "You're too dirty to put that on. You'll need to get cleaned off first." instead;
 
@@ -730,7 +763,7 @@ The matching key of the drain is the piece of scrap.
 Understand "unclog [something] with [something]" as unlocking it with.
 
 Does the player mean unlocking the drain with the piece of scrap: it is very likely.
-Does the player mean unlocking the drain with your right hand: it is likely.
+Does the player mean unlocking the drain with right hand: it is likely.
 
 Check unlocking the drain with something (called the drainsnake):
 	if the drainsnake is not the piece of scrap:
@@ -801,8 +834,9 @@ Part 2 - Opening Moves
 
 Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the Medical Bay is visited.
 
-[When Autodoc Escape begins:
-	now the player is concussed;]
+When Autodoc Escape begins:
+	now the right hand is damaged;
+	now the head is damaged;
 
 Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
 

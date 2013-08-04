@@ -130,7 +130,7 @@ PUZZLE: The player's gear is inside a locked locker and they are naked
 	NOTES:
 	-- see example 287: Safety for a simple dial-combination lock 
 		-- the 'text' and 'number' types are too general to allow 'the text understood', so a token like "channel" needs to be set up to allow the code to understand what is meant by "the channel understood"
-XXX
+
 PUZZLE: The player needs to clean and bandage the wound on their hand
 	OBSTACLES:
 	-- If there's any medical equipment in the room, it's inside the gear locker
