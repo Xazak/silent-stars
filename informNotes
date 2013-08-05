@@ -67,6 +67,7 @@ becomes
 
 A protagonist who can see into the ultraviolet range would be really cool!
 ]]-
+
 PUZZLE SPECS
 Deck A/Medical Bay -[[
 PUZZLE: Player is trapped inside the autodoc and must get out
@@ -150,7 +151,7 @@ PUZZLE: The medbay door is stuck shut
 	-- Use the handcomp to bypass the door control panel
 ]]-
 
-THEORY
+WORLD MODELLING
 VISIBILITY/EPISTEMOLOGY -[[
 Currently, "visible" only covers objects that are in a lighted room. Attempting to redefine this appears to involve seriously deep hacking of the visibility calculations.
 
@@ -376,6 +377,14 @@ PROXIMITY -[[
 | immediate  |       nearby       |
 (in location)|(in neighboring room)
 ]]-
+DAMAGE -[[
+injury
+	severity: number from 0 (unharmed) to 6 (maximal, i.e. untreatable)
+	site: limb from {{head, neck, face, arms, torso, and legs}}
+	class: modality from laceration, contusion, puncture, scorch, freeze, decompression, crush, acid-burn, alkali-burn, poison, radiation, and fracture
+	description: text to be displayed when eXamining the injury
+]]-
+
 ***REMINDERS
 SEE 11.8 FOR SWITCH-CASE NOTATION
 > EQUIVALENT TO "is greater than"

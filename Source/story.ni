@@ -4,10 +4,13 @@ Use dynamic memory allocation of at least 16384.
 
 Include Basic Screen Effects by Emily Short.
 Include Locksmith by Emily Short. Use sequential action.
+Include Plugs and Sockets by Sean Turner.
+Include Power Sources by Emily Short.
+Include Computers by Emily Short.
 Include Bulk Limiter by Eric Eve.
-Include Shipboard Directions by Mikael Segercrantz.
 Include Epistemology by Eric Eve.
-Include 
+Include Shipboard Directions by Mikael Segercrantz.
+Include Considerate Holdall by Jon Ingold.
 
 Volume 1 - Setting Things Up
 
@@ -128,8 +131,8 @@ A thing can be infrared. [this is a flag to allow unlit things to be visible in 
 Definition: a thing is shining if it is lit and it is bright.
 Definition: a thing is glowing if it is lit and it is dim.
 
-Definition: A room is bright if it encloses a shining thing.
-Definition: A room is dim:
+Definition: a room is bright if it encloses a shining thing.
+Definition: a room is dim:
 	if it encloses a glowing thing and it does not enclose a shining thing, yes;
 
 [these are meant to be on-the-fly calculations and the actual lighted/dark status of a room should probably not be relied upon as a measurement as it will change during play]
@@ -332,34 +335,12 @@ Book 4 - Actors
 
 Part 1 - The Body
 
-A limb is a kind of thing. 
-An injury level is a kind of value. The injury levels are fine, scratched, damaged, critical, and destroyed.
-[corresponding to std triage colors (white, green, yellow, red, and black)]
-
-Some limbs part of the player are defined by the Table of Body Parts. The description of a limb is usually "[printed name]: [injury level of noun]."
-
-Table of Body Parts
-Limb	Injury Level
-head	fine
-left arm	fine
-left hand	fine
-right arm	fine
-right hand	fine
-chest	fine
-abdomen	fine
-pelvis	fine
-left leg	fine
-left foot	fine
-right leg	fine
-right foot	fine
-
 Understand "your" as a thing when the item described is enclosed by the person asked.
 
-The triage rules are a rulebook.
-
-The triage rulebook has a list of texts called the diagnostic.  
-
-A triage rule: say "You are wounded here and there."
+An injury is a kind of thing. An injury has a number called the severity. The severity is usually 0. 
+A limb is a kind of value. The limbs are the head, neck, face, arms, torso, and legs. An injury has a limb called the site.
+A modality is a kind of value. The modalities are laceration, contusion, puncture, scorch, freeze, decompression, crush, acid-burn, alkali-burn, poison, radiation, and fracture. An injury has a modality called the class.
+The description of an injury is usually "You haz a paper cut."
 
 Part 2 - New Actions
 
@@ -834,9 +815,9 @@ Part 2 - Opening Moves
 
 Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the Medical Bay is visited.
 
-When Autodoc Escape begins:
+[When Autodoc Escape begins:
 	now the right hand is damaged;
-	now the head is damaged;
+	now the head is damaged;]
 
 Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
 
@@ -907,7 +888,34 @@ Carry out switching off the radio:
 An alarm clock is a device in the Autodoc. The alarm clock is switched on. The sound of the alarm clock is "beeping". The sound-description is "The alarm clock beeps incessantly."]
 
 [**********************************]
-[_ _ t THE CODE GRAVEYARD t _t ]
+[n _ _ t THE CODE GRAVEYARD t _nt ]
 [
+A limb is a kind of thing.
+An injury level is a kind of value. The injury levels are fine, scratched, damaged, critical, and destroyed.
+[corresponding to std triage colors (white, green, yellow, red, and black)]
+
+Some limbs part of the player are defined by the Table of Body Parts. The description of a limb is usually "[printed name]: [injury level of noun]."
+
+Table of Body Parts
+Limb	Injury Level
+head	fine
+left arm	fine
+left hand	fine
+right arm	fine
+right hand	fine
+chest	fine
+abdomen	fine
+pelvis	fine
+left leg	fine
+left foot	fine
+right leg	fine
+right foot	fine
+
+
+The triage rules are a rulebook.
+
+The triage rulebook has a list of texts called the diagnostic.  
+
+A triage rule: say "You are wounded here and there."
 
 ]
