@@ -96,6 +96,8 @@ To decide if the player is underwater:
 	if the location is watery, yes;
 	no;
 
+Understand "your" as a thing when the item described is enclosed by the person asked.
+
 Part 3 - Standard Actions
 
 The standard report waiting rule is not listed in any rulebook.
@@ -193,7 +195,7 @@ This is the supplementary light adjustment rule:
 
 Part 3 - New Activities
 
-[Erika knows where is in the ship by memory anyway, so don't bother obscuring the names of rooms]
+[Emma knows where is in the ship by memory anyway, so don't bother obscuring the names of rooms]
 Rule for printing the name of a room (called the place) (this is the new room-name rule):
 	[only certain actions and activities should get the full light treatment, everything else just gets the room]
 	let light-description-toggle be false;
@@ -218,7 +220,7 @@ Rule for printing the description of a dark room:
 [With regards to location contents listing after a dark room's description:
 Because a dark room is defined as one that does not contain any lit things, it is thus impossible to see anything in the room. Again, an exception might be made for familiar things the player has abandoned here]
 
-[since Zeke knows where he is even in the dark, we want the rooms he arrives in to be visited as normal]
+[since Emma knows where she is even in the dark, we want the rooms she arrives in to be visited as normal]
 The replacement arrival check rule is listed instead of the check new arrival rule in the carry out looking rules.
 This is the replacement arrival check rule:
 	if the location is a room, now the location is visited;
@@ -241,10 +243,6 @@ Part 1 - Platonic Solids
 Chapter 1 - Doors
 
 A door usually has bulk 20.
-[Before going through a closed door (called the blocking door):
-	silently try opening the blocking door;
-	if the blocking door is closed:
-		stop the action.]
 
 Chapter 2 - Containers
 
@@ -331,20 +329,75 @@ Carry out setting a dial (called the frobber) to:
 Report setting a dial (called the frobber) to:
 	say "You set [the frobber] to '[the setting of the frobber]'."
 
+A remedy is a kind of thing. The description is usually "A green box with a white + on the front."
+
 Book 4 - Actors
 
 Part 1 - The Body
 
-Understand "your" as a thing when the item described is enclosed by the person asked.
+The player has a number called the wound total.
 
-An injury is a kind of thing. An injury has a number called the severity. The severity is usually 0. 
-A limb is a kind of value. The limbs are the head, neck, face, arms, torso, and legs. An injury has a limb called the site.
-A modality is a kind of value. The modalities are laceration, contusion, puncture, scorch, freeze, decompression, crush, acid-burn, alkali-burn, poison, radiation, and fracture. An injury has a modality called the class.
-The description of an injury is usually "You haz a paper cut."
+An injury is a kind of thing. The description of an injury is usually "You haz a sad :( ". An injury has a number called the severity. The severity is usually 0. [scale is 0 - OK to 6 - maximal (i.e. impossible to treat)]
+
+A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts. An injury has a limb called the site.
+
+An injury has a remedy called the prescription. The prescription is usually more cowbell.
+
+More cowbell is a remedy. The description is "gold-plated diapers, baby!"
+
+A modality is a kind of value. The modalities are laceration, contusion, puncture, heat-burn, frost-burn, rupture, contusion, acid-burn, alkali-burn, steam-burn, poison, radiation, and fracture. An injury has a modality called the class.
+
+Table of Body Parts
+limb	description
+head	"OKEY"
+neck	"OKEY"
+face	"OKEY"
+chest	"OKEY"
+thorax	"OKEY"
+abdomen	"OKEY"
+pelvis	"OKEY"
+left shoulder	"OKEY"
+left arm	"OKEY"
+left hand	"It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]."
+right shoulder	"OKEY"
+right arm	"OKEY"
+right hand	"OKEY"
+left leg	"OKEY"
+left knee	"OKEY"
+left foot	"OKEY"
+right leg	"OKEY"
+right knee	"OKEY"
+right foot	"OKEY"
+
+[old right hand desc: The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc.]
+
+Harming relates various injuries to one person. The verb to harm (he harms, they harm, he harmed, it is harmed, he is harming) implies the harming relation. 
+
+To attack (Roger - a person) with (mindbullets - an injury):
+	now the mindbullets are harming Roger;
+
+Curing relates one remedy to one injury. The verb to cure (he cures, they cure, he cured, it is cured, he is curing) implies the curing relation.
+
+To treat (mindbullets - an injury) with (bacta - a remedy):
+	now the bacta is curing the mindbullets;
+	
+Definition: an injury is treated rather than untreated if  a remedy is curing the injury.
+
+Healing it with is an action applying to one thing and one carried thing and requiring light.
+Understand "heal [some injury] with [some remedy]" as healing it with.
+Understand "use [some remedy] on [some injury]" as healing it with (with nouns reversed).
+The healing it with action has an injury called the snakebite.
+The healing it with action has a remedy called the snake oil.
+
+Setting action variables for healing:
+	now the snakebite is the noun;
+	now the snake oil is the second noun;
+
+
 
 Part 2 - New Actions
 
-Report touching yourself: say "There'll be time for that later." instead.
+Report touching yourself: try examining yourself instead.
 
 To pay attention:
 	let foo be a random number between 1 and 5;
@@ -373,7 +426,6 @@ This is the new examine directions rule:
 
 Chapter 2 - Hearing
 
-[Define where to find the sounds of something and how to tell how loud certain kinds are]
 Every thing has some text called the sound. The sound of a thing is usually "silence".
 Every thing has some text called the sound-description. The sound-description is usually "This does not make noise."
 Every room has some text called the sound. The sound of a room is usually "silence".
@@ -402,7 +454,6 @@ The verb to hear (he hears, they hear, he heard, it is heard, he is hearing) imp
 
 The verb to holla (he hollas, they holla, he hollad, it hollad, he is hollin) implies the reversed audibility relation.
 
-[remove the default rules so as to add our own]
 The block listening rule is not listed in any rulebook.
 
 Understand the command "listen" as something new.
@@ -461,14 +512,16 @@ Carry out diving in:
 
 Part 2 - The Player
 
-The printed name of the player is "Erika". The player is female. The bulk of the player is 20. The carrying capacity of the player is 2. The bulk capacity of the player is 25.
+The printed name of the player is "Emma". The player is female. The bulk of the player is 20. The carrying capacity of the player is 2. The bulk capacity of the player is 25.
 
-[A hand called your left hand is part of the player. ]The description of the left hand is "It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]." It is familiar and seen.
-
-[A hand called your right hand is part of the player. ]The description of the right hand is "The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc." It is familiar and seen.
-
-Report examining a hand while in Dreamspace:
-	say "This is the hand haiku."
+Instead of examining yourself:
+	let diagnostic be the list of untreated injuries harming the player;
+	say "You pause for a breath and look yourself over:[br]";
+	if the diagnostic is empty:
+		say "You're in good health. No problems here.";
+	otherwise:
+		repeat with foo running through the diagnostic:
+			say the description of foo;
 
 A person can be dirty or clean. The player is dirty.
 
@@ -702,7 +755,7 @@ After closing the personal locker:
 
 A jumpsuit is inside the personal locker. The jumpsuit is wearable and indigo. "A clean and folded jumpsuit rests on the shelf of the locker." The description is "It's a standard crew shipsuit, colored indigo, with the Starlight Dancer's black-and-gold insignia on the left shoulder."  
 
-A bandage is inside the personal locker. The bandage is wearable. "A sterile adhesive bandage, still in its wrapper, lies on the shelf of the locker." The description is "Your basic adhesive bandage. This one is basically a fancy extra-big bandaid; the long adhesive strips let you get it on practically anywhere you need it."
+A remedy called a bandage is inside the personal locker. "A sterile adhesive bandage, still in its wrapper, lies on the shelf of the locker." The description is "An adhesive bandage. It's basically an extra-big bandaid; the long adhesive strips let you get it on practically anywhere you need it."
 
 [Insert a rule here to override the usual error checking if the bandage is worn/applied to a specific limb]
 
@@ -744,7 +797,7 @@ The matching key of the drain is the piece of scrap.
 Understand "unclog [something] with [something]" as unlocking it with.
 
 Does the player mean unlocking the drain with the piece of scrap: it is very likely.
-Does the player mean unlocking the drain with right hand: it is likely.
+[Does the player mean unlocking the drain with right hand: it is likely.]
 
 Check unlocking the drain with something (called the drainsnake):
 	if the drainsnake is not the piece of scrap:
@@ -813,11 +866,12 @@ When Dreamtime ends:
 
 Part 2 - Opening Moves
 
-Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the Medical Bay is visited.
+Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends]. Autodoc Escape ends when the Medical Bay is visited. 
 
-[When Autodoc Escape begins:
-	now the right hand is damaged;
-	now the head is damaged;]
+There is an injury called the jagged slash. The severity of the jagged slash is 1. The class of the jagged slash is laceration. The site of the jagged slash is the right hand. The description is "A jagged slash across the back of your right hand [if untreated]oozes a slow trickle of blood that refuses to stop[otherwise]is covered by a short length of gauze bandage, wrapped like a drunk prizefighter[end if]."
+
+When Autodoc Escape begins:
+	attack the player with the jagged slash;
 
 Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
 

@@ -383,6 +383,10 @@ injury
 	site: limb from {{head, neck, face, arms, torso, and legs}}
 	class: modality from laceration, contusion, puncture, scorch, freeze, decompression, crush, acid-burn, alkali-burn, poison, radiation, and fracture
 	description: text to be displayed when eXamining the injury
+
+  harming    curing
+limb <- injury <- remedy
+
 ]]-
 
 ***REMINDERS
