@@ -329,7 +329,9 @@ Carry out setting a dial (called the frobber) to:
 Report setting a dial (called the frobber) to:
 	say "You set [the frobber] to '[the setting of the frobber]'."
 
-A remedy is a kind of thing. The description is usually "A green box with a white + on the front."
+A remedy is a kind of thing. The description is usually "A green box with a white + on the front." A remedy has a list of things called the applications. The applications are usually {right hand, left hand}. A remedy has a number called the usefulness. The usefulness is usually 1. [A remedy has a list of modalities called the factors. The factors are usually {laceration, contusion, puncture, rupture}.]
+
+More cowbell is a remedy. The description is "gold-plated diapers, baby!"
 
 Book 4 - Actors
 
@@ -342,8 +344,6 @@ An injury is a kind of thing. The description of an injury is usually "You haz a
 A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts. An injury has a limb called the site.
 
 An injury has a remedy called the prescription. The prescription is usually more cowbell.
-
-More cowbell is a remedy. The description is "gold-plated diapers, baby!"
 
 A modality is a kind of value. The modalities are laceration, contusion, puncture, heat-burn, frost-burn, rupture, contusion, acid-burn, alkali-burn, steam-burn, poison, radiation, and fracture. An injury has a modality called the class.
 
@@ -371,17 +371,23 @@ right foot	"OKEY"
 
 [old right hand desc: The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc.]
 
-Harming relates various injuries to one person. The verb to harm (he harms, they harm, he harmed, it is harmed, he is harming) implies the harming relation. 
+Harming relates various injuries to one limb. The verb to harm (he harms, they harm, he harmed, it is harmed, he is harming) implies the harming relation. 
 
-To attack (Roger - a person) with (mindbullets - an injury):
-	now the mindbullets are harming Roger;
-
+To attack with (mindbullets - an injury):
+	let the strikezone be the site of the mindbullets;
+	now the mindbullets are part of the strikezone;
+	now the mindbullets are harming the strikezone;
+	now the mindbullets are seen;
+	
+After deciding the scope of the player:
+	let diagnostic be the list of untreated active injuries;
+	repeat with foo running through the diagnostic:
+		place foo in scope;
+			
 Curing relates one remedy to one injury. The verb to cure (he cures, they cure, he cured, it is cured, he is curing) implies the curing relation.
 
-To treat (mindbullets - an injury) with (bacta - a remedy):
-	now the bacta is curing the mindbullets;
-	
-Definition: an injury is treated rather than untreated if  a remedy is curing the injury.
+Definition: an injury is active rather than inactive if it is harming something;
+Definition: an injury is treated rather than untreated if a remedy is curing the injury.
 
 Healing it with is an action applying to one thing and one carried thing and requiring light.
 Understand "heal [some injury] with [some remedy]" as healing it with.
@@ -393,7 +399,26 @@ Setting action variables for healing:
 	now the snakebite is the noun;
 	now the snake oil is the second noun;
 
+Check healing (this is the can't fix what's not broken rule):
+	if the snakebite is not an injury, say "Rule the Zeroth of the Europan Engineering Battalion: Don't fix what isn't broken." instead;
+	
+Check healing (this is the can't heal without a remedy rule):
+	if the snake oil is not a remedy, say "You're not a doctor, technically, but you're certainly not [i]that[/i] ignorant." instead;
+	
+Check healing (this is the can't use a bandaid on a gunshot rule):
+	if the usefulness of the snake oil is less than the severity of the snakebite, say "You're going to have to find something better than that if you want to fix that [snakebite]." instead;
+	
+Check healing (this is the left-handed bandaid rule):
+	if the site of the snakebite is not listed in the applications of the snake oil, say "Gotta find the right tool for the job: you need something that can fix a [site of the snakebite]." instead; 
 
+Check healing (this is the right tool for the job rule):
+	do nothing; [need to get a list of modalities attached to the remedy kind first]
+
+Carry out healing:
+	now the snake oil is curing the snakebite;
+	
+Report healing:
+	say "You use the [snake oil] to fix the [snakebite]." 
 
 Part 2 - New Actions
 
@@ -871,7 +896,7 @@ Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends
 There is an injury called the jagged slash. The severity of the jagged slash is 1. The class of the jagged slash is laceration. The site of the jagged slash is the right hand. The description is "A jagged slash across the back of your right hand [if untreated]oozes a slow trickle of blood that refuses to stop[otherwise]is covered by a short length of gauze bandage, wrapped like a drunk prizefighter[end if]."
 
 When Autodoc Escape begins:
-	attack the player with the jagged slash;
+	attack with the jagged slash;
 
 Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
 
