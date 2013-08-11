@@ -55,6 +55,7 @@ To say (relevant time - a time) as 24h time:
 Definition: a number is round if the remainder after dividing it by 10 is 0.
 Definition: a supporter is occupied rather than empty if something is on it.
 Definition: a container is occupied rather than empty if something is in it.
+Definition: a thing is enclosed if it is part of the player.
 
 A thing can be notable or mundane. A thing is usually mundane.
 
@@ -236,6 +237,9 @@ Rule for listing nondescript items while the light level is dim (this is the ill
 	list the contents of the location, as a sentence, listing marked items only;
 	say ".";
 
+Rule for printing a parser error when the latest parser error is the can't see any such thing error:
+	say "There isn't a [noun] in sight!" instead;
+
 Book 3 - Scenery, Furniture, and Props
 
 Part 1 - Platonic Solids
@@ -329,9 +333,11 @@ Carry out setting a dial (called the frobber) to:
 Report setting a dial (called the frobber) to:
 	say "You set [the frobber] to '[the setting of the frobber]'."
 
-A remedy is a kind of thing. The description is usually "A green box with a white + on the front." A remedy has a list of things called the applications. The applications are usually {right hand, left hand}. A remedy has a number called the usefulness. The usefulness is usually 1. [A remedy has a list of modalities called the factors. The factors are usually {laceration, contusion, puncture, rupture}.]
+A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts. 
 
-More cowbell is a remedy. The description is "gold-plated diapers, baby!"
+A modality is a kind of value. The modalities are laceration, contusion, puncture, heat-burn, frost-burn, rupture, contusion, acid-burn, alkali-burn, steam-burn, poison, radiation, and fracture.
+
+A remedy is a kind of thing. The description is usually "A green box with a white + on the front." A remedy has a list of limbs called the applications. The applications are usually {right hand, left hand}. A remedy has a number called the usefulness. The usefulness is usually 1. A remedy has a list of modalities called the factors. The factors are usually {laceration, contusion, puncture, rupture}.
 
 Book 4 - Actors
 
@@ -341,11 +347,9 @@ The player has a number called the wound total.
 
 An injury is a kind of thing. The description of an injury is usually "You haz a sad :( ". An injury has a number called the severity. The severity is usually 0. [scale is 0 - OK to 6 - maximal (i.e. impossible to treat)]
 
-A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts. An injury has a limb called the site.
+An injury has a limb called the site.
 
-An injury has a remedy called the prescription. The prescription is usually more cowbell.
-
-A modality is a kind of value. The modalities are laceration, contusion, puncture, heat-burn, frost-burn, rupture, contusion, acid-burn, alkali-burn, steam-burn, poison, radiation, and fracture. An injury has a modality called the class.
+An injury has a modality called the class.
 
 Table of Body Parts
 limb	description
@@ -378,12 +382,8 @@ To attack with (mindbullets - an injury):
 	now the mindbullets are part of the strikezone;
 	now the mindbullets are harming the strikezone;
 	now the mindbullets are seen;
+	now the mindbullets are familiar;
 	
-After deciding the scope of the player:
-	let diagnostic be the list of untreated active injuries;
-	repeat with foo running through the diagnostic:
-		place foo in scope;
-			
 Curing relates one remedy to one injury. The verb to cure (he cures, they cure, he cured, it is cured, he is curing) implies the curing relation.
 
 Definition: an injury is active rather than inactive if it is harming something;
@@ -406,13 +406,13 @@ Check healing (this is the can't heal without a remedy rule):
 	if the snake oil is not a remedy, say "You're not a doctor, technically, but you're certainly not [i]that[/i] ignorant." instead;
 	
 Check healing (this is the can't use a bandaid on a gunshot rule):
-	if the usefulness of the snake oil is less than the severity of the snakebite, say "You're going to have to find something better than that if you want to fix that [snakebite]." instead;
+	if the usefulness of the snake oil is less than the severity of the snakebite, say "You're going to have to find something stronger than that if you want to fix that [snakebite]." instead;
 	
 Check healing (this is the left-handed bandaid rule):
-	if the site of the snakebite is not listed in the applications of the snake oil, say "Gotta find the right tool for the job: you need something that can fix a [site of the snakebite]." instead; 
+	if the site of the snakebite is not listed in the applications of the snake oil, say "You grimace: close, but you'll never get this to stay put on your [site of snakebite]." instead; 
 
 Check healing (this is the right tool for the job rule):
-	do nothing; [need to get a list of modalities attached to the remedy kind first]
+	if the class of the snakebite is not listed in the factors of the snake oil, say "Can't treat a [snakebite] with a [snake oil], unfortunately. Gotta find something that will work on a [class of snakebite]." instead;
 
 Carry out healing:
 	now the snake oil is curing the snakebite;
@@ -540,13 +540,14 @@ Part 2 - The Player
 The printed name of the player is "Emma". The player is female. The bulk of the player is 20. The carrying capacity of the player is 2. The bulk capacity of the player is 25.
 
 Instead of examining yourself:
-	let diagnostic be the list of untreated injuries harming the player;
-	say "You pause for a breath and look yourself over:[br]";
+	let diagnostic be the list of untreated active injuries;
+	say "You pause for a breath and look yourself over:[br][br]";
 	if the diagnostic is empty:
 		say "You're in good health. No problems here.";
 	otherwise:
 		repeat with foo running through the diagnostic:
 			say the description of foo;
+	say line break;
 
 A person can be dirty or clean. The player is dirty.
 
@@ -767,10 +768,12 @@ The description is "The locker will open provided you enter the correct 4-digit 
 
 After setting the combo lock to "4444":
 	now the personal locker is unlocked;
-	now the personal locker is open;
 	now the color of the personal locker is green;
 	now the color of the combo lock is green;
-	say "The locker door pops open.";
+	silently try opening the personal locker;
+	say "The locker door [i]pops[/i] open, revealing ";
+	list the contents of the personal locker, as a sentence;
+	say ".";
 
 After closing the personal locker:
 	now the personal locker is locked;
@@ -927,6 +930,7 @@ Current-light-level is an action applying to nothing.
 Report current-light-level:
 	mention the light level;
 	say "{{Light-bearing things: [list of lit things enclosed by the location]}}[br]";
+	say "{{Player scope: [list of visible things]}}";
 
 Understand "SOUNDCHECK [any thing]" as listen-testing.
 Listen-testing is an action applying to one visible thing.
@@ -944,7 +948,8 @@ To mention the light level:
 
 Book 2 - Testing Equipment
 
-A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright.
+A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright and infrared.
+
 Carry out switching on the sunrod:
 	now the sunrod is lit;
 	say "LIGHTS";
@@ -969,32 +974,5 @@ An alarm clock is a device in the Autodoc. The alarm clock is switched on. The s
 [**********************************]
 [n _ _ t THE CODE GRAVEYARD t _nt ]
 [
-A limb is a kind of thing.
-An injury level is a kind of value. The injury levels are fine, scratched, damaged, critical, and destroyed.
-[corresponding to std triage colors (white, green, yellow, red, and black)]
-
-Some limbs part of the player are defined by the Table of Body Parts. The description of a limb is usually "[printed name]: [injury level of noun]."
-
-Table of Body Parts
-Limb	Injury Level
-head	fine
-left arm	fine
-left hand	fine
-right arm	fine
-right hand	fine
-chest	fine
-abdomen	fine
-pelvis	fine
-left leg	fine
-left foot	fine
-right leg	fine
-right foot	fine
-
-
-The triage rules are a rulebook.
-
-The triage rulebook has a list of texts called the diagnostic.  
-
-A triage rule: say "You are wounded here and there."
 
 ]
