@@ -380,12 +380,19 @@ PROXIMITY -[[
 DAMAGE -[[
 injury
 	severity: number from 0 (unharmed) to 6 (maximal, i.e. untreatable)
-	site: limb from {{head, neck, face, arms, torso, and legs}}
-	class: modality from laceration, contusion, puncture, scorch, freeze, decompression, crush, acid-burn, alkali-burn, poison, radiation, and fracture
+	site: one limb
+	class: one modality
 	description: text to be displayed when eXamining the injury
 
-  harming    curing
-limb <- injury <- remedy
+remedy
+	usefulness (vs severity): number from 0 to 6
+	applications (vs site): list of one or more limbs
+	factors (vs class): one or more modalities
+
+INJURY		REMEDY
+severity	usefulness
+site		applications
+class		factors
 
 ]]-
 

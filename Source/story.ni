@@ -333,23 +333,20 @@ Carry out setting a dial (called the frobber) to:
 Report setting a dial (called the frobber) to:
 	say "You set [the frobber] to '[the setting of the frobber]'."
 
-A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts. 
-
-A modality is a kind of value. The modalities are laceration, contusion, puncture, heat-burn, frost-burn, rupture, contusion, acid-burn, alkali-burn, steam-burn, poison, radiation, and fracture.
-
-A remedy is a kind of thing. The description is usually "A green box with a white + on the front." A remedy has a list of limbs called the applications. The applications are usually {right hand, left hand}. A remedy has a number called the usefulness. The usefulness is usually 1. A remedy has a list of modalities called the factors. The factors are usually {laceration, contusion, puncture, rupture}.
-
 Book 4 - Actors
 
 Part 1 - The Body
 
+Chapter 1 - Let's Get Physical
+
+Check an actor wearing something(this is the clean clothing rule):
+	if the actor is dirty, say "You're too dirty to put that on. You'll need to get cleaned off first." instead;
+	
 The player has a number called the wound total.
 
-An injury is a kind of thing. The description of an injury is usually "You haz a sad :( ". An injury has a number called the severity. The severity is usually 0. [scale is 0 - OK to 6 - maximal (i.e. impossible to treat)]
+The player has a number called the INJURY INDEX.
 
-An injury has a limb called the site.
-
-An injury has a modality called the class.
+A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts. 
 
 Table of Body Parts
 limb	description
@@ -375,7 +372,27 @@ right foot	"OKEY"
 
 [old right hand desc: The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc.]
 
-Harming relates various injuries to one limb. The verb to harm (he harms, they harm, he harmed, it is harmed, he is harming) implies the harming relation. 
+Chapter 2 - Injuries and Healing
+
+A modality is a kind of value. The modalities are laceration, contusion, puncture, heat-burn, frost-burn, rupture, contusion, acid-burn, alkali-burn, steam-burn, poison, radiation, and fracture.
+
+A remedy is a kind of thing. The description is usually "A green box with a white + on the front." A remedy has a list of limbs called the applications. The applications are usually {right hand, left hand}. A remedy has a number called the usefulness. The usefulness is usually 1. A remedy has a list of modalities called the factors. The factors are usually {laceration, contusion, puncture, rupture}.
+
+An injury is a kind of thing. The description of an injury is usually "You haz a sad :( ". An injury has a number called the severity. The severity is usually 0. [scale is 0 - OK to 6 - maximal (i.e. impossible to treat)]
+
+An injury has a limb called the site.
+
+An injury has a modality called the class.
+
+Definition: an injury is active rather than inactive if it is harming something;
+Definition: an injury is treated rather than untreated if a remedy is curing the injury.
+
+Curing relates one remedy to one injury. The verb to cure (he cures, they cure, he cured, it is cured, he is curing) implies the curing relation.
+
+Harming relates various injuries to one limb. The verb to harm (he harms, they harm, he harmed, it is harmed, he is harming) implies the harming relation. The verb to be damaged by implies the reversed harming relation.
+
+[not worded correctly?]
+[Definition: a limb is injured rather than healthy if it is being damaged by an untreated injury.]
 
 To attack with (mindbullets - an injury):
 	let the strikezone be the site of the mindbullets;
@@ -383,42 +400,9 @@ To attack with (mindbullets - an injury):
 	now the mindbullets are harming the strikezone;
 	now the mindbullets are seen;
 	now the mindbullets are familiar;
-	
-Curing relates one remedy to one injury. The verb to cure (he cures, they cure, he cured, it is cured, he is curing) implies the curing relation.
-
-Definition: an injury is active rather than inactive if it is harming something;
-Definition: an injury is treated rather than untreated if a remedy is curing the injury.
-
-Healing it with is an action applying to one thing and one carried thing and requiring light.
-Understand "heal [some injury] with [some remedy]" as healing it with.
-Understand "use [some remedy] on [some injury]" as healing it with (with nouns reversed).
-The healing it with action has an injury called the snakebite.
-The healing it with action has a remedy called the snake oil.
-
-Setting action variables for healing:
-	now the snakebite is the noun;
-	now the snake oil is the second noun;
-
-Check healing (this is the can't fix what's not broken rule):
-	if the snakebite is not an injury, say "Rule the Zeroth of the Europan Engineering Battalion: Don't fix what isn't broken." instead;
-	
-Check healing (this is the can't heal without a remedy rule):
-	if the snake oil is not a remedy, say "You're not a doctor, technically, but you're certainly not [i]that[/i] ignorant." instead;
-	
-Check healing (this is the can't use a bandaid on a gunshot rule):
-	if the usefulness of the snake oil is less than the severity of the snakebite, say "You're going to have to find something stronger than that if you want to fix that [snakebite]." instead;
-	
-Check healing (this is the left-handed bandaid rule):
-	if the site of the snakebite is not listed in the applications of the snake oil, say "You grimace: close, but you'll never get this to stay put on your [site of snakebite]." instead; 
-
-Check healing (this is the right tool for the job rule):
-	if the class of the snakebite is not listed in the factors of the snake oil, say "Can't treat a [snakebite] with a [snake oil], unfortunately. Gotta find something that will work on a [class of snakebite]." instead;
-
-Carry out healing:
-	now the snake oil is curing the snakebite;
-	
-Report healing:
-	say "You use the [snake oil] to fix the [snakebite]." 
+	if the mindbullets is:
+		-- the jagged slash:
+			decrement the carrying capacity of the player;
 
 Part 2 - New Actions
 
@@ -434,6 +418,34 @@ To pay attention:
 A person can be asleep or awake. A person is usually awake.
 
 A person can be wounded or healthy. A person is usually healthy. 
+
+Healing it with is an action applying to one thing and one carried thing and requiring light.
+Understand "heal [some injury] with [some remedy]" as healing it with.
+Understand "use [some remedy] on [some injury]" as healing it with (with nouns reversed).
+The healing it with action has an injury called the snakebite.
+The healing it with action has a remedy called the snake oil.
+
+Setting action variables for healing:
+	now the snakebite is the noun;
+	now the snake oil is the second noun;
+
+Check healing (this is the can't use a bandaid on a gunshot rule):
+	if the usefulness of the snake oil is less than the severity of the snakebite, say "You're going to have to find something stronger than that if you want to fix that [snakebite]." instead;
+	
+Check healing (this is the left-handed bandaid rule):
+	if the site of the snakebite is not listed in the applications of the snake oil, say "You grimace: close, but not quite. This [snake oil] won't fit on your [site of snakebite]." instead; 
+
+Check healing (this is the right tool for the job rule):
+	if the class of the snakebite is not listed in the factors of the snake oil, say "Can't treat a [snakebite] with a [snake oil], unfortunately. Gotta find something that will work on a [class of snakebite]." instead;
+
+Carry out healing:
+	now the snake oil is curing the snakebite;
+	if the snakebite is:
+		-- the jagged slash:
+			increment the carrying capacity of the player;
+	
+Report healing:
+	say "You use the [snake oil] to fix the [snakebite]." 
 
 Chapter 1 - Vision
 
@@ -537,7 +549,17 @@ Carry out diving in:
 
 Part 2 - The Player
 
-The printed name of the player is "Emma". The player is female. The bulk of the player is 20. The carrying capacity of the player is 2. The bulk capacity of the player is 25.
+The printed name of the player is "Emma". The player is female. The bulk of the player is 20. 
+The carrying capacity of the player is 2. The bulk capacity of the player is 25.
+
+[carrying capacity rules are built into each appropriate action and issues a library message, will need to override that in order to change it]
+[The new can't carry too many things rule replaces the can't exceed carrying capacity rule.
+This is the new can't carry too many things rule:
+	if the number of things carried by the actor is at least the carrying capacity of the actor:
+		if the right hand is injured or the left hand is injured:
+			say "Your {{right hand}} is {{broken}}; you'll need to patch it up before you can use it effectively." instead;
+		otherwise:
+			say "You only have two hands! You'll have to drop some of the things you're carrying to do that." instead;	]
 
 Instead of examining yourself:
 	let diagnostic be the list of untreated active injuries;
@@ -733,7 +755,7 @@ A pushbutton called the shower cycle button is inside the chemical shower. The p
 
 Check pushing the shower cycle button:
 	if Drain The Blood has not ended:
-		say "You can practically feel that shower already, but the slick wall-to-wall scarlet pool on the floor stays your hand. No matter how clean you get, stepping back into that murk is going to make you just as dirty as before." instead;
+		say "You can practically feel that shower already, but the slick wall-to-wall scarlet on the floor stays your hand. No matter how clean you get, stepping back into that murk is going to make you just as dirty as before." instead;
 
 Carry out pushing the shower cycle button:
 	now the chemical shower is closed;
@@ -783,19 +805,15 @@ After closing the personal locker:
 
 A jumpsuit is inside the personal locker. The jumpsuit is wearable and indigo. "A clean and folded jumpsuit rests on the shelf of the locker." The description is "It's a standard crew shipsuit, colored indigo, with the Starlight Dancer's black-and-gold insignia on the left shoulder."  
 
-A remedy called a bandage is inside the personal locker. "A sterile adhesive bandage, still in its wrapper, lies on the shelf of the locker." The description is "An adhesive bandage. It's basically an extra-big bandaid; the long adhesive strips let you get it on practically anywhere you need it."
-
-[Insert a rule here to override the usual error checking if the bandage is worn/applied to a specific limb]
-
-Check an actor wearing something(this is the clean clothing rule):
-	if the actor is dirty, say "You're too dirty to put that on. You'll need to get cleaned off first." instead;
+A remedy called a bandage is inside the personal locker. "A sterile adhesive bandage, still in its wrapper, lies on the shelf of the locker." The description is "An adhesive bandage. It's basically an extra-big bandaid; the long adhesive strips let you get it on practically anywhere you need it." 
+The usefulness of the bandage is 1. The applications of the bandage are {right hand}. The factors of the bandage are {laceration}.
 
 A pile of mangled junk is here. The junk is fixed in place.
 "A giant pile of debris lies more or less in the corner."
 The description is "Most of it looks to be wreckage from whatever went berserk in here[first time]. Strangely, all of it's been piled up here in the corner[only]."
 Understand "debris" as the junk.
 
-A piece of scrap is in the pile of junk. "This is the init app of the piece of scrap."
+A piece of scrap is in the pile of junk. "A wickedly-curved piece of flat scrap lies propped against some junk."
 The description is "A piece of flat metal shaped something like a capital J. The curved end has a rather pointy tip."
 
 Report the player taking the piece of scrap:
@@ -874,8 +892,7 @@ When play begins:
 	say "[br]Nothing does, so far as anyone knows. And these other jokers, they had [i]successful[/i] missions, or even just break-even missions. Their dreams are a little weird, otherwise pleasant or at worst harmless.";
 	wait for any key;
 	say "[br]I'm the only one with a void file, the only one who came back from the Starlight Dancer. My dreams are blackest cold, the chill the sinners lying under Cocytus must feel at night. I can feel the frost reach down my throat, right into the bottom of my lungs where the death rattle must be. The frost never quite melts back out afterward, and right there next to your guts for the rest of your life is a little puddle of ice water.";
-	wait for any key;
-	say "[br]It hurts like [i]crazy.[/i]";]
+	wait for any key;]
 
 Book 2 - During
 
@@ -900,6 +917,8 @@ There is an injury called the jagged slash. The severity of the jagged slash is 
 
 When Autodoc Escape begins:
 	attack with the jagged slash;
+
+
 
 Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
 
@@ -974,5 +993,11 @@ An alarm clock is a device in the Autodoc. The alarm clock is switched on. The s
 [**********************************]
 [n _ _ t THE CODE GRAVEYARD t _nt ]
 [
-
+[Check healing (this is the can't fix what's not broken rule):
+	if the snakebite is not an injury, say "Rule the Zeroth of the Europan Engineering Battalion: Don't fix what isn't broken." instead;
+	
+Check healing (this is the can't heal without a remedy rule):
+	if the snake oil is not a remedy, say "You're not a doctor, technically, but you're certainly not [i]that[/i] ignorant." instead;]
+	
+	
 ]
