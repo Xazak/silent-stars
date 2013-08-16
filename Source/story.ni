@@ -265,11 +265,15 @@ Before exiting:
 
 Part 2 - New Kinds
 
+Chapter 1 - Various Groups of Words
+
 A light-noun is a kind of value. The light-nouns are lightness, glow, gleam, glimmer, lambency, and incandescence.
 A light-verb is a kind of value. The light-verbs are shows, illuminates, limns, reveals, and shines on.
 A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 [A flicker is a kind of value. The flickers are insubstantial, insufficient, faint, muted, poor, weak, wavering, dim, low, shadowy, wan, subdued, tenuous, shifting, dull, anemic, frail, ghostly, and flickering.]
+
+Chapter 2 - Appliances
 
 A lightsource is a kind of device. A lightsource is usually red, lit, and switched on.
 
@@ -278,6 +282,8 @@ Carry out switching on the lightsource (called the flash):
 
 Carry out switching off the lightsource (called the flash):
 	now the flash is unlit; 
+
+Chapter 3 - Control Panels & Controls
 
 A panel is a kind of supporter.
 The description of a panel is "A cheap amber-monochrome touchscreen. [if active]The controls seem to pulse and waver a little bit as you watch. Blasted cheap gear[otherwise]The display is dark[end if]."
@@ -339,12 +345,27 @@ Part 1 - The Body
 
 Chapter 1 - Let's Get Physical
 
+A person can be asleep or awake. A person is usually awake.
+
+Definition: a person is naked rather than clothed if he is not wearing something.
+
+A person can be dirty or clean. The player is dirty.
+
 Check an actor wearing something(this is the clean clothing rule):
 	if the actor is dirty, say "You're too dirty to put that on. You'll need to get cleaned off first." instead;
 	
-The player has a number called the wound total.
+The player has a number called the wound total. [used to count the number of scars the player walks out with]
 
-The player has a number called the INJURY INDEX.
+The player has a number called the health index. [used to track the current total severity of all wounds, NTA]
+
+[carrying capacity rules are built into each appropriate action and issues a library message, will need to override that in order to change it]
+[The new can't carry too many things rule replaces the can't exceed carrying capacity rule.
+This is the new can't carry too many things rule:
+	if the number of things carried by the actor is at least the carrying capacity of the actor:
+		if the right hand is injured or the left hand is injured:
+			say "Your {{right hand}} is {{broken}}; you'll need to patch it up before you can use it effectively." instead;
+		otherwise:
+			say "You only have two hands! You'll have to drop some of the things you're carrying to do that." instead;	]
 
 A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts. 
 
@@ -362,7 +383,7 @@ left arm	"OKEY"
 left hand	"It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]."
 right shoulder	"OKEY"
 right arm	"OKEY"
-right hand	"OKEY"
+right hand	"It's your right hand. [if right hand is healthy]Nothing to see here[else]The only interesting things about it are the scars it's picked up[end if]."
 left leg	"OKEY"
 left knee	"OKEY"
 left foot	"OKEY"
@@ -370,9 +391,13 @@ right leg	"OKEY"
 right knee	"OKEY"
 right foot	"OKEY"
 
+After examining a limb (called the appendix):
+	if the appendix is harmed by an injury (called the psychoknife):
+		try examining the psychoknife;
+
 [old right hand desc: The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc.]
 
-Chapter 2 - Injuries and Healing
+Chapter 2 - Injuries and Attacking the Player
 
 A modality is a kind of value. The modalities are laceration, contusion, puncture, heat-burn, frost-burn, rupture, contusion, acid-burn, alkali-burn, steam-burn, poison, radiation, and fracture.
 
@@ -387,12 +412,12 @@ An injury has a modality called the class.
 Definition: an injury is active rather than inactive if it is harming something;
 Definition: an injury is treated rather than untreated if a remedy is curing the injury.
 
-Curing relates one remedy to one injury. The verb to cure (he cures, they cure, he cured, it is cured, he is curing) implies the curing relation.
+Curing relates one remedy to one injury. The verb to cure (he cures, they cure, he cured, it is cured, he is curing) implies the curing relation. The verb to be treated by implies the reversed curing relation.
 
-Harming relates various injuries to one limb. The verb to harm (he harms, they harm, he harmed, it is harmed, he is harming) implies the harming relation. The verb to be damaged by implies the reversed harming relation.
+Harming relates various injuries to one limb. The verb to harm (he harms, they harm, he harmed, it is harmed, he is harming) implies the harming relation.
 
-[not worded correctly?]
-[Definition: a limb is injured rather than healthy if it is being damaged by an untreated injury.]
+Definition: a limb is injured rather than healthy if it is harmed by an untreated injury.
+Definition: a person is injured rather than healthy if she is incorporating an injured limb.
 
 To attack with (mindbullets - an injury):
 	let the strikezone be the site of the mindbullets;
@@ -404,7 +429,13 @@ To attack with (mindbullets - an injury):
 		-- the jagged slash:
 			decrement the carrying capacity of the player;
 
-Part 2 - New Actions
+After examining an injury (called the psychoknife):
+	if the psychoknife is untreated:
+		say "The [printed name of psychoknife] oozes and suppurates. You should get that looked at.";
+	if a remedy (called the blessing) is curing the psychoknife:
+		try examining the blessing;
+
+Part 2 - Old & New Verbage
 
 Report touching yourself: try examining yourself instead.
 
@@ -414,38 +445,6 @@ To pay attention:
 	-- 1: try listening;
 	-- 2: try smelling;
 	-- otherwise: say "[br]".
-
-A person can be asleep or awake. A person is usually awake.
-
-A person can be wounded or healthy. A person is usually healthy. 
-
-Healing it with is an action applying to one thing and one carried thing and requiring light.
-Understand "heal [some injury] with [some remedy]" as healing it with.
-Understand "use [some remedy] on [some injury]" as healing it with (with nouns reversed).
-The healing it with action has an injury called the snakebite.
-The healing it with action has a remedy called the snake oil.
-
-Setting action variables for healing:
-	now the snakebite is the noun;
-	now the snake oil is the second noun;
-
-Check healing (this is the can't use a bandaid on a gunshot rule):
-	if the usefulness of the snake oil is less than the severity of the snakebite, say "You're going to have to find something stronger than that if you want to fix that [snakebite]." instead;
-	
-Check healing (this is the left-handed bandaid rule):
-	if the site of the snakebite is not listed in the applications of the snake oil, say "You grimace: close, but not quite. This [snake oil] won't fit on your [site of snakebite]." instead; 
-
-Check healing (this is the right tool for the job rule):
-	if the class of the snakebite is not listed in the factors of the snake oil, say "Can't treat a [snakebite] with a [snake oil], unfortunately. Gotta find something that will work on a [class of snakebite]." instead;
-
-Carry out healing:
-	now the snake oil is curing the snakebite;
-	if the snakebite is:
-		-- the jagged slash:
-			increment the carrying capacity of the player;
-	
-Report healing:
-	say "You use the [snake oil] to fix the [snakebite]." 
 
 Chapter 1 - Vision
 
@@ -527,6 +526,8 @@ Chapter 3 - Touching
 
 Chapter 4 - New Verbs
 
+Section 1 - Diving
+
 Understand "dive" or "dive in" or "jump in" as diving in.
 Diving in is an action applying to nothing.
 
@@ -534,7 +535,13 @@ Before diving in:
 	let puddle be the room down from the location;
 	if the puddle is nothing:
 		say "There's nothing to dive into here." instead;
-	otherwise if the puddle is in Dreamspace:
+
+Carry out diving in:
+	move the player to the room down from the location;
+
+Report diving in:
+	let puddle be the room down from the location;
+	if the puddle is in Dreamspace:
 		if the location is the rocky shore:
 			say "One breath, plus one held.[no line break][br]Even your bones feel like ice.[no line break][br]Darkness shrouds your thoughts.";
 		otherwise:
@@ -544,22 +551,46 @@ Before diving in:
 	otherwise:
 		say "You set your feet, then take two steps and dive into the {liquid}.";
 		
-Carry out diving in:
-	move the player to the room down from the location;
+Section 2 - Healing
 
-Part 2 - The Player
+Healing it with is an action applying to one thing and one carried thing and requiring light.
+Understand "heal [some injury] with [some remedy]" as healing it with.
+Understand "use [some remedy] on [some injury]" as healing it with (with nouns reversed).
+The healing it with action has an injury called the snakebite.
+The healing it with action has a remedy called the snake oil.
+
+Setting action variables for healing:
+	now the snakebite is the noun;
+	now the snake oil is the second noun;
+
+Check healing (this is the can't use a bandaid on a gunshot rule):
+	if the usefulness of the snake oil is less than the severity of the snakebite, say "You're going to have to find something stronger than that if you want to fix that [snakebite]." instead;
+	
+Check healing (this is the left-handed bandaid rule):
+	if the site of the snakebite is not listed in the applications of the snake oil, say "You grimace: close, but not quite. This [snake oil] won't fit on your [site of snakebite]." instead; 
+
+Check healing (this is the right tool for the job rule):
+	if the class of the snakebite is not listed in the factors of the snake oil, say "Can't treat a [snakebite] with a [snake oil], unfortunately. Gotta find something that will work on a [class of snakebite]." instead;
+
+Carry out healing:
+	now the snake oil is curing the snakebite;
+	if the snakebite is:
+		-- the jagged slash:
+			increment the carrying capacity of the player;
+	if the snake oil is:
+		-- the bandage:
+			now the snake oil is part of the snakebite;
+			now the applications of the snake oil is {};
+			add the site of the snakebite to the applications of the snake oil;
+			now the description of the snake oil is "A clean white bandage is wrapped around your [applications]."; 
+	
+Report healing:
+	say "You use the [snake oil] to fix the [snakebite]." 
+
+Part 2 - Player Details
 
 The printed name of the player is "Emma". The player is female. The bulk of the player is 20. 
 The carrying capacity of the player is 2. The bulk capacity of the player is 25.
-
-[carrying capacity rules are built into each appropriate action and issues a library message, will need to override that in order to change it]
-[The new can't carry too many things rule replaces the can't exceed carrying capacity rule.
-This is the new can't carry too many things rule:
-	if the number of things carried by the actor is at least the carrying capacity of the actor:
-		if the right hand is injured or the left hand is injured:
-			say "Your {{right hand}} is {{broken}}; you'll need to patch it up before you can use it effectively." instead;
-		otherwise:
-			say "You only have two hands! You'll have to drop some of the things you're carrying to do that." instead;	]
 
 Instead of examining yourself:
 	let diagnostic be the list of untreated active injuries;
@@ -570,10 +601,6 @@ Instead of examining yourself:
 		repeat with foo running through the diagnostic:
 			say the description of foo;
 	say line break;
-
-A person can be dirty or clean. The player is dirty.
-
-Definition: a person is naked rather than clothed if he is not wearing something.
 
 Volume 2 - The Starlight Dancer
 
@@ -876,7 +903,7 @@ Hallway A is a room. "Hallway!" Hallway A is in Deck A.
 
 The Autodoc abuts the Medical Bay. The Medical Bay abuts Hallway A.
 
-Volume 3 - Before, During, and After
+Volume 3 - Action
 
 Book 1 - Before
 

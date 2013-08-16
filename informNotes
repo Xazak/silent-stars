@@ -24,6 +24,7 @@ IMPROVEMENTS:
 [ ] Improve the implicit noun supplication for UNCLOG DRAIN
 [ ] The player should receive brief lightning-flashes of memory as the PC wanders about interacting; performing these little drops should happen via an activity that is activated both passively as background ambiance and actively in response to particular stimuli
 [ ] There should be small notable messages that fire when a puzzle is completed, to let the player know they were successful and drop clues to the next puzzle on their path
+[ ] Add synonyms to X SELF ie DIAGNOSE, HEALTH, STATUS, etc
 
 MESSAGE CHANGES:
 [X] Adjust: Rewrite the illumination rule to take advantage of the color of a thing
@@ -66,6 +67,8 @@ becomes
 "There I was, dangling in space. Not (you're bad at this) sure what to do next. (you'll never finish) Was I going to head back? Or just stay out there longer?"
 
 A protagonist who can see into the ultraviolet range would be really cool!
+
+Is asking "has [limb] ever been wounded at all?" a meaningful question?
 ]]-
 
 PUZZLE SPECS
