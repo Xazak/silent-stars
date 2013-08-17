@@ -339,6 +339,46 @@ Carry out setting a dial (called the frobber) to:
 Report setting a dial (called the frobber) to:
 	say "You set [the frobber] to '[the setting of the frobber]'."
 
+A device socket is a kind of PS-socket. The type of a device socket is "device". 
+
+Part 3 - The Player's Persocom
+
+Chapter 1 - The Hardware
+
+A computer called a persocom is in the backpack. The description is "It's a small personal computer, affectionately called a 'sidebrain' by most engineers, of the sort to be worn on the forearm. These are truly the modern workhorse aboard a spacecan: now that you have one again, you can access all of the ship systems and make changes, once you're connected in." The dark-description is "The [color of persocom] [random light-noun] cast by the persocom throw peculiarly [if switched off]in[end if]distinct shadows across the walls and ceiling."
+Understand "sidebrain" or "computer" as the persocom.
+The persocom is wearable, green, and infrared.
+A selection device called persocom's touchpad is part of the persocom. A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. A PS-plug called the extension jack is part of the persocom. The type of the extension jack is "device". The persocom has a thing called the attached device.
+
+Carry out switching on the persocom:
+	now the persocom is lit;
+	
+Carry out switching off the persocom:
+	now the persocom is unlit; 
+
+Connecting relates one thing (called the attached system) to one computer. The verb to connect (he connects, they connect, he connected, it is connected, he is connecting) implies the connecting relation. The verb to be connected to implies the reversed connecting relation.
+
+After plugging the extension jack into something (called the gibson):
+	let meatspace be the location of the gibson;
+	now the persocom is connected to meatspace;
+
+After unplugging the extension jack:
+	now the persocom is connected to nothing;
+
+Chapter 2 - The Software
+
+The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 1. The options table of the operating system is the Table of GUI Options.
+
+Table of GUI Options
+topic	title	effect
+"access device"	"Access Device"	access-attached-device rule
+
+This is the access-attached-device rule:
+	carry out the hacking activity with the attached system;
+
+Hacking something is an activity on things.
+The hacking activity has a number called the duration. The duration is usually 0.
+
 Book 4 - Actors
 
 Part 1 - The Body
@@ -358,7 +398,7 @@ The player has a number called the wound total. [used to count the number of sca
 
 The player has a number called the health index. [used to track the current total severity of all wounds, NTA]
 
-[carrying capacity rules are built into each appropriate action and issues a library message, will need to override that in order to change it]
+[carrying capacity rules are built into each appropriate action and issues a library message, will need to override the msg in order to change it]
 [The new can't carry too many things rule replaces the can't exceed carrying capacity rule.
 This is the new can't carry too many things rule:
 	if the number of things carried by the actor is at least the carrying capacity of the actor:
@@ -367,7 +407,7 @@ This is the new can't carry too many things rule:
 		otherwise:
 			say "You only have two hands! You'll have to drop some of the things you're carrying to do that." instead;	]
 
-A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts. 
+A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts.
 
 Table of Body Parts
 limb	description
@@ -394,8 +434,6 @@ right foot	"OKEY"
 After examining a limb (called the appendix):
 	if the appendix is harmed by an injury (called the psychoknife):
 		try examining the psychoknife;
-
-[old right hand desc: The bolt on the [if Medical Bay is visited]autodoc[otherwise]coffin wall[end if] tore a jagged scratch across the back of your right hand. It doesn't seem to affect your ability to use the hand, which is good, but it hurts like [i]crazy[/i] and refuses to stop trickling blood, which is bad. !!{if bandaged}A thick white bandage is wound around your hand like a prizefighter's wrist wrap. The gauze pad on the back !!has bled through/has not bled through/etc.]
 
 Chapter 2 - Injuries and Attacking the Player
 
@@ -780,16 +818,19 @@ A drainspout is inside the shower. The drainspout is scenery. The description is
 
 A pushbutton called the shower cycle button is inside the chemical shower. The printed name is "cycle button". "The only controls in here are a fist-sized button labeled 'PUSH' in big block letters." The description is "A single black rubberized button, large enough to hit blindly in a panic if need be.[first time][br]A lightning-flash of memory: eyes burning pain eating around eye sockets like the devil's fingers scooping the -[br]You stifle that thought even as remembering it triggers a quick squirt of adrenaline like a cold hand trailing down your spine.[only]"
 
+Before pushing the shower cycle button:
+	if the chemical shower is open:
+		try closing the chemical shower;
+
 Check pushing the shower cycle button:
 	if Drain The Blood has not ended:
 		say "You can practically feel that shower already, but the slick wall-to-wall scarlet on the floor stays your hand. No matter how clean you get, stepping back into that murk is going to make you just as dirty as before." instead;
 
 Carry out pushing the shower cycle button:
-	now the chemical shower is closed;
 	now the player is clean;
 
 Report pushing the shower cycle button:
-	say "You [if the shower is open]pull the curtain closed and [end if]slap the cycle activation button. The warm water on your corpse-chilled flesh stings at first, but a moment or two later and it's the best thing you can remember feeling in a long time.[br]The water stops, and you realize you haven't actually scrubbed down. You hit the cycle button again (tamping down a brief pang of guilt - 'Water is liquid gold aboard a starship!') and use the little plastic scrubber to get all the nooks and crannies.[br][i]Much[/i], much better." instead;
+	say "You slap the cycle activation button. The warm water on your corpse-chilled flesh stings at first, but a moment or two later and it's the best thing you can remember feeling in a long time.[br]The water stops, and you realize you haven't actually scrubbed down. You hit the cycle button again (tamping down a brief pang of guilt - 'Water is liquid gold aboard a starship!') and use the little plastic scrubber to get all the nooks and crannies.[br][i]Much[/i], much better." instead;
 
 A container called some lockers is here. The lockers are open and not openable.
 "A bank of gear lockers along one wall have received a similar treatment as the cabinets."
@@ -815,25 +856,38 @@ Understand "far/my locker" as the personal locker.
 A dial called the combo lock is part of the personal locker. The combo lock is red.
 The description is "The locker will open provided you enter the correct 4-digit PIN. The lock is currently [color of combo lock]: the locker is [if personal locker is unlocked]un[end if]locked."
 
+After setting the combo lock to some text (called the foo):
+	if foo is "4444", do nothing;
+	otherwise say "The lock beeps and remains red. [if the mysterious corpse is familiar]That corpse over by the wall had scrawled '4444' before he perished..." instead;
+
 After setting the combo lock to "4444":
 	now the personal locker is unlocked;
 	now the color of the personal locker is green;
 	now the color of the combo lock is green;
 	silently try opening the personal locker;
-	say "The locker door [i]pops[/i] open, revealing ";
+	say "The lock changes from red to green and the door [i]pops[/i] open, revealing ";
 	list the contents of the personal locker, as a sentence;
 	say ".";
 
 After closing the personal locker:
 	now the personal locker is locked;
-	now the color of the personal locker is green;
+	now the color of the personal locker is red;
 	now the color of the combo lock is red;
 	say "There is a [i]click[/i] as the lock engages. The readout blurs from green to red.";
 
-A jumpsuit is inside the personal locker. The jumpsuit is wearable and indigo. "A clean and folded jumpsuit rests on the shelf of the locker." The description is "It's a standard crew shipsuit, colored indigo, with the Starlight Dancer's black-and-gold insignia on the left shoulder."  
+A jumpsuit is inside the personal locker. The jumpsuit is wearable and indigo. "A clean and folded jumpsuit rests on the shelf of the locker." The description is "It's a standard crew shipsuit, colored indigo, with the Starlight Dancer's black-and-gold insignia on the left shoulder. No name on it; your personal jumpsuits are back in your cabin."
 
 A remedy called a bandage is inside the personal locker. "A sterile adhesive bandage, still in its wrapper, lies on the shelf of the locker." The description is "An adhesive bandage. It's basically an extra-big bandaid; the long adhesive strips let you get it on practically anywhere you need it." 
 The usefulness of the bandage is 1. The applications of the bandage are {right hand}. The factors of the bandage are {laceration}.
+
+A player's holdall called the backpack is inside the personal locker. "A small and versatile-looking backpack rests in the back of the locker." The description is "It's a small gear bag, of the sort commonly used as technical carryalls aboard most starships. This one is made of industrial nylon, appears to be waterproof, and has multiple straps and pockets and such to accomodate a wide variety of tools and equipment."
+The backpack is wearable. The bulk capacity is 50. The carrying capacity is 100.
+Understand "gear bag" as the backpack. 
+
+After taking the backpack:
+	try the player wearing the backpack.
+
+[see above for all of the details on the player's persocom, it starts play inside this bag]
 
 A pile of mangled junk is here. The junk is fixed in place.
 "A giant pile of debris lies more or less in the corner."
@@ -842,9 +896,14 @@ Understand "debris" as the junk.
 
 A piece of scrap is in the pile of junk. "A wickedly-curved piece of flat scrap lies propped against some junk."
 The description is "A piece of flat metal shaped something like a capital J. The curved end has a rather pointy tip."
-
+The piece of scrap is unstashable.
+	
 Report the player taking the piece of scrap:
 	say "You find and take a handy-looking bit of metal[if the drain is familiar]. This should be just the thing to unclog that drain with[end if]." instead;
+
+Report the player dropping the piece of scrap when Drain The Blood has ended:
+	say "You toss the foully-choked piece of junk aside. Won't need that again.";
+	remove the piece of scrap from play;
 
 After examining the pile of junk:
 	if the drain is familiar and the pile of junk is occupied:
@@ -855,12 +914,12 @@ A pool of blood is here. The blood is fixed in place.
 The description is "The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
 
 After examining the pool of blood for the first time:
-	say "You can't see a drain through the murky surface, but if you had to guess it'd be right about in the middle of the floor. You'll have to search for it a bit though."
+	say "You can't see a drain through the murky surface, but if you had to guess it'd be right about in the middle of the floor. You'll have to search for it a bit though.";
 
 Instead of searching the blood:
 	move the drain to the Medical Bay;
 	now the drain is familiar;
-	say "You take a breath and hold it before plunging both hands into the murk and feeling your way across the floor. The drain is (fortunately) right where you expected. However, your hand grazes something obscenely organic clogging the drainspout, slick and coarse and squelchy-wet. The sensation makes you recoil in disgust; you slip an inch or two on the tile and almost go over into the ichor.[br]"
+	say "You take a breath and hold it before plunging both hands into the murk and feeling your way across the floor. The drain is (fortunately) right where you expected. However, your hand grazes something obscenely organic clogging the drainspout, slick and coarse and squelchy-wet. The sensation makes you recoil in disgust; you slip an inch or two on the tile but recover before falling in.";
 	
 There is a closed locked container called a drain. The drain is fixed in place.
 "[if the pool of blood is not in the drain]A clogged drain lies under the rippling surface of the pool.[else]A steel mesh drain has been set into the middle of the tile floor."
@@ -870,7 +929,7 @@ The matching key of the drain is the piece of scrap.
 Understand "unclog [something] with [something]" as unlocking it with.
 
 Does the player mean unlocking the drain with the piece of scrap: it is very likely.
-[Does the player mean unlocking the drain with right hand: it is likely.]
+Does the player mean unlocking the drain with right hand: it is likely.
 
 Check unlocking the drain with something (called the drainsnake):
 	if the drainsnake is not the piece of scrap:
@@ -879,21 +938,24 @@ Check unlocking the drain with something (called the drainsnake):
 After unlocking the drain with the piece of scrap:
 	move the pool of blood to the drain;
 	say "You use the hook-shaped scrap to tug the clog out, splashing more filth up your arms and chest. The pool of blood gurgles as it whirls down the drain.";
+	try the player dropping the piece of scrap;
 
 [perhaps fix the action-on-drain issue by putting it into scope when applicable? would probably suit the inform outlook better]
 [when the blood is drained out, it's vented directly into space? since it's waste anyway? maybe into water reclamation (taking dropped things with it)?]
-[what to do with that disgusting piece of scrap now?]
 
 A mysterious corpse is here.
 "Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place."
+The description is "The body's been mutilated and has probably been in here a couple days, judging from the disgusting pallor. Next to the corpse's hand, '4444' has been scrawled in blood along the wall." 
 
 A lightsource called an emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
 The description is "A series of cheap lights have been sunk into a chunk of red plastex about three feet long. The matte surface keeps the scarlet light from being harsh. Three of them are spaced across the ceiling."
 
 A door called the medbay door is west of Hallway A and east of the Medical Bay. It is locked and unopenable.
-The description is "The door out of the Medical Bay is coated with the same dried blood as everything else in the room. The lights on the control panel glow [color of medbay-door panel]."
+The description is "The door out of the Medical Bay is coated with the same dried blood as everything else in the room. The lights on the control panel glow [color of medbay door panel]."
 
-A panel called the medbay-door panel is part of the medbay door. It is red.
+A panel called the medbay door panel is part of the medbay door. It is red. The description is "The medbay door panel glows [color of medbay door panel]. The door must be [if medbay door is unlocked]un[end if]locked."
+
+Incorporated by the medbay door is a device socket.
 
 Part 3 - Hallway A
 
@@ -945,18 +1007,20 @@ There is an injury called the jagged slash. The severity of the jagged slash is 
 When Autodoc Escape begins:
 	attack with the jagged slash;
 
-
-
 Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
 
 Drain The Blood is a scene. Drain The Blood begins when Autodoc Escape ends. Drain The Blood ends when the pool of blood is in the drain.
 
 Every turn during Drain The Blood:
 	if a random chance of 1 in 3 succeeds:
-		say "[one of]The syrupy ichor gurgles and splashes partway up your calf as you move through the room.[or]
+		say "[one of]Syrupy ichor gurgles and splashes partway up your calf as you move through the room.[or]
 		You shiver and slap your forearms, trying to keep blood circulating through your hands.[or]
 		A coil of stench unwinds into your nostrils: you gag and fight back the dry heaves.[or]
 		A foot slips on something slick as you move through the room. You keep your footing, but only just.[then at random]";
+
+Take A Shower is a scene. Take A Shower begins when Autodoc Escape ends. Take A Shower ends when the player is clean.
+
+Exit The Medbay is a scene. Exit The Medbay begins when Autodoc Escape ends. Exit The Medbay ends when Hallway A is visited.
 
 Book 3 - After
 
@@ -994,7 +1058,7 @@ To mention the light level:
 
 Book 2 - Testing Equipment
 
-A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright and infrared.
+[A sunrod is a device carried by the player. "This is the normal description of the sunrod. [if switched on]It glows with a bright light.[otherwise]It is dark." The sunrod has dark-description "[if carried]The sunrod in your hand glows dimly. [otherwise]The sunrod glows faintly." The sunrod is bright and infrared.
 
 Carry out switching on the sunrod:
 	now the sunrod is lit;
@@ -1002,7 +1066,7 @@ Carry out switching on the sunrod:
 
 Carry out switching off the sunrod: 
 	now the sunrod is unlit;
-	say "DARKNESS";
+	say "DARKNESS";]
 
 [A radio is a device. The radio is in the Medical Bay. "This is the init app of the radio. [if switched on]It emits a constant stream of static.[otherwise]It is silent.[end if]". The radio is switched on. The radio is notable. The sound of the radio is "white noise". The sound-description is "[The printed name] emits an unbroken stream of static."
 Carry out switching on the radio:

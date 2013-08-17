@@ -25,6 +25,8 @@ IMPROVEMENTS:
 [ ] The player should receive brief lightning-flashes of memory as the PC wanders about interacting; performing these little drops should happen via an activity that is activated both passively as background ambiance and actively in response to particular stimuli
 [ ] There should be small notable messages that fire when a puzzle is completed, to let the player know they were successful and drop clues to the next puzzle on their path
 [ ] Add synonyms to X SELF ie DIAGNOSE, HEALTH, STATUS, etc
+[ ] Set up the personal locker to implicitly unlock when opened for the 2nd time onward
+[ ] An object-based rulebook to preferentially wear certain items when picked up
 
 MESSAGE CHANGES:
 [X] Adjust: Rewrite the illumination rule to take advantage of the color of a thing
@@ -285,7 +287,7 @@ After parsing a command but before the command is actually performed:
 
 Starry Night Lighting System Presumptions:
 A room can be lighted or dark (dark).
-	A room can be dark or dim or bright.
+	A room can be dark or dim or bright (dark).
 	A bright or dim room should not be dark.
 	A dark room should not be bright or dim.
 In a bright room:
@@ -299,8 +301,8 @@ In a dark room:
 		Only luminous objects should be in scope
 		Tenebrous objects are only in scope if they are familiar ("You left a widget here...") AND the player has a source of direct light
 A thing can be lit or unlit (unlit).
-	A lit thing can be diffuse or direct.
-	A lit thing can be dim or bright.
+	A lit thing can be diffuse or direct (diffuse).
+	A lit thing can be dim or bright (dim).
 A diffuse thing:
 	Does not pass visibility checks
 	Does not improve scope when searching
@@ -311,6 +313,8 @@ A bright thing:
 	Causes the background light level to act as bright, no matter its actual status
 A dim thing:
 	Causes the background light level to act as dim, no matter its actual status
+An infrared thing:
+	Is visible in any light level
 
 HOW DOES THE FUCKING STOCK LIGHTING WORK
 1) Game starts, initial lit/unlit states are defined their primitives
