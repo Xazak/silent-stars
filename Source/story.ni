@@ -202,7 +202,8 @@ Rule for printing the name of a room (called the place) (this is the new room-na
 	let light-description-toggle be false;
 	if the current action is looking, now light-description-toggle is true;
 	[if the player is in Dreamspace, now light-description-toggle is false;]
-	if the printing the announcement of light activity is going on, say "..." instead; [if the look action was automatically generated, we're going to skip announcing the name of the room again for now; would be a good place to insert a message later]
+	[if the look action was automatically generated, we're going to skip announcing the name of the room again for now; would be a good place to insert a message later]
+	if the printing the announcement of light activity is going on, say "..." instead;
 	if light-description-toggle is false, say "[printed name of the place]" instead;
 	if the light level is murky:
 		say "[printed name of the place], in the [random dark-noun]" instead;
@@ -339,8 +340,6 @@ Carry out setting a dial (called the frobber) to:
 Report setting a dial (called the frobber) to:
 	say "You set [the frobber] to '[the setting of the frobber]'."
 
-A device socket is a kind of PS-socket. The type of a device socket is "device". 
-
 Part 3 - The Player's Persocom
 
 Chapter 1 - The Hardware
@@ -356,8 +355,10 @@ Carry out switching on the persocom:
 Carry out switching off the persocom:
 	now the persocom is unlit; 
 
+[intended to represent a physical data cnxn between the 'com and a target device]
 Connecting relates one thing (called the attached system) to one computer. The verb to connect (he connects, they connect, he connected, it is connected, he is connecting) implies the connecting relation. The verb to be connected to implies the reversed connecting relation.
 
+[I'm leaving the extension jack here for now in case I decide I want to use it; the standard method will be wireless access via software]
 After plugging the extension jack into something (called the gibson):
 	let meatspace be the location of the gibson;
 	now the persocom is connected to meatspace;
@@ -367,18 +368,78 @@ After unplugging the extension jack:
 
 Chapter 2 - The Software
 
+Section 1 - The OS
+
 The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 1. The options table of the operating system is the Table of GUI Options.
 
 Table of GUI Options
 topic	title	effect
+"list open connections"	"List Open Connections"	get-open-cnxn-list rule
+"connect to device"	"Connect To Device"	init-cnxn rule
 "access device"	"Access Device"	access-attached-device rule
 
+This is the get-open-cnxn-list rule:
+	let chickens be the list of live access points enclosed by the location;
+	if chickens is empty:
+		say "Error: No open connections in current location.";
+	otherwise:
+		say "Open Device Connections:[br]";
+		repeat with foo running through chickens:
+			say "[printed name of foo].";
+			
+This is the init-cnxn rule:
+	blank out the whole of the Table of Available Connections;
+	let chickens be the list of live access points enclosed by the location; 
+	if chickens is empty:
+		say "Error: No open connections in current location.";
+	otherwise:
+		repeat with foo running through chickens:
+			choose a blank row in the Table of Available Connections;
+			now title entry is the printed name of foo;
+			now effect entry is the rule being compiled on foo;
+	repeat with bar running through software run by the persocom:
+		now the software priority of bar is 5;
+	now the software priority of the wifi-connector is 1;
+	try examining the wifi-connector; 
+			
+The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
+
+Table of Available Connections
+index (a number)	title (text)	effect (a rule)
+with 20 blank rows
+
+This is the connect-to-device rule:
+	do nothing;
+
 This is the access-attached-device rule:
-	carry out the hacking activity with the attached system;
+	do nothing; 
 
-Hacking something is an activity on things.
-The hacking activity has a number called the duration. The duration is usually 0.
+Section 2 - Wifi Connectivity
 
+[include access points as parts of things to give them connectivity]
+An access point is a kind of container. An access point is scenery. Embedded code is a kind of software. 
+Definition: an access point is live rather than dead if it is open.
+Definition: a thing is accessible if it incorporates a live access point.
+[do i need an adjective for "thing has software to be run"?]
+
+[intended to represent the way in which gadgets with live access broadcast their info and availability]
+Broadcasting relates a thing (called the gibson) to a computer (called the hacker) when the gibson is accessible. 
+The verb to ping (he pings, they ping, he pinged, it is pinged, he is pinging) implies the broadcasting relation.
+
+Transceiving with something is an activity.
+
+Rule for transceiving with a door (called D): say "Now connected to [D]."
+
+Compiling relates a thing to a rule. The verb to compile (he compiles, they compile, he compiled, it is compiled, he is compiling) implies the compiling relation. The verb to be compiled on implies the reversed compiling relation.
+
+Section 3 - Gadget Hacking
+
+Incorporated by the medbay door is a device socket. An access point called medbay-door-west is part of the medbay door. 
+Medbay-door-west compiles the medbay-door-hack rule.
+
+This is the medbay-door-hack rule:
+	do nothing;
+		
 Book 4 - Actors
 
 Part 1 - The Body
@@ -858,7 +919,7 @@ The description is "The locker will open provided you enter the correct 4-digit 
 
 After setting the combo lock to some text (called the foo):
 	if foo is "4444", do nothing;
-	otherwise say "The lock beeps and remains red. [if the mysterious corpse is familiar]That corpse over by the wall had scrawled '4444' before he perished..." instead;
+	otherwise say "The lock beeps and remains red.[if the mysterious corpse is familiar] That corpse over by the wall had scrawled '4444' before he perished..." instead;
 
 After setting the combo lock to "4444":
 	now the personal locker is unlocked;
@@ -954,8 +1015,6 @@ A door called the medbay door is west of Hallway A and east of the Medical Bay. 
 The description is "The door out of the Medical Bay is coated with the same dried blood as everything else in the room. The lights on the control panel glow [color of medbay door panel]."
 
 A panel called the medbay door panel is part of the medbay door. It is red. The description is "The medbay door panel glows [color of medbay door panel]. The door must be [if medbay door is unlocked]un[end if]locked."
-
-Incorporated by the medbay door is a device socket.
 
 Part 3 - Hallway A
 
