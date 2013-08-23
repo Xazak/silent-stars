@@ -55,7 +55,6 @@ To say (relevant time - a time) as 24h time:
 Definition: a number is round if the remainder after dividing it by 10 is 0.
 Definition: a supporter is occupied rather than empty if something is on it.
 Definition: a container is occupied rather than empty if something is in it.
-Definition: a thing is enclosed if it is part of the player.
 
 A thing can be notable or mundane. A thing is usually mundane.
 
@@ -375,52 +374,65 @@ The persocom runs a multiple-choice program called the operating system. The sof
 Table of GUI Options
 topic	title	effect
 "list open connections"	"List Open Connections"	get-open-cnxn-list rule
-"connect to device"	"Connect To Device"	init-cnxn rule
-"access device"	"Access Device"	access-attached-device rule
+"hack device"	"Hack Device"	init-cnxn rule
 
-This is the get-open-cnxn-list rule:
-	let chickens be the list of live access points enclosed by the location;
-	if chickens is empty:
-		say "Error: No open connections in current location.";
-	otherwise:
-		say "Open Device Connections:[br]";
-		repeat with foo running through chickens:
-			say "[printed name of foo].";
-			
-This is the init-cnxn rule:
-	blank out the whole of the Table of Available Connections;
-	let chickens be the list of live access points enclosed by the location; 
-	if chickens is empty:
-		say "Error: No open connections in current location.";
-	otherwise:
-		repeat with foo running through chickens:
-			choose a blank row in the Table of Available Connections;
-			now title entry is the printed name of foo;
-			now effect entry is the rule being compiled on foo;
+The personal computing rules are a rulebook. 
+The personal computing rules rulebook has a thing called the gadget connected to. 
+The personal computing rules rulebook has a thing called the gateway. 
+
+To give focus to (gibson - some software):
 	repeat with bar running through software run by the persocom:
 		now the software priority of bar is 5;
-	now the software priority of the wifi-connector is 1;
-	try examining the wifi-connector; 
-			
+	now the software priority of the gibson is 1;
+	try examining the gibson;
+
+The get-open-cnxn-list rule is listed in the personal computing rulebook.
+This is the get-open-cnxn-list rule:
+	if the number of live access points is 0:
+		say "Error: No open connections in current location.";
+		say "Dead access points:[br]";
+		repeat with foo running through the list of dead access points:
+			say "[foo] - [location of foo].";
+	otherwise:
+		say "Open Device Connections:[br]";
+		repeat with foo running through the list of live access points:
+			say "[foo].";
+
+[checks to see if there are connections available, then builds a table and starts the connector]
+The init-cnxn rule is listed in the personal computing rulebook.			
+This is the init-cnxn rule:
+	blank out the whole of the Table of Available Connections;
+	if the number of live access points in the location is zero:
+		say "Error: No open connections in current location.";
+	otherwise:
+		repeat with foo running through the list of live access points in the location:
+			if the number of blank rows in the Table of Available Connections is at least one:
+				choose a blank row in the Table of Available Connections;
+				now title entry is the printed name of foo;
+				now effect entry is the hacking-program-activate rule;
+		give focus to the wifi-connector; 
+
+[asks the player to select a device to connect to, whereupon the persocom will run whatever software is at the target]
 The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
 
 Table of Available Connections
 index (a number)	title (text)	effect (a rule)
 with 20 blank rows
 
-This is the connect-to-device rule:
-	do nothing;
-
-This is the access-attached-device rule:
-	do nothing; 
+The hacking-program-activate rule is listed in the personal computing rulebook.
+This is the hacking-program-activate rule:
+	do nothing; [this is where the logic to determine exactly which device program is going to be run when the cnxn is valid is going to go]
 
 Section 2 - Wifi Connectivity
 
 [include access points as parts of things to give them connectivity]
-An access point is a kind of container. An access point is scenery. Embedded code is a kind of software. 
-Definition: an access point is live rather than dead if it is open.
+An access point is a kind of device. An access point is scenery and switched on. Embedded code is a kind of software. 
+Definition: an access point (called the beacon) is live rather than dead:
+	if the beacon is switched on:
+		yes;
+	no;
+
 Definition: a thing is accessible if it incorporates a live access point.
-[do i need an adjective for "thing has software to be run"?]
 
 [intended to represent the way in which gadgets with live access broadcast their info and availability]
 Broadcasting relates a thing (called the gibson) to a computer (called the hacker) when the gibson is accessible. 
@@ -430,15 +442,15 @@ Transceiving with something is an activity.
 
 Rule for transceiving with a door (called D): say "Now connected to [D]."
 
-Compiling relates a thing to a rule. The verb to compile (he compiles, they compile, he compiled, it is compiled, he is compiling) implies the compiling relation. The verb to be compiled on implies the reversed compiling relation.
+Executing relates one access point to one rule. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the executing relation. The verb to be compiled on implies the reversed executing relation.
 
 Section 3 - Gadget Hacking
 
 Incorporated by the medbay door is a device socket. An access point called medbay-door-west is part of the medbay door. 
-Medbay-door-west compiles the medbay-door-hack rule.
+Medbay-door-west executes the medbay-door-hack rule. Incorporated by medbay-door-west is some embedded code.
 
 This is the medbay-door-hack rule:
-	do nothing;
+	say "T3H G1bS0n b1n H4><><3d!";
 		
 Book 4 - Actors
 
@@ -451,6 +463,10 @@ A person can be asleep or awake. A person is usually awake.
 Definition: a person is naked rather than clothed if he is not wearing something.
 
 A person can be dirty or clean. The player is dirty.
+
+[this may need to be tweaked for exclusion later - should be easy enough to implement an object-based rulebook]
+After an actor taking something wearable (called the beanie):
+	if the actor is the player, try the player wearing the beanie.
 
 Check an actor wearing something(this is the clean clothing rule):
 	if the actor is dirty, say "You're too dirty to put that on. You'll need to get cleaned off first." instead;
@@ -945,9 +961,6 @@ A player's holdall called the backpack is inside the personal locker. "A small a
 The backpack is wearable. The bulk capacity is 50. The carrying capacity is 100.
 Understand "gear bag" as the backpack. 
 
-After taking the backpack:
-	try the player wearing the backpack.
-
 [see above for all of the details on the player's persocom, it starts play inside this bag]
 
 A pile of mangled junk is here. The junk is fixed in place.
@@ -1088,6 +1101,12 @@ Book 3 - After
 Volume 0 - Not For Release
 
 Book 1 - Testing Commands
+
+Understand "WIFI" as testing-wifi.
+Testing-wifi is an action applying to nothing.
+Report testing-wifi:
+	repeat with foo running through the list of access points:
+		say "[foo]: [list of things incorporated by foo] - [location of foo] ([if foo is live]live[otherwise]dead[end if])."
 
 Understand "WHEREAMI" as get-location.
 Get-location is an action applying to nothing.
