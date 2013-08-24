@@ -390,9 +390,9 @@ The get-open-cnxn-list rule is listed in the personal computing rulebook.
 This is the get-open-cnxn-list rule:
 	if the number of live access points is 0:
 		say "Error: No open connections in current location.";
-		say "Dead access points:[br]";
-		repeat with foo running through the list of dead access points:
-			say "[foo] - [location of foo].";
+		say "Dead access points:[br]";[NFR]
+		repeat with foo running through the list of dead access points:[NFR]
+			say "[foo] - [location of foo].";[NFR]
 	otherwise:
 		say "Open Device Connections:[br]";
 		repeat with foo running through the list of live access points:
@@ -402,26 +402,36 @@ This is the get-open-cnxn-list rule:
 The init-cnxn rule is listed in the personal computing rulebook.			
 This is the init-cnxn rule:
 	blank out the whole of the Table of Available Connections;
-	if the number of live access points in the location is zero:
+	let nodes be a list of access points;
+	if the number of live access points is 0:
 		say "Error: No open connections in current location.";
 	otherwise:
-		repeat with foo running through the list of live access points in the location:
-			if the number of blank rows in the Table of Available Connections is at least one:
+		add the list of live access points to nodes;
+		repeat with foo running through the list of live access points:
+			if the number of blank rows in the Table of Available Connections is at least 1:
+				say "Found: [foo]...";
 				choose a blank row in the Table of Available Connections;
 				now title entry is the printed name of foo;
-				now effect entry is the hacking-program-activate rule;
-		give focus to the wifi-connector; 
+				let bar be the rule
+		give focus to the wifi-connector;
 
 [asks the player to select a device to connect to, whereupon the persocom will run whatever software is at the target]
 The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
 
 Table of Available Connections
-index (a number)	title (text)	effect (a rule)
+index (a number)	title (text)	effect (a rule)	target (object)
 with 20 blank rows
 
 The hacking-program-activate rule is listed in the personal computing rulebook.
 This is the hacking-program-activate rule:
-	do nothing; [this is where the logic to determine exactly which device program is going to be run when the cnxn is valid is going to go]
+	let T be indexed text;
+	if the player's command matches "[number]", let T be the player's command;
+[	let N be a number;
+	let N be character number 1 in T;
+	choose row N from the Table of Available Connections;
+	say "[title entry]:[target entry]...";[NFR]
+	now the gateway is the target entry;
+	now the gadget connected to is the thing enclosing the gateway;]
 
 Section 2 - Wifi Connectivity
 
@@ -435,19 +445,19 @@ Definition: an access point (called the beacon) is live rather than dead:
 Definition: a thing is accessible if it incorporates a live access point.
 
 [intended to represent the way in which gadgets with live access broadcast their info and availability]
-Broadcasting relates a thing (called the gibson) to a computer (called the hacker) when the gibson is accessible. 
-The verb to ping (he pings, they ping, he pinged, it is pinged, he is pinging) implies the broadcasting relation.
+Receiving relates a computer (called the hacker) to an access point (called the gibson) when the gibson is live.
+The verb to ping (he pings, they ping, he pinged, it is pinged, he is pinging) implies the receiving relation.
 
 Transceiving with something is an activity.
 
 Rule for transceiving with a door (called D): say "Now connected to [D]."
 
-Executing relates one access point to one rule. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the executing relation. The verb to be compiled on implies the reversed executing relation.
+Executing relates one access point to one rule. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the executing relation. The verb to be compiled by implies the reversed executing relation.
 
 Section 3 - Gadget Hacking
 
 Incorporated by the medbay door is a device socket. An access point called medbay-door-west is part of the medbay door. 
-Medbay-door-west executes the medbay-door-hack rule. Incorporated by medbay-door-west is some embedded code.
+The medbay-door-hack rule is compiled by medbay-door-west. Incorporated by medbay-door-west is some embedded code.
 
 This is the medbay-door-hack rule:
 	say "T3H G1bS0n b1n H4><><3d!";
