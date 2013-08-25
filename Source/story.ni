@@ -346,7 +346,7 @@ Chapter 1 - The Hardware
 A computer called a persocom is in the backpack. The description is "It's a small personal computer, affectionately called a 'sidebrain' by most engineers, of the sort to be worn on the forearm. These are truly the modern workhorse aboard a spacecan: now that you have one again, you can access all of the ship systems and make changes, once you're connected in." The dark-description is "The [color of persocom] [random light-noun] cast by the persocom throw peculiarly [if switched off]in[end if]distinct shadows across the walls and ceiling."
 Understand "sidebrain" or "computer" as the persocom.
 The persocom is wearable, green, and infrared.
-A selection device called persocom's touchpad is part of the persocom. A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. A PS-plug called the extension jack is part of the persocom. The type of the extension jack is "device". The persocom has a thing called the attached device.
+A selection device called persocom's touchpad is part of the persocom. A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. A PS-plug called the extension jack is part of the persocom. The type of the extension jack is "device". The persocom has a thing called the attached device. The persocom has a thing called the connected device. 
 
 Carry out switching on the persocom:
 	now the persocom is lit;
@@ -354,16 +354,14 @@ Carry out switching on the persocom:
 Carry out switching off the persocom:
 	now the persocom is unlit; 
 
-[intended to represent a physical data cnxn between the 'com and a target device]
-Connecting relates one thing (called the attached system) to one computer. The verb to connect (he connects, they connect, he connected, it is connected, he is connecting) implies the connecting relation. The verb to be connected to implies the reversed connecting relation.
-
-[I'm leaving the extension jack here for now in case I decide I want to use it; the standard method will be wireless access via software]
-After plugging the extension jack into something (called the gibson):
-	let meatspace be the location of the gibson;
-	now the persocom is connected to meatspace;
+After plugging the extension jack into something (called the external system):
+	now the persocom is linked to the external system;
 
 After unplugging the extension jack:
-	now the persocom is connected to nothing;
+	now the persocom is linked to nothing;
+
+[represents the extension jack being connected to something]
+Linking relates one thing (called the attached system) to one computer. The verb to link (he links, they link, he linked, it is linked, he is linking) implies the linking relation. The verb to be linked to implies the linking relation.
 
 Chapter 2 - The Software
 
@@ -373,36 +371,51 @@ The persocom runs a multiple-choice program called the operating system. The sof
 
 Table of GUI Options
 topic	title	effect
-"list open connections"	"List Open Connections"	get-open-cnxn-list rule
-"hack device"	"Hack Device"	init-cnxn rule
+"view devices"	"View Available Devices"	list-open-cnxns rule
+"connect"	"Connect to Device"	init-device-cnxn rule
 
-The personal computing rules are a rulebook. 
-The personal computing rules rulebook has a thing called the gadget connected to. 
-The personal computing rules rulebook has a thing called the gateway. 
+The persocom operations rules are a rulebook.
+The persocom operations rulebook has a thing called the gibson.
+The persocom operations rulebook has a thing called the gateway.
 
-To give focus to (gibson - some software):
+To give focus to (warez - some software):
 	repeat with bar running through software run by the persocom:
 		now the software priority of bar is 5;
-	now the software priority of the gibson is 1;
-	try examining the gibson;
+	now the software priority of the warez is 1;
+	try examining the warez;
 
-The get-open-cnxn-list rule is listed in the personal computing rulebook.
-This is the get-open-cnxn-list rule:
-	if the number of live access points is 0:
-		say "Error: No open connections in current location.";
-		say "Dead access points:[br]";[NFR]
-		repeat with foo running through the list of dead access points:[NFR]
-			say "[foo] - [location of foo].";[NFR]
-	otherwise:
-		say "Open Device Connections:[br]";
-		repeat with foo running through the list of live access points:
-			say "[foo].";
-
-[checks to see if there are connections available, then builds a table and starts the connector]
-The init-cnxn rule is listed in the personal computing rulebook.			
-This is the init-cnxn rule:
+A persocom operations rule (this is the list-open-cnxns rule):
+	say "Ext Cable: [if there is nothing linked to the persocom]--no connection--[otherwise][attached system][end if][br]";
+	repeat with foo running through broadcasting things:
+		if foo incorporates an access point (called the bar):
+			say "Found: [bar] ([foo])...";
+		
+A persocom operations rule (this is the init-device-cnxn rule):
+	if the attached system is not nothing, say "Skipping the extension port until software prompts are written.";
 	blank out the whole of the Table of Available Connections;
-	let nodes be a list of access points;
+	repeat with foo running through broadcasting things:
+		choose a blank row in the Table of Available Connections;
+		now the title entry is the printed name of the node providing access to foo;
+		let bar be the node providing access to foo;
+		now the effect entry is the the buffer overflow attack on foo;
+		say the effect entry;
+		now the target entry is foo;
+	give focus to the wifi-connector;
+		
+A persocom operations rule (this is the cnxn-handshake rule):
+	do nothing;
+
+The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
+
+Table of Available Connections
+index (a number)	title (text)	effect (a rule)	target (object)
+with 20 blank rows
+
+Table of DNS Information
+archway	gadget	executable
+medbay-door-west	medbay door	medbay-door-hack rule
+
+[	let nodes be a list of access points;
 	if the number of live access points is 0:
 		say "Error: No open connections in current location.";
 	otherwise:
@@ -412,56 +425,63 @@ This is the init-cnxn rule:
 				say "Found: [foo]...";
 				choose a blank row in the Table of Available Connections;
 				now title entry is the printed name of foo;
-				let bar be the rule
-		give focus to the wifi-connector;
-
-[asks the player to select a device to connect to, whereupon the persocom will run whatever software is at the target]
-The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
-
-Table of Available Connections
-index (a number)	title (text)	effect (a rule)	target (object)
-with 20 blank rows
-
-The hacking-program-activate rule is listed in the personal computing rulebook.
-This is the hacking-program-activate rule:
-	let T be indexed text;
-	if the player's command matches "[number]", let T be the player's command;
-[	let N be a number;
-	let N be character number 1 in T;
-	choose row N from the Table of Available Connections;
-	say "[title entry]:[target entry]...";[NFR]
-	now the gateway is the target entry;
-	now the gadget connected to is the thing enclosing the gateway;]
+				now target entry is the gadget corresponding to an archway of foo in the Table of DNS Information;
+				now effect entry is the executable corresponding to an archway of foo in the Table of DNS Information;
+		give focus to the wifi-connector;]
 
 Section 2 - Wifi Connectivity
 
+[gateway - the gibson's access point, gibson - the target device, payload - the software contained in the gibson]
 [include access points as parts of things to give them connectivity]
-An access point is a kind of device. An access point is scenery and switched on. Embedded code is a kind of software. 
-Definition: an access point (called the beacon) is live rather than dead:
-	if the beacon is switched on:
-		yes;
+An access point is a kind of device. An access point is scenery and switched on. 
+To decide which access point is the node providing access to (gadget - a thing):
+	if the gadget incorporates a live access point (called the beacon):
+		decide on the beacon.
+
+[include embedded code as parts of things to give the persocom something to run when it connects]
+Embedded code is a kind of software. Every access point incorporates some embedded code (called its payload).
+
+Executing relates a rule to a access point. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the reversed executing relation.
+To decide which rule is the buffer overflow attack on (gadget - a thing):
+	if the gadget incorporates a live access point (called the beacon):
+		do nothing;
+[		if executing relates the beacon to a rule (called the attack):
+			decide on the attack.]
+
+[Hackability relates an access point (called the beacon) to a thing (called the gadget) when the beacon is part of the gadget and the beacon is live. The verb to be accessed through implies the hackability relation.]
+
+[intended to represent a wireless data cnxn between the 'com and a target device]
+Connecting relates one thing (called the attached system) to one computer. The verb to connect (he connects, they connect, he connected, it is connected, he is connecting) implies the connecting relation. The verb to be connected to implies the connecting relation.
+
+Definition: an access point is live rather than dead if it is switched on.
+Definition: a thing is broadcasting:
+	if it incorporates a live access point:
+		if it is immediate:
+			yes;
+		no;
 	no;
 
-Definition: a thing is accessible if it incorporates a live access point.
+[To interface the persocom with (the client - something):
+	now the persocom is connected to the client;
+	begin the transceiving activity with the the client;
 
-[intended to represent the way in which gadgets with live access broadcast their info and availability]
-Receiving relates a computer (called the hacker) to an access point (called the gibson) when the gibson is live.
-The verb to ping (he pings, they ping, he pinged, it is pinged, he is pinging) implies the receiving relation.
+Transceiving something is an activity.
+The transceiving activity has a thing called the gadget connected to.
+The transceiving activity has a thing called the gateway. 
 
-Transceiving with something is an activity.
+Before transceiving something (called the client):
+	now the gateway is the client;
+	now the gadget connected to is the gadget corresponding to an archway of the client in the Table of DNS Information;
 
-Rule for transceiving with a door (called D): say "Now connected to [D]."
-
-Executing relates one access point to one rule. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the executing relation. The verb to be compiled by implies the reversed executing relation.
+Rule for transceiving something (called the client): say "Now connected to [client]."]
 
 Section 3 - Gadget Hacking
 
-Incorporated by the medbay door is a device socket. An access point called medbay-door-west is part of the medbay door. 
-The medbay-door-hack rule is compiled by medbay-door-west. Incorporated by medbay-door-west is some embedded code.
+Incorporated by the medbay door is a device socket. An access point called medbay-door-west is part of the medbay door. Some embedded code called medbay-door-hack is part of the medbay door. Medbay-door-west is executing the medbay-door-hack rule.
 
 This is the medbay-door-hack rule:
-	say "T3H G1bS0n b1n H4><><3d!";
-		
+	say "The medbay-door-hack rule has been run successfully.";
+
 Book 4 - Actors
 
 Part 1 - The Body
@@ -492,7 +512,7 @@ This is the new can't carry too many things rule:
 		if the right hand is injured or the left hand is injured:
 			say "Your {{right hand}} is {{broken}}; you'll need to patch it up before you can use it effectively." instead;
 		otherwise:
-			say "You only have two hands! You'll have to drop some of the things you're carrying to do that." instead;	]
+			say "You only have two hands! You'll have to drop some of the things you're carrying to do that." instead;]
 
 A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts.
 
@@ -1172,11 +1192,46 @@ An alarm clock is a device in the Autodoc. The alarm clock is switched on. The s
 [**********************************]
 [n _ _ t THE CODE GRAVEYARD t _nt ]
 [
-[Check healing (this is the can't fix what's not broken rule):
-	if the snakebite is not an injury, say "Rule the Zeroth of the Europan Engineering Battalion: Don't fix what isn't broken." instead;
-	
-Check healing (this is the can't heal without a remedy rule):
-	if the snake oil is not a remedy, say "You're not a doctor, technically, but you're certainly not [i]that[/i] ignorant." instead;]
-	
-	
+
+
+The get-open-cnxn-list rule is listed in the personal computing rulebook.
+This is the get-open-cnxn-list rule:
+	if the number of live access points is 0:
+		say "Error: No open connections in current location.";
+		say "Dead access points:[br]";[NFR]
+		repeat with foo running through the list of dead access points:[NFR]
+			say "[foo] - [location of foo].";[NFR]
+	otherwise:
+		say "Open Device Connections:[br]";
+		repeat with foo running through the list of live access points:
+			say "[foo].";
+
+[checks to see if there are connections available, then builds a table and starts the connector]
+The init-cnxn rule is listed in the personal computing rulebook.			
+This is the init-cnxn rule:
+	blank out the whole of the Table of Available Connections;
+	let nodes be a list of access points;
+	if the number of live access points is 0:
+		say "Error: No open connections in current location.";
+	otherwise:
+		add the list of live access points to nodes;
+		repeat with foo running through the list of live access points:
+			if the number of blank rows in the Table of Available Connections is at least 1:
+				say "Found: [foo]...";
+				choose a blank row in the Table of Available Connections;
+				now title entry is the printed name of foo;
+				now target entry is the gadget corresponding to an archway of foo in the Table of DNS Information;
+				now effect entry is the executable corresponding to an archway of foo in the Table of DNS Information;
+		give focus to the wifi-connector;
+
+[asks the player to select a device to connect to, whereupon the persocom will run whatever software is at the target]
+The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
+
+Table of Available Connections
+index (a number)	title (text)	effect (a rule)	target (object)
+with 20 blank rows
+
+
+
+
 ]
