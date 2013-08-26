@@ -375,8 +375,7 @@ topic	title	effect
 "connect"	"Connect to Device"	init-device-cnxn rule
 
 The persocom operations rules are a rulebook.
-The persocom operations rulebook has a thing called the gibson.
-The persocom operations rulebook has a thing called the gateway.
+The attack vector is a rule that varies.
 
 To give focus to (warez - some software):
 	repeat with bar running through software run by the persocom:
@@ -389,7 +388,9 @@ A persocom operations rule (this is the list-open-cnxns rule):
 	repeat with foo running through broadcasting things:
 		if foo incorporates an access point (called the bar):
 			say "Found: [bar] ([foo])...";
-		
+			now the attack vector is the icebreaker against bar;
+			say "Attack vector: [attack vector]...";
+					
 A persocom operations rule (this is the init-device-cnxn rule):
 	if the attached system is not nothing, say "Skipping the extension port until software prompts are written.";
 	blank out the whole of the Table of Available Connections;
@@ -397,13 +398,12 @@ A persocom operations rule (this is the init-device-cnxn rule):
 		choose a blank row in the Table of Available Connections;
 		now the title entry is the printed name of the node providing access to foo;
 		let bar be the node providing access to foo;
-		now the effect entry is the the buffer overflow attack on foo;
-		say the effect entry;
 		now the target entry is foo;
+		now the effect entry is the icebreaker against bar;
 	give focus to the wifi-connector;
 		
 A persocom operations rule (this is the cnxn-handshake rule):
-	do nothing;
+	say "This is the cnxn-handshake rule."
 
 The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
 
@@ -411,47 +411,28 @@ Table of Available Connections
 index (a number)	title (text)	effect (a rule)	target (object)
 with 20 blank rows
 
-Table of DNS Information
-archway	gadget	executable
-medbay-door-west	medbay door	medbay-door-hack rule
-
-[	let nodes be a list of access points;
-	if the number of live access points is 0:
-		say "Error: No open connections in current location.";
-	otherwise:
-		add the list of live access points to nodes;
-		repeat with foo running through the list of live access points:
-			if the number of blank rows in the Table of Available Connections is at least 1:
-				say "Found: [foo]...";
-				choose a blank row in the Table of Available Connections;
-				now title entry is the printed name of foo;
-				now target entry is the gadget corresponding to an archway of foo in the Table of DNS Information;
-				now effect entry is the executable corresponding to an archway of foo in the Table of DNS Information;
-		give focus to the wifi-connector;]
-
 Section 2 - Wifi Connectivity
 
-[gateway - the gibson's access point, gibson - the target device, payload - the software contained in the gibson]
 [include access points as parts of things to give them connectivity]
 An access point is a kind of device. An access point is scenery and switched on. 
 To decide which access point is the node providing access to (gadget - a thing):
+	say "Looking for access point...";
 	if the gadget incorporates a live access point (called the beacon):
-		decide on the beacon.
+		say "Success: [the beacon].";
+		decide on the beacon;
 
-[include embedded code as parts of things to give the persocom something to run when it connects]
+[include embedded code as parts of access points to give the persocom something to run when it connects]
 Embedded code is a kind of software. Every access point incorporates some embedded code (called its payload).
 
-Executing relates a rule to a access point. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the reversed executing relation.
-To decide which rule is the buffer overflow attack on (gadget - a thing):
-	if the gadget incorporates a live access point (called the beacon):
-		do nothing;
-[		if executing relates the beacon to a rule (called the attack):
-			decide on the attack.]
+Executing relates a access point to a rule. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the executing relation.
 
-[Hackability relates an access point (called the beacon) to a thing (called the gadget) when the beacon is part of the gadget and the beacon is live. The verb to be accessed through implies the hackability relation.]
+To decide which rule is the icebreaker against (gibson - an access point):
+	say "Looking for attack vectors against [the gibson]...";
+	if the gibson relates to a rule by the executing relation:
+		decide on the rule to which the gibson relates by the executing relation;
 
 [intended to represent a wireless data cnxn between the 'com and a target device]
-Connecting relates one thing (called the attached system) to one computer. The verb to connect (he connects, they connect, he connected, it is connected, he is connecting) implies the connecting relation. The verb to be connected to implies the connecting relation.
+Connecting relates one thing (called the connected system) to one computer. The verb to connect (he connects, they connect, he connected, it is connected, he is connecting) implies the connecting relation. The verb to be connected to implies the connecting relation.
 
 Definition: an access point is live rather than dead if it is switched on.
 Definition: a thing is broadcasting:
@@ -1135,8 +1116,17 @@ Book 1 - Testing Commands
 Understand "WIFI" as testing-wifi.
 Testing-wifi is an action applying to nothing.
 Report testing-wifi:
-	repeat with foo running through the list of access points:
-		say "[foo]: [list of things incorporated by foo] - [location of foo] ([if foo is live]live[otherwise]dead[end if])."
+	repeat with foo running through the list of broadcasting things:
+		say "[foo]: [list of things incorporated by foo] - [location of foo]."
+
+Understand "WIFI [something]" as testing-wifi-target.
+Testing-wifi-target is an action applying to one thing.
+Report testing-wifi-target:
+	if the noun incorporates an access point (called the beacon):
+		now the attack vector is the icebreaker against the beacon;
+		say "[noun]:[beacon] <- [attack vector].";
+	otherwise:
+		say "There is no access point attached to the [noun]!" 
 
 Understand "WHEREAMI" as get-location.
 Get-location is an action applying to nothing.
@@ -1192,46 +1182,5 @@ An alarm clock is a device in the Autodoc. The alarm clock is switched on. The s
 [**********************************]
 [n _ _ t THE CODE GRAVEYARD t _nt ]
 [
-
-
-The get-open-cnxn-list rule is listed in the personal computing rulebook.
-This is the get-open-cnxn-list rule:
-	if the number of live access points is 0:
-		say "Error: No open connections in current location.";
-		say "Dead access points:[br]";[NFR]
-		repeat with foo running through the list of dead access points:[NFR]
-			say "[foo] - [location of foo].";[NFR]
-	otherwise:
-		say "Open Device Connections:[br]";
-		repeat with foo running through the list of live access points:
-			say "[foo].";
-
-[checks to see if there are connections available, then builds a table and starts the connector]
-The init-cnxn rule is listed in the personal computing rulebook.			
-This is the init-cnxn rule:
-	blank out the whole of the Table of Available Connections;
-	let nodes be a list of access points;
-	if the number of live access points is 0:
-		say "Error: No open connections in current location.";
-	otherwise:
-		add the list of live access points to nodes;
-		repeat with foo running through the list of live access points:
-			if the number of blank rows in the Table of Available Connections is at least 1:
-				say "Found: [foo]...";
-				choose a blank row in the Table of Available Connections;
-				now title entry is the printed name of foo;
-				now target entry is the gadget corresponding to an archway of foo in the Table of DNS Information;
-				now effect entry is the executable corresponding to an archway of foo in the Table of DNS Information;
-		give focus to the wifi-connector;
-
-[asks the player to select a device to connect to, whereupon the persocom will run whatever software is at the target]
-The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
-
-Table of Available Connections
-index (a number)	title (text)	effect (a rule)	target (object)
-with 20 blank rows
-
-
-
 
 ]
