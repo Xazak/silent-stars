@@ -27,6 +27,7 @@ IMPROVEMENTS:
 [ ] Add synonyms to X SELF ie DIAGNOSE, HEALTH, STATUS, etc
 [ ] Set up the personal locker to implicitly unlock when opened for the 2nd time onward
 [ ] An object-based rulebook to preferentially wear certain items when picked up
+[ ] Instead of having infrared things pass a flag, there is a way to make things conditionally ignore specific rules
 
 MESSAGE CHANGES:
 [X] Adjust: Rewrite the illumination rule to take advantage of the color of a thing
@@ -402,7 +403,10 @@ site		applications
 class		factors
 
 ]]-
+THE PERSOCOM  -[[
+system trace for connecting to another device, running remote software, and exiting:
 
+]]-
 ***REMINDERS
 SEE 11.8 FOR SWITCH-CASE NOTATION
 > EQUIVALENT TO "is greater than"

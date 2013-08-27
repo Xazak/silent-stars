@@ -343,10 +343,10 @@ Part 3 - The Player's Persocom
 
 Chapter 1 - The Hardware
 
-A computer called a persocom is in the backpack. The description is "It's a small personal computer, affectionately called a 'sidebrain' by most engineers, of the sort to be worn on the forearm. These are truly the modern workhorse aboard a spacecan: now that you have one again, you can access all of the ship systems and make changes, once you're connected in." The dark-description is "The [color of persocom] [random light-noun] cast by the persocom throw peculiarly [if switched off]in[end if]distinct shadows across the walls and ceiling."
+A computer called the persocom is in the backpack. The description is "It's a small personal computer, affectionately called a 'sidebrain' by most engineers, of the sort to be worn on the forearm. These are truly the modern workhorse aboard a spacecan: now that you have one again, you can access all of the ship systems and make changes, once you're connected in." The dark-description is "The [color of persocom] [random light-noun] cast by the persocom throw peculiarly [if switched off]in[end if]distinct shadows across the walls and ceiling."
 Understand "sidebrain" or "computer" as the persocom.
 The persocom is wearable, green, and infrared.
-A selection device called persocom's touchpad is part of the persocom. A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. A PS-plug called the extension jack is part of the persocom. The type of the extension jack is "device". The persocom has a thing called the attached device. The persocom has a thing called the connected device. 
+A selection device called persocom's touchpad is part of the persocom. A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. A PS-plug called the device extension jack is part of the persocom. The type of the extension jack is "device".
 
 Carry out switching on the persocom:
 	now the persocom is lit;
@@ -354,87 +354,139 @@ Carry out switching on the persocom:
 Carry out switching off the persocom:
 	now the persocom is unlit; 
 
-After plugging the extension jack into something (called the external system):
-	now the persocom is linked to the external system;
+Carry out an actor plugging something (called the hacktool) into something (called the external system) (this is the set-connection-relation rule):
+	now the the external system is connected to the hacktool;
+	choose row with a title of "Access Cnxn" in the Table of GUI Options;
+	now the display entry is true;
+	refresh the GUI;
 
-After unplugging the extension jack:
-	now the persocom is linked to nothing;
+Report an actor plugging something (called the hacktool) into something (called the external system):
+	say "The [hacktool] is now connected to [the external system].";
 
-[represents the extension jack being connected to something]
-Linking relates one thing (called the attached system) to one computer. The verb to link (he links, they link, he linked, it is linked, he is linking) implies the linking relation. The verb to be linked to implies the linking relation.
+Carry out unplugging something (called the hacktool):
+	now nothing is connected to the hacktool;
+	refresh the GUI;
 
+Report unplugging something (called the hacktool):
+	say "The [hacktool] is now disconnected.";
+
+[include device sockets in things to provide cable-only access via persocom]
+A device socket is a kind of PS-socket. The type of a device socket is usually "device". 
+
+[represents the extension jack being plugged into something]
+Connecting relates one thing to one computer. The verb to connect (he connects, they connect, he connected, it is connected, he is connecting) implies the connecting relation. The verb to be connected to implies the connecting relation.
+
+To decide which thing is the cnxn-gadget:
+	if something (called the item) is connected to the persocom, decide on the item.
+
+A persocom operations rule (this is the access-connected-program rule):
+	if the cnxn-gadget is compiling something (called the gibson):
+		say "Accessing [the gibson]...";
+		now the active-cnxn is wired;
+		give focus to the gibson;
+	
 Chapter 2 - The Software
 
 Section 1 - The OS
 
-The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 1. The options table of the operating system is the Table of GUI Options.
+The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 1. The options table of the operating system is the Table of GUI Options. A thing called the active-cnxn is part of the persocom. The active-cnxn is either wired or wireless.
+The description of the operating system is "--PERSO.SYS v17revA//1.2--[paragraph break][options-list of the operating system]".
+
+To say options-list of the operating system:
+	say "The following options are visible on the screen:[paragraph break]"; 
+	repeat through the options table of the operating system:
+		if display entry is true, say "[title entry][line break]";
+	say "[run paragraph on]".
 
 Table of GUI Options
-topic	title	effect
-"view devices"	"View Available Devices"	list-open-cnxns rule
-"connect"	"Connect to Device"	init-device-cnxn rule
+topic	title	effect	display
+"view devices"	"View Devices"	list-open-cnxns rule	true
+"wireless"	"Wireless"	init-device-cnxn rule	true
+"access cnxn"	"Access Cnxn"	access-connected-program rule	false
+"access link"	"Access Link"	access-linked-program rule	false
+"disconnect"	"Disconnect"	disconnect-wireless-link rule	false
 
 The persocom operations rules are a rulebook.
 The attack vector is a rule that varies.
 
+To refresh the GUI:
+	if something (called foo) is connected to the persocom:
+		say "Looking for available controls via extension jack...";
+		if foo incorporates some software (called bar):
+			now the persocom is running bar;
+	if something (called qaz) is linked to the persocom:
+		say "Looking for available controls via wireless...";
+		if qaz incorporates some software (called unf):
+			now the persocom is running unf;
+	repeat through the options table of the operating system:
+		if title entry is:
+		-- "View Devices":
+			now display entry is true; [always show]
+		-- "Wireless":
+			if something is linked to the persocom, now display entry is false; [always show unless something is linked]
+		-- "Access Cnxn":
+			if nothing is connected to the persocom, now display entry is false; [always hide unless something is connected]
+		-- "Access Link":
+			if nothing is linked to the persocom, now display entry is false; [always hide unless something is linked]
+		-- "Disconnect":
+			if nothing is linked to the persocom, now display entry is false; [always hide unless something is linked]
+
 To give focus to (warez - some software):
+	say "Bringing [warez] to the front.";
 	repeat with bar running through software run by the persocom:
 		now the software priority of bar is 5;
 	now the software priority of the warez is 1;
 	try examining the warez;
 
 A persocom operations rule (this is the list-open-cnxns rule):
-	say "Ext Cable: [if there is nothing linked to the persocom]--no connection--[otherwise][attached system][end if][br]";
-	repeat with foo running through broadcasting things:
-		if foo incorporates an access point (called the bar):
-			say "Found: [bar] ([foo])...";
-			now the attack vector is the icebreaker against bar;
+	say "Ext Cable: [if there is nothing connected to the persocom]--no connection--[otherwise]a thing is connected[end if][br]";
+	repeat with target running through broadcasting things:
+		if the target incorporates an access point (called the gateway):
+			say "Found: [gateway] ([target])...";
+			now the attack vector is the icebreaker against the gateway;
 			say "Attack vector: [attack vector]...";
 					
 A persocom operations rule (this is the init-device-cnxn rule):
 	if the attached system is not nothing, say "Skipping the extension port until software prompts are written.";
 	blank out the whole of the Table of Available Connections;
-	repeat with foo running through broadcasting things:
+	repeat with target running through broadcasting things:
 		choose a blank row in the Table of Available Connections;
-		now the title entry is the printed name of the node providing access to foo;
-		let bar be the node providing access to foo;
-		now the target entry is foo;
-		now the effect entry is the icebreaker against bar;
+		let the gateway be the node providing access to the target;
+		now the title entry is the printed name of the gateway;
+		now the effect entry is the icebreaker against the gateway;
 	give focus to the wifi-connector;
 		
-A persocom operations rule (this is the cnxn-handshake rule):
-	say "This is the cnxn-handshake rule."
-
 The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
 
 Table of Available Connections
-index (a number)	title (text)	effect (a rule)	target (object)
+index (a number)	title (text)	effect (a rule)
 with 20 blank rows
 
 Section 2 - Wifi Connectivity
 
-[include access points as parts of things to give them connectivity]
+[include access points as parts of things to give them wireless connectivity]
 An access point is a kind of device. An access point is scenery and switched on. 
 To decide which access point is the node providing access to (gadget - a thing):
 	say "Looking for access point...";
-	if the gadget incorporates a live access point (called the beacon):
-		say "Success: [the beacon].";
-		decide on the beacon;
+	if the gadget incorporates a live access point (called the gateway):
+		say "Success: [the gateway].";
+		decide on the gateway;
 
-[include embedded code as parts of access points to give the persocom something to run when it connects]
-Embedded code is a kind of software. Every access point incorporates some embedded code (called its payload).
+[the rule being executed by an access point is what provides the framework lifting to connect the persocom wirelessly with the target device; every access point must be executing its own unique rule]
+Executing relates a thing to a rule. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the executing relation.
 
-Executing relates a access point to a rule. The verb to execute (he executes, they execute, he executed, it is executed, he is executing) implies the executing relation.
+To decide which rule is the icebreaker against (gateway - an access point):
+	say "Looking for attack vectors against [the gateway]...";
+	if the gateway relates to a rule by the executing relation:
+		decide on the rule to which the gateway relates by the executing relation;
 
-To decide which rule is the icebreaker against (gibson - an access point):
-	say "Looking for attack vectors against [the gibson]...";
-	if the gibson relates to a rule by the executing relation:
-		decide on the rule to which the gibson relates by the executing relation;
+Definition: an access point is live rather than dead:
+	if it relates to a rule by the executing relation:
+		if it is switched on:
+			yes;
+		no;
+	no;
 
-[intended to represent a wireless data cnxn between the 'com and a target device]
-Connecting relates one thing (called the connected system) to one computer. The verb to connect (he connects, they connect, he connected, it is connected, he is connecting) implies the connecting relation. The verb to be connected to implies the connecting relation.
-
-Definition: an access point is live rather than dead if it is switched on.
 Definition: a thing is broadcasting:
 	if it incorporates a live access point:
 		if it is immediate:
@@ -442,26 +494,71 @@ Definition: a thing is broadcasting:
 		no;
 	no;
 
-[To interface the persocom with (the client - something):
-	now the persocom is connected to the client;
-	begin the transceiving activity with the the client;
+[intended to represent a wireless data cnxn between the 'com and a target access point]
+Linking relates one thing to one computer. The verb to link (he links, they link, he linked, it is linked, he is linking) implies the linking relation. The verb to be linked to implies the linking relation.
 
-Transceiving something is an activity.
-The transceiving activity has a thing called the gadget connected to.
-The transceiving activity has a thing called the gateway. 
+Associating with something is an activity.
+Rule for associating with something (called the target):
+	now the target is linked to the persocom;
+	choose row with a title of "Access Link" in the Table of GUI Options;
+	now the display entry is true;
+	choose row with a title of "Disconnect" in the Table of GUI Options;	
+	now the display entry is true;
+	refresh the GUI;
+	say "Wireless link established with [target].";
 
-Before transceiving something (called the client):
-	now the gateway is the client;
-	now the gadget connected to is the gadget corresponding to an archway of the client in the Table of DNS Information;
+To decide which thing is the link-gadget:
+	if something (called the item) is linked to the persocom, decide on the item.
 
-Rule for transceiving something (called the client): say "Now connected to [client]."]
+A persocom operations rule (this is the access-linked-program rule):
+	if the link-gadget is compiling something (called the gibson):
+		say "Accessing [the gibson]...";
+		now the active-cnxn is wireless;
+		give focus to the gibson;
 
-Section 3 - Gadget Hacking
+A persocom operations rule (this is the disconnect-wireless-link rule):
+	say "Disconnecting wireless link...";
+	now the persocom is linked to nothing;
+	refresh the GUI;
 
-Incorporated by the medbay door is a device socket. An access point called medbay-door-west is part of the medbay door. Some embedded code called medbay-door-hack is part of the medbay door. Medbay-door-west is executing the medbay-door-hack rule.
+Section 3 - Remote Computer Control
+
+Compiling relates one thing to one software. The verb to compile (he compiles, they compile, he compiled, it is compiled, he is compiling) implies the compiling relation.
+
+To decide which thing is the hacked-luser:
+	if the active-cnxn is wireless, decide on the link-gadget;
+	decide on the cnxn-gadget;
+
+[Definition: a software is binary if the compiler of it is not the persocom.]
+
+[move this stuff down later]
+Incorporated by the medbay door is a device socket. An access point called medbay-door-west is part of the medbay door. Medbay-door-west is executing the medbay-door-hack rule.
 
 This is the medbay-door-hack rule:
-	say "The medbay-door-hack rule has been run successfully.";
+	carry out the associating with activity with the medbay door;
+	refresh the GUI;
+	give focus to the operating system;
+
+A multiple-choice program called the medbay-door-hack program is part of the medbay door. The medbay-door-hack program is compiled by the medbay door.
+
+The options table of the medbay-door-hack program is the Table of DoorHack Options.
+
+Table of DoorHack Options
+topic	title	effect
+"open"	"OPEN"	open-door rule
+"close"	"CLOSE"	close-door rule
+"exit"	"EXIT"	exit-program rule
+
+This is the open-door rule:
+	now the hacked-luser is open;
+	say "The [hacked-luser] slides open reluctantly.";
+	
+This is the close-door rule:
+	now the hacked-luser is closed;
+	say "The [hacked-luser] slides closed.";
+	
+This is the exit-program rule:
+	give focus to the operating system;
 
 Book 4 - Actors
 
@@ -484,7 +581,7 @@ Check an actor wearing something(this is the clean clothing rule):
 	
 The player has a number called the wound total. [used to count the number of scars the player walks out with]
 
-The player has a number called the health index. [used to track the current total severity of all wounds, NTA]
+The player has a number called the health index. [used to track the current total severity of all wounds]
 
 [carrying capacity rules are built into each appropriate action and issues a library message, will need to override the msg in order to change it]
 [The new can't carry too many things rule replaces the can't exceed carrying capacity rule.
@@ -730,7 +827,7 @@ Instead of examining yourself:
 
 Volume 2 - The Starlight Dancer
 
-The player is in the autodoc.[move the player back to the rocky shore before releasing]
+The player is in the rocky shore.[move the player back to the rocky shore before releasing]
 
 Book 1 - Dreamtime
 
@@ -970,7 +1067,7 @@ The usefulness of the bandage is 1. The applications of the bandage are {right h
 
 A player's holdall called the backpack is inside the personal locker. "A small and versatile-looking backpack rests in the back of the locker." The description is "It's a small gear bag, of the sort commonly used as technical carryalls aboard most starships. This one is made of industrial nylon, appears to be waterproof, and has multiple straps and pockets and such to accomodate a wide variety of tools and equipment."
 The backpack is wearable. The bulk capacity is 50. The carrying capacity is 100.
-Understand "gear bag" as the backpack. 
+Understand "gear bag" as the backpack. Understand "back pack" as the backpack.
 
 [see above for all of the details on the player's persocom, it starts play inside this bag]
 
@@ -1055,7 +1152,7 @@ Book 1 - Before
 When play begins:
 	set the status line;
 	[Introductory text goes here]
-	[say "At the time, I considered 'Chief Engineer' aboard the Starlight Dancer one of the highlights of my career. It was the first time anyone from the Europan Engineer's Fellowship had been chosen. To be perfectly technical, it wasn't the EEF's fault that Aurita did what she did. We signed waivers, we knew there was experimental tech aboard, the usual boilerplate for bleeding-edge research vessels. It was what we wanted: big toys in a new sandbox and no supervision.";
+	say "At the time, I considered 'Chief Engineer' aboard the Starlight Dancer one of the highlights of my career. It was the first time anyone from the Europan Engineer's Fellowship had been chosen. To be perfectly technical, it wasn't the EEF's fault that Aurita did what she did. We signed waivers, we knew there was experimental tech aboard, the usual boilerplate for bleeding-edge research vessels. It was what we wanted: big toys in a new sandbox and no supervision.";
 	wait for any key;
 	say "[br]I guess we got a little big for our britches. If I never see the inside of a spacecan again it'll be too soon.";
 	wait for any key;
@@ -1064,7 +1161,7 @@ When play begins:
 	say "[br]Nothing does, so far as anyone knows. And these other jokers, they had [i]successful[/i] missions, or even just break-even missions. Their dreams are a little weird, otherwise pleasant or at worst harmless.";
 	wait for any key;
 	say "[br]I'm the only one with a void file, the only one who came back from the Starlight Dancer. My dreams are blackest cold, the chill the sinners lying under Cocytus must feel at night. I can feel the frost reach down my throat, right into the bottom of my lungs where the death rattle must be. The frost never quite melts back out afterward, and right there next to your guts for the rest of your life is a little puddle of ice water.";
-	wait for any key;]
+	wait for any key;
 
 Book 2 - During
 
@@ -1090,7 +1187,7 @@ There is an injury called the jagged slash. The severity of the jagged slash is 
 When Autodoc Escape begins:
 	attack with the jagged slash;
 
-Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the personal locker is open.
+Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the player is wearing a jumpsuit.
 
 Drain The Blood is a scene. Drain The Blood begins when Autodoc Escape ends. Drain The Blood ends when the pool of blood is in the drain.
 
@@ -1103,7 +1200,12 @@ Every turn during Drain The Blood:
 
 Take A Shower is a scene. Take A Shower begins when Autodoc Escape ends. Take A Shower ends when the player is clean.
 
+Fix Jagged Slash is a scene. Fix Jagged Slash begins when the jagged slash is part of the player. Fix Jagged Slash ends when the jagged slash is treated.
+
 Exit The Medbay is a scene. Exit The Medbay begins when Autodoc Escape ends. Exit The Medbay ends when Hallway A is visited.
+
+When Exit The Medbay ends:
+	end the story finally saying "Here's the end of what I have so far!";
 
 Book 3 - After
 
@@ -1182,5 +1284,42 @@ An alarm clock is a device in the Autodoc. The alarm clock is switched on. The s
 [**********************************]
 [n _ _ t THE CODE GRAVEYARD t _nt ]
 [
+[To interface the persocom with (the client - something):
+	now the persocom is connected to the client;
+	begin the transceiving activity with the the client;
+
+Transceiving something is an activity.
+The transceiving activity has a thing called the gadget connected to.
+The transceiving activity has a thing called the gateway. 
+
+Before transceiving something (called the client):
+	now the gateway is the client;
+	now the gadget connected to is the gadget corresponding to an archway of the client in the Table of DNS Information;
+
+Rule for transceiving something (called the client): say "Now connected to [client]."]
+[	try switching off the persocom;
+	blank out the whole of the Table of GUI Options;
+	choose a blank row in the Table of GUI Options;
+	now the topic entry is "view devices";
+	now the title entry is "View Available Devices";
+	now the effect entry is the list-open-cnxns rule;
+	choose a blank row in the Table of GUI Options;
+	now the topic entry is "link";
+	now the title entry is "Link to Device";
+	now the effect entry is the init-device-cnxn rule;
+	if something (called foo) is connected to the persocom:
+		say "Looking for available controls via extension jack...";
+		if foo incorporates some software (called the banana):
+			say "Found: [banana][br]";
+			now the persocom is running the banana;
+			choose a blank row in the Table of GUI Options;
+			now the topic entry is "connected device";
+			now the title entry is the printed name of the banana;
+			say the title entry;
+			now the effect entry is the cnxn-handshake rule;
+			say the effect entry;
+[	if something is linked to the persocom:
+		activate the linked payload;]
+	try switching on the persocom;]
 
 ]
