@@ -202,6 +202,7 @@ Rule for printing the name of a room (called the place) (this is the new room-na
 	if the current action is looking, now light-description-toggle is true;
 	[if the player is in Dreamspace, now light-description-toggle is false;]
 	[if the look action was automatically generated, we're going to skip announcing the name of the room again for now; would be a good place to insert a message later]
+	say bold type;
 	if the printing the announcement of light activity is going on, say "..." instead;
 	if light-description-toggle is false, say "[printed name of the place]" instead;
 	if the light level is murky:
@@ -210,7 +211,8 @@ Rule for printing the name of a room (called the place) (this is the new room-na
 		say "[printed name of the place], in dim light" instead;
 	if the light level is bright:
 		say "[printed name of the place], in the [random light-noun]" instead;
-	say "[printed name of the place]" instead.
+	say "[printed name of the place]" instead;
+	say roman type;
 
 Rule for printing the name of a dark room:
 	follow the new room-name rule for the location instead;
@@ -233,12 +235,12 @@ Rule for listing nondescript items while the light level is dim (this is the ill
 	let foo be a random number from 1 to 2;
 	if foo is:
 		-- 1: say "The [random lit visible thing] [random light-verb] "; [The glowing blorb shines on a sprocket.]
-		-- 2: say "The [color of random lit visible thing] [random light-noun] from [a random lit visible thing] [random light-verb] "; [The shifting light from the glowing blorb illuminates a sprocket.]
+		-- 2: say "The [color of random lit visible thing] [random light-noun] from [the random lit visible thing] [random light-verb] "; [The shifting light from the glowing blorb illuminates a sprocket.]
 	list the contents of the location, as a sentence, listing marked items only;
 	say ".";
 
-Rule for printing a parser error when the latest parser error is the can't see any such thing error:
-	say "There isn't a [noun] in sight!" instead;
+[Rule for printing a parser error when the latest parser error is the can't see any such thing error:
+	say "There isn't a [topic understood] in sight!" instead;]
 
 Book 3 - Scenery, Furniture, and Props
 
@@ -275,6 +277,7 @@ A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 Chapter 2 - Appliances
 
+[this is only for light sources that can be manipulated! static light-bearing things should be just things]
 A lightsource is a kind of device. A lightsource is usually red, lit, and switched on.
 
 Carry out switching on the lightsource (called the flash):
@@ -972,7 +975,7 @@ The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark
 {{'Disarray' is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood."
 
 A container called a chemical shower is here. The shower is [transparent, ]openable, enterable, and closed.
-"A green vinyl curtain is drawn across the entrance to a small chemical shower."
+"A green vinyl curtain [if open]hangs to one side of[else]is drawn across[end if] the entrance to a small chemical shower."
 The description is "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
 The inside-description is "The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a drain underfoot must be where it goes. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
 [the room description should appear slightly shrouded when the curtain is closed]
@@ -989,27 +992,43 @@ Report closing the shower: say "You tug the curtain across the entrance." instea
 A vinyl curtain is part of the chemical shower. The curtain is green and scenery.
 The description is "A sheet of emerald plastic hangs from a curtain rod."
 
+Does the player mean taking the vinyl curtain: it is likely.
+
+Check opening the curtain: try opening the shower instead.
+
+Check closing the curtain: try closing the shower instead.
+
+Check taking the vinyl curtain: say "What are you going to do with that much plastic sheeting and no[if clothed]t enough[end if] pockets? Best to leave it where it is for now." instead.
+
 A curtain rod is part of the vinyl curtain. The rod is grey and scenery.
 The description is "A metal rod has been bolted into either side of the chemical shower, where it continues to hold the shower curtain in place."
 
-A lightsource called a chemical lamp is inside the shower. The lamp is yellow and scenery.
+Does the player mean opening the curtain rod: it is very unlikely.
+Does the player mean closing the curtain rod: it is very unlikely.
+
+Check taking the curtain rod: say "It's bolted to either side of the chemical shower. Need to find a wrench." instead.
+
+A chemical lamp is inside the shower. The lamp is yellow, lit, and scenery.
 The description is "A simple chemical light is glued to the roof of the shower. They say these are supposed to be good for a couple centuries; you suppose this one has at least another century and nine-tenths to go before it burns out."
 
 Instead of switching off the chemical lamp: say "It can't be switched off."
 
 A showerhead is inside the shower. The showerhead is scenery. The description is "A metal shower head. It hangs directly above, and appears to thread onto a pipe."
 
-A drainspout is inside the shower. The drainspout is scenery. The description is "An eight-inch round metal grate has been set into the floor."
+A shower drain is inside the shower. The shower drain is scenery. The description is "An eight-inch round metal grate has been set into the floor."
+Does the player mean doing something with the shower drain: it is unlikely.
 
 A pushbutton called the shower cycle button is inside the chemical shower. The printed name is "cycle button". "The only controls in here are a fist-sized button labeled 'PUSH' in big block letters." The description is "A single black rubberized button, large enough to hit blindly in a panic if need be.[first time][br]A lightning-flash of memory: eyes burning pain eating around eye sockets like the devil's fingers scooping the -[br]You stifle that thought even as remembering it triggers a quick squirt of adrenaline like a cold hand trailing down your spine.[only]"
-
-Before pushing the shower cycle button:
-	if the chemical shower is open:
-		try closing the chemical shower;
 
 Check pushing the shower cycle button:
 	if Drain The Blood has not ended:
 		say "You can practically feel that shower already, but the slick wall-to-wall scarlet on the floor stays your hand. No matter how clean you get, stepping back into that murk is going to make you just as dirty as before." instead;
+	if the player is not inside the chemical shower:
+		say "Shouldn't waste water by running the shower without anyone inside." instead;	
+
+Before pushing the shower cycle button:
+	if the chemical shower is open:
+		try closing the chemical shower;
 
 Carry out pushing the shower cycle button:
 	now the player is clean;
@@ -1125,11 +1144,14 @@ After unlocking the drain with the piece of scrap:
 [perhaps fix the action-on-drain issue by putting it into scope when applicable? would probably suit the inform outlook better]
 [when the blood is drained out, it's vented directly into space? since it's waste anyway? maybe into water reclamation (taking dropped things with it)?]
 
-A mysterious corpse is here.
+A mysterious corpse is here. The corpse is fixed in place.
 "Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place."
 The description is "The body's been mutilated and has probably been in here a couple days, judging from the disgusting pallor. Next to the corpse's hand, '4444' has been scrawled in blood along the wall." 
 
-A lightsource called an emergency lightstrip is here. It is red, infrared, scenery, lit, and switched on.
+Check taking the corpse:
+	say "Just being ankle deep in this disgusting gore [if Drain the Blood has ended]was [else]is [end if]enough; there's no way you're going to add to your troubles. Best leave the dead alone." instead;
+
+An emergency lightstrip is here. It is red, lit, and scenery.
 The description is "A series of cheap lights have been sunk into a chunk of red plastex about three feet long. The matte surface keeps the scarlet light from being harsh. Three of them are spaced across the ceiling."
 
 A door called the medbay door is west of Hallway A and east of the Medical Bay. It is locked and unopenable.
@@ -1191,12 +1213,13 @@ Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. G
 
 Drain The Blood is a scene. Drain The Blood begins when Autodoc Escape ends. Drain The Blood ends when the pool of blood is in the drain.
 
-Every turn during Drain The Blood:
-	if a random chance of 1 in 3 succeeds:
-		say "[one of]Syrupy ichor gurgles and splashes partway up your calf as you move through the room.[or]
-		You shiver and slap your forearms, trying to keep blood circulating through your hands.[or]
-		A coil of stench unwinds into your nostrils: you gag and fight back the dry heaves.[or]
-		A foot slips on something slick as you move through the room. You keep your footing, but only just.[then at random]";
+Every turn during Drain The Blood (this is the disgusting ichor rule):
+	if the location is the Medical Bay:
+		if a random chance of 1 in 4 succeeds:
+			say "[one of]Syrupy ichor gurgles and splashes partway up your calf as you move through the room.[or]
+			You shiver and slap your forearms, trying to keep blood circulating through your hands.[or]
+			A coil of stench unwinds into your nostrils: you gag and fight back the dry heaves.[or]
+			A foot slips on something slick as you move through the room. You keep your footing, but only just.[then at random]";
 
 Take A Shower is a scene. Take A Shower begins when Autodoc Escape ends. Take A Shower ends when the player is clean.
 
@@ -1241,6 +1264,7 @@ Report current-light-level:
 	mention the light level;
 	say "{{Light-bearing things: [list of lit things enclosed by the location]}}[br]";
 	say "{{Player scope: [list of visible things]}}";
+	consider the illumination rule;
 
 Understand "SOUNDCHECK [any thing]" as listen-testing.
 Listen-testing is an action applying to one visible thing.
