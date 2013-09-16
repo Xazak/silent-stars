@@ -830,7 +830,7 @@ Instead of examining yourself:
 
 Volume 2 - The Starlight Dancer
 
-The player is in the rocky shore.[move the player back to the rocky shore before releasing]
+The player is in the autodoc.[move the player back to the rocky shore before releasing]
 
 Book 1 - Dreamtime
 
@@ -964,15 +964,20 @@ Report closing the autodoc door:
 	say "There is a hiss of air as the hatch seals pressurize." instead;
 
 Report going through the autodoc door to the Medical Bay during Autodoc Escape:
-	say "You sit up, lift open the hatch with one shoulder, and roll over the lip of the autodoc. The fall to the ground is thankfully short.";
+	say "You sit up, lift open the hatch with one shoulder, and roll over the lip of the autodoc. The fall to the ground is thankfully short.[br][br]You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your addled head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.";
 
 The hatch window is part of the autodoc door. The description of the hatch window is "The frosted plastex shows only flickers of dim light on the ceiling above." 
+
+Instead of searching the hatch window: try examining the hatch window instead.
 
 Part 2 - The Medical Bay
 
 The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark.
-"[first time]You make a [i]splash[/i] instead of a [i]thud[/i] when you land. As you raise your {{drug-addled}} head to look, you choke down the urge to vomit as you realize the syrupy black gunk coating your arms up to the bicep is half-dried blood. The puddle is almost ankle-deep and wall-to-wall.[br][br][only]
-{{'Disarray' is putting it mildly:}} every single cabinet in the room is open and empty. Some of the doors have been torn off the hinges and lie mangled in a corner. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood."
+"The Medical Bay is a wreck: most of the cabinets have been torn off their hinges and twisted medical debris litters the room[if Drain the Blood has ended]. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood[end if]."
+
+The floor crap is scenery in the Medical Bay. The description is "Anything of value was removed from this room when it was ransacked by whatever tore the room apart. Aside from the autodoc and your gear locker, that is."
+
+Understand "floor/glass/paraphernalia/dried blood" as the floor crap. 
 
 A container called a chemical shower is here. The shower is [transparent, ]openable, enterable, and closed.
 "A green vinyl curtain [if open]hangs to one side of[else]is drawn across[end if] the entrance to a small chemical shower."
@@ -1036,26 +1041,21 @@ Carry out pushing the shower cycle button:
 Report pushing the shower cycle button:
 	say "You slap the cycle activation button. The warm water on your corpse-chilled flesh stings at first, but a moment or two later and it's the best thing you can remember feeling in a long time.[br]The water stops, and you realize you haven't actually scrubbed down. You hit the cycle button again (tamping down a brief pang of guilt - 'Water is liquid gold aboard a starship!') and use the little plastic scrubber to get all the nooks and crannies.[br][i]Much[/i], much better." instead;
 
-A container called some lockers is here. The lockers are open and not openable.
-"A bank of gear lockers along one wall have received a similar treatment as the cabinets."
-The description is "The crew lockers are busted to hell, though they're usually empty anyway. They're only meant as temporary storage, until the assigned crewman gets back on their feet[first time].[br][br]The locker on the far end appears to be intact: the lock panel on its face glows red[only]."
-
-After examining some lockers for the first time:
-	now the personal locker is not scenery;
-	now some lockers are scenery;
+A container called some lockers is here. The lockers are scenery, open and not openable.
+The description is "The crew lockers are busted to hell, though they're usually empty anyway. They're only meant as temporary storage, until the assigned crewman gets back on their feet."
 
 Instead of inserting something into some lockers: say "None of the [if personal locker is familiar]other [end if]lockers look like they will support weight."
 
 Does the player mean doing something with some lockers: it is unlikely.
 
 A container called the personal locker is here. The personal locker is locked and fixed in place. The color of the personal locker is red.
-"One of the gear lockers is still intact; the controls glow [color of combo lock]."
-The description is "The nameplate reads 'E. Lumien'. It looks like it's [if unlocked]un[end if]locked."
+"A bank of gear lockers along one wall have received a similar treatment as the cabinets. [if personal locker is familiar]Your [else]One [end if]gear locker is still intact; the controls glow [color of combo lock]."
+The description is "The nameplate reads 'E. Lumien'. It's [if unlocked]un[end if]locked."
 
 After examining the personal locker for the first time:
-	now the initial appearance of the personal locker is "Your gear locker sits at the end of the row, controls glowing [color of personal locker]."
+	now the initial appearance of the personal locker is "Your gear locker sits at the end of the row, controls glowing [color of combo lock]."
 
-Understand "far/my locker" as the personal locker.
+Understand "far/my gear locker" as the personal locker.
 
 A dial called the combo lock is part of the personal locker. The combo lock is red.
 The description is "The locker will open provided you enter the correct 4-digit PIN. The lock is currently [color of combo lock]: the locker is [if personal locker is unlocked]un[end if]locked."
@@ -1081,6 +1081,8 @@ After closing the personal locker:
 
 A jumpsuit is inside the personal locker. The jumpsuit is wearable and indigo. "A clean and folded jumpsuit rests on the shelf of the locker." The description is "It's a standard crew shipsuit, colored indigo, with the Starlight Dancer's black-and-gold insignia on the left shoulder. No name on it; your personal jumpsuits are back in your cabin."
 
+Understand "crew shipsuit" as the jumpsuit.
+
 A remedy called a bandage is inside the personal locker. "A sterile adhesive bandage, still in its wrapper, lies on the shelf of the locker." The description is "An adhesive bandage. It's basically an extra-big bandaid; the long adhesive strips let you get it on practically anywhere you need it." 
 The usefulness of the bandage is 1. The applications of the bandage are {right hand}. The factors of the bandage are {laceration}.
 
@@ -1102,27 +1104,38 @@ The piece of scrap is unstashable.
 Report the player taking the piece of scrap:
 	say "You find and take a handy-looking bit of metal[if the drain is familiar]. This should be just the thing to unclog that drain with[end if]." instead;
 
-Report the player dropping the piece of scrap when Drain The Blood has ended:
-	say "You toss the foully-choked piece of junk aside. Won't need that again.";
-	remove the piece of scrap from play;
-
 After examining the pile of junk:
 	if the drain is familiar and the pile of junk is occupied:
 		try the player taking the piece of scrap;
 		
-A pool of blood is here. The blood is fixed in place.
+A container called a pool of blood is here. The blood is fixed in place and closed.
 "The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much."
 The description is "The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
 
-After examining the pool of blood for the first time:
+After examining the pool of blood:
 	say "You can't see a drain through the murky surface, but if you had to guess it'd be right about in the middle of the floor. You'll have to search for it a bit though.";
 
-Instead of searching the blood:
+Before searching the pool of blood: now the pool of blood is open.
+
+Report searching the pool of blood:
+	say "You take a breath and hold it before plunging both hands into the murk and feeling your way across the floor. The drain is (fortunately) right where you expected. However, your hand grazes something obscenely organic clogging the drainspout, slick and coarse and squelchy-wet. The sensation makes you recoil in disgust; you slip an inch or two on the tile but recover before falling in." instead;
+
+Before dropping something (called the potato) while Drain The Blood has not ended:
+	if the personal locker is open:
+		try silently inserting the potato into the personal locker;
+		say "You carefully store the [potato] in the open locker." instead;
+	otherwise:
+		if the personal locker is familiar:
+			say "If you drop anything on the floor in here it's going to get really disgusting really fast. You should keep your things in a locker until you clean things up in here." instead;
+		otherwise:
+			say "Bad idea to drop that in here until you get the blood cleaned up." instead; 
+	
+[Instead of searching the blood:
 	move the drain to the Medical Bay;
 	now the drain is familiar;
-	say "You take a breath and hold it before plunging both hands into the murk and feeling your way across the floor. The drain is (fortunately) right where you expected. However, your hand grazes something obscenely organic clogging the drainspout, slick and coarse and squelchy-wet. The sensation makes you recoil in disgust; you slip an inch or two on the tile but recover before falling in.";
+	say "You take a breath and hold it before plunging both hands into the murk and feeling your way across the floor. The drain is (fortunately) right where you expected. However, your hand grazes something obscenely organic clogging the drainspout, slick and coarse and squelchy-wet. The sensation makes you recoil in disgust; you slip an inch or two on the tile but recover before falling in.";]
 	
-There is a closed locked container called a drain. The drain is fixed in place.
+A closed locked container called a drain is inside the pool of blood. The drain is fixed in place.
 "[if the pool of blood is not in the drain]A clogged drain lies under the rippling surface of the pool.[else]A steel mesh drain has been set into the middle of the tile floor."
 The description is "[if the drain is locked]You gingerly reach out and touch the drain, trying not to brush up against that disgusting clog too much. [end if]The drain is about six inches across and made of punched steel; they're a standard fixture on all starships."
 The matching key of the drain is the piece of scrap.
@@ -1137,9 +1150,11 @@ Check unlocking the drain with something (called the drainsnake):
 		say "Even if you were willing to tear that clog out by hand - the mere thought sends a frisson of disgust up your spine - you doubt you could. You'll need some kind of a hook or tool to unclog the drain." instead;
 
 After unlocking the drain with the piece of scrap:
+	move the drain to the Medical Bay;
 	move the pool of blood to the drain;
 	say "You use the hook-shaped scrap to tug the clog out, splashing more filth up your arms and chest. The pool of blood gurgles as it whirls down the drain.";
-	try the player dropping the piece of scrap;
+	say "You toss the foully-choked piece of junk aside. Won't need that again.";
+	remove the piece of scrap from play;
 
 [perhaps fix the action-on-drain issue by putting it into scope when applicable? would probably suit the inform outlook better]
 [when the blood is drained out, it's vented directly into space? since it's waste anyway? maybe into water reclamation (taking dropped things with it)?]
@@ -1148,7 +1163,7 @@ A mysterious corpse is here. The corpse is fixed in place.
 "Against the wall, tucked fetal into the corner, lies a corpse wearing a shipsuit. If it weren't for the shipsuit, you'd never know it was a corpse in the first place."
 The description is "The body's been mutilated and has probably been in here a couple days, judging from the disgusting pallor. Next to the corpse's hand, '4444' has been scrawled in blood along the wall." 
 
-Check taking the corpse:
+Instead of doing anything except examining with the corpse:
 	say "Just being ankle deep in this disgusting gore [if Drain the Blood has ended]was [else]is [end if]enough; there's no way you're going to add to your troubles. Best leave the dead alone." instead;
 
 An emergency lightstrip is here. It is red, lit, and scenery.
@@ -1173,7 +1188,7 @@ Book 1 - Before
 
 When play begins:
 	set the status line;
-	[Introductory text goes here]
+	[[Introductory text goes here]
 	say "At the time, I considered 'Chief Engineer' aboard the Starlight Dancer one of the highlights of my career. It was the first time anyone from the Europan Engineer's Fellowship had been chosen. To be perfectly technical, it wasn't the EEF's fault that Aurita did what she did. We signed waivers, we knew there was experimental tech aboard, the usual boilerplate for bleeding-edge research vessels. It was what we wanted: big toys in a new sandbox and no supervision.";
 	wait for any key;
 	say "[br]I guess we got a little big for our britches. If I never see the inside of a spacecan again it'll be too soon.";
@@ -1183,7 +1198,7 @@ When play begins:
 	say "[br]Nothing does, so far as anyone knows. And these other jokers, they had [i]successful[/i] missions, or even just break-even missions. Their dreams are a little weird, otherwise pleasant or at worst harmless.";
 	wait for any key;
 	say "[br]I'm the only one with a void file, the only one who came back from the Starlight Dancer. My dreams are blackest cold, the chill the sinners lying under Cocytus must feel at night. I can feel the frost reach down my throat, right into the bottom of my lungs where the death rattle must be. The frost never quite melts back out afterward, and right there next to your guts for the rest of your life is a little puddle of ice water.";
-	wait for any key;
+	wait for any key;]
 
 Book 2 - During
 
