@@ -347,9 +347,12 @@ Part 3 - The Player's Persocom
 Chapter 1 - The Hardware
 
 A computer called the persocom is in the backpack. The description is "It's a small personal computer, affectionately called a 'sidebrain' by most engineers, of the sort to be worn on the forearm. These are truly the modern workhorse aboard a spacecan: now that you have one again, you can access all of the ship systems and make changes, once you're connected in." The dark-description is "The [color of persocom] [random light-noun] cast by the persocom throw peculiarly [if switched off]in[end if]distinct shadows across the walls and ceiling."
-Understand "sidebrain" or "computer" as the persocom.
+Understand "sidebrain" as the persocom.
 The persocom is wearable, green, and infrared.
 A selection device called persocom's touchpad is part of the persocom. A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. A PS-plug called the device extension jack is part of the persocom. The type of the extension jack is "device".
+
+Before examining the persocom:
+	if the persocom is switched on, try the player examining the persocom's screen instead.
 
 Carry out switching on the persocom:
 	now the persocom is lit;
@@ -393,7 +396,9 @@ Chapter 2 - The Software
 Section 1 - The OS
 
 The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 1. The options table of the operating system is the Table of GUI Options. A thing called the active-cnxn is part of the persocom. The active-cnxn is either wired or wireless.
-The description of the operating system is "--PERSO.SYS v17revA//1.2--[paragraph break][options-list of the operating system]".
+The description of the operating system is "--PERSO.SYS v17revA//1.2--
+
+[paragraph break][options-list of the operating system]".
 
 To say options-list of the operating system:
 	say "The following options are visible on the screen:[paragraph break]"; 
@@ -945,7 +950,7 @@ Check pushing the exit button:
 		if the control panel is active:
 			say "ERROR: Completion of surgery cycle has not been confirmed." instead;
 		otherwise:
-			say "ERROR: [printed name of autodoc's hatch] is locked." instead;
+			say "ERROR: Autodoc door is locked." instead;
 
 Carry out pushing the exit button:
 	now the autodoc door is open;
@@ -954,7 +959,15 @@ Carry out pushing the exit button:
 Report pushing the exit button:
 	say "A beat passes, and then the hatch seal on the [printed name] disengages with a whoosh of pressurized air. The stench of old blood quickly replaces the tang of disinfectants." instead;
 
-A door called the autodoc door is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex [printed name of hatch window] is set into the hatch above you.[else]The dark hulk of the autodoc crouches in one corner." It is locked. The printed name of the Autodoc's hatch is "hatch". The description of the autodoc's hatch is "The door of the coffin. There is a tiny plastex window the size of a playing card directly in front of your head, and a control panel a few inches below that."
+A door called the autodoc door is outside of the Autodoc and inside of the Medical Bay. "[if player is in Autodoc]A small plastex window the size of a playing card is directly in front of you, and a control panel a few inches below that.[else]The dark hulk of the autodoc crouches in one corner." 
+[The description of the autodoc door is "[if player is in Autodoc]Aside from the window and control panel, the autodoc - door included - is made of the same stuff as the ship hull. One of the controls should unseal the door though.[else]The low bulky machine takes up an entire corner of the room. This machine alone cost as much as a troop transport fresh out the factory, and the only people who get their hands on them these days the spacers, the ones who might have no other choice." ]
+To say the description of the autodoc door:
+	if the player is in the autodoc:
+		say "Aside from the window and control panel, the autodoc - door included - is made of the same stuff as the ship hull. [if autodoc door is open]The left edge of the hatch is cracked open an inch or three.[else]One of the controls should unseal the door though.";
+	otherwise:
+		say "The low bulky machine takes up an entire corner of the room. This machine alone cost as much as a troop transport fresh out the factory, and the only people who get their hands on them these days the spacers, the ones who might have no other choice. [if autodoc door is open]Wan light from the autodoc control panel leaks out from the open hatch.[else]The only light from the sealed hatch is from the little window on top.";
+	
+The autodoc door is locked.
 
 Before opening the autodoc door:
 	say "You reach up and push the exit button.[command clarification break]"; 
@@ -982,7 +995,7 @@ Understand "floor/glass/paraphernalia/dried blood" as the floor crap.
 A container called a chemical shower is here. The shower is [transparent, ]openable, enterable, and closed.
 "A green vinyl curtain [if open]hangs to one side of[else]is drawn across[end if] the entrance to a small chemical shower."
 The description is "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
-The inside-description is "The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a drain underfoot must be where it goes. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
+The inside-description is "The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a simple hole underfoot must be where it goes. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
 [the room description should appear slightly shrouded when the curtain is closed]
 
 Does the player mean entering the shower: it is likely.
@@ -1020,8 +1033,8 @@ Instead of switching off the chemical lamp: say "It can't be switched off."
 
 A showerhead is inside the shower. The showerhead is scenery. The description is "A metal shower head. It hangs directly above, and appears to thread onto a pipe."
 
-A shower drain is inside the shower. The shower drain is scenery. The description is "An eight-inch round metal grate has been set into the floor."
-Does the player mean doing something with the shower drain: it is unlikely.
+A simple hole is inside the shower. The simple hole is scenery. The description is "This is where the shower drains into, a one-inch hole cut into the plastic underfoot."
+Does the player mean doing something with the simple hole: it is unlikely.
 
 A pushbutton called the shower cycle button is inside the chemical shower. The printed name is "cycle button". "The only controls in here are a fist-sized button labeled 'PUSH' in big block letters." The description is "A single black rubberized button, large enough to hit blindly in a panic if need be.[first time][br]A lightning-flash of memory: eyes burning pain eating around eye sockets like the devil's fingers scooping the -[br]You stifle that thought even as remembering it triggers a quick squirt of adrenaline like a cold hand trailing down your spine.[only]"
 
@@ -1109,13 +1122,15 @@ After examining the pile of junk:
 		try the player taking the piece of scrap;
 		
 A container called a pool of blood is here. The blood is fixed in place and closed.
-"The floor is ankle-deep in blood. It gurgles and sloshes as you move about. You try not to move around too much."
+"The floor is ankle-deep in blood. It gurgles and sloshes as you move about. [if the drain is seen][initial appearance of the drain][end if]".
 The description is "The emergency lighting makes it look near-black, with a monochrome-red sheen almost like machine oil. You'd prefer the smell of machine oil over this organic reek, come to that."
 
-After examining the pool of blood:
+After examining the pool of blood while the drain is unseen:
 	say "You can't see a drain through the murky surface, but if you had to guess it'd be right about in the middle of the floor. You'll have to search for it a bit though.";
 
 Before searching the pool of blood: now the pool of blood is open.
+
+Carry out searching the pool of blood: now the drain is seen.
 
 Report searching the pool of blood:
 	say "You take a breath and hold it before plunging both hands into the murk and feeling your way across the floor. The drain is (fortunately) right where you expected. However, your hand grazes something obscenely organic clogging the drainspout, slick and coarse and squelchy-wet. The sensation makes you recoil in disgust; you slip an inch or two on the tile but recover before falling in." instead;
