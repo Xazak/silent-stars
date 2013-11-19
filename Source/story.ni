@@ -395,24 +395,35 @@ Chapter 2 - The Software
 
 Section 1 - The OS
 
-The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 1. The options table of the operating system is the Table of GUI Options. A thing called the active-cnxn is part of the persocom. The active-cnxn is either wired or wireless.
-The description of the operating system is "--PERSO.SYS v17revA//1.2--
+The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 1. The options table of the operating system is the Table of GUI Options.
+The description of the operating system is "(You can enter commands on the persocom by typing 'persocom' followed by the name of the program, i.e. 'persocom help'.)
+[paragraph break]--PERSO.SYS v17revA//1.2--[br]
+Issue the 'help' command for more info.[br]
+((extension-jack-device)) is connected via extension jack.[br]
+((wireless-assoc-device)) is connected via wifi.".
 
-[paragraph break][options-list of the operating system]".
+Understand the command "ps" and "persocom" as "type". [Default synonyms for "type": enter, key, input, select]
 
 To say options-list of the operating system:
-	say "The following options are visible on the screen:[paragraph break]"; 
+	say "The following commands are available on this terminal:[paragraph break]"; 
 	repeat through the options table of the operating system:
 		if display entry is true, say "[title entry][line break]";
 	say "[run paragraph on]".
 
 Table of GUI Options
 topic	title	effect	display
-"view devices"	"View Devices"	list-open-cnxns rule	true
+"wifi"	"WiFi"	init-wifi-assoc rule	true
+"disconnect"	"Disconnect"	disconnect-wifi-assoc rule	false
+"extension"	"Extension"	access-cnxed-device rule	true
+"help"	"Help"	get-persocom-help rule	true
+
+[topic	title	effect	display
+["view devices"	"View Devices"	list-open-cnxns rule	true]
 "wireless"	"Wireless"	init-device-cnxn rule	true
 "access cnxn"	"Access Cnxn"	access-connected-program rule	false
 "access link"	"Access Link"	access-linked-program rule	false
 "disconnect"	"Disconnect"	disconnect-wireless-link rule	false
+"help"	"Help"	display-persocom-help rule	true]
 
 The persocom operations rules are a rulebook.
 The attack vector is a rule that varies.
@@ -446,6 +457,10 @@ To give focus to (warez - some software):
 	now the software priority of the warez is 1;
 	try examining the warez;
 
+A persocom operations rule (this is the get-persocom-help rule):
+	refresh the GUI;
+	say the options-list of the operating system;
+
 A persocom operations rule (this is the list-open-cnxns rule):
 	say "Ext Cable: [if there is nothing connected to the persocom]--no connection--[otherwise]a thing is connected[end if][br]";
 	repeat with target running through broadcasting things:
@@ -454,8 +469,8 @@ A persocom operations rule (this is the list-open-cnxns rule):
 			now the attack vector is the icebreaker against the gateway;
 			say "Attack vector: [attack vector]...";
 					
-A persocom operations rule (this is the init-device-cnxn rule):
-	if the attached system is not nothing, say "Skipping the extension port until software prompts are written.";
+A persocom operations rule (this is the init-wifi-assoc rule):
+	if the attached system is not nothing, say "Access the extension jack using the Extension command.";
 	blank out the whole of the Table of Available Connections;
 	repeat with target running through broadcasting things:
 		choose a blank row in the Table of Available Connections;
