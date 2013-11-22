@@ -110,8 +110,66 @@ Report an actor waiting:
 
 Part 4 - Status Line, Game HUD, Misc
 
-To set the status line:
-	now the right hand status line is "[time of day as 24h time]";
+[To set the status line:
+	now the right hand status line is "[time of day as 24h time]";]
+
+Definition: a person is mundane rather than augmented if she is wearing the persocom.
+
+Rule for constructing the status line while the player is mundane:
+	fill status bar with Table of Mundane Status;
+	rule succeeds.
+	
+Table of Mundane Status
+left	central	right
+" [location of player], in the {shadows}"	""	""
+" Status: Healthy"	""	""
+" "	""	""
+
+Rule for constructing the status line while the player is augmented:
+	fill status bar with Table of Augmented Status;
+	rule succeeds.
+
+Table of Augmented Status
+left	central	right
+" |[top rose]|"	"[location of player]"	"{shadows}"
+" |[middle rose]|"	" Status: Healthy"	"[time of day as 24h time]"
+" |[bottom rose]|"	" >>..."	""
+
+To say rose (way - a direction):
+	let place be the room way from the location;
+	if the place is a room, say "[way abbreviation]"; otherwise say "[way spacing]"; 
+
+To say (way - a direction) abbreviation:
+	choose row with a chosen way of way in the Table of Various Directions;
+	say abbrev entry.
+	
+To say (way - a direction) spacing:
+	choose row with a chosen way of way in the Table of Various Directions;
+	say spacing entry.
+
+Table of Various Directions
+chosen way	abbrev	spacing
+northwest	"NW_"	"___"
+north	"_N_"	"___"
+northeast	"_NE"	"___"
+east	"--E"	"---"
+west	"W--"	"---"
+southeast	"`SE"	"```"
+south	"`S`"	"```"
+southwest	"SW`"	"```"
+inside	"-I-"	"---"
+outside	"-O-"	""
+up	"_U_"	"___"
+down	"`D`"	"```"
+	
+To say top rose:
+	say "[rose northwest][rose north][rose northeast][rose up]".
+
+To say middle rose: 
+	say "[rose west][rose inside][rose outside][rose east]"; [need to insert a check for if both in and out are valid] 
+
+To say bottom rose:
+	say "[rose southwest][rose south][rose southeast][rose down]".
 
 To beep:
 	say "Beep!"
@@ -349,7 +407,11 @@ Chapter 1 - The Hardware
 A computer called the persocom is in the backpack. The description is "It's a small personal computer, affectionately called a 'sidebrain' by most engineers, of the sort to be worn on the forearm. These are truly the modern workhorse aboard a spacecan: now that you have one again, you can access all of the ship systems and make changes, once you're connected in." The dark-description is "The [color of persocom] [random light-noun] cast by the persocom throw peculiarly [if switched off]in[end if]distinct shadows across the walls and ceiling."
 Understand "sidebrain" as the persocom.
 The persocom is wearable, green, and infrared.
-A selection device called persocom's touchpad is part of the persocom. A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. A PS-plug called the device extension jack is part of the persocom. The type of the extension jack is "device".
+A selection device called persocom's touchpad is part of the persocom. 
+A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. 
+A PS-plug called the device extension jack is part of the persocom. The type of the extension jack is "device". 
+Cnxn-type is a kind of value. The cnxn-types are dormant, wired and wireless. 
+The persocom has a cnxn-type called the active-cnxn. The active-cnxn of the persocom is dormant.
 
 Before examining the persocom:
 	if the persocom is switched on, try the player examining the persocom's screen instead.
@@ -404,7 +466,7 @@ Issue the 'help' command for more info.[br]
 
 Understand the command "ps" and "persocom" as "type". [Default synonyms for "type": enter, key, input, select]
 
-To say options-list of the operating system:
+To say the options-list of the operating system:
 	say "The following commands are available on this terminal:[paragraph break]"; 
 	repeat through the options table of the operating system:
 		if display entry is true, say "[title entry][line break]";
@@ -416,6 +478,9 @@ topic	title	effect	display
 "disconnect"	"Disconnect"	disconnect-wifi-assoc rule	false
 "extension"	"Extension"	access-cnxed-device rule	true
 "help"	"Help"	get-persocom-help rule	true
+
+This is the disconnect-wifi-assoc rule: do nothing.
+This is the access-cnxed-device rule: do nothing.
 
 [topic	title	effect	display
 ["view devices"	"View Devices"	list-open-cnxns rule	true]
@@ -1216,9 +1281,8 @@ Volume 3 - Action
 
 Book 1 - Before
 
-When play begins:
-	set the status line;
-	[[Introductory text goes here]
+[When play begins:
+	[Introductory text goes here]
 	say "At the time, I considered 'Chief Engineer' aboard the Starlight Dancer one of the highlights of my career. It was the first time anyone from the Europan Engineer's Fellowship had been chosen. To be perfectly technical, it wasn't the EEF's fault that Aurita did what she did. We signed waivers, we knew there was experimental tech aboard, the usual boilerplate for bleeding-edge research vessels. It was what we wanted: big toys in a new sandbox and no supervision.";
 	wait for any key;
 	say "[br]I guess we got a little big for our britches. If I never see the inside of a spacecan again it'll be too soon.";
