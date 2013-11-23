@@ -3,6 +3,7 @@
 Use dynamic memory allocation of at least 16384.
 
 Include Basic Screen Effects by Emily Short.
+Include Glulx Text Effects by Emily Short.
 Include Locksmith by Emily Short. Use sequential action.
 Include Plugs and Sockets by Sean Turner.
 Include Power Sources by Emily Short.
@@ -26,6 +27,12 @@ To say i -- beginning say_i -- running on: (- style underline; -).
 To say /i -- ending say_i -- running on: (- style roman; -).
 To say b -- beginning say_b -- running on: (- style bold; -).
 To say /b -- ending say_b -- running on: (- style roman; -).
+
+[these are Glulx text styles, invoke them with "say first/second custom style". Only two are allowed]
+Table of User Styles (continued)
+style name	justification	obliquity	indentation	first-line indentation	boldness	fixed width	relative size	glulx color
+special-style-1	right-justified	no-obliquity	0	0	regular-weight	fixed-width-font	0	g-black
+special-style-2	right-justified	no-obliquity	0	0	regular-weight	proportional-font	0	g-black
 
 To say br: say line break; [use "[br]"]
 
@@ -81,6 +88,7 @@ The verb to abut (he abuts, they abut, he abutted, it is abutted, he is abutting
 
 The verb to be next to implies the neighboring relation.
 
+Definition: a direction (called thataway) is viable if the room thataway from the location is a room.
 Definition: a thing is immediate if it is in the location.
 Definition: a thing (called the item) is nearby if the location of the item is next to the location of the player.
 Definition: a thing is proximate:
@@ -121,7 +129,7 @@ Rule for constructing the status line while the player is mundane:
 	
 Table of Mundane Status
 left	central	right
-" [location of player], in the {shadows}"	""	""
+" [location of player]"	""	""
 " Status: Healthy"	""	""
 " "	""	""
 
@@ -129,47 +137,74 @@ Rule for constructing the status line while the player is augmented:
 	fill status bar with Table of Augmented Status;
 	rule succeeds.
 
-Table of Augmented Status
+[Table of Augmented Status
 left	central	right
 " |[top rose]|"	"[location of player]"	"{shadows}"
-" |[middle rose]|"	" Status: Healthy"	"[time of day as 24h time]"
-" |[bottom rose]|"	" >>..."	""
+" |[middle rose]|"	"Status: Healthy"	"[time of day as 24h time]"
+" |[bottom rose]|"	">>..."	""
+]
+
+Table of Augmented Status
+left	central	right
+" [location of player]"	"{shadows}"	"[first custom style]|[top rose]|[roman type]"
+" Status: Healthy"	"[time of day as 24h time]"	"[first custom style]|[middle rose]|[roman type]"
+" >>..."	""	"[first custom style]|[bottom rose]|[roman type]"
 
 To say rose (way - a direction):
 	let place be the room way from the location;
-	if the place is a room, say "[way abbreviation]"; otherwise say "[way spacing]"; 
+	if the place is a room, say "[way abbreviation]"; otherwise say "[way spacing]";
 
 To say (way - a direction) abbreviation:
 	choose row with a chosen way of way in the Table of Various Directions;
-	say abbrev entry.
+	say abbrev entry;
 	
 To say (way - a direction) spacing:
 	choose row with a chosen way of way in the Table of Various Directions;
-	say spacing entry.
+	say spacing entry;
+
+[Table of Various Directions
+chosen way	abbrev	spacing
+northwest	"NW-"	"---"
+north	"-N-"	"---"
+northeast	"-NE"	"---"
+east	"--E"	"---"
+west	"W--"	"---"
+southeast	"-SE"	"---"
+south	"-S-"	"---"
+southwest	"SW-"	"---"
+inside	"-I-"	"---"
+outside	"-O-"	"---"
+up	"-U-"	"---"
+down	"-D-"	"---"]
 
 Table of Various Directions
 chosen way	abbrev	spacing
-northwest	"NW_"	"___"
-north	"_N_"	"___"
-northeast	"_NE"	"___"
-east	"--E"	"---"
-west	"W--"	"---"
-southeast	"`SE"	"```"
-south	"`S`"	"```"
-southwest	"SW`"	"```"
-inside	"-I-"	"---"
-outside	"-O-"	""
-up	"_U_"	"___"
-down	"`D`"	"```"
+northwest	"NW-"	"123"
+north	"-N-"	"456"
+northeast	"-NE"	"789"
+east	"--E"	"789"
+west	"W--"	"123"
+southeast	"-SE"	"789"
+south	"-S-"	"456"
+southwest	"SW-"	"123"
+inside	"-I-"	"456"
+outside	"-O-"	"456"
+up	"^U^"	"0-="
+down	"vDv"	"0-="
 	
 To say top rose:
-	say "[rose northwest][rose north][rose northeast][rose up]".
+	say "[rose northwest][rose north][rose northeast]|[rose up]".
 
 To say middle rose: 
-	say "[rose west][rose inside][rose outside][rose east]"; [need to insert a check for if both in and out are valid] 
+	if inside is viable and outside is viable:
+		say "[rose west]I/O[rose east]|---";
+	else if outside is viable:
+		say "[rose west][rose outside][rose east]|---";
+	otherwise:
+		say "[rose west][rose inside][rose east]|---";
 
 To say bottom rose:
-	say "[rose southwest][rose south][rose southeast][rose down]".
+	say "[rose southwest][rose south][rose southeast]|[rose down]".
 
 To beep:
 	say "Beep!"
@@ -1281,8 +1316,9 @@ Volume 3 - Action
 
 Book 1 - Before
 
-[When play begins:
-	[Introductory text goes here]
+When play begins:
+      change left hand status line to ""; change right hand status line to "";
+	[[Introductory text goes here]
 	say "At the time, I considered 'Chief Engineer' aboard the Starlight Dancer one of the highlights of my career. It was the first time anyone from the Europan Engineer's Fellowship had been chosen. To be perfectly technical, it wasn't the EEF's fault that Aurita did what she did. We signed waivers, we knew there was experimental tech aboard, the usual boilerplate for bleeding-edge research vessels. It was what we wanted: big toys in a new sandbox and no supervision.";
 	wait for any key;
 	say "[br]I guess we got a little big for our britches. If I never see the inside of a spacecan again it'll be too soon.";
