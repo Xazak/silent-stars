@@ -60,6 +60,15 @@ To say (relevant time - a time) as 24h time:
 	say "[if H is less than 10]0[end if][H]:[if M is less than 10]0[end if][M]".
 
 Definition: a number is round if the remainder after dividing it by 10 is 0.
+
+To square (echs - a number):
+	let wye be echs * echs;
+	now echs is wye;
+
+To cube (echs - a number):
+	let wye be echs * echs * echs;
+	now echs is wye;
+	
 Definition: a supporter is occupied rather than empty if something is on it.
 Definition: a container is occupied rather than empty if something is in it.
 
@@ -129,7 +138,7 @@ Rule for constructing the status line while the player is mundane:
 	
 Table of Mundane Status
 left	central	right
-" [location of player]"	""	""
+" [location]"	"[ambient light of location]"	""
 " Status: Healthy"	""	""
 " "	""	""
 
@@ -146,8 +155,8 @@ left	central	right
 
 Table of Augmented Status
 left	central	right
-" [location of player]"	"{shadows}"	"[first custom style]|[top rose]|[roman type]"
-" Status: Healthy"	"[time of day as 24h time]"	"[first custom style]|[middle rose]|[roman type]"
+" [location]"	"[ambient light of location]"	"[first custom style]|[top rose]|[roman type]"
+" Status: [health of the player]"	"[time of day as 24h time]"	"[first custom style]|[middle rose]|[roman type]"
 " >>..."	""	"[first custom style]|[bottom rose]|[roman type]"
 
 To say rose (way - a direction):
@@ -296,7 +305,7 @@ Rule for printing the name of a room (called the place) (this is the new room-na
 	[if the player is in Dreamspace, now light-description-toggle is false;]
 	[if the look action was automatically generated, we're going to skip announcing the name of the room again for now; would be a good place to insert a message later]
 	say bold type;
-	if the printing the announcement of light activity is going on, say "..." instead;
+	if the printing the announcement of light activity is going on, say "printing announcement of light" instead;
 	if light-description-toggle is false, say "[printed name of the place]" instead;
 	if the light level is murky:
 		say "[printed name of the place], in the [random dark-noun]" instead;
@@ -335,6 +344,14 @@ Rule for listing nondescript items while the light level is dim (this is the ill
 [Rule for printing a parser error when the latest parser error is the can't see any such thing error:
 	say "There isn't a [topic understood] in sight!" instead;]
 
+To say ambient light of (place - a room):
+	if the light level is murky:
+		say a random dark-noun;
+	else if the light level is dim:
+		say "dim";
+	else if the light level is bright:
+		say a random light-noun;
+
 Book 3 - Scenery, Furniture, and Props
 
 Part 1 - Platonic Solids
@@ -367,6 +384,7 @@ A light-verb is a kind of value. The light-verbs are shows, illuminates, limns, 
 A dark-noun is a kind of value. The dark-nouns are darkness, gloom, and shadows.
 
 [A flicker is a kind of value. The flickers are insubstantial, insufficient, faint, muted, poor, weak, wavering, dim, low, shadowy, wan, subdued, tenuous, shifting, dull, anemic, frail, ghostly, and flickering.]
+[could change "flicker" to "dim-adj" and use it in conjunction with light-noun for dimness levels?]
 
 Chapter 2 - Appliances
 
@@ -706,6 +724,53 @@ The player has a number called the wound total. [used to count the number of sca
 
 The player has a number called the health index. [used to track the current total severity of all wounds]
 
+To calculate the player's health index:
+	let diagnostic be the list of injured limbs;
+	let status be a list of numbers;
+	if the diagnostic is empty:
+		now the health index of the player is 0;
+	otherwise:
+		repeat with foo running through the diagnostic:
+			add the injury-level of foo to status;
+		sort status in reverse order;
+		let criticality be 0;
+		repeat with bar running through status:
+			if bar is 6:
+				let criticality be 75; [might be worth making a subcondition?]
+			otherwise:
+				square bar;
+				let criticality be criticality plus bar;
+		now the health index of the player is criticality;
+
+To say health of the player:
+	calculate the player's health index;
+	let foo be the health index of the player to the nearest 10;
+	now foo is foo divided by 10;
+	now the health index of the player is foo;
+	say the status corresponding to an index of foo in the Table of Triage Status;
+
+[Instead of examining yourself:
+	let diagnostic be the list of untreated active injuries;
+	say "You pause for a breath and look yourself over:[br][br]";
+	if the diagnostic is empty:
+		say "You're in good health. No problems here.";
+	otherwise:
+		repeat with foo running through the diagnostic:
+			say the description of foo;
+	say line break;
+	]
+
+Table of Triage Status
+index	status
+0	"healthy"
+1	"minor"
+2	"moderate"
+3	"serious"
+4	"severe"
+5	"critical"
+6	"maximal"
+7	"dead"
+
 [carrying capacity rules are built into each appropriate action and issues a library message, will need to override the msg in order to change it]
 [The new can't carry too many things rule replaces the can't exceed carrying capacity rule.
 This is the new can't carry too many things rule:
@@ -716,6 +781,7 @@ This is the new can't carry too many things rule:
 			say "You only have two hands! You'll have to drop some of the things you're carrying to do that." instead;]
 
 A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts.
+A limb has a number called the injury-level. The injury-level is usually 0.
 
 Table of Body Parts
 limb	description
@@ -726,20 +792,16 @@ chest	"OKEY"
 thorax	"OKEY"
 abdomen	"OKEY"
 pelvis	"OKEY"
-left shoulder	"OKEY"
 left arm	"OKEY"
 left hand	"It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]."
-right shoulder	"OKEY"
 right arm	"OKEY"
 right hand	"It's your right hand. [if right hand is healthy]Nothing to see here[else]The only interesting things about it are the scars it's picked up[end if]."
 left leg	"OKEY"
-left knee	"OKEY"
 left foot	"OKEY"
 right leg	"OKEY"
-right knee	"OKEY"
 right foot	"OKEY"
 
-After examining a limb (called the appendix):
+After examining a limb (called the appendix)(this is the mention injuries with limbs rule):
 	if the appendix is harmed by an injury (called the psychoknife):
 		try examining the psychoknife;
 
@@ -749,7 +811,7 @@ A modality is a kind of value. The modalities are laceration, contusion, punctur
 
 A remedy is a kind of thing. The description is usually "A green box with a white + on the front." A remedy has a list of limbs called the applications. The applications are usually {right hand, left hand}. A remedy has a number called the usefulness. The usefulness is usually 1. A remedy has a list of modalities called the factors. The factors are usually {laceration, contusion, puncture, rupture}.
 
-An injury is a kind of thing. The description of an injury is usually "You haz a sad :( ". An injury has a number called the severity. The severity is usually 0. [scale is 0 - OK to 6 - maximal (i.e. impossible to treat)]
+An injury is a kind of thing. The description of an injury is usually "You haz a sad :( ". An injury has a number called the severity. The severity is usually 1. [scale is 0 - harmless to 6 - maximal (i.e. impossible to treat)]
 
 An injury has a limb called the site.
 
@@ -765,17 +827,21 @@ Harming relates various injuries to one limb. The verb to harm (he harms, they h
 Definition: a limb is injured rather than healthy if it is harmed by an untreated injury.
 Definition: a person is injured rather than healthy if she is incorporating an injured limb.
 
-To attack with (mindbullets - an injury):
-	let the strikezone be the site of the mindbullets;
-	now the mindbullets are part of the strikezone;
-	now the mindbullets are harming the strikezone;
-	now the mindbullets are seen;
-	now the mindbullets are familiar;
-	if the mindbullets is:
+To attack with (psychoknife - an injury):
+	let the strikezone be the site of the psychoknife; [the attacker picks a target]
+	now the psychoknife is part of the strikezone; [the attacker is attached to the target]
+	now the psychoknife is harming the strikezone; [the injury relation is created]
+	now the psychoknife is seen;
+	now the psychoknife is familiar;
+	increment the wound total of the player; [healed or not, it's going to leave a scar]
+	increase the injury-level of the strikezone by the severity of the psychoknife; [update the limb's condition]
+	calculate the player's health index; [update the player's physical condition]
+	[wound-specific effects go here, add a new case for each unique wound]
+	if the psychoknife is:
 		-- the jagged slash:
 			decrement the carrying capacity of the player;
 
-After examining an injury (called the psychoknife):
+After examining an injury (called the psychoknife)(this is the examine bandages rule):
 	if the psychoknife is untreated:
 		say "The [printed name of psychoknife] oozes and suppurates. You should get that looked at.";
 	if a remedy (called the blessing) is curing the psychoknife:
