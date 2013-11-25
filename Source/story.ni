@@ -130,7 +130,7 @@ Part 4 - Status Line, Game HUD, Misc
 [To set the status line:
 	now the right hand status line is "[time of day as 24h time]";]
 
-Definition: a person is mundane rather than augmented if she is wearing the persocom.
+Definition: a person is augmented rather than mundane if she is wearing the persocom.
 
 Rule for constructing the status line while the player is mundane:
 	fill status bar with Table of Mundane Status;
@@ -139,7 +139,7 @@ Rule for constructing the status line while the player is mundane:
 Table of Mundane Status
 left	central	right
 " [location]"	"[ambient light of location]"	""
-" Status: Healthy"	""	""
+" Status: [health of the player]"	""	""
 " "	""	""
 
 Rule for constructing the status line while the player is augmented:
@@ -150,14 +150,13 @@ Rule for constructing the status line while the player is augmented:
 left	central	right
 " |[top rose]|"	"[location of player]"	"{shadows}"
 " |[middle rose]|"	"Status: Healthy"	"[time of day as 24h time]"
-" |[bottom rose]|"	">>..."	""
-]
+" |[bottom rose]|"	">>..."	""]
 
 Table of Augmented Status
 left	central	right
 " [location]"	"[ambient light of location]"	"[first custom style]|[top rose]|[roman type]"
 " Status: [health of the player]"	"[time of day as 24h time]"	"[first custom style]|[middle rose]|[roman type]"
-" >>..."	""	"[first custom style]|[bottom rose]|[roman type]"
+" >>[program-output of persocom]"	""	"[first custom style]|[bottom rose]|[roman type]"
 
 To say rose (way - a direction):
 	let place be the room way from the location;
@@ -171,22 +170,22 @@ To say (way - a direction) spacing:
 	choose row with a chosen way of way in the Table of Various Directions;
 	say spacing entry;
 
-[Table of Various Directions
-chosen way	abbrev	spacing
-northwest	"NW-"	"---"
-north	"-N-"	"---"
-northeast	"-NE"	"---"
-east	"--E"	"---"
-west	"W--"	"---"
-southeast	"-SE"	"---"
-south	"-S-"	"---"
-southwest	"SW-"	"---"
-inside	"-I-"	"---"
-outside	"-O-"	"---"
-up	"-U-"	"---"
-down	"-D-"	"---"]
-
 Table of Various Directions
+chosen way	abbrev	spacing
+northwest	"NW-"	" . "
+north	"-N-"	" . "
+northeast	"-NE"	" . "
+east	"--E"	" . "
+west	"W--"	" . "
+southeast	"-SE"	" . "
+south	"-S-"	" . "
+southwest	"SW-"	" . "
+inside	"-I-"	" . "
+outside	"-O-"	" . "
+up	"^U^"	" . "
+down	"vDv"	" . "
+
+[Table of Various Directions
 chosen way	abbrev	spacing
 northwest	"NW-"	"123"
 north	"-N-"	"456"
@@ -199,7 +198,7 @@ southwest	"SW-"	"123"
 inside	"-I-"	"456"
 outside	"-O-"	"456"
 up	"^U^"	"0-="
-down	"vDv"	"0-="
+down	"vDv"	"0-="]
 	
 To say top rose:
 	say "[rose northwest][rose north][rose northeast]|[rose up]".
@@ -465,12 +464,13 @@ A laptop battery compartment called persocom's battery port is part of the perso
 A PS-plug called the device extension jack is part of the persocom. The type of the extension jack is "device". 
 Cnxn-type is a kind of value. The cnxn-types are dormant, wired and wireless. 
 The persocom has a cnxn-type called the active-cnxn. The active-cnxn of the persocom is dormant.
+The persocom has some text called the program-output. The program-output is usually "INACTIVE".
 
 Before examining the persocom:
 	if the persocom is switched on, try the player examining the persocom's screen instead.
 
 Carry out switching on the persocom:
-	now the persocom is lit;
+	now the persocom is lit;	
 	
 Carry out switching off the persocom:
 	now the persocom is unlit; 
@@ -510,7 +510,30 @@ Chapter 2 - The Software
 
 Section 1 - The OS
 
-The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 1. The options table of the operating system is the Table of GUI Options.
+Some software has some text called the activation message. The activation message is usually "The [printed name] expands into the main display area."
+
+The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "boot message 0". The bios can be processing or resting. The bios is resting.
+
+[current settings mean initial description is shown both when pc is booted up and when software is actually given focus, one or both should be suppressed]
+
+An input handling rule for the bios(this is the ignore all input while booting rule):
+	if the bios is processing, say "The persocom beeps; you cannot interrupt it while it's booting up.";
+	rule fails.
+
+Table of Boot Messages
+index	message
+1	"boot message 1."
+2	"boot message 2."
+3	"boot message 3."
+
+Persocom Boot Process is a scene. Persocom Boot Process begins when the persocom is switched on.
+
+When Persocom Boot Process begins:
+	give focus to the bios;
+	now the bios is processing;
+	now the description of the bios is the message corresponding to an index of 1 in the Table of Boot Messages;
+
+The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 2. The options table of the operating system is the Table of GUI Options.
 The description of the operating system is "(You can enter commands on the persocom by typing 'persocom' followed by the name of the program, i.e. 'persocom help'.)
 [paragraph break]--PERSO.SYS v17revA//1.2--[br]
 Issue the 'help' command for more info.[br]
@@ -569,7 +592,7 @@ To refresh the GUI:
 			if nothing is linked to the persocom, now display entry is false; [always hide unless something is linked]
 
 To give focus to (warez - some software):
-	say "Bringing [warez] to the front.";
+	say the activation message of the warez;
 	repeat with bar running through software run by the persocom:
 		now the software priority of bar is 5;
 	now the software priority of the warez is 1;
@@ -744,22 +767,13 @@ To calculate the player's health index:
 
 To say health of the player:
 	calculate the player's health index;
-	let foo be the health index of the player to the nearest 10;
-	now foo is foo divided by 10;
-	now the health index of the player is foo;
-	say the status corresponding to an index of foo in the Table of Triage Status;
-
-[Instead of examining yourself:
-	let diagnostic be the list of untreated active injuries;
-	say "You pause for a breath and look yourself over:[br][br]";
-	if the diagnostic is empty:
-		say "You're in good health. No problems here.";
-	otherwise:
-		repeat with foo running through the diagnostic:
-			say the description of foo;
-	say line break;
-	]
-
+	let h-index be the health index of the player;
+	if the h-index is greater than zero and the h-index is less than 10, now the h-index is 10;
+	let foo be the remainder after dividing the h-index by 10;
+	if foo is greater than zero, now the h-index is the h-index minus foo;
+	now the h-index is the h-index divided by 10;
+	say the status corresponding to an index of the h-index in the Table of Triage Status;
+	
 Table of Triage Status
 index	status
 0	"healthy"
