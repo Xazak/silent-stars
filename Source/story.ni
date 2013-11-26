@@ -464,7 +464,8 @@ A laptop battery compartment called persocom's battery port is part of the perso
 A PS-plug called the device extension jack is part of the persocom. The type of the extension jack is "device". 
 Cnxn-type is a kind of value. The cnxn-types are dormant, wired and wireless. 
 The persocom has a cnxn-type called the active-cnxn. The active-cnxn of the persocom is dormant.
-The persocom has some text called the program-output. The program-output is usually "INACTIVE".
+The persocom has some text called the program-output. The program-output is usually "--  PERSOCOM INACTIVE  --".
+The persocom has some text called the hostname. The hostname is usually "FAWN".
 
 Before examining the persocom:
 	if the persocom is switched on, try the player examining the persocom's screen instead.
@@ -477,12 +478,14 @@ Carry out switching off the persocom:
 
 Carry out an actor plugging something (called the hacktool) into something (called the external system) (this is the set-connection-relation rule):
 	now the the external system is connected to the hacktool;
+	now the active-cnxn is wired;
 	choose row with a title of "Access Cnxn" in the Table of GUI Options;
 	now the display entry is true;
 	refresh the GUI;
 
 Report an actor plugging something (called the hacktool) into something (called the external system):
-	say "The [hacktool] is now connected to [the external system].";
+	say "The [hacktool] is now connected to [external system].";
+	now the program-output of the persocom is "[cnxn-gadget] connected to [hostname] via extension jack.";
 
 Carry out unplugging something (called the hacktool):
 	now nothing is connected to the hacktool;
@@ -490,6 +493,7 @@ Carry out unplugging something (called the hacktool):
 
 Report unplugging something (called the hacktool):
 	say "The [hacktool] is now disconnected.";
+	now the program-output of the persocom is "Extension jack disconnected.";
 
 [include device sockets in things to provide cable-only access via persocom]
 A device socket is a kind of PS-socket. The type of a device socket is usually "device". 
@@ -500,9 +504,13 @@ Connecting relates one thing to one computer. The verb to connect (he connects, 
 To decide which thing is the cnxn-gadget:
 	if something (called the item) is connected to the persocom, decide on the item.
 
+To decide which thing is the payload:
+	if something (called the item) is compiling something (called the gibson), decide on the gibson.
+
 A persocom operations rule (this is the access-connected-program rule):
 	if the cnxn-gadget is compiling something (called the gibson):
 		say "Accessing [the gibson]...";
+		now the program-output of the persocom is "Accessing [the payload]...";
 		now the active-cnxn is wired;
 		give focus to the gibson;
 	
@@ -514,11 +522,11 @@ Some software has some text called the activation message. The activation messag
 
 The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "boot message 0". The bios can be processing or resting. The bios is resting.
 
-[current settings mean initial description is shown both when pc is booted up and when software is actually given focus, one or both should be suppressed]
-
 An input handling rule for the bios(this is the ignore all input while booting rule):
-	if the bios is processing, say "The persocom beeps; you cannot interrupt it while it's booting up.";
-	rule fails.
+	if the bios is processing:
+		say "The persocom beeps; you cannot interrupt it while it's booting up.";
+		rule fails;
+	rule succeeds.
 
 Table of Boot Messages
 index	message
@@ -526,19 +534,33 @@ index	message
 2	"boot message 2."
 3	"boot message 3."
 
-Persocom Boot Process is a scene. Persocom Boot Process begins when the persocom is switched on.
+Persocom Boot Process is a scene. Persocom Boot Process begins when the persocom is switched on. Persocom Boot Process ends when the bios is resting.
 
 When Persocom Boot Process begins:
-	give focus to the bios;
+	give focus to the bios, quietly;
 	now the bios is processing;
 	now the description of the bios is the message corresponding to an index of 1 in the Table of Boot Messages;
+	now the program-output of the persocom is the description of the bios;
+
+Every turn during Persocom Boot Process:
+	if the time since Persocom Boot Process began is:
+	-- 1 minute:
+		now the description of the bios is the message corresponding to an index of 2 in the Table of Boot Messages; 
+	-- 2 minutes:
+		now the description of the bios is the message corresponding to an index of 3 in the Table of Boot Messages;
+	-- 3 minutes:
+		now the bios is resting;
+		give focus to the operating system;
+	now the program-output of the persocom is the description of the bios;
+
+When Persocom Boot Process ends:
+	now the program-output of the persocom is "Awaiting input.";
 
 The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 2. The options table of the operating system is the Table of GUI Options.
-The description of the operating system is "(You can enter commands on the persocom by typing 'persocom' followed by the name of the program, i.e. 'persocom help'.)
-[paragraph break]--PERSO.SYS v17revA//1.2--[br]
-Issue the 'help' command for more info.[br]
-((extension-jack-device)) is connected via extension jack.[br]
-((wireless-assoc-device)) is connected via wifi.".
+The description of the operating system is "--PERSO.SYS v17revA//1.2--[br]
+Issue the help command - 'persocom help' - for more info[if persocom is connected to something].[br][cnxn-gadget] is connected via extension jack[end if][if persocom is linked to something].[br][link-gadget] is connected via wireless link[end if].[br][br][options-list of operating system]".
+
+The activation message of the operating system is "The persocom emits a quiet chime, and the main screen of the OS appears."
 
 Understand the command "ps" and "persocom" as "type". [Default synonyms for "type": enter, key, input, select]
 
@@ -552,19 +574,11 @@ Table of GUI Options
 topic	title	effect	display
 "wifi"	"WiFi"	init-wifi-assoc rule	true
 "disconnect"	"Disconnect"	disconnect-wifi-assoc rule	false
-"extension"	"Extension"	access-cnxed-device rule	true
+"access device"	"Access Device"	access-active-gadget rule	false
 "help"	"Help"	get-persocom-help rule	true
 
 This is the disconnect-wifi-assoc rule: do nothing.
-This is the access-cnxed-device rule: do nothing.
-
-[topic	title	effect	display
-["view devices"	"View Devices"	list-open-cnxns rule	true]
-"wireless"	"Wireless"	init-device-cnxn rule	true
-"access cnxn"	"Access Cnxn"	access-connected-program rule	false
-"access link"	"Access Link"	access-linked-program rule	false
-"disconnect"	"Disconnect"	disconnect-wireless-link rule	false
-"help"	"Help"	display-persocom-help rule	true]
+This is the access-active-gadget rule: do nothing.
 
 The persocom operations rules are a rulebook.
 The attack vector is a rule that varies.
@@ -580,23 +594,24 @@ To refresh the GUI:
 			now the persocom is running unf;
 	repeat through the options table of the operating system:
 		if title entry is:
-		-- "View Devices":
-			now display entry is true; [always show]
-		-- "Wireless":
+		-- "WiFi":
 			if something is linked to the persocom, now display entry is false; [always show unless something is linked]
-		-- "Access Cnxn":
-			if nothing is connected to the persocom, now display entry is false; [always hide unless something is connected]
-		-- "Access Link":
-			if nothing is linked to the persocom, now display entry is false; [always hide unless something is linked]
 		-- "Disconnect":
 			if nothing is linked to the persocom, now display entry is false; [always hide unless something is linked]
+		-- "Access Device":
+			if something is connected to the persocom, now display entry is true;
+			if something is linked to the persocom, now display entry is true;
+			if nothing is connected to the persocom and nothing is linked to the persocom, now the display entry is false;
+		-- "Help":
+			now display entry is true; [always show]
 
-To give focus to (warez - some software):
-	say the activation message of the warez;
+To give focus to (warez - some software), quietly:
 	repeat with bar running through software run by the persocom:
 		now the software priority of bar is 5;
 	now the software priority of the warez is 1;
-	try examining the warez;
+	if not quietly:
+		say the activation message of the warez;
+		try examining the warez;
 
 A persocom operations rule (this is the get-persocom-help rule):
 	refresh the GUI;
@@ -611,7 +626,7 @@ A persocom operations rule (this is the list-open-cnxns rule):
 			say "Attack vector: [attack vector]...";
 					
 A persocom operations rule (this is the init-wifi-assoc rule):
-	if the attached system is not nothing, say "Access the extension jack using the Extension command.";
+	if the cnxn-gadget is not nothing, say "Access the extension jack using the Extension command.";
 	blank out the whole of the Table of Available Connections;
 	repeat with target running through broadcasting things:
 		choose a blank row in the Table of Available Connections;
