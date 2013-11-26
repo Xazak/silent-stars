@@ -156,7 +156,7 @@ Table of Augmented Status
 left	central	right
 " [location]"	"[ambient light of location]"	"[first custom style]|[top rose]|[roman type]"
 " Status: [health of the player]"	"[time of day as 24h time]"	"[first custom style]|[middle rose]|[roman type]"
-" >>[program-output of persocom]"	""	"[first custom style]|[bottom rose]|[roman type]"
+" >>[program output of persocom]"	""	"[first custom style]|[bottom rose]|[roman type]"
 
 To say rose (way - a direction):
 	let place be the room way from the location;
@@ -463,8 +463,8 @@ A selection device called persocom's touchpad is part of the persocom.
 A laptop battery compartment called persocom's battery port is part of the persocom. A rechargeable battery called the graphene cell is in the battery port. The charge of the graphene cell is 30. 
 A PS-plug called the device extension jack is part of the persocom. The type of the extension jack is "device". 
 Cnxn-type is a kind of value. The cnxn-types are dormant, wired and wireless. 
-The persocom has a cnxn-type called the active-cnxn. The active-cnxn of the persocom is dormant.
-The persocom has some text called the program-output. The program-output is usually "--  PERSOCOM INACTIVE  --".
+The persocom has a cnxn-type called the active pipeline. The active pipeline is dormant.
+The persocom has some text called the program output. The program output is usually "--  PERSOCOM INACTIVE  --".
 The persocom has some text called the hostname. The hostname is usually "FAWN".
 
 Before examining the persocom:
@@ -478,14 +478,14 @@ Carry out switching off the persocom:
 
 Carry out an actor plugging something (called the hacktool) into something (called the external system) (this is the set-connection-relation rule):
 	now the the external system is connected to the hacktool;
-	now the active-cnxn is wired;
+	[set the active pipeline;] [this will be a phrase that will take the place of all existing "set the active-cnxn..." statements]
 	choose row with a title of "Access Cnxn" in the Table of GUI Options;
 	now the display entry is true;
 	refresh the GUI;
 
 Report an actor plugging something (called the hacktool) into something (called the external system):
 	say "The [hacktool] is now connected to [external system].";
-	now the program-output of the persocom is "[cnxn-gadget] connected to [hostname] via extension jack.";
+	now the program output of the persocom is "[cnxn-gadget] connected to [hostname] via extension jack.";
 
 Carry out unplugging something (called the hacktool):
 	now nothing is connected to the hacktool;
@@ -493,7 +493,7 @@ Carry out unplugging something (called the hacktool):
 
 Report unplugging something (called the hacktool):
 	say "The [hacktool] is now disconnected.";
-	now the program-output of the persocom is "Extension jack disconnected.";
+	now the program output of the persocom is "Extension jack disconnected.";
 
 [include device sockets in things to provide cable-only access via persocom]
 A device socket is a kind of PS-socket. The type of a device socket is usually "device". 
@@ -510,8 +510,8 @@ To decide which thing is the payload:
 A persocom operations rule (this is the access-connected-program rule):
 	if the cnxn-gadget is compiling something (called the gibson):
 		say "Accessing [the gibson]...";
-		now the program-output of the persocom is "Accessing [the payload]...";
-		now the active-cnxn is wired;
+		now the program output of the persocom is "Accessing [the payload]...";
+		[now the active-cnxn is wired;]
 		give focus to the gibson;
 	
 Chapter 2 - The Software
@@ -540,7 +540,7 @@ When Persocom Boot Process begins:
 	give focus to the bios, quietly;
 	now the bios is processing;
 	now the description of the bios is the message corresponding to an index of 1 in the Table of Boot Messages;
-	now the program-output of the persocom is the description of the bios;
+	now the program output of the persocom is the description of the bios;
 
 Every turn during Persocom Boot Process:
 	if the time since Persocom Boot Process began is:
@@ -551,10 +551,10 @@ Every turn during Persocom Boot Process:
 	-- 3 minutes:
 		now the bios is resting;
 		give focus to the operating system;
-	now the program-output of the persocom is the description of the bios;
+	now the program output of the persocom is the description of the bios;
 
 When Persocom Boot Process ends:
-	now the program-output of the persocom is "Awaiting input.";
+	now the program output of the persocom is "Awaiting input.";
 
 The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 2. The options table of the operating system is the Table of GUI Options.
 The description of the operating system is "--PERSO.SYS v17revA//1.2--[br]
@@ -692,7 +692,7 @@ To decide which thing is the link-gadget:
 A persocom operations rule (this is the access-linked-program rule):
 	if the link-gadget is compiling something (called the gibson):
 		say "Accessing [the gibson]...";
-		now the active-cnxn is wireless;
+		[now the active-cnxn is wireless;]
 		give focus to the gibson;
 
 A persocom operations rule (this is the disconnect-wireless-link rule):
@@ -705,7 +705,7 @@ Section 3 - Remote Computer Control
 Compiling relates one thing to one software. The verb to compile (he compiles, they compile, he compiled, it is compiled, he is compiling) implies the compiling relation.
 
 To decide which thing is the hacked-luser:
-	if the active-cnxn is wireless, decide on the link-gadget;
+	[if the active-cnxn is wireless, decide on the link-gadget;]
 	decide on the cnxn-gadget;
 
 [Definition: a software is binary if the compiler of it is not the persocom.]
