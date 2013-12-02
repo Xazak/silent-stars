@@ -520,7 +520,11 @@ Section 1 - The OS
 
 Some software has some text called the activation message. The activation message is usually "The [printed name] expands into the main display area."
 
-The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "boot message 0". The bios can be processing or resting. The bios is resting.
+Understand the command "ps" and "persocom" as "type". [Default synonyms for "type": enter, key, input, select]
+
+[*** THE BIOS ***] 
+
+The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "MITARI-HYLAND FIRMOS v309.72.16a4(3030-01-28)". The bios can be processing or resting. The bios is resting.
 
 An input handling rule for the bios(this is the ignore all input while booting rule):
 	if the bios is processing:
@@ -530,9 +534,9 @@ An input handling rule for the bios(this is the ignore all input while booting r
 
 Table of Boot Messages
 index	message
-1	"boot message 1."
-2	"boot message 2."
-3	"boot message 3."
+1	"Cy-neur Interlace Self-Test: VALID"
+2	"Input Holostracts: INITIALIZED"
+3	"PersOSys Operation Layer: STARTING"
 
 Persocom Boot Process is a scene. Persocom Boot Process begins when the persocom is switched on. Persocom Boot Process ends when the bios is resting.
 
@@ -555,19 +559,23 @@ Every turn during Persocom Boot Process:
 
 When Persocom Boot Process ends:
 	now the program output of the persocom is "Awaiting input.";
+	now the description of the bios is "MITARI-HYLAND FIRMOS v309.72.16a4(3030-01-28)".
+
+[*** THE OS ***] 
 
 The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 2. The options table of the operating system is the Table of GUI Options.
-The description of the operating system is "--PERSO.SYS v17revA//1.2--[br]
-Issue the help command - 'persocom help' - for more info[if persocom is connected to something].[br][cnxn-gadget] is connected via extension jack[end if][if persocom is linked to something].[br][link-gadget] is connected via wireless link[end if].[br][br][options-list of operating system]".
+The description of the operating system is "--PersOSys v17revA//1.2--[br]
+Issue the help command - 'persocom help' - for basic help at any time[if persocom is connected to something].[br][cnxn-gadget] is connected via extension jack[end if][if persocom is linked to something].[br][link-gadget] is connected via wireless link[end if].[br][br][options-list of operating system]".
 
 The activation message of the operating system is "The persocom emits a quiet chime, and the main screen of the OS appears."
-
-Understand the command "ps" and "persocom" as "type". [Default synonyms for "type": enter, key, input, select]
 
 To say the options-list of the operating system:
 	say "The following commands are available on this terminal:[paragraph break]"; 
 	repeat through the options table of the operating system:
-		if display entry is true, say "[title entry][line break]";
+		if display entry is true:
+			say "[title entry]Y[line break]";
+		otherwise if display entry is false:
+			say "[title entry]N[line break]";
 	say "[run paragraph on]".
 
 Table of GUI Options
@@ -577,11 +585,16 @@ topic	title	effect	display
 "access device"	"Access Device"	access-active-gadget rule	false
 "help"	"Help"	get-persocom-help rule	true
 
-This is the disconnect-wifi-assoc rule: do nothing.
-This is the access-active-gadget rule: do nothing.
-
 The persocom operations rules are a rulebook.
 The attack vector is a rule that varies.
+
+To give focus to (warez - some software), quietly:
+	repeat with bar running through software run by the persocom:
+		now the software priority of bar is 5;
+	now the software priority of the warez is 1;
+	if not quietly:
+		say the activation message of the warez;
+		try examining the warez;
 
 To refresh the GUI:
 	if something (called foo) is connected to the persocom:
@@ -605,26 +618,6 @@ To refresh the GUI:
 		-- "Help":
 			now display entry is true; [always show]
 
-To give focus to (warez - some software), quietly:
-	repeat with bar running through software run by the persocom:
-		now the software priority of bar is 5;
-	now the software priority of the warez is 1;
-	if not quietly:
-		say the activation message of the warez;
-		try examining the warez;
-
-A persocom operations rule (this is the get-persocom-help rule):
-	refresh the GUI;
-	say the options-list of the operating system;
-
-A persocom operations rule (this is the list-open-cnxns rule):
-	say "Ext Cable: [if there is nothing connected to the persocom]--no connection--[otherwise]a thing is connected[end if][br]";
-	repeat with target running through broadcasting things:
-		if the target incorporates an access point (called the gateway):
-			say "Found: [gateway] ([target])...";
-			now the attack vector is the icebreaker against the gateway;
-			say "Attack vector: [attack vector]...";
-					
 A persocom operations rule (this is the init-wifi-assoc rule):
 	if the cnxn-gadget is not nothing, say "Access the extension jack using the Extension command.";
 	blank out the whole of the Table of Available Connections;
@@ -633,15 +626,31 @@ A persocom operations rule (this is the init-wifi-assoc rule):
 		let the gateway be the node providing access to the target;
 		now the title entry is the printed name of the gateway;
 		now the effect entry is the icebreaker against the gateway;
-	give focus to the wifi-connector;
+	give focus to the wifi-connector; [see Section 2]
 		
+This is the disconnect-wifi-assoc rule: do nothing.
+This is the access-active-gadget rule: do nothing.
+
+A persocom operations rule (this is the get-persocom-help rule):
+	refresh the GUI;
+	say the options-list of the operating system;
+
+[superceded by init-wifi-assoc]
+[A persocom operations rule (this is the list-open-cnxns rule):
+	say "Ext Cable: [if there is nothing connected to the persocom]--no connection--[otherwise]a thing is connected[end if][br]";
+	repeat with target running through broadcasting things:
+		if the target incorporates an access point (called the gateway):
+			say "Found: [gateway] ([target])...";
+			now the attack vector is the icebreaker against the gateway;
+			say "Attack vector: [attack vector]...";]
+					
+Section 2 - Wifi Connectivity
+
 The persocom runs an enumerated multiple-choice program called the wifi-connector. The options table of the wifi-connector is the Table of Available Connections.
 
 Table of Available Connections
 index (a number)	title (text)	effect (a rule)
 with 20 blank rows
-
-Section 2 - Wifi Connectivity
 
 [include access points as parts of things to give them wireless connectivity]
 An access point is a kind of device. An access point is scenery and switched on. 
