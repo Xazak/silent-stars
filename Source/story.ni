@@ -569,14 +569,20 @@ Issue the help command - 'persocom help' - for basic help at any time[if persoco
 
 The activation message of the operating system is "The persocom emits a quiet chime, and the main screen of the OS appears."
 
-To say the options-list of the operating system:
+To say options-list of (chosen program - a multiple-choice program)(this is the advanced options rule):
 	say "The following commands are available on this terminal:[paragraph break]"; 
-	repeat through the options table of the operating system:
-		if display entry is true:
-			say "[title entry]Y[line break]";
-		otherwise if display entry is false:
-			say "[title entry]N[line break]";
+	if the chosen program is the operating system:
+		repeat through the options table of the operating system:
+			if display entry is true:
+				say "[title entry]Y[line break]";
+			otherwise if display entry is false:
+				say "[title entry]N[line break]";
+	otherwise:
+		repeat through the options table of the chosen program:
+			say "[title entry][line break]";
 	say "[run paragraph on]".
+
+The advanced options rule is listed instead of the basic options rule in the computer display rulebook.
 
 Table of GUI Options
 topic	title	effect	display
@@ -633,7 +639,7 @@ This is the access-active-gadget rule: do nothing.
 
 A persocom operations rule (this is the get-persocom-help rule):
 	refresh the GUI;
-	say the options-list of the operating system;
+	say options-list of the operating system;
 
 [superceded by init-wifi-assoc]
 [A persocom operations rule (this is the list-open-cnxns rule):
