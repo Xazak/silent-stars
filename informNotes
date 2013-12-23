@@ -73,6 +73,45 @@ A protagonist who can see into the ultraviolet range would be really cool!
 
 Is asking "has [limb] ever been wounded at all?" a meaningful question?
 ]]-
+SETTING -[[
+The three core dangers aboard the Starlight Dancer are the LMR, Aurita, and the SD herself
+
+DANGER: The Sinking Ship
+	...has fallen prey to a serious disaster, one that will obliterate the ship in a matter of hours.
+	Cursed Place; wants to break apart and become nothing
+	! Caused by planted explosives
+	! One fuel tank is a shell, the other is leaking into the ship
+	Portents:
+	1) The player obtains a status report on the ship, indicating damage levels
+	2) 
+	3) The fuel filling Deck D catches fire
+	4) The fire reaches the $ROOM and causes explosions
+	Stakes: Will the player be able to escape the Starlight Dancer before it consumes itself in fire?
+	Doom: Obliteration
+
+DANGER: The Localized Matter Rehabilitator
+	...has been infected with a virus that has corrupted its programming, causing it to attack organic material in an attempt to clean it up.
+	Corrupted Machine; wants to clean and fix the ship
+	! Has been infected with a virus that the player can remove later on
+	Portents:
+	1) The LMR emits strange noises that can be heard from a few rooms away
+	2) If the doors are open, the light from its eyes can be seen a distance away
+	3) The LMR emits a particular noise when it opens a closed door
+	4) The LMR overwhelms the player with its floodlight eyes and attacks
+	Stakes: Will the player be able to evade the LMR long enough to disable or reprogram it?
+	Doom: Death
+
+DANGER: Aurita, the Shipboard AI 
+	...has gone insane after the sabotage to the ship overwhelmed her tolerances; she now thinks herself responsible and wants to bury her despair
+	Insane Artificial Intelligence; wants to hide any evidence and run from her guilt
+	! Dealing with Aurita and her psychoses is the mind game to the hardline puzzle solving aboard the ship
+	Portents:
+	1) If the player tries to access data that Aurita considers incriminating, she will try to corrupt the persocom to force a wipe
+	2) If the player tries to confront Aurita directly about the sabotage, she will choose a psychosis (denial, rage, etc) and evade
+	3) Lacking any way to affect the ship herself, she will try to trick the player into destroying the ship 
+	Stakes: Will the player be able to bring Aurita around or will she be consumed along with the Starlight Dancer?
+	Doom: Destruction
+]]-
 
 PUZZLE SPECS
 Deck A/Medical Bay -[[
@@ -80,14 +119,12 @@ PUZZLE: Player is trapped inside the autodoc and must get out
 	STATUS: Mechanics are partially written, has been shelved as incomplete (see notes)
 	COMPLICATIONS: 
 	-- Recent mysterious injuries and attendant treatments has left the PC's brain fuzzy, the controls are hard to read
-	?? If the player takes too long inside the autodoc, a cleaning cycle will start and the player will drown
 	SOLUTION:
 	1- push cycle button
 	2- push unlock button
 	3- push exit button
 	4- exit 
 	NOTES:
-	-- pushing buttons out of order does not work, causes errors
 	-- will need a way for the player to address the first, second, etc choices given
 	-- still need to work out how to scramble all the button names, problem is rather intractable and has been shelved until i can ascertain whether or not i will want to reuse the scrambler function later on
 	-- might be able to use [mangle][/mangle] tags in order to get the job done, would rather scramble names by way of a rulebook
@@ -96,7 +133,7 @@ PUZZLE: The floor has about a three-inch-deep pool of blood and the drain is blo
 	STATUS: Mechanics are written, needs testing and editing
 	COMPLICATIONS:
 	-- There is a drain sunk into the floor but it is blocked and requires a tool to be unlocked
-		-- The player can use the chemshower at any time but will immediately get dirty if the blood's not drained
+		-- The player cannot use the chemshower without first draining the blood out of the room
 	SOLUTION:
 	.. (player gets out of autodoc)
 	1- x blood [soft move: augurs the drain]
@@ -404,9 +441,22 @@ class		factors
 
 ]]-
 THE PERSOCOM  -[[
-system trace for connecting to another device, running remote software, and exiting:
+Proposed fnxns:
+network trace
+
+Current fnxns:
+Boot up process
+	1 - Power-on self test
+	2 - Initialize peripherals
+	3 - Find and start the OS
+
+Connect via ext cable
+Link via wireless
+Disconnect wireless
+
 
 ]]-
+
 ***REMINDERS
 SEE 11.8 FOR SWITCH-CASE NOTATION
 > EQUIVALENT TO "is greater than"

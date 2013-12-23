@@ -564,31 +564,24 @@ When Persocom Boot Process ends:
 [*** THE OS ***] 
 
 The persocom runs a multiple-choice program called the operating system. The software priority of the operating system is 2. The options table of the operating system is the Table of GUI Options.
-The description of the operating system is "--PersOSys v17revA//1.2--[br]
-Issue the help command - 'persocom help' - for basic help at any time[if persocom is connected to something].[br][cnxn-gadget] is connected via extension jack[end if][if persocom is linked to something].[br][link-gadget] is connected via wireless link[end if].[br][br][options-list of operating system]".
+The description of the operating system is "*************************[br]--PersOSys v17revA//1.2--[br]
+Issue the help command - 'persocom help' - for basic help at any time[if persocom is connected to something].[br][cnxn-gadget] is connected via extension jack[end if][if persocom is linked to something].[br][link-gadget] is connected via wireless link[end if].[br][br][options-list of the operating system]".
 
 The activation message of the operating system is "The persocom emits a quiet chime, and the main screen of the OS appears."
 
-To say options-list of (chosen program - a multiple-choice program)(this is the advanced options rule):
+To say options-list of the operating system:
 	say "The following commands are available on this terminal:[paragraph break]"; 
-	if the chosen program is the operating system:
-		repeat through the options table of the operating system:
-			if display entry is true:
-				say "[title entry]Y[line break]";
-			otherwise if display entry is false:
-				say "[title entry]N[line break]";
-	otherwise:
-		repeat through the options table of the chosen program:
-			say "[title entry][line break]";
+	repeat through the options table of the operating system:
+		if display entry is true:
+			say "[title entry][br]";
 	say "[run paragraph on]".
-
-The advanced options rule is listed instead of the basic options rule in the computer display rulebook.
 
 Table of GUI Options
 topic	title	effect	display
 "wifi"	"WiFi"	init-wifi-assoc rule	true
 "disconnect"	"Disconnect"	disconnect-wifi-assoc rule	false
 "access device"	"Access Device"	access-active-gadget rule	false
+"settings"	"Settings"	change-settings rule	true
 "help"	"Help"	get-persocom-help rule	true
 
 The persocom operations rules are a rulebook.
@@ -621,6 +614,8 @@ To refresh the GUI:
 			if something is connected to the persocom, now display entry is true;
 			if something is linked to the persocom, now display entry is true;
 			if nothing is connected to the persocom and nothing is linked to the persocom, now the display entry is false;
+		-- "Settings":
+			now display entry is true; [always show]
 		-- "Help":
 			now display entry is true; [always show]
 
@@ -636,8 +631,10 @@ A persocom operations rule (this is the init-wifi-assoc rule):
 		
 This is the disconnect-wifi-assoc rule: do nothing.
 This is the access-active-gadget rule: do nothing.
+This is the change-settings rule: do nothing.
 
 A persocom operations rule (this is the get-persocom-help rule):
+	say "To issue a command to the persocom, type 'PERSOCOM <command>', minus the quotes. You may also use 'PS', 'ENTER', 'TYPE', 'KEY', 'SELECT', or 'INPUT' instead of 'PERSOCOM'. The extension jack can be PLUGGED into any compatible socket.";
 	refresh the GUI;
 	say options-list of the operating system;
 
