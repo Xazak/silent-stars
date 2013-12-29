@@ -83,7 +83,7 @@ DANGER: The Sinking Ship
 	! One fuel tank is a shell, the other is leaking into the ship
 	Portents:
 	1) The player obtains a status report on the ship, indicating damage levels
-	2) 
+	2) The player discovers that access to Deck D is restricted due to the rising fuel leaking from the tanks 
 	3) The fuel filling Deck D catches fire
 	4) The fire reaches the $ROOM and causes explosions
 	Stakes: Will the player be able to escape the Starlight Dancer before it consumes itself in fire?
