@@ -1040,7 +1040,7 @@ Carry out healing:
 Report healing:
 	say "You use the [snake oil] to fix the [snakebite]." 
 
-Part 2 - Player Details
+Part 3 - Player Details
 
 The printed name of the player is "Emma". The player is female. The bulk of the player is 20. 
 The carrying capacity of the player is 2. The bulk capacity of the player is 25.
@@ -1055,6 +1055,25 @@ Instead of examining yourself:
 			say the description of foo;
 	say line break;
 
+Part 4 - The Localized Matter Rehabilitator
+
+A robot is a kind of person. A robot called the lemur is in Hallway A. The printed name of the lemur is "the localized matter rehabilitator". Understand "the LMR" as the lemur. The description is "The localized matter rehabilitator is dinged up and battle-scarred; that is, what you can see when those godawful floodlights aren't pointed your way."
+
+Every turn when the player can see the lemur:
+	say "The [printed name of lemur] [one of]scurries over to a bit of debris, chittering and scraping[or]emits a near-supersonic [i]chirrup[/i] and cocks its head to one side, holding very still[or]races around in a circle, its floodlit-eyes strobing across the room[as decreasingly likely outcomes]."
+
+The lemur can be wandering, inquiring, or cleaning. The lemur is wandering.
+The lemur has a list of rooms called the scanned zones.
+
+Every turn when the lemur is wandering:
+	if a random chance of 1 in 3 succeeds:
+		say "The [printed name of lemur] freezes in place and twitches an audio sensor for a few moments.";
+	otherwise:
+		if the location of the lemur is a scanned zone:
+			do nothing; [move the lemur out of the scanned zone]
+		otherwise:
+			try the lemur advancing; [move the lemur into a new room]
+		
 Volume 2 - The Starlight Dancer
 
 The player is in the autodoc.[move the player back to the rocky shore before releasing]

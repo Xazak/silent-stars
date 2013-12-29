@@ -73,10 +73,7 @@ A protagonist who can see into the ultraviolet range would be really cool!
 
 Is asking "has [limb] ever been wounded at all?" a meaningful question?
 ]]-
-SETTING -[[
-The three core dangers aboard the Starlight Dancer are the LMR, Aurita, and the SD herself
-
-DANGER: The Sinking Ship
+DANGER: The Sinking Ship -[[
 	...has fallen prey to a serious disaster, one that will obliterate the ship in a matter of hours.
 	Cursed Place; wants to break apart and become nothing
 	! Caused by planted explosives
@@ -88,20 +85,27 @@ DANGER: The Sinking Ship
 	4) The fire reaches the $ROOM and causes explosions
 	Stakes: Will the player be able to escape the Starlight Dancer before it consumes itself in fire?
 	Doom: Obliteration
-
-DANGER: The Localized Matter Rehabilitator
+]]-
+DANGER: The Localized Matter Rehabilitator -[[
 	...has been infected with a virus that has corrupted its programming, causing it to attack organic material in an attempt to clean it up.
 	Corrupted Machine; wants to clean and fix the ship
-	! Has been infected with a virus that the player can remove later on
+	Goals:
+	- Enter all the rooms
+	- Look in all the unlocked boxes
+	- Clean all the dirty things
 	Portents:
 	1) The LMR emits strange noises that can be heard from a few rooms away
-	2) If the doors are open, the light from its eyes can be seen a distance away
+	2) The LMR's eyes are stuck on FLOODLIGHT, and so it can be seen coming in the right circumstances
 	3) The LMR emits a particular noise when it opens a closed door
 	4) The LMR overwhelms the player with its floodlight eyes and attacks
 	Stakes: Will the player be able to evade the LMR long enough to disable or reprogram it?
 	Doom: Death
-
-DANGER: Aurita, the Shipboard AI 
+	Notes:
+	- Was formerly an exterior maintenance robot; its programming was corrupted either before or during the sabotage and it nows roams the inside
+	- The player may be able to hide from the LMR in an opaque container, but it must be able to lock or the LMR will open it
+	- The player will have some opportunities to disable or destroy the LMR; if disabled, it might possibly be recruited
+]]-
+DANGER: Aurita, the Shipboard AI -[[
 	...has gone insane after the sabotage to the ship overwhelmed her tolerances; she now thinks herself responsible and wants to bury her despair
 	Insane Artificial Intelligence; wants to hide any evidence and run from her guilt
 	! Dealing with Aurita and her psychoses is the mind game to the hardline puzzle solving aboard the ship
@@ -192,15 +196,6 @@ PUZZLE: The medbay door is stuck shut
 		!! The handcomp's battery is only just charged enough to allow this puzzle to be completed; it requires a recharge directly after
 	SOLUTION:
 	-- Use the handcomp to bypass the door control panel
-
-PUZZLE: The maintenance robot, LMR, comes in and attacks the player partway through her work getting out of the room
-	STATUS: Not implemented
-	COMPLICATIONS:
-	SOLUTION:
-	-- The LMR emits a strange loud sound, so it can be heard coming
-	-- The LMR's eyes are stuck on FLOODLIGHT, and so it can also be seen coming in the right circumstances
-	-- The player may hide from the LMR in an opaque container, but it must be able to lock or the LMR will look inside
-	-- The player will have a few opportunities to destroy or disable the LMR; if disabled, it might be recruited?
 ]]-
 
 WORLD MODELLING
