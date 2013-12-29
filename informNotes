@@ -128,9 +128,10 @@ PUZZLE: Player is trapped inside the autodoc and must get out
 	-- will need a way for the player to address the first, second, etc choices given
 	-- still need to work out how to scramble all the button names, problem is rather intractable and has been shelved until i can ascertain whether or not i will want to reuse the scrambler function later on
 	-- might be able to use [mangle][/mangle] tags in order to get the job done, would rather scramble names by way of a rulebook
+	-- more complex controls may be added later, ability to reprogram with persocom? or just runs on autodetect?
 
 PUZZLE: The floor has about a three-inch-deep pool of blood and the drain is blocked
-	STATUS: Mechanics are written, needs testing and editing
+	STATUS: Done
 	COMPLICATIONS:
 	-- There is a drain sunk into the floor but it is blocked and requires a tool to be unlocked
 		-- The player cannot use the chemshower without first draining the blood out of the room
@@ -140,11 +141,11 @@ PUZZLE: The floor has about a three-inch-deep pool of blood and the drain is blo
 	2- search blood [causes the drain to be accessible]
 	3- x drain [warns the player about the clog]
 	X- unblock drain [requires a tool to be unblocked]
-	4- get $TOOL
-	5- unblock drain with $TOOL [clog is destroyed, blood is moved into the drain]
+	4- get jagged scrap
+	5- unblock drain with scrap [clog is moved offstage, blood is moved into the drain, scrap is moved offstage]
 
 PUZZLE: The player needs to take a shower and wash all this blood off
-	STATUS: nothing
+	STATUS: Done
 	COMPLICATIONS:
 	-- The massive pool of blood covering the medbay floor renders any attempts to get clean worthless
 	SOLUTION:
@@ -158,24 +159,22 @@ PUZZLE: The player needs to take a shower and wash all this blood off
 	6- wear jumpsuit
 
 PUZZLE: The player's gear is inside a locked locker and they are naked
+	STATUS: Placeholder is currently being used, corpse should be exchanged with another prompt to REMEMBER
 	OBSTACLES:
 	-- The pool of blood all over the room needs to be drained or the contents of the locker will get dirty
 	COMPLICATIONS:
 	-- The player needs to take a shower before putting on any clothes
 	SOLUTION:
 	.. (player takes a shower)
-	1- x lockers
-	2- x locker
-
-	-- TAKE a shower
-	-- REMEMBER the combination to the lock
-	-- SET the combo lock
-	-- GET the stuff inside
+	1- (player discovers locker combo)
+	2- set lock to NNNN
+	3- (player takes contents of locker)
 	NOTES:
 	-- see example 287: Safety for a simple dial-combination lock 
 		-- the 'text' and 'number' types are too general to allow 'the text understood', so a token like "channel" needs to be set up to allow the code to understand what is meant by "the channel understood"
 
 PUZZLE: The player needs to clean and bandage the wound on their hand
+	STATUS: Done
 	OBSTACLES:
 	-- If there's any medical equipment in the room, it's inside the gear locker
 	-- The pool of blood in the room makes cleaning the wound a dicey proposition
@@ -186,12 +185,22 @@ PUZZLE: The player needs to clean and bandage the wound on their hand
 	-- Use the medical kit inside to clean and bandage the wound
 
 PUZZLE: The medbay door is stuck shut
+	STATUS: Done
 	COMPLICATIONS:
 	-- The lock cannot be disengaged normally because the control panel is broken
 	-- The player has a pocket terminal that will allow secondary access but it's inside a gear locker
 		!! The handcomp's battery is only just charged enough to allow this puzzle to be completed; it requires a recharge directly after
 	SOLUTION:
 	-- Use the handcomp to bypass the door control panel
+
+PUZZLE: The maintenance robot, LMR, comes in and attacks the player partway through her work getting out of the room
+	STATUS: Not implemented
+	COMPLICATIONS:
+	SOLUTION:
+	-- The LMR emits a strange loud sound, so it can be heard coming
+	-- The LMR's eyes are stuck on FLOODLIGHT, and so it can also be seen coming in the right circumstances
+	-- The player may hide from the LMR in an opaque container, but it must be able to lock or the LMR will look inside
+	-- The player will have a few opportunities to destroy or disable the LMR; if disabled, it might be recruited?
 ]]-
 
 WORLD MODELLING

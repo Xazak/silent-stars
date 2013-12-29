@@ -524,7 +524,7 @@ Understand the command "ps" and "persocom" as "type". [Default synonyms for "typ
 
 [*** THE BIOS ***] 
 
-The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "MITARI-HYLAND FIRMOS v309.72.16a4(3030-01-28)". The bios can be processing or resting. The bios is resting.
+The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "MITARI-HYLAND FIRMOS v309.72.16a4(3030-01-28)[br]Memory Test OK,  Initialized...". The bios can be processing or resting. The bios is resting.
 
 An input handling rule for the bios(this is the ignore all input while booting rule):
 	if the bios is processing:
