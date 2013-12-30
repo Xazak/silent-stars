@@ -1057,26 +1057,86 @@ Instead of examining yourself:
 
 Part 4 - The Localized Matter Rehabilitator
 
-A robot is a kind of person. A robot called the lemur is in Hallway A. The printed name of the lemur is "the localized matter rehabilitator". Understand "the LMR" as the lemur. The description is "The localized matter rehabilitator is dinged up and battle-scarred; that is, what you can see when those godawful floodlights aren't pointed your way."
+A robot is a kind of person. A robot called the lemur is in the Medical Bay. The printed name of the lemur is "localized matter rehabilitator". Understand "LMR" as the lemur. The description is "The localized matter rehabilitator is dinged up and battle-scarred; that is, what you can see when those godawful floodlights aren't pointed your way."
 
-Every turn when the player can see the lemur:
-	say "The [printed name of lemur] [one of]scurries over to a bit of debris, chittering and scraping[or]emits a near-supersonic [i]chirrup[/i] and cocks its head to one side, holding very still[or]races around in a circle, its floodlit-eyes strobing across the room[as decreasingly likely outcomes]."
+[Every turn when the player can see the lemur:
+	say "The [printed name of lemur] [one of]scurries over to a bit of debris, chittering and scraping[or]emits a near-supersonic [i]chirrup[/i] and cocks its head to one side, holding very still[or]races around in a circle, its floodlit-eyes strobing across the room[as decreasingly likely outcomes]."]
 
 The lemur can be wandering, inquiring, or cleaning. The lemur is wandering.
-The lemur has a list of rooms called the scanned zones.
+The lemur has a list of rooms called the cleaned places. The lemur has a room called the destination. The destination of the lemur is Hallway A.
 
 Every turn when the lemur is wandering:
 	if a random chance of 1 in 3 succeeds:
-		say "The [printed name of lemur] freezes in place and twitches an audio sensor for a few moments.";
+		if the player can see the lemur, say "The [printed name of lemur] freezes in place and twitches an audio sensor for a few moments."; [it bugs out every so often instead of moving on]
 	otherwise:
-		if the location of the lemur is a scanned zone:
-			do nothing; [move the lemur out of the scanned zone]
+		say "Lemur advancing to [destination of the lemur]."; [NFR]
+		if the location of the lemur is the destination of the lemur:
+			say "Lemur choosing new location."; [NFR]
+			choose a new maintenance zone;
 		otherwise:
-			try the lemur advancing; [move the lemur into a new room]
-		
+			try the lemur advancing;
+
+To choose a new maintenance zone:
+	let foo be the list of rooms regionally in the map region of the location of the lemur;
+	remove the cleaned places from foo;
+	let bar be a random number between 1 and the number of entries in foo;
+	let target be entry bar of foo;
+	now the destination of the lemur is target;
+	say "The lemur is headed for [destination of the lemur]." [NFR]
+
+Advancing is an action applying to nothing.
+Carry out someone advancing:
+	say "The lemur is advancing."; [NFR]
+	
+Carry out advancing:
+	say "Maybe not this time. --Ghetvark";
+
+Report someone advancing:
+	say "The lemur hurries towards the [destination of the lemur]."
+
+[First carry out going rule: now the former location is the location.
+Advancing is an action applying to one visible thing (called the target).
+
+Check someone advancing:
+	if the actor is the player, say "That doesn't really work yet. --Ghetvark" instead;
+
+Carry out someone advancing:
+	say wander-dest; [NFR]
+	now the wander-dest is the next target for maintenance;
+	let way be the best route from the location to the wander-dest, using doors;
+	say "Heading [way].";
+	if way is a direction, try the lemur going way;
+
+To decide which room is the next target for maintenance:
+	let sector be the map region of the location of the lemur;
+	let zones be the list of rooms regionally in the map region of the location of the lemur;
+	remove the cleaned places from zones;
+	let foo be a random number from 1 to the number of entries in zones;
+	let target be entry foo of zones;
+	say "New wander-dest: [target].";[NFR]
+	decide on target;
+		 
+Report advancing:
+	say "[The actor] hurries towards the [wander-dest].";
+
+To advance the lemur:
+	if the location of the lemur is the wander-dest:
+		if the wander-dest is listed in the cleaned zones:
+			try the lemur going to the nearest hallway;
+
+To decide which room is the nearest hallway:
+	if the lemur is in Deck A, decide on Hallway A;
+	else if the lemur is in Deck B, decide on Hallway B; 
+	else if the lemur is in Deck C, decide on Hallway C;
+	else if the lemur is in Deck D, decide on Hallway D;]
+	
 Volume 2 - The Starlight Dancer
 
+[Nationalism relates a room (called the zone) to a region (called the sector) when the zone is in the sector. The verb to be included in implies the nationalism relation.]
+
 The player is in the autodoc.[move the player back to the rocky shore before releasing]
+
+Deck A is a region. The autodoc is in Deck A. The Medical Bay is in Deck A. Hallway A is in Deck A.
 
 Book 1 - Dreamtime
 
@@ -1133,13 +1193,10 @@ Report taking the stone:
 
 Book 2 - Deck A
 
-Deck A is a region.
-
 Part 1 - The Autodoc
 
 The Autodoc is a room. "You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes."
 The printed name of the autodoc is "Antiseptic Coffin". Understand "coffin" as the Autodoc. The dark-description of the Autodoc is "It's cold and damp and dark in here."
-The Autodoc is in Deck A.
 Index map with the Autodoc mapped south of the Medical Bay.
 
 There is a panel called the control panel in the Autodoc. 
@@ -1226,7 +1283,7 @@ Instead of searching the hatch window: try examining the hatch window instead.
 
 Part 2 - The Medical Bay
 
-The Medical Bay is a room. The Medical Bay is in Deck A. The Medical Bay is dark.
+The Medical Bay is a room.
 "The Medical Bay is a wreck: most of the cabinets have been torn off their hinges and twisted medical debris litters the room[if Drain the Blood has ended]. The grey tile floor is littered with broken glass, bits of medical paraphernalia, and dried blood[end if]."
 
 The floor crap is scenery in the Medical Bay. The description is "Anything of value was removed from this room when it was ransacked by whatever tore the room apart. Aside from the autodoc and your gear locker, that is."
@@ -1432,7 +1489,7 @@ A panel called the medbay door panel is part of the medbay door. It is red. The 
 
 Part 3 - Hallway A
 
-Hallway A is a room. "Hallway!" Hallway A is in Deck A.
+Hallway A is a room. "Hallway!"
 
 [Once Deck A is set up, use the neighboring relation to establish the correct adjacency of rooms for the listening logic, repeat for each deck]
 

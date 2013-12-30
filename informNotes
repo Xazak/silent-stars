@@ -87,23 +87,32 @@ DANGER: The Sinking Ship -[[
 	Doom: Obliteration
 ]]-
 DANGER: The Localized Matter Rehabilitator -[[
-	...has been infected with a virus that has corrupted its programming, causing it to attack organic material in an attempt to clean it up.
-	Corrupted Machine; wants to clean and fix the ship
-	Goals:
+...has been infected with a virus that has corrupted its programming, causing it to attack organic material in an attempt to clean it up.
+Corrupted Machine; wants to clean and fix the ship
+Goals:
 	- Enter all the rooms
 	- Look in all the unlocked boxes
 	- Clean all the dirty things
-	Portents:
+Portents:
 	1) The LMR emits strange noises that can be heard from a few rooms away
 	2) The LMR's eyes are stuck on FLOODLIGHT, and so it can be seen coming in the right circumstances
 	3) The LMR emits a particular noise when it opens a closed door
 	4) The LMR overwhelms the player with its floodlight eyes and attacks
-	Stakes: Will the player be able to evade the LMR long enough to disable or reprogram it?
-	Doom: Death
-	Notes:
+Stakes: Will the player be able to evade the LMR long enough to disable or reprogram it?
+Doom: Death
+Notes:
 	- Was formerly an exterior maintenance robot; its programming was corrupted either before or during the sabotage and it nows roams the inside
 	- The player may be able to hide from the LMR in an opaque container, but it must be able to lock or the LMR will open it
 	- The player will have some opportunities to disable or destroy the LMR; if disabled, it might possibly be recruited
+OPERATION CYCLE:
+	--Moves from wandering to inquiring to cleaning phases before starting over again at wandering
+	--Remembers which rooms it has cleaned so as to avoid recleaning them, but when it runs out of rooms to clean it restarts all over again instead of shutting down as per normal operations
+	Wandering:
+	1) The LMR decides which rooms it hasn't cleaned yet
+	2) The LMR chooses a room to clean at random (called the wander-dest)
+	3) The LMR tries to enter the wander-dest
+	4) If entry fails, goto 1; if entry succeeds, move to inquiring phase
+	Inquiring:
 ]]-
 DANGER: Aurita, the Shipboard AI -[[
 	...has gone insane after the sabotage to the ship overwhelmed her tolerances; she now thinks herself responsible and wants to bury her despair
