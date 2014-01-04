@@ -524,7 +524,7 @@ Understand the command "ps" and "persocom" as "type". [Default synonyms for "typ
 
 [*** THE BIOS ***] 
 
-The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "MITARI-HYLAND FIRMOS v309.72.16a4(3030-01-28)[br]Memory Test OK,  Initialized...". The bios can be processing or resting. The bios is resting.
+The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "MITARI-HYLAND FIRMOS v309.72.16a4(3030-01-28)[br]Hardware Test OK, Symbory Abstracts Initialized...". The bios can be processing or resting. The bios is resting.
 
 An input handling rule for the bios(this is the ignore all input while booting rule):
 	if the bios is processing:
@@ -1084,16 +1084,23 @@ To choose a new maintenance zone:
 	now the destination of the lemur is target;
 	say "The lemur is headed for [destination of the lemur]." [NFR]
 
-Advancing is an action applying to nothing.
-Carry out someone advancing:
-	say "The lemur is advancing."; [NFR]
+Advancing is an action applying to nothing. [the lemur decides which direction to head and then takes it]
+
+Carry out the lemur advancing:
+	let the right direction be the best route from the location of the lemur to the destination of the lemur, using even locked doors;
+	say "The lemur heads for [right direction]."; [NFR]
+	if the right direction is a direction, try the lemur going the right direction.
 	
 Carry out advancing:
 	say "Maybe not this time. --Ghetvark";
 
-Report someone advancing:
-	say "The lemur hurries towards the [destination of the lemur]."
+Report the lemur advancing:
+	say "The lemur advances towards [destination of the lemur]."
 
+Report the lemur trying opening a door (called the blocking door):
+	if the blocking door is open, say "The lemur emits a short trill; [the noun] slides open in response.";
+	otherwise say "The [lemur] emits a short trill; when [the blocking door] remains shut, the [lemur] lets out a frustrated warble and starts wandering in circles."
+	
 [First carry out going rule: now the former location is the location.
 Advancing is an action applying to one visible thing (called the target).
 
