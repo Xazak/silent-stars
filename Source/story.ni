@@ -1098,9 +1098,11 @@ Report the lemur advancing:
 	say "The lemur advances towards [destination of the lemur]."
 
 Report the lemur trying opening a door (called the blocking door):
-	if the blocking door is open, say "The lemur emits a short trill; [the noun] slides open in response.";
-	otherwise say "The [lemur] emits a short trill; when [the blocking door] remains shut, the [lemur] lets out a frustrated warble and starts wandering in circles."
+	if the blocking door is open, say "The lemur emits a short trill; [the blocking door] slides open in response.";
+	otherwise say "The lemur emits a short trill; when [the blocking door] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."
 	
+Persuasion rule for asking people to try going: persuasion succeeds.
+
 [First carry out going rule: now the former location is the location.
 Advancing is an action applying to one visible thing (called the target).
 
