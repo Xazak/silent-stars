@@ -1067,7 +1067,7 @@ The lemur has a list of rooms called the cleaned places. The lemur has a room ca
 
 Every turn when the lemur is wandering:
 	if a random chance of 1 in 3 succeeds:
-		if the player can see the lemur, say "The [printed name of lemur] freezes in place and twitches an audio sensor for a few moments."; [it bugs out every so often instead of moving on]
+		if the player can see the lemur, say "The [lemur] freezes in place and twitches an audio sensor for a few moments."; [it bugs out every so often instead of moving on]
 	otherwise:
 		say "Lemur advancing to [destination of the lemur]."; [NFR]
 		if the location of the lemur is the destination of the lemur:
@@ -1082,24 +1082,32 @@ To choose a new maintenance zone:
 	let bar be a random number between 1 and the number of entries in foo;
 	let target be entry bar of foo;
 	now the destination of the lemur is target;
-	say "The lemur is headed for [destination of the lemur]." [NFR]
+	say "The [lemur] is headed for [destination of the lemur]." [NFR]
 
 Advancing is an action applying to nothing. [the lemur decides which direction to head and then takes it]
 
 Carry out the lemur advancing:
 	let the right direction be the best route from the location of the lemur to the destination of the lemur, using even locked doors;
-	say "The lemur heads for [right direction]."; [NFR]
-	if the right direction is a direction, try the lemur going the right direction.
+	say "The [lemur] heads for [right direction]."; [NFR]
+	if the right direction is a direction, try the lemur going the right direction. [this needs to be converted? the advancing action is not abiding by the results of the going action started here]
 	
 Carry out advancing:
 	say "Maybe not this time. --Ghetvark";
 
 Report the lemur advancing:
-	say "The lemur advances towards [destination of the lemur]."
+	say "The [lemur] advances towards [destination of the lemur]."
 
-Report the lemur trying opening a door (called the blocking door):
+Unsuccessful attempt by the lemur going:
+	if the reason the action failed is the check someone else keylessly unlocking rule:
+		if the noun is a direction, let the current direction be the noun;
+		let the barrier be the door the current direction from the location of the lemur;
+		say "The [lemur] emits a short trill; when [the barrier] remains shut, the [lemur] lets out a frustrated warble and starts wandering in circles.";
+	otherwise:
+		say "The [lemur] walks in circles, all of its sensor stalks twitching."; 
+
+[Report the lemur trying opening a door (called the blocking door):
 	if the blocking door is open, say "The lemur emits a short trill; [the blocking door] slides open in response.";
-	otherwise say "The lemur emits a short trill; when [the blocking door] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."
+	otherwise say "The lemur emits a short trill; when [the blocking door] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."]
 	
 Persuasion rule for asking people to try going: persuasion succeeds.
 
