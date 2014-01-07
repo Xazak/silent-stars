@@ -113,6 +113,8 @@ OPERATION CYCLE:
 	3) The LMR tries to enter the wander-dest
 	4) If entry fails, goto 1; if entry succeeds, move to inquiring phase
 	Inquiring:
+
+	Properly writing Report rules for lemur actions will require custom action-result handling in each case, I7 does not appear to have suitable rules
 ]]-
 DANGER: Aurita, the Shipboard AI -[[
 	...has gone insane after the sabotage to the ship overwhelmed her tolerances; she now thinks herself responsible and wants to bury her despair

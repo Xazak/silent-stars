@@ -1063,7 +1063,7 @@ A robot is a kind of person. A robot called the lemur is in the Medical Bay. The
 	say "The [printed name of lemur] [one of]scurries over to a bit of debris, chittering and scraping[or]emits a near-supersonic [i]chirrup[/i] and cocks its head to one side, holding very still[or]races around in a circle, its floodlit-eyes strobing across the room[as decreasingly likely outcomes]."]
 
 The lemur can be wandering, inquiring, or cleaning. The lemur is wandering.
-The lemur has a list of rooms called the cleaned places. The lemur has a room called the destination. The destination of the lemur is Hallway A.
+The lemur has a list of rooms called the cleaned places. The lemur has a room called the destination. The lemur has a room called the next step. The destination of the lemur is Astrogation.
 
 Every turn when the lemur is wandering:
 	if a random chance of 1 in 3 succeeds:
@@ -1083,19 +1083,22 @@ To choose a new maintenance zone:
 	let target be entry bar of foo;
 	now the destination of the lemur is target;
 	say "The [lemur] is headed for [destination of the lemur]." [NFR]
-
+	
 Advancing is an action applying to nothing. [the lemur decides which direction to head and then takes it]
 
 Carry out the lemur advancing:
 	let the right direction be the best route from the location of the lemur to the destination of the lemur, using even locked doors;
-	say "The [lemur] heads for [right direction]."; [NFR]
-	if the right direction is a direction, try the lemur going the right direction. [this needs to be converted? the advancing action is not abiding by the results of the going action started here]
+	now the next step of the lemur is the room the right direction from the location of the lemur;
+	say "The [lemur] moves [right direction] towards the [next step of the lemur]."; [NFR]
+	try the lemur going the right direction;
+	
 	
 Carry out advancing:
 	say "Maybe not this time. --Ghetvark";
 
 Report the lemur advancing:
-	say "The [lemur] advances towards [destination of the lemur]."
+	
+	
 
 Unsuccessful attempt by the lemur going:
 	if the reason the action failed is the check someone else keylessly unlocking rule:
@@ -1105,9 +1108,9 @@ Unsuccessful attempt by the lemur going:
 	otherwise:
 		say "The [lemur] walks in circles, all of its sensor stalks twitching."; 
 
-[Report the lemur trying opening a door (called the blocking door):
-	if the blocking door is open, say "The lemur emits a short trill; [the blocking door] slides open in response.";
-	otherwise say "The lemur emits a short trill; when [the blocking door] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."]
+Report the lemur trying opening a door (called the barrier):
+	if the barrier is open, say "The lemur emits a short trill; [the barrier] slides open in response.";
+	otherwise say "The lemur emits a short trill; when [the barrier] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."
 	
 Persuasion rule for asking people to try going: persuasion succeeds.
 
@@ -1154,6 +1157,7 @@ Volume 2 - The Starlight Dancer
 The player is in the autodoc.[move the player back to the rocky shore before releasing]
 
 Deck A is a region. The autodoc is in Deck A. The Medical Bay is in Deck A. Hallway A is in Deck A.
+South of Hallway A is Astrogation. 
 
 Book 1 - Dreamtime
 
