@@ -1062,12 +1062,14 @@ A robot is a kind of person. A robot called the lemur is in the Medical Bay. The
 [Every turn when the player can see the lemur:
 	say "The [printed name of lemur] [one of]scurries over to a bit of debris, chittering and scraping[or]emits a near-supersonic [i]chirrup[/i] and cocks its head to one side, holding very still[or]races around in a circle, its floodlit-eyes strobing across the room[as decreasingly likely outcomes]."]
 
+A room can be dirty or clean. A room is usually dirty.
+
 The lemur can be wandering, inquiring, or cleaning. The lemur is wandering.
-The lemur has a list of rooms called the cleaned places. The lemur has a room called the destination. The lemur has a room called the next step. The destination of the lemur is Astrogation.
+The lemur has a list of rooms called the duty list. The lemur has a room called the destination. The lemur has a room called the next step. The destination of the lemur is Astrogation. The lemur has a region called the current deck. [The current deck must be set manually as there is no (stock?) way to refer to the map region of an npc!]
 
 Every turn when the lemur is wandering:
 	if a random chance of 1 in 3 succeeds:
-		if the player can see the lemur, say "The [lemur] freezes in place and twitches an audio sensor for a few moments."; [it bugs out every so often instead of moving on]
+		if the player can see the lemur, say "The [lemur] freezes in place and twitches an audio sensor for a few moments."; [it bugs out every so often instead of moving on, even if the player can't see it]
 	otherwise:
 		say "Lemur advancing to [destination of the lemur]."; [NFR]
 		if the location of the lemur is the destination of the lemur:
@@ -1076,13 +1078,24 @@ Every turn when the lemur is wandering:
 		otherwise:
 			try the lemur advancing;
 
-To choose a new maintenance zone:
-	let foo be the list of rooms regionally in the map region of the location of the lemur;
-	remove the cleaned places from foo;
+[To choose a new maintenance zone:
+	let qaz be the map region of the location of the lemur;
+	let foo be the list of rooms regionally in qaz;
 	let bar be a random number between 1 and the number of entries in foo;
 	let target be entry bar of foo;
 	now the destination of the lemur is target;
-	say "The [lemur] is headed for [destination of the lemur]." [NFR]
+	say "The [lemur] is headed for [destination of the lemur]." [NFR]]
+	
+To choose a new maintenance zone:
+	say "Choosing:[br]";
+	repeat with bar running through the list of rooms regionally in the current deck of the lemur:
+		if bar is dirty, add bar to the duty list of the lemur;
+	repeat with qaz running through the duty list of the lemur:
+		if qaz is clean, remove qaz from the duty list of the lemur;
+	if the duty list of the lemur is empty, do nothing; [later we'll make this reset the list of dirty rooms]
+	let wham be a random number between 1 and the number of entries in the duty list of the lemur;
+	now the destination of the lemur is entry wham in the duty list of the lemur;
+	say the destination of the lemur;
 	
 Advancing is an action applying to nothing. [the lemur decides which direction to head and then takes it]
 
@@ -1092,13 +1105,14 @@ Carry out the lemur advancing:
 	say "The [lemur] moves [right direction] towards the [next step of the lemur]."; [NFR]
 	try the lemur going the right direction;
 	
-	
 Carry out advancing:
 	say "Maybe not this time. --Ghetvark";
 
 Report the lemur advancing:
-	
-	
+	if the location of the lemur is the next step of the lemur:
+		say "The lemur skitters away towards the [next step of the lemur].";
+	otherwise:
+		say "The lemur runs in circles for a few moments, evidently lost or stuck.";
 
 Unsuccessful attempt by the lemur going:
 	if the reason the action failed is the check someone else keylessly unlocking rule:
@@ -1158,6 +1172,8 @@ The player is in the autodoc.[move the player back to the rocky shore before rel
 
 Deck A is a region. The autodoc is in Deck A. The Medical Bay is in Deck A. Hallway A is in Deck A.
 South of Hallway A is Astrogation. 
+
+ The current deck of the lemur is Deck A. 
 
 Book 1 - Dreamtime
 
@@ -1503,7 +1519,7 @@ Instead of doing anything except examining with the corpse:
 An emergency lightstrip is here. It is red, lit, and scenery.
 The description is "A series of cheap lights have been sunk into a chunk of red plastex about three feet long. The matte surface keeps the scarlet light from being harsh. Three of them are spaced across the ceiling."
 
-A door called the medbay door is west of Hallway A and east of the Medical Bay. It is locked and unopenable.
+A door called the medbay door is west of Hallway A and east of the Medical Bay. It is open and unopenable.
 The description is "The door out of the Medical Bay is coated with the same dried blood as everything else in the room. The lights on the control panel glow [color of medbay door panel]."
 
 A panel called the medbay door panel is part of the medbay door. It is red. The description is "The medbay door panel glows [color of medbay door panel]. The door must be [if medbay door is unlocked]un[end if]locked."
