@@ -1074,7 +1074,7 @@ Every turn when the lemur is wandering:
 		say "Lemur advancing to [destination of the lemur]."; [NFR]
 		if the location of the lemur is the destination of the lemur:
 			say "Lemur choosing new location."; [NFR]
-			choose a new maintenance zone;
+			try the lemur scanning;
 		otherwise:
 			try the lemur advancing;
 
@@ -1086,24 +1086,49 @@ Every turn when the lemur is wandering:
 	now the destination of the lemur is target;
 	say "The [lemur] is headed for [destination of the lemur]." [NFR]]
 	
-To choose a new maintenance zone:
+[To choose a new maintenance zone:
 	say "Choosing:[br]";
-	repeat with bar running through the list of rooms regionally in the current deck of the lemur:
-		if bar is dirty, add bar to the duty list of the lemur;
-	repeat with qaz running through the duty list of the lemur:
-		if qaz is clean, remove qaz from the duty list of the lemur;
-	if the duty list of the lemur is empty, do nothing; [later we'll make this reset the list of dirty rooms]
+	repeat with zone running through the list of rooms regionally in the current deck of the lemur:
+		if zone is dirty, add zone to the duty list of the lemur;
+	repeat with target running through the duty list of the lemur:
+		if target is clean, remove target from the duty list of the lemur;
+	if the duty list of the lemur is empty:
+		repeat with place running through the list of rooms regionally in the current deck of the lemur:
+			now place is dirty;
+		[restart the choosing action;]
 	let wham be a random number between 1 and the number of entries in the duty list of the lemur;
 	now the destination of the lemur is entry wham in the duty list of the lemur;
-	say the destination of the lemur;
+	say the destination of the lemur;]
+
+Scanning is an action applying to nothing.
+
+Before the lemur scanning:
+	if the duty list of the lemur is empty:
+		repeat with resetti running through the list of rooms regionally in the current deck of the lemur:
+			now resetti is dirty;
+			add resetti to the duty list of the lemur; [this probably will NOT be random]
+[when changing the lemur's current deck, make sure the duty list gets emptied out or the lemur will take care of the previous deck first!]
 	
-Advancing is an action applying to nothing. [the lemur decides which direction to head and then takes it]
+Carry out the lemur scanning:
+	if the location of the lemur is clean and the location of the lemur is listed in the duty list of the lemur, remove the location of the lemur from the duty list of the lemur; [check the current room off the list]
+	now the destination of the lemur is entry 1 of the duty list of the lemur; [get the next room off the stack]
+
+Carry out scanning:
+	say "Probably not, scout. --Ghetvark";
+
+Report the lemur scanning:
+	say "The [lemur] stands on its triple hindlegs, sensor banks slowly rotating as it runs some kind of scan."
+	
+Advancing is an action applying to nothing. [the lemur physically moves towards the destination]
+
+Before the lemur advancing:
+	if the destination of the lemur is the location of the lemur, try the lemur scanning instead;
 
 Carry out the lemur advancing:
 	let the right direction be the best route from the location of the lemur to the destination of the lemur, using even locked doors;
 	now the next step of the lemur is the room the right direction from the location of the lemur;
-	say "The [lemur] moves [right direction] towards the [next step of the lemur]."; [NFR]
 	try the lemur going the right direction;
+[	say "The [lemur] moves [right direction] towards the [next step of the lemur]."; [NFR]]
 	
 Carry out advancing:
 	say "Maybe not this time. --Ghetvark";
@@ -1114,6 +1139,12 @@ Report the lemur advancing:
 	otherwise:
 		say "The lemur runs in circles for a few moments, evidently lost or stuck.";
 
+Report the lemur trying opening a door (called the barrier):
+	if the barrier is open, say "The lemur emits a short trill; [the barrier] slides open in response.";
+	otherwise say "The lemur emits a short trill; when [the barrier] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."
+	
+Persuasion rule for asking people to try going: persuasion succeeds.
+
 Unsuccessful attempt by the lemur going:
 	if the reason the action failed is the check someone else keylessly unlocking rule:
 		if the noun is a direction, let the current direction be the noun;
@@ -1121,12 +1152,6 @@ Unsuccessful attempt by the lemur going:
 		say "The [lemur] emits a short trill; when [the barrier] remains shut, the [lemur] lets out a frustrated warble and starts wandering in circles.";
 	otherwise:
 		say "The [lemur] walks in circles, all of its sensor stalks twitching."; 
-
-Report the lemur trying opening a door (called the barrier):
-	if the barrier is open, say "The lemur emits a short trill; [the barrier] slides open in response.";
-	otherwise say "The lemur emits a short trill; when [the barrier] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."
-	
-Persuasion rule for asking people to try going: persuasion succeeds.
 
 [First carry out going rule: now the former location is the location.
 Advancing is an action applying to one visible thing (called the target).
