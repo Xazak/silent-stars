@@ -1064,61 +1064,25 @@ A robot is a kind of person. A robot called the lemur is in the Medical Bay. The
 
 A room can be dirty or clean. A room is usually dirty.
 
-The lemur can be wandering, inquiring, or cleaning. The lemur is wandering.
+Chapter 1 - Lemur AI
+
+The lemur can be wandering, inquiring, or cleaning. The lemur is wandering. [The lemur has three main behaviours]
 The lemur has a list of rooms called the duty list. The lemur has a room called the destination. The lemur has a room called the next step. The destination of the lemur is Astrogation. The lemur has a region called the current deck. [The current deck must be set manually as there is no (stock?) way to refer to the map region of an npc!]
 
 Every turn when the lemur is wandering:
 	if a random chance of 1 in 3 succeeds:
 		if the player can see the lemur, say "The [lemur] freezes in place and twitches an audio sensor for a few moments."; [it bugs out every so often instead of moving on, even if the player can't see it]
 	otherwise:
-		say "Lemur advancing to [destination of the lemur]."; [NFR]
-		if the location of the lemur is the destination of the lemur:
-			say "Lemur choosing new location."; [NFR]
-			try the lemur scanning;
+		if the destination of the lemur is the location of the lemur: [are we there yet?]
+			now the lemur is inquiring;
 		otherwise:
 			try the lemur advancing;
 
-[To choose a new maintenance zone:
-	let qaz be the map region of the location of the lemur;
-	let foo be the list of rooms regionally in qaz;
-	let bar be a random number between 1 and the number of entries in foo;
-	let target be entry bar of foo;
-	now the destination of the lemur is target;
-	say "The [lemur] is headed for [destination of the lemur]." [NFR]]
-	
-[To choose a new maintenance zone:
-	say "Choosing:[br]";
-	repeat with zone running through the list of rooms regionally in the current deck of the lemur:
-		if zone is dirty, add zone to the duty list of the lemur;
-	repeat with target running through the duty list of the lemur:
-		if target is clean, remove target from the duty list of the lemur;
-	if the duty list of the lemur is empty:
-		repeat with place running through the list of rooms regionally in the current deck of the lemur:
-			now place is dirty;
-		[restart the choosing action;]
-	let wham be a random number between 1 and the number of entries in the duty list of the lemur;
-	now the destination of the lemur is entry wham in the duty list of the lemur;
-	say the destination of the lemur;]
+Every turn when the lemur is inquiring:
+	say "The lemur looks around inquiringly."
 
-Scanning is an action applying to nothing.
+Chapter 2 - Lemur Actions
 
-Before the lemur scanning:
-	if the duty list of the lemur is empty:
-		repeat with resetti running through the list of rooms regionally in the current deck of the lemur:
-			now resetti is dirty;
-			add resetti to the duty list of the lemur; [this probably will NOT be random]
-[when changing the lemur's current deck, make sure the duty list gets emptied out or the lemur will take care of the previous deck first!]
-	
-Carry out the lemur scanning:
-	if the location of the lemur is clean and the location of the lemur is listed in the duty list of the lemur, remove the location of the lemur from the duty list of the lemur; [check the current room off the list]
-	now the destination of the lemur is entry 1 of the duty list of the lemur; [get the next room off the stack]
-
-Carry out scanning:
-	say "Probably not, scout. --Ghetvark";
-
-Report the lemur scanning:
-	say "The [lemur] stands on its triple hindlegs, sensor banks slowly rotating as it runs some kind of scan."
-	
 Advancing is an action applying to nothing. [the lemur physically moves towards the destination]
 
 Before the lemur advancing:
@@ -1143,7 +1107,25 @@ Report the lemur trying opening a door (called the barrier):
 	if the barrier is open, say "The lemur emits a short trill; [the barrier] slides open in response.";
 	otherwise say "The lemur emits a short trill; when [the barrier] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."
 	
-Persuasion rule for asking people to try going: persuasion succeeds.
+Scanning is an action applying to nothing.
+
+Before the lemur scanning:
+	if the duty list of the lemur is empty:
+		repeat with resetti running through the list of rooms regionally in the current deck of the lemur:
+			add resetti to the duty list of the lemur; [this probably will NOT be random]
+			[when changing the lemur's current deck, make sure the duty list gets emptied out or the lemur will take care of the previous deck first!]
+	
+Carry out the lemur scanning:
+	if the location of the lemur is clean and the location of the lemur is listed in the duty list of the lemur, remove the location of the lemur from the duty list of the lemur; [check the current room off the list]
+	now the destination of the lemur is entry 1 of the duty list of the lemur; [get the next room off the stack]
+
+Carry out scanning:
+	say "Probably not, scout. --Ghetvark";
+
+Report the lemur scanning:
+	say "The [lemur] stands on its triple hindlegs, sensor banks slowly rotating as it runs some kind of scan."
+	
+[Persuasion rule for asking people to try going: persuasion succeeds.
 
 Unsuccessful attempt by the lemur going:
 	if the reason the action failed is the check someone else keylessly unlocking rule:
@@ -1151,54 +1133,17 @@ Unsuccessful attempt by the lemur going:
 		let the barrier be the door the current direction from the location of the lemur;
 		say "The [lemur] emits a short trill; when [the barrier] remains shut, the [lemur] lets out a frustrated warble and starts wandering in circles.";
 	otherwise:
-		say "The [lemur] walks in circles, all of its sensor stalks twitching."; 
+		say "The [lemur] walks in circles, all of its sensor stalks twitching."; ]
 
-[First carry out going rule: now the former location is the location.
-Advancing is an action applying to one visible thing (called the target).
-
-Check someone advancing:
-	if the actor is the player, say "That doesn't really work yet. --Ghetvark" instead;
-
-Carry out someone advancing:
-	say wander-dest; [NFR]
-	now the wander-dest is the next target for maintenance;
-	let way be the best route from the location to the wander-dest, using doors;
-	say "Heading [way].";
-	if way is a direction, try the lemur going way;
-
-To decide which room is the next target for maintenance:
-	let sector be the map region of the location of the lemur;
-	let zones be the list of rooms regionally in the map region of the location of the lemur;
-	remove the cleaned places from zones;
-	let foo be a random number from 1 to the number of entries in zones;
-	let target be entry foo of zones;
-	say "New wander-dest: [target].";[NFR]
-	decide on target;
-		 
-Report advancing:
-	say "[The actor] hurries towards the [wander-dest].";
-
-To advance the lemur:
-	if the location of the lemur is the wander-dest:
-		if the wander-dest is listed in the cleaned zones:
-			try the lemur going to the nearest hallway;
-
-To decide which room is the nearest hallway:
-	if the lemur is in Deck A, decide on Hallway A;
-	else if the lemur is in Deck B, decide on Hallway B; 
-	else if the lemur is in Deck C, decide on Hallway C;
-	else if the lemur is in Deck D, decide on Hallway D;]
 	
 Volume 2 - The Starlight Dancer
-
-[Nationalism relates a room (called the zone) to a region (called the sector) when the zone is in the sector. The verb to be included in implies the nationalism relation.]
 
 The player is in the autodoc.[move the player back to the rocky shore before releasing]
 
 Deck A is a region. The autodoc is in Deck A. The Medical Bay is in Deck A. Hallway A is in Deck A.
 South of Hallway A is Astrogation. 
 
- The current deck of the lemur is Deck A. 
+The current deck of the lemur is Deck A. [including this before the declaration above causes namespace issues] 
 
 Book 1 - Dreamtime
 
