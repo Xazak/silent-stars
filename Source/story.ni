@@ -1074,19 +1074,20 @@ Every turn when the lemur is wandering:
 		if the player can see the lemur, say "The [lemur] freezes in place and twitches an audio sensor for a few moments."; [it bugs out every so often instead of moving on, even if the player can't see it]
 	otherwise:
 		if the destination of the lemur is the location of the lemur: [are we there yet?]
-			now the lemur is inquiring;
+			now the lemur is inquiring; [then switch modes to see what exactly needs cleaning]
 		otherwise:
 			try the lemur advancing;
 
 Every turn when the lemur is inquiring:
-	say "The lemur looks around inquiringly."
+	say "The lemur looks around inquiringly.";
+	try the lemur sorting;
 
 Chapter 2 - Lemur Actions
 
 Advancing is an action applying to nothing. [the lemur physically moves towards the destination]
 
-Before the lemur advancing:
-	if the destination of the lemur is the location of the lemur, try the lemur scanning instead;
+[Before the lemur advancing:
+	if the destination of the lemur is the location of the lemur, try the lemur scanning instead;]
 
 Carry out the lemur advancing:
 	let the right direction be the best route from the location of the lemur to the destination of the lemur, using even locked doors;
@@ -1107,7 +1108,7 @@ Report the lemur trying opening a door (called the barrier):
 	if the barrier is open, say "The lemur emits a short trill; [the barrier] slides open in response.";
 	otherwise say "The lemur emits a short trill; when [the barrier] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."
 	
-Scanning is an action applying to nothing.
+[Scanning is an action applying to nothing.
 
 Before the lemur scanning:
 	if the duty list of the lemur is empty:
@@ -1123,8 +1124,29 @@ Carry out scanning:
 	say "Probably not, scout. --Ghetvark";
 
 Report the lemur scanning:
-	say "The [lemur] stands on its triple hindlegs, sensor banks slowly rotating as it runs some kind of scan."
+	say "The [lemur] stands on its triple hindlegs, sensor banks slowly rotating as it runs some kind of scan."]
+
+Sorting is an action applying to nothing.
+
+Before the lemur sorting:
+	do nothing;
 	
+Carry out the lemur sorting:
+	do nothing;
+	
+Carry out sorting:
+	say "Can't let you do that. --Ghetvark";
+	
+Report the lemur sorting:
+	say "A bright red laser shoots out of the lemur's head and starts moving down the room, scanning everything visible." 
+
+The atomos rules are an object-based rulebook. The atomos rules have outcomes it is animal, it is vegetal and it is mineral.
+
+An atomos rule for a thing: it is mineral.
+An atomos rule for a person: it is animal.
+An atomos rule for a robot: it is mineral.
+An atomos rule for a limb: it is animal.
+
 [Persuasion rule for asking people to try going: persuasion succeeds.
 
 Unsuccessful attempt by the lemur going:
