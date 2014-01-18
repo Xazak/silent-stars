@@ -1067,7 +1067,7 @@ A room can be dirty or clean. A room is usually dirty.
 Chapter 1 - Lemur AI
 
 The lemur can be wandering, inquiring, or cleaning. The lemur is wandering. [The lemur has three main behaviours]
-The lemur has a list of rooms called the duty list. The lemur has a room called the destination. The lemur has a room called the next step. The destination of the lemur is Astrogation. The lemur has a region called the current deck. [The current deck must be set manually as there is no (stock?) way to refer to the map region of an npc!]
+The lemur has a list of rooms called the duty list. The lemur has a room called the destination. The lemur has a room called the next step. The destination of the lemur is Medical Bay. The lemur has a region called the current deck. [The current deck must be set manually as there is no (stock?) way to refer to the map region of an npc!]
 
 Every turn when the lemur is wandering:
 	if a random chance of 1 in 3 succeeds:
@@ -1128,11 +1128,17 @@ Report the lemur scanning:
 
 Sorting is an action applying to nothing.
 
+The sorting action has a list of things called the pile of stuff.
+
 Before the lemur sorting:
 	do nothing;
 	
 Carry out the lemur sorting:
-	do nothing;
+	now the pile of stuff is the list of things able to be seen by the lemur;
+	remove the lemur from the pile of stuff;
+	repeat with item running through the pile of stuff:
+		follow the atomos rules for the item;
+		if the outcome of the rulebook is mineral, remove the item from the pile of stuff;
 	
 Carry out sorting:
 	say "Can't let you do that. --Ghetvark";
@@ -1140,12 +1146,17 @@ Carry out sorting:
 Report the lemur sorting:
 	say "A bright red laser shoots out of the lemur's head and starts moving down the room, scanning everything visible." 
 
-The atomos rules are an object-based rulebook. The atomos rules have outcomes it is animal, it is vegetal and it is mineral.
+The atomos rules are an object-based rulebook. The atomos rules have outcomes animal, vegetal and mineral.
 
-An atomos rule for a thing: it is mineral.
-An atomos rule for a person: it is animal.
-An atomos rule for a robot: it is mineral.
-An atomos rule for a limb: it is animal.
+An atomos rule for a thing: mineral.
+An atomos rule for a person: animal.
+An atomos rule for a robot: mineral.
+An atomos rule for a limb: animal.
+
+Welding something is an action applying to one thing. Understand "welding [thing]" as welding something.
+
+Carry out the lemur welding something:
+	say "The [lemur] welds the [noun].";
 
 [Persuasion rule for asking people to try going: persuasion succeeds.
 
