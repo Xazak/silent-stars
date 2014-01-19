@@ -28,6 +28,7 @@ IMPROVEMENTS:
 [ ] Set up the personal locker to implicitly unlock when opened for the 2nd time onward
 [ ] An object-based rulebook to preferentially wear certain items when picked up
 [ ] Instead of having infrared things pass a flag, there is a way to make things conditionally ignore specific rules
+[ ] Edit certain body parts to show a different description if there is a mirror or suchlike around
 
 MESSAGE CHANGES:
 [X] Adjust: Rewrite the illumination rule to take advantage of the color of a thing

@@ -826,16 +826,15 @@ A limb has a number called the injury-level. The injury-level is usually 0.
 
 Table of Body Parts
 limb	description
-head	"OKEY"
-neck	"OKEY"
-face	"OKEY"
-chest	"OKEY"
-thorax	"OKEY"
-abdomen	"OKEY"
-pelvis	"OKEY"
-left arm	"OKEY"
+head	"You're still thinking, breathing and moving around, and there's no weird memory gaps, so presumably your head is still intact."
+neck	"You always thought you had an elegant neck. The abstract wingtip tattoos along the collarbones were painful (amateur artist, multiple retouches, needles on bone), but worth it."
+face	"Can't see it, but everything's there."
+chest	"You glance down. [if player is naked]You keep your arms crossed over your breasts when you can. Too damn cold in here[otherwise]You readjust your [worn clothing] across your chest, shuffling everything back into place."  
+thorax	"Still trim, even after all that time in cryo."
+pelvis	"[if player is naked]You don't admit it to anyone but your closest, but the interlocked hearts tattooed across your lower abdomen are your favorite. The glossy ink was a nice touch[otherwise]The pockets of your [worn clothing] contain [list of things carried by the player][end if]."
+left arm	"[if the player is wearing the persocom]The persocom glows quietly[otherwise]The top half of your forearm tattoo reads '|_| /_\ |) |\ (_ |)'[end if]."
 left hand	"It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]."
-right arm	"OKEY"
+right arm	"The bottom half of your forearm tattoo reads '| | | | |\ |/ (_ |\'."
 right hand	"It's your right hand. [if right hand is healthy]Nothing to see here[else]The only interesting things about it are the scars it's picked up[end if]."
 left leg	"OKEY"
 left foot	"OKEY"
@@ -845,6 +844,11 @@ right foot	"OKEY"
 After examining a limb (called the appendix)(this is the mention injuries with limbs rule):
 	if the appendix is harmed by an injury (called the psychoknife):
 		try examining the psychoknife;
+
+The worn clothing is a thing that varies. The named clothing rule is listed before the standard wearing rule in the carry out wearing rules.
+
+Carry out the player wearing (this is the named clothing rule):
+	if the player is naked, now the noun is the worn clothing;
 
 Chapter 2 - Injuries and Attacking the Player
 
@@ -1138,7 +1142,7 @@ Carry out the lemur sorting:
 	remove the lemur from the pile of stuff;
 	repeat with item running through the pile of stuff:
 		follow the atomos rules for the item;
-		if the outcome of the rulebook is mineral, remove the item from the pile of stuff;
+[		if the outcome of the rulebook is mineral, remove the item from the pile of stuff;]
 	
 Carry out sorting:
 	say "Can't let you do that. --Ghetvark";
