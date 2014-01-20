@@ -80,7 +80,7 @@ Definition: a thing is small if its bulk is at least 2 and its bulk is at most 4
 Definition: a thing is midsized if its bulk is at least 5 and its bulk is at most 9.
 Definition: a thing is large if its bulk is at least 10.
 
-Color is a kind of value. The colors are translucent, red, orange, yellow, green, blue, indigo, violet, grey, silver, pink, white, and black. A thing has color. A thing is usually silver. Understand the color property as describing a thing.
+A color is a kind of value. The colors are translucent, red, orange, yellow, green, blue, indigo, violet, grey, silver, pink, white, and black. A thing has a color. A thing is usually silver. Understand the color property as describing a thing.
 
 [rain suggested trapping the putting X in/taking X out events to change the color accordingly, wouldn't work for initial setup]
 [To say the color of (item - a translucent thing):
@@ -518,11 +518,11 @@ Chapter 2 - The Software
 
 Section 1 - The OS
 
-Some software has some text called the activation message. The activation message is usually "The [printed name] expands into the main display area."
+Some software has some text called the activation message. The activation message is usually "The [printed name] expands into the main display area." Some software is usually fixed in place.
 
 Understand the command "ps" and "persocom" as "type". [Default synonyms for "type": enter, key, input, select]
 
-[*** THE BIOS ***] 
+[*** THE BIOS ***]
 
 The persocom runs some software called the bios. The software priority of the bios is 1. The description of the bios is "MITARI-HYLAND FIRMOS v309.72.16a4(3030-01-28)[br]Hardware Test OK, Symbory Abstracts Initialized...". The bios can be processing or resting. The bios is resting.
 
@@ -826,20 +826,20 @@ A limb has a number called the injury-level. The injury-level is usually 0.
 
 Table of Body Parts
 limb	description
-head	"You're still thinking, breathing and moving around, and there's no weird memory gaps, so presumably your head is still intact."
+head	"You're still thinking, breathing and moving around, and there's no weird memory gaps, so presumably everything's still there."
 neck	"You always thought you had an elegant neck. The abstract wingtip tattoos along the collarbones were painful (amateur artist, multiple retouches, needles on bone), but worth it."
 face	"Can't see it, but everything's there."
 chest	"You glance down. [if player is naked]You keep your arms crossed over your breasts when you can. Too damn cold in here[otherwise]You readjust your [worn clothing] across your chest, shuffling everything back into place."  
 thorax	"Still trim, even after all that time in cryo."
-pelvis	"[if player is naked]You don't admit it to anyone but your closest, but the interlocked hearts tattooed across your lower abdomen are your favorite. The glossy ink was a nice touch[otherwise]The pockets of your [worn clothing] contain [list of things carried by the player][end if]."
+pelvis	"[if player is naked]You don't admit it to anyone but your closest friends, but the interlocked hearts tattooed across your lower abdomen are your favorite. The glossy ink was a nice touch[otherwise]The pockets of your [worn clothing] contain [list of things carried by the player][end if]."
 left arm	"[if the player is wearing the persocom]The persocom glows quietly[otherwise]The top half of your forearm tattoo reads '|_| /_\ |) |\ (_ |)'[end if]."
-left hand	"It's your left hand. [if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]."
+left hand	"[if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]."
 right arm	"The bottom half of your forearm tattoo reads '| | | | |\ |/ (_ |\'."
-right hand	"It's your right hand. [if right hand is healthy]Nothing to see here[else]The only interesting things about it are the scars it's picked up[end if]."
-left leg	"OKEY"
-left foot	"OKEY"
-right leg	"OKEY"
-right foot	"OKEY"
+right hand	"[if right hand is healthy]Nothing to see here[else]The only interesting things about it are the scars it's picked up[end if]."
+left leg	"A stack of 4 thick black bands - one for each year of spin-up training - circle your thigh."
+left foot	"Other than the missing pinky toenail (recent rock-climbing accident), it's just an average foot."
+right leg	"Unlike the ritual-scholastic tattoos on your other leg, the leopard spots running down your right leg are purely for aesthetic."
+right foot	"Your right foot is [if right foot is healthy]unmarked and healthy[otherwise]marred by a few injuries[end if]."
 
 After examining a limb (called the appendix)(this is the mention injuries with limbs rule):
 	if the appendix is harmed by an injury (called the psychoknife):
@@ -856,7 +856,7 @@ A modality is a kind of value. The modalities are laceration, contusion, punctur
 
 A remedy is a kind of thing. The description is usually "A green box with a white + on the front." A remedy has a list of limbs called the applications. The applications are usually {right hand, left hand}. A remedy has a number called the usefulness. The usefulness is usually 1. A remedy has a list of modalities called the factors. The factors are usually {laceration, contusion, puncture, rupture}.
 
-An injury is a kind of thing. The description of an injury is usually "You haz a sad :( ". An injury has a number called the severity. The severity is usually 1. [scale is 0 - harmless to 6 - maximal (i.e. impossible to treat)]
+An injury is a kind of thing. The description of an injury is usually "You haz a sad :( ". The bulk is usually 0. An injury has a number called the severity. The severity is usually 1. [scale is 0 - harmless to 6 - maximal (i.e. impossible to treat)]
 
 An injury has a limb called the site.
 
@@ -1072,6 +1072,7 @@ Chapter 1 - Lemur AI
 
 The lemur can be wandering, inquiring, or cleaning. The lemur is wandering. [The lemur has three main behaviours]
 The lemur has a list of rooms called the duty list. The lemur has a room called the destination. The lemur has a room called the next step. The destination of the lemur is Medical Bay. The lemur has a region called the current deck. [The current deck must be set manually as there is no (stock?) way to refer to the map region of an npc!]
+The lemur has a list of things called the laundry list. The lemur has a thing called the target.
 
 Every turn when the lemur is wandering:
 	if a random chance of 1 in 3 succeeds:
@@ -1085,6 +1086,15 @@ Every turn when the lemur is wandering:
 Every turn when the lemur is inquiring:
 	say "The lemur looks around inquiringly.";
 	try the lemur sorting;
+
+Every turn when the lemur is cleaning:
+	say "The lemur looks for another thing to clean.";
+	if the laundry list of the lemur is empty:
+		now the lemur is wandering;
+		say "The lemur warbles and heads for an exit.";
+	otherwise:
+		now the target of the lemur is entry 1 of the laundry list of the lemur;
+		try the lemur welding the target of the lemur;
 
 Chapter 2 - Lemur Actions
 
@@ -1108,7 +1118,7 @@ Report the lemur advancing:
 	otherwise:
 		say "The lemur runs in circles for a few moments, evidently lost or stuck.";
 
-Report the lemur trying opening a door (called the barrier):
+Report the lemur opening a door (called the barrier):
 	if the barrier is open, say "The lemur emits a short trill; [the barrier] slides open in response.";
 	otherwise say "The lemur emits a short trill; when [the barrier] remains shut, the lemur lets out a frustrated warble and starts wandering in circles."
 	
@@ -1137,12 +1147,24 @@ The sorting action has a list of things called the pile of stuff.
 Before the lemur sorting:
 	do nothing;
 	
-Carry out the lemur sorting:
-	now the pile of stuff is the list of things able to be seen by the lemur;
+Carry out the lemur sorting(this is the corrupted lemur programming rule):
+	now the pile of stuff is the list of portable things able to be seen by the lemur;
 	remove the lemur from the pile of stuff;
 	repeat with item running through the pile of stuff:
-		follow the atomos rules for the item;
-[		if the outcome of the rulebook is mineral, remove the item from the pile of stuff;]
+		if the item is clean, remove the item from the pile of stuff;
+	now the laundry list of the lemur is the pile of stuff;
+	now the lemur is cleaning;
+	
+Definition: a thing (called the target) is dirty rather than clean:
+	consider the atomos rules for the target;
+	if outcome of the rulebook is:
+		-- the animal outcome:
+			yes;
+		-- the vegetal outcome:
+			yes;
+	if the target is fixed in place, no;
+	if the target is a part of something, no;
+	otherwise yes;
 	
 Carry out sorting:
 	say "Can't let you do that. --Ghetvark";
@@ -1157,11 +1179,27 @@ An atomos rule for a person: animal.
 An atomos rule for a robot: mineral.
 An atomos rule for a limb: animal.
 
-Welding something is an action applying to one thing. Understand "welding [thing]" as welding something.
+Understand "weld [thing]" as welding.
+Welding is an action applying to one thing. 
 
-Carry out the lemur welding something:
-	say "The [lemur] welds the [noun].";
+Carry out welding:
+	say "Not ready yet. --Ghetvark";
 
+Carry out the lemur welding:
+	if the noun is part of the player:
+		attack with the plasma burn;
+	otherwise:
+		remove the noun from play;
+		remove the noun from the laundry list of the lemur;
+
+There is an injury called the plasma burn. The severity of the plasma burn is 4. The site of the plasma burn is the left foot. The class of the plasma burn is heat-burn. The description is "That bastard LMR got you pretty good with its welding torch. A plasma burn stretches across most of your foot and ankle; walking on it is going to be painful no matter what." 
+
+Report the lemur welding:
+	if the noun is part of the player:
+		say "The welding torch flickers out and catches you across the left foot; bright pain flares up your leg like stepping into a pool of lava.";
+	otherwise:
+		say "The [lemur]'s welding torch reduces the [noun] to a pile of dust, which it then sweeps into an internal compartment.";
+	
 [Persuasion rule for asking people to try going: persuasion succeeds.
 
 Unsuccessful attempt by the lemur going:
@@ -1334,7 +1372,7 @@ The floor crap is scenery in the Medical Bay. The description is "Anything of va
 
 Understand "floor/glass/paraphernalia/dried blood" as the floor crap. 
 
-A container called a chemical shower is here. The shower is [transparent, ]openable, enterable, and closed.
+A container called a chemical shower is here. The shower is [transparent, ]fixed in place, openable, enterable, and closed.
 "A green vinyl curtain [if open]hangs to one side of[else]is drawn across[end if] the entrance to a small chemical shower."
 The description is "The humble chemical shower is equipped with a variety of {{anti-chemical chemicals}} and its own fluid reclamation system. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
 The inside-description is "The extruded fiberglass walls are only just wide enough apart to let you in. A spigot overhead must be where the {{soapy water}} comes out; a simple hole underfoot must be where it goes. [br][br]A green vinyl curtain[if the shower is open] hangs to one side.[else] is drawn across the entrance."
