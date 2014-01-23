@@ -209,8 +209,37 @@ PUZZLE: The medbay door is stuck shut
 	SOLUTION:
 	-- Use the handcomp to bypass the door control panel
 ]]-
+THE MAP -[[
+Deck A
+		Recyl	Med Bay	 ->\
+			  \		|
+AFT|	ElevA -	HallA x2	  -	Astro
+			  /		|
+		LfSup	Sci Lab	 ->/
+-
+Deck B
+		|<- 	Crew Quarters Alpha		->|	XOQtr\
+						\	|			   /
+AFT|	SecAI -	ElevA -	HallB x2 [Bridge] -	ElevB -	RecRm
+			  			/	|			   \
+		|<- 	Crew Quarters Beta		->|	CpQtr/
+-
+Deck C
+		|<- 	Fuel Tank Alpha				 ->\
+<- THRUSTER ACCESS
+AFT| >-	EngPt -	ElevA -	HallC x2 [Bridge] -	ElevB -	MShop
+<- THRUSTER ACCESS
+		|<- 	Fuel Tank Beta				 ->/
+-
+Deck D
+		| Eva	 ->| |<-	Cargo			 ->\
+					 \		|		/
+AFT|	| Eva -	ElevA -	HallD x2 [Secure] -	ElevB -	Cargo
+					 /		|		\
+		| Eva	 ->| |<-	Cargo			 ->/
+]]-
 
-WORLD MODELLING
+MODELLING
 VISIBILITY/EPISTEMOLOGY -[[
 Currently, "visible" only covers objects that are in a lighted room. Attempting to redefine this appears to involve seriously deep hacking of the visibility calculations.
 

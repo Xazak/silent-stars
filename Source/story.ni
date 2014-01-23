@@ -831,14 +831,14 @@ neck	"You always thought you had an elegant neck. The abstract wingtip tattoos a
 face	"Can't see it, but everything's there."
 chest	"You glance down. [if player is naked]You keep your arms crossed over your breasts when you can. Too damn cold in here[otherwise]You readjust your [worn clothing] across your chest, shuffling everything back into place."  
 thorax	"Still trim, even after all that time in cryo."
-pelvis	"[if player is naked]You don't admit it to anyone but your closest friends, but the interlocked hearts tattooed across your lower abdomen are your favorite. The glossy ink was a nice touch[otherwise]The pockets of your [worn clothing] contain [list of things carried by the player][end if]."
+pelvis	"[if player is naked]You don't admit it to anyone but your closest friends, but the interlocked hearts tattooed across your lower abs are your favorite. The glossy ink was a nice touch[otherwise]The pockets of your [worn clothing] contain [list of things carried by the player][end if]."
 left arm	"[if the player is wearing the persocom]The persocom glows quietly[otherwise]The top half of your forearm tattoo reads '|_| /_\ |) |\ (_ |)'[end if]."
 left hand	"[if the light level is murky]You flex it once or twice to make sure it's still there[otherwise]Missing fingertip on middle finger (bar fight), blank pinky fingerprint (close call with industrial acid), inoculation and transit scars on the back (expensive counterfeits)[end if]."
 right arm	"The bottom half of your forearm tattoo reads '| | | | |\ |/ (_ |\'."
 right hand	"[if right hand is healthy]Nothing to see here[else]The only interesting things about it are the scars it's picked up[end if]."
 left leg	"A stack of 4 thick black bands - one for each year of spin-up training - circle your thigh."
 left foot	"Other than the missing pinky toenail (recent rock-climbing accident), it's just an average foot."
-right leg	"Unlike the ritual-scholastic tattoos on your other leg, the leopard spots running down your right leg are purely for aesthetic."
+right leg	"Unlike the ritual-scholastic tattoos on your other leg, the blacklight leopard spots running down your right leg are purely for the futuro-classique death-metal aesthetic."
 right foot	"Your right foot is [if right foot is healthy]unmarked and healthy[otherwise]marred by a few injuries[end if]."
 
 After examining a limb (called the appendix)(this is the mention injuries with limbs rule):
@@ -872,8 +872,7 @@ Harming relates various injuries to one limb. The verb to harm (he harms, they h
 Definition: a limb is injured rather than healthy if it is harmed by an untreated injury.
 Definition: a person is injured rather than healthy if she is incorporating an injured limb.
 
-To attack with (psychoknife - an injury):
-	let the strikezone be the site of the psychoknife; [the attacker picks a target]
+To attack (strikezone - a limb) with (psychoknife - an injury):
 	now the psychoknife is part of the strikezone; [the attacker is attached to the target]
 	now the psychoknife is harming the strikezone; [the injury relation is created]
 	now the psychoknife is seen;
@@ -1187,7 +1186,7 @@ Carry out welding:
 
 Carry out the lemur welding:
 	if the noun is part of the player:
-		attack with the plasma burn;
+		attack the noun with the plasma burn;
 	otherwise:
 		remove the noun from play;
 		remove the noun from the laundry list of the lemur;
@@ -1617,7 +1616,7 @@ Autodoc Escape is a scene. Autodoc Escape begins when play begins[Dreamtime ends
 There is an injury called the jagged slash. The severity of the jagged slash is 1. The class of the jagged slash is laceration. The site of the jagged slash is the right hand. The description is "A jagged slash across the back of your right hand [if untreated]oozes a slow trickle of blood that refuses to stop[otherwise]is covered by a short length of gauze bandage, wrapped like a drunk prizefighter[end if]."
 
 When Autodoc Escape begins:
-	attack with the jagged slash;
+	attack the right hand with the jagged slash;
 
 Get My Gear Back is a scene. Get My Gear Back begins when Autodoc Escape ends. Get My Gear Back ends when the player is wearing a jumpsuit.
 
