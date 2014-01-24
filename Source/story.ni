@@ -1060,7 +1060,7 @@ Instead of examining yourself:
 
 Part 4 - The Localized Matter Rehabilitator
 
-A robot is a kind of person. A robot called the lemur is in the Medical Bay. The printed name of the lemur is "localized matter rehabilitator". Understand "LMR" as the lemur. The description is "The localized matter rehabilitator is dinged up and battle-scarred; that is, what you can see when those godawful floodlights aren't pointed your way."
+A robot is a kind of person. A robot called the lemur is in Hallway A. The printed name of the lemur is "localized matter rehabilitator". Understand "LMR" as the lemur. The description is "The localized matter rehabilitator is dinged up and battle-scarred; that is, what you can see when those godawful floodlights aren't pointed your way."
 
 [Every turn when the player can see the lemur:
 	say "The [printed name of lemur] [one of]scurries over to a bit of debris, chittering and scraping[or]emits a near-supersonic [i]chirrup[/i] and cocks its head to one side, holding very still[or]races around in a circle, its floodlit-eyes strobing across the room[as decreasingly likely outcomes]."]
@@ -1070,7 +1070,7 @@ A room can be dirty or clean. A room is usually dirty.
 Chapter 1 - Lemur AI
 
 The lemur can be wandering, inquiring, or cleaning. The lemur is wandering. [The lemur has three main behaviours]
-The lemur has a list of rooms called the duty list. The lemur has a room called the destination. The lemur has a room called the next step. The destination of the lemur is Medical Bay. The lemur has a region called the current deck. [The current deck must be set manually as there is no (stock?) way to refer to the map region of an npc!]
+The lemur has a list of rooms called the duty list. The lemur has a room called the destination. The lemur has a room called the next step. The lemur has a region called the current deck. [The current deck must be set manually as there is no (stock?) way to refer to the map region of an npc!]
 The lemur has a list of things called the laundry list. The lemur has a thing called the target.
 
 Every turn when the lemur is wandering:
@@ -1148,7 +1148,7 @@ Before the lemur sorting:
 	
 Carry out the lemur sorting(this is the corrupted lemur programming rule):
 	now the pile of stuff is the list of portable things able to be seen by the lemur;
-	remove the lemur from the pile of stuff;
+	if the lemur is listed in the pile of stuff, remove the lemur from the pile of stuff;
 	repeat with item running through the pile of stuff:
 		if the item is clean, remove the item from the pile of stuff;
 	now the laundry list of the lemur is the pile of stuff;
@@ -1214,8 +1214,8 @@ Volume 2 - The Starlight Dancer
 
 The player is in the autodoc.[move the player back to the rocky shore before releasing]
 
-Deck A is a region. The autodoc is in Deck A. The Medical Bay is in Deck A. Hallway A is in Deck A.
-South of Hallway A is Astrogation. 
+Deck A is a region. [The autodoc is in Deck A. The Medical Bay is in Deck A. Hallway A is in Deck A.]
+The autodoc, the Medical Bay, Astrogation, SciLabs, Recycling, Life Support, Elevator Alpha and Hallway A are in Deck A.
 
 The current deck of the lemur is Deck A. [including this before the declaration above causes namespace issues] 
 
@@ -1274,11 +1274,16 @@ Report taking the stone:
 
 Book 2 - Deck A
 
+[Once Deck A is set up, use the neighboring relation to establish the correct adjacency of rooms for the listening logic, repeat for each deck]
+
+The Autodoc abuts the Medical Bay. The Medical Bay abuts Hallway A.
+
+
 Part 1 - The Autodoc
 
 The Autodoc is a room. "You're lying down inside a metal coffin that isn't much larger than you. It (you?) reeks of medical disinfectants; the fuzziness in your head feels like it's keeping away a headache from all the fumes."
 The printed name of the autodoc is "Antiseptic Coffin". Understand "coffin" as the Autodoc. The dark-description of the Autodoc is "It's cold and damp and dark in here."
-Index map with the Autodoc mapped south of the Medical Bay.
+[Index map with the Autodoc mapped north of the Medical Bay.]
 
 There is a panel called the control panel in the Autodoc. 
 "[if active]A flashing red button on the control panel above you casts flickering shadows[otherwise]The control panel above you awaits input[end if]."
@@ -1563,18 +1568,34 @@ Instead of doing anything except examining with the corpse:
 An emergency lightstrip is here. It is red, lit, and scenery.
 The description is "A series of cheap lights have been sunk into a chunk of red plastex about three feet long. The matte surface keeps the scarlet light from being harsh. Three of them are spaced across the ceiling."
 
-A door called the medbay door is west of Hallway A and east of the Medical Bay. It is open and unopenable.
+A door called the medbay door is east of Hallway A and west of the Medical Bay. It is open and unopenable.
 The description is "The door out of the Medical Bay is coated with the same dried blood as everything else in the room. The lights on the control panel glow [color of medbay door panel]."
 
 A panel called the medbay door panel is part of the medbay door. It is red. The description is "The medbay door panel glows [color of medbay door panel]. The door must be [if medbay door is unlocked]un[end if]locked."
 
 Part 3 - Hallway A
 
-Hallway A is a room. "Hallway!"
+Hallway A is a room. "The hallway is stark and clean, though totally dark. The emergency lighting must have shorted out." 
 
-[Once Deck A is set up, use the neighboring relation to establish the correct adjacency of rooms for the listening logic, repeat for each deck]
+Part 4 - Astrogation
 
-The Autodoc abuts the Medical Bay. The Medical Bay abuts Hallway A.
+Astrogation is north of Hallway A. "The astrogation cabin is untouched, by human or metal hands: a layer of dust rests undisturbed on the backup bridge console spread underneath the massive 270-degree 'windows'."
+
+Part 5 - Science Labs
+
+SciLabs is west of Hallway A. "The LMR has been hard at work in here: the cabinets and walls are strangely bare of anything including doors, and all the resulting trash from whatever happened is piled up in the corner. The organic specimens locked inside cold storage are still intact, however."
+
+Part 6 - Recycling
+
+Recycling is southwest of Hallway A. "You suppress a snort when you walk into Recycling. 'The Boring Station' is still such a mind-numbing drudge that even the chaos on the ship hasn't touched it, despite the door being unlocked. A closet is on the far wall; the recycling system introduction port is to the left."
+
+Part 7 - Life Support
+
+Life Support is southeast of Hallway A. "Life Support is, to your mixed hopes, at least working, if not undamaged. All of the viewscreens are smashed, but the device sockets appear intact. (One of them will short out!)."
+
+Part 8 - Elevator Lv-Alpha
+
+Elevator Lv-Alpha is south of Hallway A. "The elevator door lights are blinking in synch when you walk up; the panel is flashing the standard intractable red '!!!'. A device socket is under a service panel."
 
 Volume 3 - Action
 
