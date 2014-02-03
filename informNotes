@@ -130,6 +130,65 @@ DANGER: Aurita, the Shipboard AI -[[
 ]]-
 
 PUZZLE SPECS
+PC Basic Moves:
+- HACK a system
+- REPAIR a widget
+- GREP for information
+- ENGINEER a widget
+- OBTAIN supplies
+- MOVE to a new location
+- HIDE from the LMR
+- EMAIL Aurita
+
+Starlight Dancer Basic Moves:
+- VENT into space
+- CATCH AFLAME
+- CONTAMINATE the player
+- etc for each wound modality
+
+LMR Basic Moves:
+- FIND something dirty
+- MOVE towards the target thing
+- CLEAN the target thing (according to internal logic)
+- DELAY because corrupted programming
+
+Aurita Basic Moves:
+- NOTICE something
+- CONSIDER her goals
+- MAKE UP a lie
+- SABOTAGE a system 
+- EMAIL the player
+
+Medbay:
+PC	OBTAIN - starting gear, HACK - medbay door, REPAIR - the organic clog in the room
+SD	CONTAMINATE the player via biohazard
+LMR	AVOID the medbay because locked
+AUR	NOTICE the medbay door hack then EMAIL the player
+
+Astrogation:
+PC	HACK - astrogation hatch (current privs not high enough), GREP - for current ship location, HACK - the astrogation console to behave as 2nd bridge
+SD	nothing
+LMR	AVOID the astrogation because locked
+AUR	NOTICE any activity on the astrogation console then CONSIDER her goals
+
+Science Labs:
+PC	GREP - re: ship & crew background, journal entries, REPAIR - a small workbench, UPGRADE - small workbench to be more versatile
+SD	FILL with steam then VENT into space then FILL with air
+LMR	AVOID the Science Labs because locked
+AUR	IGNORE the Science Labs
+
+Life Support:
+PC	HACK - the life support hatch, GREP - for current ship status and life support config, HACK - the life support console to enable certain systems
+SD	nothing
+LMR	AVOID the Life Support because locked
+AUR	NOTICE any activity in LS then CONSIDER her goals
+
+Elevator A:
+PC	REPAIR - the broken elevator hatch to force open, HACK - the elevdoor sensor to disregard the error, MOVE - to Deck B
+SD	BLOCK the player from moving UNLESS fixed
+LMR	AVOID the ElevA shaft because blocked
+AUR	NOTICE the player moving between decks
+
 Deck A/Medical Bay -[[
 PUZZLE: Player is trapped inside the autodoc and must get out
 	STATUS: Mechanics are partially written, has been shelved as incomplete (see notes)
@@ -209,6 +268,11 @@ PUZZLE: The medbay door is stuck shut
 	SOLUTION:
 	-- Use the handcomp to bypass the door control panel
 ]]-
+Deck A/Astrogation -[[
+	HACK: The Astrogation hatch is locked and requires XO-permissions
+	
+]]-
+
 THE MAP -[[
 Deck A
 		Recyl	Med Bay	 ->\

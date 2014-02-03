@@ -822,7 +822,8 @@ This is the new can't carry too many things rule:
 			say "You only have two hands! You'll have to drop some of the things you're carrying to do that." instead;]
 
 A limb is a kind of thing. Some limbs part of the player are defined by the Table of Body Parts.
-A limb has a number called the injury-level. The injury-level is usually 0.
+A limb has a number called the injury-level. The injury-level is usually 0. 
+Rule for grouping together limbs: say "your body".
 
 Table of Body Parts
 limb	description
