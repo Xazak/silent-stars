@@ -129,7 +129,7 @@ DANGER: Aurita, the Shipboard AI -[[
 	Doom: Destruction
 ]]-
 
-PUZZLE SPECS
+PUZZLE SPECS -[[
 PC Basic Moves:
 - HACK a system
 - REPAIR a widget
@@ -189,6 +189,36 @@ SD	BLOCK the player from moving UNLESS fixed
 LMR	AVOID the ElevA shaft because blocked
 AUR	NOTICE the player moving between decks
 
+]]-
+THE MAP -[[
+Deck A
+		Recyl	Med Bay	 ->\
+			  \		|
+AFT|	ElevA -	HallA x2	  -	Astro
+			  /		|
+		LfSup	Sci Lab	 ->/
+-
+Deck B
+		|<- 	Crew Quarters Alpha		->|	XOQtr\
+						\	|			   /
+AFT|	SecAI -	ElevA -	HallB x2 [Bridge] -	ElevB -	RecRm
+			  			/	|			   \
+		|<- 	Crew Quarters Beta		->|	CpQtr/
+-
+Deck C
+		|<- 	Fuel Tank Alpha				 ->\
+<- THRUSTER ACCESS
+AFT| >-	EngPt -	ElevA -	HallC x2 [Bridge] -	ElevB -	MShop
+<- THRUSTER ACCESS
+		|<- 	Fuel Tank Beta				 ->/
+-
+Deck D
+		| Eva	 ->| |<-	Cargo			 ->\
+					 \		|		/
+AFT|	| Eva -	ElevA -	HallD x2 [Secure] -	ElevB -	Cargo
+					 /		|		\
+		| Eva	 ->| |<-	Cargo			 ->/
+]]-
 Deck A/Medical Bay -[[
 PUZZLE: Player is trapped inside the autodoc and must get out
 	STATUS: Mechanics are partially written, has been shelved as incomplete (see notes)
@@ -271,36 +301,6 @@ PUZZLE: The medbay door is stuck shut
 Deck A/Astrogation -[[
 	HACK: The Astrogation hatch is locked and requires XO-permissions
 	
-]]-
-
-THE MAP -[[
-Deck A
-		Recyl	Med Bay	 ->\
-			  \		|
-AFT|	ElevA -	HallA x2	  -	Astro
-			  /		|
-		LfSup	Sci Lab	 ->/
--
-Deck B
-		|<- 	Crew Quarters Alpha		->|	XOQtr\
-						\	|			   /
-AFT|	SecAI -	ElevA -	HallB x2 [Bridge] -	ElevB -	RecRm
-			  			/	|			   \
-		|<- 	Crew Quarters Beta		->|	CpQtr/
--
-Deck C
-		|<- 	Fuel Tank Alpha				 ->\
-<- THRUSTER ACCESS
-AFT| >-	EngPt -	ElevA -	HallC x2 [Bridge] -	ElevB -	MShop
-<- THRUSTER ACCESS
-		|<- 	Fuel Tank Beta				 ->/
--
-Deck D
-		| Eva	 ->| |<-	Cargo			 ->\
-					 \		|		/
-AFT|	| Eva -	ElevA -	HallD x2 [Secure] -	ElevB -	Cargo
-					 /		|		\
-		| Eva	 ->| |<-	Cargo			 ->/
 ]]-
 
 MODELLING

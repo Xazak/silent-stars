@@ -1,5 +1,7 @@
 "Silent Stars" by Zaq Grow
 
+The release number is 1.
+
 Use dynamic memory allocation of at least 16384.
 
 Include Basic Screen Effects by Emily Short.
