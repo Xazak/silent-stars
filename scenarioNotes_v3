@@ -1,0 +1,158 @@
+PREMISE:
+	The Player takes on the role of Engineer Emma Lumien, a Terran//French shipwright aboard the intergalactic spacecraft /Starlight Dancer/. While they are adrift near the Wolf Nebula, their port fuel tank is holed by a micrometeorite and the explosion vaporizes a full third of the ship's mass.
+	The player first meets their fellow crew just as they are stepping aboard to be put into spacecans. Then she has the scattered memories of being flash-defrosted, carried to the medbay, and secured in the autodoc. When the player assumes control, it is just on this awakening.
+	The player must unlock new areas of the ship, diagnose and repair malfunctioning systems, avoid a roaming killer robot, and evade the wiles of the ship's AI as it tries to keep them out of the ship intranet.
+	If at any time, the player takes too much damage or fails to prevent certain disasters from occurring, the game will end.
+	In order to claim victory, the player must:
+	1) Disable, destroy, or reprogram the LMR so that it does not hitch aboard the escape boat
+		A) DISABLE
+			The LMR can be disabled temp. through using some various tools and construx
+		B) DESTROY
+			The LMR can be destroyed by causing any part of it to take fatal levels of damage, such as by luring it into a trap
+		C) REPROGRAM
+			To reprogram the LMR, Emma needs access to Drone Control, which has been usurped by AURITA
+
+	2) Destroy, save, or subdue AURITA in her madness to prevent her from destroying everything
+		A) DESTROY
+			AURITA can be destroyed by way of her core, which is installed in the Security Office
+				The Security Office is only accessible by the LMR because of ship damage
+				The LMR can only be coerced into entering the AI core if the player reprograms it first from the SecOffice
+					Reprogramming the LMR will break its connection with the network, making it impossible to save AURITA unless switched back
+		B) SUBDUE
+			AURITA's madness can be placated if the player is willing to do certain things for her, or making her happy
+		C) SAVE
+			The only way to save AURITA is to correct her personality matrix such that her sole functioning shard takes control of the LMR
+				-The LMR cannot be reprogrammed at the same time, as doing so requires breaking the cnxn between the LMR and the network
+				-Correcting her personality matrix involves a sort of reverse-engineering of the situations involving her broken shards
+
+	3) Prevent the ship from drifting into doom
+		A) CORRECT SHIP DRIFT
+			Causing the ship to assume a safe position requires repairs to the manouvering jets
+		...or die: if the ship is allowed to drift unchecked for too long, it will slip into the gravity well of the hazard; though this is apparent from the beginning, the alerts regarding it are overly generous and will warn the player too late if not changed beforehand - this is an option available from the Astrogation deck (the timer on the drift does not start until the player exits the medical bay)
+
+	4) Repair enough of the ship to traverse obstacles and find what they need
+		--primary game loop--
+		Simply accessing other parts of the ship requires bypassing and repairing whatever systems were damaged
+
+	5) Repair the escape boat for final launch
+		--secondary game loop--
+		The need for the escape boat is obvious from the Astrogation deck; the need to repair it comes 1/2 through the game, upon accessing the boat launch deck for the first time
+
+THE CAST:
+-Emma Lumien, Ship's Engineer (Class 2), Terran//French, age 26, no living relatives.
+	A straightforward woman who grew up as a tomboy, she is happiest with her hands dirty in an engine pit rather than in a clean uniform.
+
+-AURITA, Ship's AI, mfc. Akari-Saburo Co-Eng (Little Plato Shipyards - AI Division), model series SO-CRX, series #047.
+	An artificial intelligence, like the one installed in every starship flying the black, she experiences a "critical stress event" when the ship's fuel tank explodes. In the resulting shock, her personality matrix fragments, and the divide in her consciousness results in her trying to both save and destroy the ship at the same time.
+
+-The Localized Matter Rehabilitator, or LMR (pronounced "LEE-muhr", for its resemblance to the Terran jungle creature)
+	Part of the standard operations package that comes with every starship, an LMR is indispensable to the good operations of any ship in service. It can operate independently as a repair and maintenance drone or controlled directly through telepresence.
+	Unfortunately, the one aboard the Starlight Dancer is as broken as the ship, its programming corrupted to make it clean anything it can find that is organic. To the player's dismay, it has also been programmed to use its welding torch to do the cleaning, instead of the pressure jets. 
+
+THE CREW:
+Captain Iblis Thuringwald Monosuke
+	Though regarded as quiet and calculating by his peers, his friends know that underneath the calm surface is a roiling cauldron of passion and drive, masked by a practiced control that still goes awry once in a while.
+
+Quartermaster Maryam van Jadoori
+	Known as exceedingly fair, often chosen as a mediator in shipboard conflicts, secretly considered a good-luck charm among ship captain rumor mills. Every trip she comes back on is a trip that cashes out in hard cash.
+
+Navigator Tristan Michel Cousteau
+	His business cards say "Pilot", not Navigator, and he uses them to seduce women in bars along with his tall features and poet's hair. Though he wouldn't know what to do with a wrench to save his life, he affects engineer's boots and a dashing scarf when he's off-duty. Despite the manufactured exterior, he is known for being a top-class pilot, deserving of his reputation as both a navigator and a rake. He is secretly romantic, keeping an actual astrolabe in his possessions. He owns a patent on a more-or-less novelty conversion of the astrolabe to the demands of intergalactic travel.
+
+Surgeon Amaranthe Melissa al-Smith
+	She is unaware that she has garnered a fan club of torch-bearing romantics back at the home station. Her cold manner and pale features are the sort of thing that would be intimidating on anyone else, but on Amaranthe they serve her as a direct expression of her total commitment to the duties and goals of a ship's surgeon. She can be a little scary anyway, and her fan club knows if she ever hears their motto of 'Punish me, Amaranthe!' they're in for the beating of their lives.
+
+THE SHIP
+The Aft Elevator connects Deck A to B and C; the Fore Elevator connects B and C to D. The ship is roughly five-sided, each deck connected in a circular hallway that borders the Bridge. 
+
+DECK A - Sci-Med
+	This deck is the smallest, running along the dorsal side of the ship, and unlike the three is merely a few rooms with a hallway between them. Hallway A connects the aft elevator to Astrogation, Sci-Labs, Life Support, Recycling, and Med-Labs.
+	
+	MEDLABS (W) (Starting Position)
+		Contains: Autodoc, player's equipment, chemical shower
+
+	ASTROGATION (N)
+		Contains: Auxiliary console, dorsal-fore viewport
+		The Astrogation console is untouched, saved from the disaster by luck of being ignored. AURITA took the early precaution of changing the password on the deck early in her coup, but it was soon forgotten in the resulting conflict. However, it lacks database access, since the main trunk line has been cut. It cannot issue commands to the ship, running from a read-only mirror of the mainframe until it is reconnected.
+		Emma discovers that the ship is adrift near the rings of (planet), on a course that will lead it straight into the river of stone and ice that hurtles through the vaccuum at supersonic speeds. She receives a few inklings of what has happened since she slept, and what might have happened to the other crewmembers and the AI. 
+	
+	SCILABS (E)
+		Contains: player's handbooks and repair guides
+	
+	LIFE SUPPORT (SE)
+		Contains: Life Support control console
+		This room contains the first large-scale puzzle of the game, involving the management of life support's limited resources. In effect, only certain rooms can be pressurized, and there is not enough atmosphere to pressurize all of them, nor are all of the decks connected. The player will need to change the configuration in order to allow their movements through other rooms while looking for a spare EVA suit. This configuration tool is accessible over the network, but initial configuration must be performed at the control terminal.
+	
+	AFT ELEVATOR (S)
+		Connects Deck A to Decks B and C, but the shaft is blocked between B & C. The door to A must be pried open with a heavy-duty tool, and which allows the LMR access to the upper deck, where it will pursue its regime of cleaning everything it can reach. The player can prevent this by making sure their needed items are secured away from the reach of the LMR.
+	
+	RECYCLING (SW)
+		Though this room also handles controls for the waste recycling systems, it also refers to the air scrubber systems, and contains the first hazardous puzzle the player will encounter (aside from dodging the LMR).
+
+DECK B - Staff
+	Most people on a ship never get farther than this deck, for this is where the crew quarters - berths for four plus Cap/XO on the Starlight Dancer - are located, along with the airlocks, the bridge entrance, security and AI core, and the rec room/galley. The Bridge takes up two-decks in the middle of the ship, while the other rooms run the periphery of the ship; the hallway connects both together.
+	BRIDGE (IN)
+		The most important room on the ship, and so not accessible until Emma can unlock it by fooling the system or forging new credentials. It spans both decks B and C, roughly the shape of a cube, capable of running under gravity or without, and has access to much of the ship. 
+	REC ROOM (N)
+		Containing the galley and the recreation facilities for the crew, this is also where guests were entertained and parties held. 
+	CPN QTR (NE)
+		Iblis' quarters, who was surprisingly cool yet cluttered, and would rather have a messy room than worry about securing his things prior to zero-g maneuvers. Thus, much of what lies in his room tends to lie on the floor, or whatever surface is the 'floor' at the time. Emma will be able to retrieve some of his things if she can effect changes in the ship's direction of drift.
+	CREW QTR B (E)
+		The quarters belonging to Tristan and Amaranthe, who were cohabitating at the time, more out of necessity than preference. The contents are damaged by the blast, largely blown out into space when the exo-bulkhead was vaporized, but a few things survive clinging to the webbing. Emma can retrieve them if she can secure the necessary EVA gear.
+	SECURITY/AI (S)
+		AURITA's access point is located here and secured heavily; if the player wishes to destroy AURITA, this is where they do it.
+	CREW QTR A (W)
+		The quarters belonging to Emma, and the empty berth. Her things are largely untouched.
+	XO QTR (NW)
+		The quarters assigned to Maryam, who had the sort of taste one might expect of a faithful military wife, an odd combination of hard metals against snuggly quilts and delicate beauty.
+
+DECK C - Tech
+	The ship's machine shop is located in the fore, while the engine pits are in the aft. The ship's fuel tanks run the length of the ship here to either side; maintenance access to the majority of the ship (including direct access to sensor equipment) is located here, along with a bridge access point.
+	BRIDGE (IN)
+		See above.
+	MACHINE SHOP (N)
+		Much of this room has been raided and robbed, the contents damaged or destroyed, but a few lockers and tools still remain.
+	ENGINE PIT (S)
+		The player will need to climb and clamber through here to finish repairs allowing the ship to maneuver, but this is the LMR's ground: it is perfectly suited to clambering through the ducting and tunnels.
+	FUEL TANK A (W)
+		This tank is intact, about one-quarter full of fuel. This represents the remaining maneuvering power available to the player. Measurements of the remaining fuel are inaccurate; repair of the sensor must be effected in order to prevent it from overreporting.
+	FUEL TANK B (E)
+		This is the tank that exploded: the meteorite made a hole not much bigger than a finger in the bulkhead, passing through both top and bottom of the curve of the fuel tank in a fraction of a second. It imparted so much kinetic energy that the resulting spray of fuel was turned to plasma, and the energy differential ripped open the fuel tanks along the longitudinal lines of their construction. In addition to ruining Crew Quarters B, it blew holes in the port sides of the Cargo Hold and the EVA Garage.
+
+DECK D - Cargo
+	The ship's cargo holds are accessible here through the atmo-airlock, along with secure cargo in the center, and the EVA garage in the back. Landing gear access is here as well.
+	SECURE CARGO (IN)
+		The extra-thick bulkheads have prevented this bulkhead from any damage, but likewise its contents are very difficult to obtain.
+	CARGO (N/W/E)
+		A hole blown in the starboard side by the explosion has vented this bulkhead to space, and part of the fuel incineration further damaged the room's contents. 
+	EVA GARAGE (S)
+		A hole blown in the starboard side by the explosion has vented this bulkhead to space, and part of the fuel incineration further damaged the room's contents. 
+
+THE EQUIPMENT
+The Planq/Persocom
+	-act as alt. terminal screen for consoles
+	-interact with network for traces, comms
+	-allow player to act on acquired access without req. useless intermediary
+
+The Hardware Tuner
+	-functions as sort of skeleton key that works on local systems
+	-allows player to access firewalled or secured systems that are not otherwise accessible by persocom for whatever reason
+
+The Repair Kit
+	-every ship engineer's best friend, a collection of demi-universal spanners, drivers, and sockets for all situations and needs
+
+The Cutter
+	-a futuristic cross between a dremel and a jigsaw blade
+
+The Welder
+	-unlike the rest, this tech hasn't changed much if ever, except to miniaturize it
+
+The Engineer's Light
+	-an earring on a chain that can be left flexible or made stiff; the light is turned on and off by flicking it with a fingertip; it is intended to be used when the engineer is bent over a small project
+
+The Torch
+	-a dual-source handlight that can be hand-cranked or fed batteries for power; it can be switched into a strobe mode that takes more power
+
+
+
+-needed parts are sourced as they come up, either by scavenging them or making them as applicable
