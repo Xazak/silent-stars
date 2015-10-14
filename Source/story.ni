@@ -949,7 +949,7 @@ The verb to hear (he hears, they hear, he heard, it is heard, he is hearing) imp
 
 The verb to holla (he hollas, they holla, he hollad, it hollad, he is hollin) implies the reversed audibility relation.
 
-The block listening rule is not listed in any rulebook.
+[The block listening rule is not listed in any rulebook.]
 
 Understand the command "listen" as something new.
 Understand "listen to [things]" as listening to.
@@ -1230,7 +1230,7 @@ After deciding the scope of the player while the location is in Dreamspace:
 	place the location in scope;
 	place the stone in scope; [the glow from this is visible all the way up]
 	
-A rocky shore is a room. The rocky shore is in the Dreamspace. The printed name of the rocky shore is "[one of]jagged[or]craggy[or]gravelly[or]cracked[or]sharp[at random] rocks";
+A rocky shore is a room. The rocky shore is in the Dreamspace. The printed name of the rocky shore is "[one of]jagged[or]craggy[or]gravelly[or]cracked[or]sharp[at random] rocks".
 "Rocks gnaw your bare feet.[br]The darkness is a vast cloak.[br]Nothing lies behind.[br][br]Still water cools the air.[br]It seems to stretch forever.[br]No waves touch your feet."
 
 Before taking something while the location is the rocky shore for the first time:
@@ -1245,7 +1245,7 @@ The-nothing is scenery, infrared.
 The description is "In nothing, stillness.[br]Fear and curiousity.[br]Turn lightward for now."
 
 A backdrop called the water is in the rocky shore, the upper pool, and the lower pool.
-The description is "[if the location is the rocky shore]You dip your fingers.[br]Deathly cold, then painful heat.[br]You flinch back, anxious.[otherwise]Blacker than midnight.[br]The chill reaches through your skin.[br]Your limbs feel distant.[end if][if the stone is in the lower pool][br][br][the initial appearance of the stone][end if]";
+The description is "[if the location is the rocky shore]You dip your fingers.[br]Deathly cold, then painful heat.[br]You flinch back, anxious.[otherwise]Blacker than midnight.[br]The chill reaches through your skin.[br]Your limbs feel distant.[end if][if the stone is in the lower pool][br][br][the initial appearance of the stone][end if]".
 The water is infrared.
 
 Down from the rocky shore is the upper pool. The upper pool is in the Dreamspace.

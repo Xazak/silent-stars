@@ -1,0 +1,159 @@
+ACT 1 - PROLOGUE
+	The player is introduced as Emma Lumien, along with the fellow crewmen as well as AURITA. Soon after, she awakens within the autodoc inside the Medbay, to the sound of a repeating distress message from one of the other crew.
+	The ship is connected on this level by a single central hallway that runs from Astrogation to the Aft Elevator Shaft.
+	GOAL: What the hell happened?
+
+==THE MEDICAL BAY (W)
+The player awakens in the autodoc in the Medical Bay. It is clear there has been trauma of some kind, both to the player and to their surroundings.
+? What's the distress message saying?
+	>When Emma emerges from the autodoc, she discovers a message addressed to her from Maryam. It prompts Emma to get her things out of her locker - "I set the combo to our birthday" or something, a clue to use >RECALL $MEMORY - and begs Emma to come save them as soon as she wakes up.
+? Where's all my stuff? 
+	>After Emma unlocks the gear locker, she finds a shipsuit and her usual things, including her Planq and her earlight. All of her more advanced tools are elsewhere in the ship, who knows where by now.
+? What happened while I was under anaesthetic?
+	>Without investigating the rest of the ship, it is unclear: the only warning is in Maryam's message, saying to 'beware the LMR'. 
+? Where's Melissa?
+	>Not in this room; Maryam's message to Emma says they are going to the SecOffice to see if AURITA's core is damaged.
+	PUZZLE: The Planq And You
+		1) Emma exits the autodoc via control panel - discloses evidence of trauma repair
+		2) Emma opens her gear locker using RECALL to remember the lock number
+		3) After getting ready, she uses the Planq to override the door lock and exit the room
+			- SUCCESS (Player exits Medical Bay)
+	SCENE: My Head Hurts...
+		1) In order to get her locker combo, she must use RECALL to remember it
+		2) There is a message from Maryam, hinting at the combo, and the use of RECALL
+			GOAL: Locate fellow crewmembers
+		3) Emma RECALLS the locker combo after invoking one of the second-order nouns
+			- SUCCESS (Emma opens her gear locker)
+
+==ASTROGATION (N)
+Though the hallway is scorched and littered with the debris of a struggle, there is no evidence of organic material whatsoever. If the player proceeds foreward, she encounters the sealed Astrogation hatch. If she can get inside, the auxiliary console within may provide some answers.
+? What's the current status of the Astrogation terminal?
+? Where are we right now? Is the ship in danger?
+? Where's Tristan?
+
+	PUZZLE: The Astrogation Terminal
+	> Provides RO access to: observation ctrls, ship status overview/etc, navigation data, remote access
+		- SUCCESS (Emma takes ship condition report)
+	> RW access requires low.security
+	> If the viewport controls are examined, it becomes clear that they are not showing a current feed
+	> Access to auxiliary bridge functions is not available, requiring later repairs
+		> A trunkline has been cut by the LMR; also requires high.security
+			> If AURITA is alerted, she may try to send the LMR to cut the line again
+		> Allows astro.term to be used as bridge.term, granting access to core ship fxns
+		> Successfully unlocking bridge fxns alerts AURITA via a local watchdaemon
+			> The daemon can be detected and eliminated first...
+	
+	SCENE: Drifting into the Void
+	1) The walls and floor of the room are covered with high-def displays of their surroundings, painted on by the projectors (this can be reduced or turned off from the terminal)
+	2) If Emma examines the views more than twice, their repetition becomes apparent
+	3) If Emma sets the views to the actual sensor feed, the true situation becomes clear
+		- (SUCCESS) (Emma discovers true location of the ship)
+		GOAL: Find a way to push the ship off-course to avoid the micrometeorites/gravity well
+		> To assist tracking this goal, Emma constructs a small script that provides warnings
+
+==AFT ELEVATOR SHAFT (S)
+The elevator appears to be working, but the door on this level is broken, and only opens at the bottom by a foot or so. In order to get inside, Emma will have to effect some kind of repairs to the door or cut through the stripped bolts on the access hatch next to it.
+? What happened to the elevator?
+? Where can I find a tool to cut this with?
+	PUZZLE: Unjamming the Door
+	- Cheap/Fast: Cut through the door bolts and move the doors aside, permanent change to door
+	- Cheap/Fast 2: Cut through the stripped bolts on the access panel/ reverse with welder, $resource
+	- Cheap/Strong: Locate the damaged component and cut it out of the wall; the door can be propped open, and a replacement mechanism made later
+		- SUCCESS (Emma gains access to Deck B)
+		! The LMR is alerted by the noise and comes to investigate
+	
+	SCENE: What's Happened Here?
+	1) Upon approaching the elevator door, the status lights report a mechanical failure
+	2) Examining the door provides clues about the LMR's abilities as well as clues to fixing the door
+	3) When Emma unlocks the elevator, the noise alerts the LMR; it comes to investigate
+		GOAL: Find a way to deal with the LMR
+		> The strongest indication of the LMR's proximity is the sound of its broken speaker
+
+==SCIENCE LABS (E)
+As with the hallway, the Science Lab is a mess but is bare of any organic material whatsoever. Even the specimen containers have been sterilized down to the gleaming metal. The player is also likely to find helpful information regarding repair procedures here.
+In addition, Amaranthe's shard is here, too distraught over the loss of the scientific samples to pay attention to Emma at first.
+? Is there any sign of my fellow crewmembers in here?
+? What happened to all the samples we took along the way?
+	PUZZLE: The SciLab Terminal
+	> Provides RW access to: archived documents & reports, certain software programs, remote access
+		> Provides archive access for the ship's documentation and certain software tools
+			> AURITA can launch an attack to void the DRM on this documentation
+			> If Emma chooses, there are hardcopies of the manuals in this room as well
+	1) Access to the terminal is open, but the datastore is encrypted, requiring low.security
+	2) Located within the room is a memchip with a security template that can be altered
+		2a) Also here are technical manuals, one of which contains the procedure for #2
+	3) When access to the datastore is unlocked, Emma can view some of the logs prior to the accident
+		> Some of the logs on the terminal do not match up with the backups on the memchip...
+	
+	SCENE: The History of a MemCard
+	1) If Emma examines the report archive on the scilab.term, information on recent history is exposed
+	2) If she examines the report archive on the memchip, the same information is disclosed
+	3) Examining both items within a certain number of turns alerts Emma to a discrepancy
+		- SUCCESS (Emma discovers clues to AURITA's derangement in logs from the memchip)
+
+==LIFE SUPPORT (SE)
+Here, Emma is able to get a diagnostic of the ship's condition (if not from Astrogation already), and discovers that there is not enough atmosphere left in circulation to allow every room to be pressurized. More importantly, some of the rooms cannot be pressurized at all due to leaks, and at least one of the rooms has a damaged sensor that will cause it to leak atmosphere without causing alerts to the system.
+? What is causing this immense status blackout on the charts?
+? What happened to the atmosphere controls? Why are they on manual?
+? Where is the EVA gear? If I had a breathmask or even a suit...
+	PUZZLE: The LifeS Terminal
+	> Provides RW access to: life support functionality, ship status overview, remote access
+	1) There is not enough atmosphere left to pressurize every remaining room on the ship
+	2) The system is locked into manual control to keep it out of AURITA's hands; requires mid.security
+	3) Atmosphere pressure can be redistributed throughout the ship to allow travel between rooms
+		> The system is controlled by hull sensors for detecting breaches and atmo sensors for air pressure
+		> The failsafes will not allow anyone less than high.security to pressurize a breached room
+		> XOQtrs(B) has a small breach and a faulty hull sensor: it vents air if pressurized above XX%
+		> SecCm(B) reports a false hull breach, preventing the room from opening due to failsafes	
+
+	SCENE: ...It Doesn't Look Good (triggers when Emma gets ship status report)
+	1) Many of the rooms on the (port) side are totally unresponsive
+	2) A great deal of atmo has vented to space, leaving Emma with a not-quite-generous supply
+	3) Some of the sensors are broken, causing the status report to be incomplete, hinting at damage
+		GOAL: Investigate and repair the damaged parts of the ship
+
+OTHER ROOMS ON THIS DECK: Recycling (SW)
+
+ACT 2: The Starlight Dancer's Fate
+The LMR should be making its way slowly, so that Emma has time to look around a bit first (it is triggered by the sound of the cutter on the elevator bolts). The scenery is no more optimistic than above: without a running power plant, the red glow of the emergency lighting is harsh and gloomy. 
+The bridge forms a central sphere around which are laid circular hallways spanning Decks B and C; secondary rooms are connected to these hallways around the outside.
+
+==BRIDGE (CENTER)
+Access to this room forms the central problem of Act 2: the answers inside will bring more questions than solutions.
+This room can theoretically be accessed from both Deck B and C, via one of eight access points, but damage to the ship has blocked many of them.
+? What happened to Captain Iblis? And the ship?
+? How do I get inside?
+
+==AFT ELEVATOR SHAFT (S)
+The elevator cannot descend any lower: if Emma looks inside, she sees there is a blockage there that might be cleared from the access hatch but not the shaft. She may climb down to Deck C or D if she wishes.
+? What happened to the elevator shaft?
+
+==REC ROOM (N)
+The recreation room and galley for the ship. It contains the usual sort of thing one might find here: equipment for fixing a meal, places to sit and eat or relax, viewing equipment for study or recreation. It also contains a zero-g bed with privacy screens - a running joke among those who travel through space, as the confines of a ship make real privacy near-impossible - used for those crewmen with romantic interests.
+	==FORE ELEVATOR SHAFT (N)
+This shaft connects Decks B, C, and D together. Access to Deck D is restricted by fuel flooding that has tripped danger sensors. If the flooding is eliminated, the elevator will be able to move freely between those decks.
+? What does the flooding mean? What's caused the flood down there?
+
+==CREW QTR PORT (W)
+These are Emma's quarters, which she occupied alone. There is an empty berth; it was not taken before the Starlight Dancer left port.
+? What is inside that would be most important to Emma?
+
+==CREW QTR STARBOARD (E)
+Tristan and Amaranthe cohabitated here, more out of necessity than preference - not much choice aboard a ship like this. The room was damaged by the blast, much of it blown out into space or vaporized, but a few things are still attached to the zero-g hardpoints. If Emma can find some EVA gear, she might be able to get out there and retrieve them.
+? What happened to Tristan and Melissa?
+
+==CPN QTR (NE)
+Captain Monosuke's room. Despite his calm, cool exterior, he is very cluttered, and displays a certain lack of concern about physical objects. Because of the ship's drift, certain important things are trapped beyond Emma's reach; if the drift can be corrected, the change in inertia will allow them to be obtained.
+? What happened to Captain Iblis?
+
+==XO QTR (NW)
+XO Jadoori's room. Part of the room has been sheared away in the blast, but one of her quilts has caught up against the opening and kept a few things from flying out into space when the atmosphere vented. The atmo sensor in this room is damaged; if Emma redirects atmosphere inside this room, it will slowly vent into space. While it is possible to get what is needed from the room with enough atmo to finish the game, it will eat into the player's reserves for the endgame.
+> Located in this room is a text on AI psychology, containing the first serious hints at a solution leading to AURITA's reintegration.
+? What happened to Maryam?
+
+==SECURITY OFFICE (S)
+The SecOffice is inaccessible due to ship damage. An access point for the LMR can be made, which after being programmed for it, can be made to allow Emma access. If the LMR is allowed inside before it has been reprogrammed, it will engage its cleaning routines on the contents within. When the ship is running, this is where direct access to AURITA's core can be found, as well as the various things required to run the quartermaster's post.
+? What happened to AURITA?
+
+DECK C:
+The scent of raw fuel is thick in the air despite the overworked scrubbers. 
