@@ -1,0 +1,120 @@
+	A micrometeorite hulls one of the Starlight Dancer's fuel tanks while it is taking observations near the Eagle Nebula. The resulting explosion tears out half the ship, and AURITA goes into massive shock and overload to try and deal with the damage. The quartermaster is dead, having been caught in the blast. Nav and Eng are both in deep cryo, but when they discover that Nav's tank has failed, they pull Eng out on a fast-defrost and transfer her to the autodoc in the medbay, one of the last intact bulkheads. As AURITA goes schiz, she is divided between the drive to save the ship and its data, or to destroy it to cover her shame. Using the few tools left to her she kills the surgeon and capatain, then sabotages the ship so that her yin-face can't fix it. When she finds that she cannot breach the medbay, she finds a way to push the ship into a drift towards the meteorite-drifts that hurtle through the clouds.
+	The player awakens in the medbay as the Engineer, Emma Lumien, hours away before a fatal encounter with a streak of meteorites will turn the hull of the ship into swiss cheese. As she makes a few repairs to get her bearings and figure out what has happened, she discovers the ship's plight, and her new priority becomes securing an escape path. While trying to establish what is going on, she discovers the AI is impersonating the other crewmembers as a method of sabotage against her. In order to reach safety, Emma will need to find a way to evade or pacify AURITA while lashing together what she can into an escape craft.
+
+CHARACTERS
+Engineer Emma Lumien, Terran/French, young adult
+AURITA
+The LeMuR
+
+Captain
+Quartermaster
+Navigator
+Surgeon
+
+---
+DANGER: The Starlight Dancer -[[
+	...has fallen prey to a serious disaster, one that will obliterate the ship in a matter of hours.
+	Cursed Place; wants to break apart and become nothing
+	! One fuel tank is a shell, the other is leaking into the ship
+	Portents:
+	1) The player obtains a status report on the ship, indicating damage levels
+	2) ...
+	3) ...
+	4) The fire reaches the $ROOM and causes explosions
+	Stakes: Will the player be able to escape the Starlight Dancer before it consumes itself in fire?
+	Doom: Obliteration
+]]-
+DANGER: The Localized Matter Rehabilitator -[[
+...has been infected with a virus that has corrupted its programming, causing it to attack organic material in an attempt to clean it up.
+Corrupted Machine; wants to clean and fix the ship
+Goals:
+	- Enter all the rooms
+	- Look in all the unlocked boxes
+	- Clean all the dirty things
+Portents:
+	1) The LMR emits strange noises that can be heard from a few rooms away
+	2) The LMR's eyes are stuck on FLOODLIGHT, and so it can be seen coming in the right circumstances
+	3) The LMR emits a particular noise when it opens a closed door
+	4) The LMR overwhelms the player with its floodlight eyes and attacks
+Stakes: Will the player be able to evade the LMR long enough to disable or reprogram it?
+Doom: Death
+Notes:
+	- Was formerly an exterior maintenance robot; its programming was corrupted either before or during the sabotage and it nows roams the inside
+	- The player may be able to hide from the LMR in an opaque container, but it must be able to lock or the LMR will open it
+	- The player will have some opportunities to disable or destroy the LMR; if disabled, it might possibly be recruited
+OPERATION CYCLE:
+	--Moves from wandering to inquiring to cleaning phases before starting over again at wandering
+	--Remembers which rooms it has cleaned so as to avoid recleaning them, but when it runs out of rooms to clean it restarts all over again instead of shutting down as per normal operations
+	Wandering:
+	1) The LMR scans the deck its on and builds a list of rooms to check 
+	2) The LMR chooses the first room off the list and heads for it
+	3) If it reaches its destination, it shifts to Inquiring mode
+	4) If it cannot reach its destination, [it discards the room off the list and chooses a new one]
+	Inquiring:
+
+	Properly writing Report rules for lemur actions will require custom action-result handling in each case, I7 does not appear to have suitable rules
+]]-
+DANGER: Aurita, the Shipboard AI -[[
+	...has gone insane after the sabotage to the ship overwhelmed her tolerances; she now thinks herself responsible and wants to bury her despair
+	Insane Artificial Intelligence; wants to hide any evidence and run from her guilt
+	! Dealing with Aurita and her psychoses is the mind game to the hardline puzzle solving aboard the ship
+	Portents:
+	1) If the player tries to access data that Aurita considers incriminating, she will try to corrupt the persocom to force a wipe
+	2) If the player tries to confront Aurita directly about the sabotage, she will choose a psychosis (denial, rage, etc) and evade
+	3) Lacking any way to affect the ship herself, she will try to trick the player into destroying the ship 
+	Stakes: Will the player be able to bring Aurita around or will she be consumed along with the Starlight Dancer?
+	Doom: Destruction
+]]-
+
+MAJOR PUZZLES
+-Dealing with AURITA
+-Disabling the LMR
+-Escaping from the Ship
+
+GAME LOOP
+-Player repairs systems, discovers information, avoids LMR, gains access
+-AURITA commands LMR, changes information, corrupts the Planq, emails Player
+-LMR cleans rooms, looks for things to clean, goes haywire
+
+ENDINGS
+The Ship is destroyed when it drifts into the nebula
+AURITA survives / is destroyed|immolates herself|etc
+Player survives / is killed|maimed|etc
+
+ENDING A: AURITA and Player both survive
+ENDING B: Player survives, AURITA does not
+ENDING C: AURITA destroys everything
+
+Emma's Survival:
+> What happened while Navigation and I were in hibernation?
+> What has happened to the AI through all this?
+1) Ascertain the condition and heading of the ship
+2) Gather supplies and examine damage
+3) Effect repairs while avoiding harm
+4) Repeat cycle while penetrating into the ship
+
+In order to survive, the following conditions must be met:
+- The escape craft is prepped, checked, and ready to launch;
+- AURITA is no longer in control of the hatch system;
+- The LMR has been deactivated to prevent it from hitching aboard
+
+AURITA's Survival:
+- her personality has been reintegrated through correction of her internal logic matrix
+- she has been convinced to accept further existence as a shackled AI to be studied back on Terra
+	- she is copied onto removable media and placed in the Player's bag
+
+AURITA's Suicide:
+- her personality has been reintegrated
+- she is convinced to accept self-immolation by pushing the Starlight Dancer further into the nebula, where it will be torn apart
+
+AURITA's Collapse:
+- the player chooses to push AURITA into a codeloop that forces her synaptic processing into an echolalia trap
+
+AURITA's Destruction:
+- the player attempts to escape without first correcting AURITA's neuroses, and she blows up the ship to leave no trace behind
+
+Reintegrating AURITA:
+	When the Starlight Dancer was damaged, her personality fragmented under the shock, and is at war with itself, fighting between oblivion or rescue. In order to displace her guilt at being unable to prevent the disaster, she is using personality constructs of the former crewmembers to concoct a story where they have sabotaged the ship out of political motivations, an entire falsehood. If she can plant all the evidence, she will overload the engines and destroy everything, but she won't do it unless she can commit suicide without any guilt first. 
+	The constructs are designed to fool the player into thinking they are the still-living crew, and communicate with the player in a manner that suggests they are effecting repairs of their own in order to meet them at the escape pod. Of course none of them are alive at all and so if the player believes them, they arrive at the pod amid a ship tearing itself apart in flames.
+	To repair the constructs and reintegrate AURITA, the player must interact with the constructs in their space, that of the messaging system, in order to impose a new logic matrix on her system. Setting up the obvious one allows AURITA to commit her suicide faster; setting up the correct one requires a certain transposition of roles in the logic-matrix (that of moving the Engineer out and the AI in) but also allows the player to communicate directly with AURITA's remaining sane personality fragments, as if through a keyhole.
+	If she is reintegrated, and the player chooses to communicate with her, they can convince her to accept a future being studied by specialists back on Terra, or to accept self-immolation after allowing the player to escape in her craft. If the player ignores her after reintegration, she allows the latter to happen anyway.

@@ -1,0 +1,20 @@
+DEVICE SPECS
+The Planq
+FUNCTIONS:
+> Device Access:
+	> A serial jack that allows certain maintenance cmds to be run from the Planq in a service mode, and provides a recovery mode for the Planq
+	> Local network access to any terminals, allowing them to be controlled from the Planq itself
+	> Remote terminal emulation
+> Communications:
+	> Access to the ship network, allowing communications between Planqs and the ship systems
+	> Network trace fxns
+	> Ship sensor data
+> Hacking:
+	> Datastream injection
+	> System file access
+	> Direct file editing
+> Memory Storage and Expansion:
+	> Runs a variety of storage media
+	> Local memory allows installation of auxiliary software
+	> ReaderSoft allows offline access to personal library
+

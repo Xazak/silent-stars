@@ -1,0 +1,71 @@
+WIN CONDITIONS:
+- Emma MUST flee in the escape craft before the ship is destroyed
+	- Emma MUST repair the craft
+
+? How did Emma choose to resolve the situation with AURITA?
+	-- Only the 'worst' option is available if the ship's drift is not corrected
+	IGNORE - AURITA probably gets to blow up the escape pod with Emma in it
+	NEGOTIATE - Emma and AURITA bargain for Emma's life
+	DISABLE - Emma cuts off all of AURITA's core cnxns
+	DESTROY - Emma destroys AURITA's AI core (perhaps via LMR)
+	INTEGRATE - Emma uses Maryam's information to collapse AURITA's chaotic personality matrix
+		...causes the partitioned sections of AURITA's core to be overwritten
+		vs. Emma - All of AURITA's motives are set to "kill player"
+		vs. AURITA - All of AURITA's motives are set to "kill self"
+		vs. null - Paradox state allows open communication with remaining intact fragment of AURITA's core
+
+=====
+DANGER: If the ship is not moved to a safe orbit within ???? hours, it will drift into a planetary ring, where micrometeorites will turn the ship into swiss cheese!
+	Solutions:
+	CHEAP-FAST: Detonate remainder of fuel to divert ship
+		1) Reinforce tank to provide correct thrust
+		2) Install detonation device
+		3) Detonate and hope you do not die
+	FAST-SOLID: Repair the maneuvering jets to push the ship
+		1) Fix a majority of the attitude jets
+		2) Prime the jets for ignition
+		3) Issue nav commands at Astro/Bridge terminal
+	SOLID-CHEAP: Manually fire the thruster to move the ship
+		1) Allow the power plant to reach operating capacity
+		2) Confirm fuel path is intact and controls operative
+		3) Prime the thruster and allow it to warm up
+		4) Ignite, let run, and shutdown the thruster engine from Astro
+
+DANGER: The LMR's subverted programming means that if it catches Emma in the open, it will reduce her to cooked ashes
+	Solutions:
+	AVOID: Emma can hear it coming because it emits a distinctive sound as it moves
+	DECEIVE: The LMR's sensors are damaged: it can be hidden from, or lured with bait
+	SUBVERT: If Emma can gain access to its controls, she can reprogram it to do certain other things
+	DISABLE: It can be disabled in software or via [a very bright flash of light]
+	DESTROY: It can be told to self-destruct or lured into a suitable trap
+
+DANGER: AURITA, the ship AI, has gone crazy: she will try to use misdirection and sabotage to destroy the ship and all the evidence before Emma can escape
+	Solutions:
+	IGNORE: Emma disregards AURITA's attacks by working around them
+	NEGOTIATE: Emma and AURITA bargain for Emma's life
+	! Solutions beyond here REQUIRE more time than is allowed without fixing the ship drift!
+	DISABLE: Emma cuts off all of AURITA's core cnxns
+	DESTROY: Emma destroys AURITA's AI core (perhaps via LMR)
+	INTEGRATE: Emma uses Maryam's information to collapse AURITA's chaotic personality matrix
+		...causes the partitioned sections of AURITA's core to be overwritten
+		vs. Emma - All of AURITA's motives are set to "kill player"
+		vs. AURITA - All of AURITA's motives are set to "kill self"
+		vs. null - Paradox state allows open communication with remaining intact fragment of AURITA's core
+
+DANGER: The escape pod took some damage in all of the chaos and must be repaired before it can be used, whether she remains in orbit or opts to make planetfall
+	Checklist:
+		1) Air?
+		2) Food/water?
+		3) Fuel?
+		4) Beacon?
+
+=====
+SHIP SUBSYSTEMS
+-Navigation Controls
+	-Astro, Bridge
+-Life Support
+	-LifeSup, Bridge
+-Power System
+	-Engines, Bridge
+
+
