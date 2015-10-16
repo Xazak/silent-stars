@@ -41,20 +41,45 @@ DANGER: The LMR's subverted programming means that if it catches Emma in the ope
 
 DANGER: AURITA, the ship AI, has gone crazy: she will try to use misdirection and sabotage to destroy the ship and all the evidence before Emma can escape
 	Solutions:
-	IGNORE: Emma disregards AURITA's attacks by working around them
-	NEGOTIATE: Emma and AURITA bargain for Emma's life
+	IGNORE: [questionably possible, check later]
 	! Solutions beyond here REQUIRE more time than is allowed without fixing the ship drift!
-	DISABLE: Emma cuts off all of AURITA's core cnxns
+	NEGOTIATE: What could AURITA want from Emma? (obv Emma wants to live)
+		...freedom?
+		...oblivion?
+	DISABLE: Prevent AURITA from being able to attack
+		1) Cnxn w/ LMR
+		2) Cnxn to network
+		3) ???
 	DESTROY: Emma destroys AURITA's AI core (perhaps via LMR)
+		CHEAP-FAST: Program LMR to do it, avoid room entirely
+		FAST-SOLID: ???
+		CHEAP-SOLID: Get inside, use cutter on AI core
 	INTEGRATE: Emma uses Maryam's information to collapse AURITA's chaotic personality matrix
-		...causes the partitioned sections of AURITA's core to be overwritten
-		vs. Emma - All of AURITA's motives are set to "kill player"
-		vs. AURITA - All of AURITA's motives are set to "kill self"
-		vs. null - Paradox state allows open communication with remaining intact fragment of AURITA's core
+		0) Read technical manuals
+		1) Discern false truisms
+		2) Locate evidence to disprove statements
+		3) Present evidence in order to sway focus
+		4) Unanimous focus on a single target causes collapse of personality matrix
+			AURITA's decision of what action to take on a given turn is driven by her motive
+			Before her matrix is resolved, multiple motives are in play, at differing levels of influence
+			Afterwards, her motives are un-confused, and her purpose becomes singular
+			Possible motive targets: vs self, vs Emma, vs Ship, vs null (error state)
 
 DANGER: The escape pod took some damage in all of the chaos and must be repaired before it can be used, whether she remains in orbit or opts to make planetfall
 	Checklist:
 		1) Air?
+			-Reseal the cracked hull
+			-Clean the O2 scrubbers
+			-Replenish the circulating atmo
 		2) Food/water?
+			-make sure the stores are filled
+				-where to get more?
 		3) Fuel?
+			-make sure the tanks are filled
+				-siphon from tanks?
 		4) Beacon?
+			-transceiver inspection:
+			Y/N receive
+			Y/N transmit
+			Y/N emergency msg
+
