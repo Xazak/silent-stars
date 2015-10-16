@@ -1,5 +1,5 @@
-<<This is still a rough list of all the game objectives, in order of presumed best completion. Detailed walkthru to come later>>
-
+ROOM DETAILS
+============
 DECK A - SCIENCE
 (Player begins within the autodoc, within the MedBay)
 > [W-MedBay] door controls broken
@@ -93,4 +93,49 @@ DECK B - LIVING QUARTERS
     >unlock Elevator B
 	  - denied until tristan.satisfied
 
+PLOTLINE WALKTHRU
+> get out of autodoc
+  ? what happened to everyone while i was asleep?
+> read message from melissa
+  ? what happened to melissa?
+> recall locker combo
+> open locker
+> get stuff out of locker
+	> use planq for 1st time
+> use planq on medbay door
+> enter hallway-a
 
+> enter scilab
+	> take cutter and memchip
+	> speak to Melissa's Ghost
+		"I need help with something..." //TASK
+	> hack scilab.terminal w/ util-mode on planq
+		> obtain copies of technical manuals
+		> observe ship condition
+	> upgrade security on planq
+		> read extra files from memchip on planq
+		> use security template on memchip to upgrade planq
+
+> enter life support
+	> use lifesup.terminal
+		> observe ship condition
+		> change config, install remote access
+
+> enter astrogation (low.sec required)
+	> use astro.terminal
+		> observe ship condition
+		> unlock RW access w/ planq
+			> set camera feeds to "current" from "20XX.JAN"
+				> observe ship location //TASK
+
+> examine elev-A
+	> observe damage to doors
+	> use cutter on...
+		1- door hinges: door.open, cannot be fixed or changed
+		2- door mechanism: door.open, can be fixed w/ (welder)
+		3- access hatch: hatch.open, can be fixed w/ (welder)
+		> when door|hatch.open, access to deck-B granted
+		(hall-A - elev-A - hall-B)
+
+[PLAYER INVENTORY: planq, cutter, low.sec, acc:lifes, astro]
+[PLAYER GOALS: melissa's ghost, ship drift]

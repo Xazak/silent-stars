@@ -58,14 +58,3 @@ DANGER: The escape pod took some damage in all of the chaos and must be repaired
 		2) Food/water?
 		3) Fuel?
 		4) Beacon?
-
-=====
-SHIP SUBSYSTEMS
--Navigation Controls
-	-Astro, Bridge
--Life Support
-	-LifeSup, Bridge
--Power System
-	-Engines, Bridge
-
-
