@@ -137,5 +137,22 @@ PLOTLINE WALKTHRU
 		> when door|hatch.open, access to deck-B granted
 		(hall-A - elev-A - hall-B)
 
-[PLAYER INVENTORY: planq, cutter, low.sec, acc:lifes, astro]
+[PLAYER INVENTORY: planq, cutter, low.sec, acc:lifes]
 [PLAYER GOALS: melissa's ghost, ship drift]
+
+> enter SE-ElevA (back up to DeckA only; travel to DeckC blocked)
+> enter W-CrewA
+	> get Emma's things
+> enter N-RecRm
+	> speak to Tristan
+	> enter ElevB (locked by ...)
+
+> enter NE-XOQtr (pressure diff lock:hull breach)
+> enter E-CrewB (pressure diff lock:hull destroyed)
+
+> enter NW-CpnQr (high.sec required)
+> enter S-SecCm (high.sec required)
+
+(Hallway B: [NW-CpnQr], N-RecRm:v, [NE-XOQtr], W-CrewA, [E-CrewB], [S-SecCm], SE-ElevA:^)
+
+

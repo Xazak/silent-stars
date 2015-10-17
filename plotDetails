@@ -47,9 +47,9 @@ DANGER: AURITA, the ship AI, has gone crazy: she will try to use misdirection an
 		...freedom?
 		...oblivion?
 	DISABLE: Prevent AURITA from being able to attack
-		1) Cnxn w/ LMR
-		2) Cnxn to network
-		3) ???
+		CHEAP-FAST: Modify and hardlock the software controls on her network access
+		CHEAP-SOLID: Destroy the hardline connecting the core to the network
+		FAST-SOLID: ??? 
 	DESTROY: Emma destroys AURITA's AI core (perhaps via LMR)
 		CHEAP-FAST: Program LMR to do it, avoid room entirely
 		FAST-SOLID: ???
@@ -64,6 +64,28 @@ DANGER: AURITA, the ship AI, has gone crazy: she will try to use misdirection an
 			Before her matrix is resolved, multiple motives are in play, at differing levels of influence
 			Afterwards, her motives are un-confused, and her purpose becomes singular
 			Possible motive targets: vs self, vs Emma, vs Ship, vs null (error state)
+
+DANGER: The holographic ghosts of the dead crew may or may not be trying to kill me?
+	Solutions:
+	STAGE 1: Placate their wails
+	STAGE 2: Discover their falsehoods
+		Amaranthe: "$MAN destroyed our science samples; they wanted us to be doomed!"
+			1: an edited piece of video footage that shows $MAN destroying the samples
+			2: one of the science samples, intact from the secure cargo hold
+		Tristan: "$MAN disabled our orbital shielding systems; they wanted an 'accident'!"
+			1: an edited system log, noting the time of shield system deactivation
+			2: a sensor log disclosing the high potential of a pinpoint impact overload event
+		Iblis: "$MAN sabotaged our engines and life support, killing us all!"
+			1: an edited journal from the crew qtrs, stating that $MAN is a secret traitor
+			2: a system report indicating the micrometeorite impact event
+		Maryam: "$MAN let AURITA loose from her program shackles and sent us into the torments of hell!"
+			1: an edited network tracelog that shows the unshackling auth from $MAN's address
+			2: an AI core dumprep that notes a massive psych event coinciding with meteorite impact
+	STAGE 3: Present the proof of logic
+		Each statement can be swayed via an obvious way and a hidden way. Each obvious way involves the use of something that can be hacked somehow to present a different person, allowing Emma to 'rewrite' the evidence as she needs to. However, each hidden option involves a particular unique, probably one that appears to be somewhat useless otherwise.
+	STAGE 4: Sway their emotions
+		Presenting proof that sways allows Emma to redirect AURITA's focus.
+		Presenting proof that confuses allows Emma to make contact with the self-preservation fragment.
 
 DANGER: The escape pod took some damage in all of the chaos and must be repaired before it can be used, whether she remains in orbit or opts to make planetfall
 	Checklist:
@@ -83,3 +105,18 @@ DANGER: The escape pod took some damage in all of the chaos and must be repaired
 			Y/N transmit
 			Y/N emergency msg
 
+THE AI FRAGMENTS
+When the meteorite struck and AURITA was damaged, her core fractured at a metaprocessing level, and manifested in a division of her capabilities. Lacking any kind of physical morphic structure to attach to, her divisions have taken on the forms of the other dead crewmen, reconstructed from what video she was able to recover.
+
+As AURITA's secret ur-objective is to find a way to clear her name, that is the subtle goal of each of these shards. Each one is constructed on the basis of a single statement's parity; the statement is one that assigns fault, or cause, for a given problem or obstacle. Of course in real life no one is really to blame for any such things, and so making it clear to the shards that there is logically no target for their blame will force them into a paradox-state. If each of the shards are thus rendered helpless, it will allow AURITA's remaining fragment of self-preservation to make contact with Emma.
+
+Each shard has the intent of placing blame at a specific entity's feet, those being the ones aboard the ship: AURITA and the crew. Their initial starting positions are all pointed at each other, excepting AURITA and Emma, whose positions as protag-antag make them also the only valid endgame configurations (aside from paradox-state).
+
+The use of each shard is multilayered:
+At first, they are perceived as strange organic computer-ghosts
+1 Emma interacts with them by doing regular quest things
+2 ...then by perceiving their real nature, and looking for their weak points, giving clues to what will be needed
+3 Emma locates the necessary proof items, repeat 2/3 as needed
+4 ...then by collapsing each of the ghosts into a particular config
+
+In order to have enough time to complete this process, it is necessary to prevent the ship from encountering a major stellar hazard. While it is perfectly acceptable for Emma to depart before this hazard becomes dangerous, it requires a deft touch. In addition, the only maneuvers available to Emma will not prevent her from death if she is aboard the ship for more than a day or so afterwards, necessitating that she escape aboard one of the ship's pods. The only shipshape pod on the rack is not ready to be used in the condition Emma discovers it in, having been worked over by the LMR in AURITA's 
