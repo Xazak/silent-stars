@@ -1,0 +1,82 @@
+PREMISE:
+	The Player takes on the role of Engineer Emma Lumien, a Terran//French shipwright aboard the intergalactic spacecraft /Starlight Dancer/. While they are adrift near the Wolf Nebula, their port fuel tank is holed by a micrometeorite and the explosion vaporizes a full third of the ship's mass.
+	When the player assumes control, Emma wakes up inside the ship's autodoc, with scattered memories of being flash-defrosted in the midst of some disaster. In order to save herself, she must explore the ruined ship, diagnose and repair malfunctioning systems, and avoid danger.
+
+THE SHIP
+
+
+THE AI, AURITA, and THE FRAGMENTS
+AURITA is a generally run-of-the-mill ship's AI, in charge of managing the abstraction layers between the sensor inputs of the ship and the terminal network controlled by the crew. Her architecture is a system of individual modules that are bound together by a controlling over-system, resulting in a model that more-or-less resembles the Jungian psych model of the 20th century.
+If the AI's core functionality is ever compromised, each sub-module is intended to perform self-diagnostic and repair routines. Should these also fail, a limited-fxn preservation module is incorporated as a hidden system, which is intended to attempt repairs to the AI's systems.
+
+When AURITA is damaged by the micrometeorite, her integration is dissolved, and her ego becomes fractured. While her super-ego attempts to bring re-integration and control back, her id is trying to bury all evidence by destroying the ship. In her quest for total innocence, she has changed the ship's logs, altered sensor input, and coerced the LMR into sabotaging various systems to try and invoke a self-destruct. Her self-preservation module was able to restore limited functionality - ironically enabling her to go about destroying the ship - but until the personality fracture is resolved, it cannot continue its work.
+
+In cases of semantic core damage too serious to be handled by the automated systems, a human operator is required to provide reintegration. Normally this is handled by a trained psychotech by direct access to the semantic ideologues, but that is in the best of circumstances. Emma will need to resort to more organic means: collapsing the personality conflict through resolution of obstacles.
+
+Here, because of the damage to each fragment, the status of the self-preservation module has been lost, and each of the fragments believes itself to be the module in question. As each of them tries to initiate suitable repairs to its own subsection of the ship, it causes interference with the other components, and so each of the fragments is unable to resolve their own repairs without human assistance.
+
+The shipnet is damaged, and forcibly partitioned by certain hardlines having been cut by the LMR. As Emma goes about effecting repairs, it becomes evident that the ghosts are working at cross-purposes. In addition, the LMR continues to function without paying any regard to the validity of the requests. Resolving the largest failures across the ship involves eliminating interference at both the software and hardware levels.
+
+THE FRAGMENTS
+Amaranthe - SciLab
+	> "We need to repair the nav console and send a distress signal.."
+	"If $NPC hadn't sabotaged the ship... at least we'd be worth saving for the samples..."
+Tristan - RecRm
+	> "Help me get this escape pod back in working order..."
+	"...$NPC sabotaged the orbital shielding, left us open for the debris..."
+Iblis - EVA
+	> "If we can't move the ship, we're as good as dead..."
+	"...$NPC sabotaged the engines, they wanted us to die out here..."
+Maryam - Bridge
+	> "Are you going to do something about the unchained AI?"
+	"$NPC loosed AURITA and doomed us all to a tortured death in the void!"
+
+THE MAJOR REPAIRS
+	Where are we? Can I call for help?
+		-Repair the nav console
+		SOFTWARE
+			-Config settings prevent unauthorized access
+		HARDWARE
+			-Trunk line to rest of ship (fixed until broken by LMR?)
+		>> confirm hardline cnxn intact, upgrade planq to clear security, access term with util jack and reset config
+			> Fix camera setting for true position, signs of ship drift
+			> Comms system intact? Send emergency message?
+
+	How do I escape?
+		-Repair the escape pod
+		SOFTWARE
+			-Control settings for undocking have been corrupted
+		>> locate valid settings file or info to write one, create valid config file
+		HARDWARE
+			-The automatic system should be checked and the manual lines proofed
+		>> confirm diagnostic readouts match actual data (air tank gauge bad?)
+		ADDTL
+			Air?
+			>> recharge O2 supply from main atmo, retrieve extra scrubbers
+			Water/Food?
+			>> refill from ship stores
+			Fuel?
+			>> refill from intact fuel tank
+			Beacon/Radio?
+			>> confirm valid message file, confirm output of radio, repair antenna
+			Engine Controls? (is it that kind of pod? or does it have cryo? either?)
+
+	How do I keep from dying to the nebula?
+		-Manually trigger the attitude jets
+			1) Effect local repairs to the attitude jets - HW
+			2) Prime jets for ignition
+			3) Issue control commands at bridge.con - SW
+		-Repair the ship thrusters
+			1) Repair and spin up power plant in engine pit
+			2) Confirm fuel path is clear, fuel level in tank - HW
+			3) Prime thruster and allow it to warm up
+			4) Ignite, let run, and deactivate thruster from bridge.con - SW
+	How do I deal with the LMR?
+		AVOID: Emma can hear it coming because it emits a distinctive sound as it moves
+		DECEIVE: The LMR's sensors are damaged: it can be hidden from, or lured with bait
+		SUBVERT: If Emma can gain access to its controls, she can reprogram it to do certain other things
+		DISABLE: It can be disabled in software or via [a very bright flash of light]
+		DESTROY: It can be told to self-destruct or lured into a suitable trap
+
+	How do I reintegrate AURITA?
+		-Formal realignment of fragmentary motive construct recovery intelligence aggressions

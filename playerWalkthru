@@ -137,22 +137,36 @@ PLOTLINE WALKTHRU
 		> when door|hatch.open, access to deck-B granted
 		(hall-A - elev-A - hall-B)
 
+> enter SE-ElevA (back up to DeckA only; travel to DeckC blocked)
+(Hallway B: [NW-CpnQr], N-RecRm:v, [NE-XOQtr], W-CrewA, [E-CrewB], [S-SecCm], SE-ElevA:^)
+
 [PLAYER INVENTORY: planq, cutter, low.sec, acc:lifes]
 [PLAYER GOALS: melissa's ghost, ship drift]
 
-> enter SE-ElevA (back up to DeckA only; travel to DeckC blocked)
 > enter W-CrewA
-	> get Emma's things
+	> get Emma's things, incl. welder
 > enter N-RecRm
 	> speak to Tristan
-	> enter ElevB (locked by ...)
+	> unblock access to ElevB
 
-> enter NE-XOQtr (pressure diff lock:hull breach)
-> enter E-CrewB (pressure diff lock:hull destroyed)
+> Shop
+> Fuel A/B
+> Engine Pit
+> ElevA
+> EVA Garage
+ <player can end game any point after taking EVA mask!>
+ <ship drift is now in hazardous range! danger!>
+ <enough time allowance is made re: engine repairs>
 
-> enter NW-CpnQr (high.sec required)
-> enter S-SecCm (high.sec required)
+> Thrusters (If player chooses to investigate...)
+> Crew B
+> XO Qtr
+ <game should end before this point if drift not corrected>
+ <if not corrected, travel is very dangerous in meantime>
 
-(Hallway B: [NW-CpnQr], N-RecRm:v, [NE-XOQtr], W-CrewA, [E-CrewB], [S-SecCm], SE-ElevA:^)
-
+> Bridge
+> Cargo | Cpn Qtr | SecCm | S.Cargo
+ <shards can be resolved with findings now accessible>
+ <AURITA's motive can then be resolved one way or another>
+ <only remaining goal is to escape>
 
