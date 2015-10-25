@@ -2,6 +2,8 @@ PREMISE:
 	The Player takes on the role of Engineer Emma Lumien, a Terran//French shipwright aboard the intergalactic spacecraft /Starlight Dancer/. While they are adrift near the Wolf Nebula, their port fuel tank is holed by a micrometeorite and the explosion vaporizes a full third of the ship's mass.
 	When the player assumes control, Emma wakes up inside the ship's autodoc, with scattered memories of being flash-defrosted in the midst of some disaster. In order to save herself, she must explore the ruined ship, diagnose and repair malfunctioning systems, and avoid danger.
 
+- Two impending disasters? one the PC can dodge the ship around and another longer-term one to explain why get off the ship? (planetfall?)
+
 THE SHIP
 
 
@@ -18,20 +20,113 @@ Here, because of the damage to each fragment, the status of the self-preservatio
 The shipnet is damaged, and forcibly partitioned by certain hardlines having been cut by the LMR. As Emma goes about effecting repairs, it becomes evident that the ghosts are working at cross-purposes. In addition, the LMR continues to function without paying any regard to the validity of the requests. Resolving the largest failures across the ship involves eliminating interference at both the software and hardware levels.
 
 THE FRAGMENTS
+=============
+draft 1 -[[
 Amaranthe - SciLab
 	> "We need to repair the nav console and send a distress signal.."
 	"If $NPC hadn't sabotaged the ship... at least we'd be worth saving for the samples..."
+
 Tristan - RecRm
 	> "Help me get this escape pod back in working order..."
 	"...$NPC sabotaged the orbital shielding, left us open for the debris..."
+
 Iblis - EVA
 	> "If we can't move the ship, we're as good as dead..."
 	"...$NPC sabotaged the engines, they wanted us to die out here..."
+
 Maryam - Bridge
 	> "Are you going to do something about the unchained AI?"
 	"$NPC loosed AURITA and doomed us all to a tortured death in the void!"
 
+AMARANTHE
+	- Data recovery and restoration: Wants to save as much data as possible for the recovery teams
+		! subr: overwrites configs and logs with 'better' ones
+	(...rewrite old records to change the history in case anything is recovered)
+TRISTAN
+	- Navigation and communications 
+		! subr: causes signal input distortion/failure - false positives/negatives, etc
+	(...prevent further unapproved comms from leaving the ship, to avoid bringing help)
+IBLIS 
+	- Exterior security, ship heading/location
+		! subr: 
+	(...send the ship into danger to get rid of it)
+MARYAM 
+	- Internal security, life support, etc
+	(...)
+(AURITA)
+	- "cohesion" of fragments
+	(...pursuit of self-destruction)
+]]-
+
+DATA - the information unrelated to the ship but important otherwise
+	- background on what happened, valuable data to bring to the recovery team, etc
+	> tries to recover corrupted data, performs validation checks, maintains logfiles
+		x AURITA has corrupted her functions by breaking certain logfiles and altering the core checksum value
+SECURITY - life support, internal affairs, supply stores, etc
+	- ship conditions, atmo controls, cryostasis, food & water levels, AI condition, etc
+	> manages the automatic atmo controls, monitors various meatspace indices (food, water, etc)
+		x has been corrupted through the monitoring systems (atmo being locked into manual), causing bad data
+COMMAND - exterior conditions and communications
+	- sensor data, comms gear, administration and goal decision
+	> performs various sensor interpolations, handles commo targeting and modulation, provides tactical support
+		x has been corrupted through distortion of the sensor/commo algorithms
+NAVIGATION - ship location/heading and route planning
+	- where are we? where are we going? how long do we have?
+	> handles navigation and propulsion calculations, starfield observations, etc
+		x certain core constants have had their values altered
+ENGINES - ship propulsion and powerplant
+	- all mechanical considerations: from the dataterminals to the powerplant to the thruster nacelles
+	> monitors internal ship sensors: thruster & powerplant output, fuel levels, LMR status
+		x untouched by aurita because too damaged to need it; LMR controls technically work but LMR's xcvr is broken (no comms)
+
+--The AI fragments on the ship are actively destroying it, though they all claim otherwise
+	- Questioning each reveals that each one believes another to be the cause of all the problems - "$FRAG's programming must be corrupted"
+		- In actuality, none of the fragments are corrupted, but their assumptions and data input can be, which is AURITA's fault
+	- The fragments are a subset of the AI core and cannot be edited directly [save @ the core in SecCm]
+	- The fragments are trying to engage their self-preservation routines, but are unaware of AURITA's changes
+	- Because AURITA has to manipulate things behind the scenes, she will not be able to keep up with the PC
+
+SOFTWARE - AURITA left corruption and malicious code to sabotage the fragments
+HARDWARE - AURITA broke the logfile, though unable to disable it, so that her LMR reqs are mixed in with the rest
+
+FRAGMENT RECOVERY PROCESS
+1) fragment cannot initiate repair procedures because $REASON
+	-PC discovers solution to $REASON and eliminates the problem
+2) fragment makes repair procedure attempt; reports a success but is running AURITA's bad code
+	-PC discovers underlying problems with repair systems
+		-attempting to wipe and restart fragment fails because netboot comes off the AI core
+		-resolving AI fragmentation allows self-preservation module to assist PC with repairs
+
+A) Isolate fragments/systems from each other, get just enough equipment repaired to make an escape
+	-bad or okay ending, player is not able to get true story or recover much, if any, of the expedition
+	-isolating a given system causes it to be only locally accessible - it will be manually reparable but slowly so
+OR
+B) Discover underlying cause of issues, resolve AI fragmentation, use automatic systems to repair and escape
+	-good ending, player will be able to leave with as much of the expedition's data as possible
+
+STEPS TO A SUCCESSFUL RESCUE
+1) Send emergency communications requesting assistance
+2) Obtain time for repairs (if needed) by manually firing engine thrusters - not enough fuel left to reach orbit in the ship
+3) Repair and secure the escape pod, then depart
+
+--RULES
+1) Each fragment is only concerned with a particular subsystem in the ship
+	-They are not intelligent enough to deal with more; they are aware of the other frags but don't care
+	-Nor are they able to assist with other repairs; they simply direct Emma elsewhere
+2) Any frag can send reqs to the LMR, but it only carries out one at a time
+	-Emma has to spoof one of the other frags to use the LMR?
+	-What does the LMR do when it's not occupied with a task? (clean?)
+3) The fragments alone do not possess enough cognition to have initiative, only motive; they are not malicious, only dumb
+	-Any perception of self-thought is interface artifacting
+
+TERMINAL RECOVERY PROCESS
+1) If possible, perform adjustments using normal terminal access
+2) Connect planq to maint.jack and engage util-mode
+3) In util-mode, choose reboot option: reboot | reboot w/ clean img | close
+4) Allow terminal to reboot then update config to system settings
+
 THE MAJOR REPAIRS
+=================
 	Where are we? Can I call for help?
 		-Repair the nav console
 		SOFTWARE
