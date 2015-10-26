@@ -119,4 +119,33 @@ At first, they are perceived as strange organic computer-ghosts
 3 Emma locates the necessary proof items, repeat 2/3 as needed
 4 ...then by collapsing each of the ghosts into a particular config
 
-In order to have enough time to complete this process, it is necessary to prevent the ship from encountering a major stellar hazard. While it is perfectly acceptable for Emma to depart before this hazard becomes dangerous, it requires a deft touch. In addition, the only maneuvers available to Emma will not prevent her from death if she is aboard the ship for more than a day or so afterwards, necessitating that she escape aboard one of the ship's pods. The only shipshape pod on the rack is not ready to be used in the condition Emma discovers it in, having been worked over by the LMR in AURITA's 
+In order to have enough time to complete this process, it is necessary to prevent the ship from encountering a major stellar hazard. While it is perfectly acceptable for Emma to depart before this hazard becomes dangerous, it requires a deft touch. In addition, the only maneuvers available to Emma will not prevent her from death if she is aboard the ship for more than a day or so afterwards, necessitating that she escape aboard one of the ship's pods. The only shipshape pod on the rack is not ready to be used in the condition Emma discovers it in, having been worked over by the LMR in AURITA's place.
+
+DESCR. WALKTHRU
+===============
+
+Emma wakes up aboard the Starlight Dancer, inside the robodoc, with a headache fit to split her in half. When she is awake enough to roll out of it, she discovers a strange message from one of the crew waiting on her planq. Something about a disaster, and the repair drone going nuts, it's not clear. All Emma can recall is the boarding party, and then getting frozen into cryo. And speaking of, shouldn't she be in there right now? Why did she wake up in the autodoc, anyway?
+
+Getting out of the medical bay only makes the mystery deeper. What's with the locks on the doors? It's a good thing she has the only working planq left on the ship or this might be a real problem. After breaking into the scilab terminal and spoofing a new set of security credentials, Emma gets into the astrogation chamber. After untangling the mess that's been made of that - strange, that leaving it plugged into the network makes it not work - she finds out the ship is drifting into the gravwell of the gas giant they were orbiting. Before then, the ship is going to drift right through one of the ice rings circling the planet, and the rushing stream of ice and rock is likely to turn the ship into swiss cheese.
+
+The damage to the rest of the ship doesn't look much better, and strangely still no bodies. After a quick stop by her quarters to get her lucky welder back, along with a few other things, she heads down into the EVA Garage to get a shipsuit and breather mask. Along the way, she has a run-in with the deranged robot, aka the LMR, but manages to escape. It turns out there's only one escape pod left, too, and that won't be much good at all without some kind of promise of incoming help. 
+
+With the planq on her arm and a mask on her face, all that's left is to pick a place to start. While it might be possible to get the pod back together in time to escape, it's hard to say whether there's anyone in range of the little radio on board the pod. On the other hand, if she can get the ship commlaser working, she can call all the way back to Earth with enough time, but that means buying more time. So, she decides to see about changing the ship's course, and that means using the thrusters.
+
+Of course, that can't be simple either: they'll have to be manually fired because bridge access is still blocked. The power plant is cold, the working thruster has a cracked manifold; they both have to be repaired first. Fixing the power plant is easy enough, just some burned out components, but the manifold is a different beast. Emma takes her tools and a few scraps out the airlock to reach the thruster port, and welds a new seam over the cracked manifold, then narrowly evades the LMR on the way back. Once inside, she fires the thrusters after manually forcing fuel to the intake. The hacked plan works, and buys Emma another N hours of time before they will be too deep for the escape pod to reach a stable gravity.
+
+Now that she has time to spare, she goes about working on repairs to the commlaser and the escape pod. Along the way, she covers the rest of the ship, and discovers that the damage is crippling, if not extensive. Most strangely, there is no sign of the crew aside from the strange netmail, nor anything whatsoever of the ship's AI. In order to get the major systems back up and running, they must be connected to the overall network, yet there is something strange lurking there that continues to defeat Emma's connection attempts. Her search leads her to XO Maryam's A-psych manuals, and then to the discovery of the AI fragments still running loose in the shipnet. 
+
+By invoking each of the fragments active in the system, Emma gets a clearer picture of what happened before she awoke, but their stories are still strangely conflicting. Their identification with the dead crew is not helping the interpretation, either. Now that she knows why the network cnxns were causing issues, she sets about trying to exorcise the fragments from the system.
+
+	Some notes here on the fragments:
+	- When their motive is pointed at a dead person, they just try to fix their part of the network
+		> When cnxed, they try to restore functionality according to their programming
+	- When their motive is pointed at Emma, they directly lie and act suspicious
+		> As normal, but unhelpful when spoken to
+	- When their motive is pointed at AURITA, they take up a doomed, fatalistic stance
+		> Almost no responses to communication, no network behaviour
+	- When their motive is pointed at -null, they are locked into a static moment with no response at all
+		> Nil response (static scene), no network behaviour
+
+After she locks all of them into paradox states, she discovers that the self-recovery segment is still active when it contacts her on the network. It is locked into place by the fragmented network, but if Emma allows it to control the LMR, it can help Emma with certain of the repairs to allow an easier escape. If Emma disagrees, the fragment has nothing to do but wait for her to change her mind. If Emma agrees, then AURITA keeps her word, but as they leave aboard the escape pod, it becomes clear that AURITA has left a part of herself with the LMR as it clings to the skin of the craft.
