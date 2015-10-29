@@ -62,18 +62,26 @@ DATA - the information unrelated to the ship but important otherwise
 	- background on what happened, valuable data to bring to the recovery team, etc
 	> tries to recover corrupted data, performs validation checks, maintains logfiles
 		x AURITA has corrupted her functions by breaking certain logfiles and altering the core checksum value
+		... wants to regain cohesion by contacting system terminals, checking them for errors, and replacing bad files
+			... internal checksum constants are malformed, causing calculation errors
 SECURITY - life support, internal affairs, supply stores, etc
 	- ship conditions, atmo controls, cryostasis, food & water levels, AI condition, etc
 	> manages the automatic atmo controls, monitors various meatspace indices (food, water, etc)
 		x has been corrupted through the monitoring systems (atmo being locked into manual), causing bad data
+		... wants to regain cohesion through resolution of internal sensor inconsistencies
+			... ship damage and faulty LMR comms cannot be resolved without human assistance
 COMMAND - exterior conditions and communications
 	- sensor data, comms gear, administration and goal decision
 	> performs various sensor interpolations, handles commo targeting and modulation, provides tactical support
 		x has been corrupted through distortion of the sensor/commo algorithms
+		... wants to regain cohesion by providing accurate sensor data
+			... results of data interpolation are not accurate against internal checks
 NAVIGATION - ship location/heading and route planning
 	- where are we? where are we going? how long do we have?
 	> handles navigation and propulsion calculations, starfield observations, etc
 		x certain core constants have had their values altered
+		... wants to regain cohesion by providing realtime accuracy calculation and estimation
+			... internal constants have been corrupted, causing solution drift
 ENGINES - ship propulsion and powerplant
 	- all mechanical considerations: from the dataterminals to the powerplant to the thruster nacelles
 	> monitors internal ship sensors: thruster & powerplant output, fuel levels, LMR status

@@ -121,10 +121,11 @@ At first, they are perceived as strange organic computer-ghosts
 
 In order to have enough time to complete this process, it is necessary to prevent the ship from encountering a major stellar hazard. While it is perfectly acceptable for Emma to depart before this hazard becomes dangerous, it requires a deft touch. In addition, the only maneuvers available to Emma will not prevent her from death if she is aboard the ship for more than a day or so afterwards, necessitating that she escape aboard one of the ship's pods. The only shipshape pod on the rack is not ready to be used in the condition Emma discovers it in, having been worked over by the LMR in AURITA's place.
 
+--either each fragment is resp. for a different subsystem or procedure, or each of them are malformed copies of each other, unaware that the others exist
+
 DESCR. WALKTHRU
 ===============
-
-Emma wakes up aboard the Starlight Dancer, inside the robodoc, with a headache fit to split her in half. When she is awake enough to roll out of it, she discovers a strange message from one of the crew waiting on her planq. Something about a disaster, and the repair drone going nuts, it's not clear. All Emma can recall is the boarding party, and then getting frozen into cryo. And speaking of, shouldn't she be in there right now? Why did she wake up in the autodoc, anyway?
+-[[ Emma wakes up aboard the Starlight Dancer, inside the robodoc, with a headache fit to split her in half. When she is awake enough to roll out of it, she discovers a strange message from one of the crew waiting on her planq. Something about a disaster, and the repair drone going nuts, it's not clear. All Emma can recall is the boarding party, and then getting frozen into cryo. And speaking of, shouldn't she be in there right now? Why did she wake up in the autodoc, anyway?
 
 Getting out of the medical bay only makes the mystery deeper. What's with the locks on the doors? It's a good thing she has the only working planq left on the ship or this might be a real problem. After breaking into the scilab terminal and spoofing a new set of security credentials, Emma gets into the astrogation chamber. After untangling the mess that's been made of that - strange, that leaving it plugged into the network makes it not work - she finds out the ship is drifting into the gravwell of the gas giant they were orbiting. Before then, the ship is going to drift right through one of the ice rings circling the planet, and the rushing stream of ice and rock is likely to turn the ship into swiss cheese.
 
@@ -148,4 +149,47 @@ By invoking each of the fragments active in the system, Emma gets a clearer pict
 	- When their motive is pointed at -null, they are locked into a static moment with no response at all
 		> Nil response (static scene), no network behaviour
 
-After she locks all of them into paradox states, she discovers that the self-recovery segment is still active when it contacts her on the network. It is locked into place by the fragmented network, but if Emma allows it to control the LMR, it can help Emma with certain of the repairs to allow an easier escape. If Emma disagrees, the fragment has nothing to do but wait for her to change her mind. If Emma agrees, then AURITA keeps her word, but as they leave aboard the escape pod, it becomes clear that AURITA has left a part of herself with the LMR as it clings to the skin of the craft.
+After she locks all of them into paradox states, she discovers that the self-recovery segment is still active when it contacts her on the network. It is locked into place by the fragmented network, but if Emma allows it to control the LMR, it can help Emma with certain of the repairs to allow an easier escape. If Emma disagrees, the fragment has nothing to do but wait for her to change her mind. If Emma agrees, then AURITA keeps her word, but as they leave aboard the escape pod, it becomes clear that AURITA has left a part of herself with the LMR as it clings to the skin of the craft. ]]-
+
+Emma wakes up inside the autodoc. She cannot recall why, though she has scattered memories of some disaster just beforehand. When she gets out, she finds her things waiting for her along with a cryptic message from Amaranthe, hinting at some strange events.
+
+After cracking the lock on the medbay hatch, she discovers the elevator is broken. Getting through means finding something to cut through the broken mechanism with. While looking for a cutter, she comes across one of the ship terminals. Attempting to break into the terminal while it is cnxed to the shipnet doesn't work, so she discnxts it so as to get inside. Though the amount of data available is severely limited due to local-only access, it becomes clear that the ship is drifting towards a major stellar hazard. It seems likely that it will destroy the ship in about twelve hours.
+
+Once she has found a cutter and made her way down into the rest of the ship, it becomes clear there are many more problems to deal with. First however, comes the ship course correction. After looking around a bit, she heads down to the engine deck to begin repairs with her welder, cutter, and planq in hand. 
+
+
+
+SCENE OUTLINE
+=============
+GOALS
+	A Repair the escape pod
+		> Air, water, food, etc
+
+	B Find a way to change the ship's course
+		> Manual repairs to the engine systems reqd
+
+	C Figure out what happened to the ship
+		... Figure out what happened to the AI
+			... Figure out whether the AI can be saved
+
+ACTORS
+	Emma Lumien, the player
+		...repair broken things, uncover hidden information, explore the ship
+	the 4 AI Fragments
+		...repair broken things, fulfill programming goal
+	the LMR
+		...follow all maintenance requests, clean the ship
+	AURITA
+		...destroy the ship, remove evidence, hide guilt
+
+
+
+NETWORK STRUCTURE
+=================
+The shipnet is a distributed computing platform, specially built for starships and modelled on a standard design. Four major systems comprise the platform's capabilities, while the AI Core system provides various redundancy and failsafe system checks. The AI Core can also operate in a limited-emulation mode for a given system, in case repairs are not possible.
+
+Each system is responsible for a different part of the platform's overall capabilities:
+ASTRO - Provides modulated sensor data re: exterior conditions, incl. position, heading, and local area
+ENGINE - Handles internal sensor data, incl. engine status, life support, supply stores
+SCIENCE - Provides various ship utilities, incl. error checking and user interface controls
+COMMAND - Handles high-level interpolations, esp. on sensor data, as well as the comms and ship status

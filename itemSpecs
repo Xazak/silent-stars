@@ -1,4 +1,8 @@
-DEVICE SPECS
+CONTENTS:
+	Actors
+	Props
+
+=========
 The Planq
 FUNCTIONS:
 > Device Access:
@@ -17,4 +21,12 @@ FUNCTIONS:
 	> Runs a variety of storage media
 	> Local memory allows installation of auxiliary software
 	> ReaderSoft allows offline access to personal library
+
+ship.terminals
+FUNCTIONS:
+> All Access:
+  - Can be installed at any terminal onto planq
+	> Ship Status Monitor
+	> Habitat Interface (life support)
+
 

@@ -6,43 +6,25 @@ DECK A - SCIENCE
   + Planq, jumpsuit, earlight
   = autodoc, gear locker
   ! email:maryam/re:autodoc
-  Exit autodoc
-  Open locker
-  Recall combination
-  Get $locker.contents
-  Exit Medbay (to Hallway A)
+  > Exit autodoc
+  > Open locker (takes RECALL COMBO)
+  > Exit Medbay (takes planq override)
 
 (Hallway A: [N-Astro], W-Medbay, E-SciLabs, [SE-ElevA:v], SW-LifeS)
 
 > E-SciLabs
   + Cutter, technical manuals, memory chip
   = SciLab terminal
-  ! Amaranthe
-  Speak to Amaranthe
-  Get technical manuals
-  Get cutter
-  Get memory chip
-  Install chip in planq
-  Upgrade planq security
-	Hack into locked terminal to access datastore
-
-> SW-LifeS
-  Examine LifeS terminal
-  Create link between planq and LifeS for remote access
-  	Change configuration of atmo density
-
+  > Download tech manuals, logfiles
+  > Upgrade planq.security (takes memory chip)
+  > Hack into sci.term
+	> Examine hidden datacache
+ 
 > [N-Astro] Door ctrls broken
   = Locked door, Astro terminal, viewports
-  Examine Astro terminal - access denied
-  	(use planq to crack terminal access)
-	  >get ship status
-	  	- disclose conditions 
-	  >unlock viewports
-	  	- disclose ship drift
-	  >activate bridge.term - access denied (NO_CNXN)
-  Examine viewports
-    IF viewports are filtered - camera.old
-	IF viewports are unlocked - camera.now
+  > Hack into astro.term
+  	> Change viewport configuration
+	> Aux Bridge Fxns (w/ net axs)
 
 > [SE-ElevA] Locked by puzzle; requires cutter (in SciLabs)
   = Broken door, access panel to crawlspace
@@ -68,9 +50,8 @@ DECK B - LIVING QUARTERS
   ! Hull sensor irreparable; force bad status with hardware switch
 
 > W-CrewA
-  + Emma's personal effects
+  + Emma's lucky welder, a few other things
   = Emma personal space, an empty berth for another person
-  Get my stuff back
 
 > [E-CrewB] locked by LifeS(hull.breach)
   + (things left behind by Amaranthe and Tristan)
@@ -84,68 +65,17 @@ DECK B - LIVING QUARTERS
   ! No hull breach exists, error faked to prevent door opening
   ! Truth of errors ascertained after reprogramming LMR for recon
 
-> N-RecRm
+> N-RecRm (cryo??)
   + ? (holotapes?)
   = ElevB, viewscreen, RecRm terminal, (galley and dining rms)
-  ! Tristan
-  Speak to Tristan
-  Examine RecRm terminal
-    >unlock Elevator B
-	  - denied until tristan.satisfied
 
-PLOTLINE WALKTHRU
-> get out of autodoc
-  ? what happened to everyone while i was asleep?
-> read message from melissa
-  ? what happened to melissa?
-> recall locker combo
-> open locker
-> get stuff out of locker
-	> use planq for 1st time
-> use planq on medbay door
-> enter hallway-a
+> Machine Shop
+  = Major equipment for metalwork
 
-> enter scilab
-	> take cutter and memchip
-	> hack scilab.terminal w/ util-mode on planq
-		> obtain copies of technical manuals
-		> observe ship condition
-	> upgrade security on planq
-		> read extra files from memchip on planq
-		> use security template on memchip to upgrade planq
+> Fuel A
+  
+> Fuel B
 
-> enter life support
-	> use lifesup.terminal
-		> observe ship condition
-		> change config, install remote access
-
-> enter astrogation (low.sec required)
-	> use astro.terminal
-		> observe ship condition
-		> unlock RW access w/ planq
-			> set camera feeds to "current" from "20XX.JAN"
-				> observe ship location //TASK
-
-> examine elev-A
-	> observe damage to doors
-	> use cutter on...
-		1- door hinges: door.open, cannot be fixed or changed
-		2- door mechanism: door.open, can be fixed w/ (welder)
-		3- access hatch: hatch.open, can be fixed w/ (welder)
-		> when door|hatch.open, access to deck-B granted
-		(hall-A - elev-A - hall-B)
-
-> enter SE-ElevA (back up to DeckA only; travel to DeckC blocked)
-(Hallway B: [NW-CpnQr], N-RecRm:v, [NE-XOQtr], W-CrewA, [E-CrewB], [S-SecCm], SE-ElevA:^)
-
-[PLAYER INVENTORY: planq, cutter, low.sec, acc:lifes]
-
-> enter W-CrewA
-	> get Emma's things, incl. welder
-
-> RecRm
-> Shop
-> Fuel A/B
 > Engine Pit
 > ElevA
 > EVA Garage
