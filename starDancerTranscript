@@ -1,0 +1,91 @@
+The glowing blue eye's blinking is what wakes you up eventually. It floats in the darkness before you, opening and closing, opening and closing. The air around you smells of antiseptic and metal. You can tell there isn't much room in here from the way your breath sounds in your ears. You feel good, but somehow you feel like it's not your body, and you wonder if that might last very long.
+
+> examine eye
+
+You reach up and rub the sleep out of your eyes. Bending forward - which takes a great deal more effort than you expected, grunting as you brace yourself on your elbows - you discover that it is a blue button.
+
+> push button
+
+The running lights come on, filling the coffin-sized space with a full-spectrum glow designed to emulate the rays of the sun. The blue button is one of a trio on the panel before you. The readout flickers to life as you lay back on the padding, already tired from holding yourself up. 
+
+*****
+ /_\ 
+/   \UTODOCTOR v12.72_rev6
+
+Procedure complete. Details forwarded to eLumien, iAltasir.
+
+To initiate another procedure, please exit the chamber.
+*****
+
+> exit chamber
+
+(unlock chamber)
+You reach up and press the red button on the panel. The safety interlocks all release at once, and there is a hissing sound as the seals release. The coffin lid rises up on servos and rolls back, the better to let you sit up.
+
+< Your ears pop as the pressure changes in the atmosphere.
+
+(get out)
+You have barely enough strength to clamber over the side without tumbling onto your ass. You feel sluggish, still disconnected from your body. 
+
+(look)
+You're in the medical bay, clinging to the side of the autodoc, naked as a jaybird. The emergency lights are on, bathing the room in their sapphire glow. The room looks disheveled, some of the cabinets hanging askew on their hinges. It has the look of a frantic search as opposed to a vicious struggle.
+
+< A storage locker along the wall appears to be intact, the red lock indicator still shining happily.
+
+< A chemical shower stands on the opposite side of the room from the 'doc. Unlike the crew showers, this one gets priority status on hot water.
+
+< You're still warm from the autodoc, but you should find some clothes.
+
+> examine locker
+
+Although it has its fair share of scratches and damage, this locker's door is intact and sealed. Scrawled across the front in grease-pencil are the words, "REMEMBER AMARANTHE".
+
+Under the indicator light is a ten-key.
+
+> examine ten-key
+
+Buttons for the numbers zero through nine, arranged in a 3x3+1 block. Standard input device since the days of the keyboard.
+
+> open locker
+
+You stand for a moment, thinking. You have no idea what the unlock code might be.
+
+> examine words
+
+They're written in grease pencil by a fast hand, probably Amaranthe's.
+
+-> remember amaranthe
+
+She's Lunar//Irish, pale and glowering under a cloudlike mass of raven-colored hair that refused to be tamed. You have been friends since the beginning of the expedition, when you came upon her watching vintage 20th-century cinema. She has tattoos of ribbon bows on the backs of each thigh, and a third tattoo of a sword along the inside of her left arm. On the sword's blade, it read, "17-11-2057".
+
+> remember date
+
+You were never able to find out what it meant to her, nor why it had to be on the sword's blade like that. One of the many things she chose not to talk about.
+
+< You're starting to feel chilly. The bones in your feet are starting to ache.
+
+< You feel your stomach rumble. The autodoc is supposed to give nutrient rations, but they're intravenous; not really very filling, when it comes to that.
+
+> enter "1711"
+
+The locker's indicator turns green, and the door pops open as neat as you please.
+
+-> examine (contents of) locker
+
+Inside the locker is a shipsuit, a pair of magsandals, a granola bar, and your planq. 
+
+> put on shipsuit
+
+The standard-issue uniform aboard starships the universe over, normally worn over regular clothing but perfectly serviceable on its own. The interior is lined with heat-reflective threads, and assuming no damage is proof to vaccuum in emergency situations. By the time you tug the collar around your neck and draw the zipper up from ankle to shoulder, you already feel warmer.
+
+-> put on magsandals
+
+They aren't much more complex than a pair of magnetic platforms with straps on them; they wrap around the ankle and calf up to the knee. The edges are rounded off to facilitate the shipman's gait that everyone develops to accomodate the strange frictions of a magnetic walking motion instead of a gravitational one. Your professors back in college used to say a man could run around the hull of a ship with these on, if he was careful to keep his mass pointed in the right direction.
+
+> take granola bar and planq
+
+You're too hungry to hold on to the granola bar; you peel the wrapper off and bite off a chunk.
+
+It feels reassuring to just hold a planq again. You strap the readout around your left forearm, pulling the synthetic fabric nice and tight. Then you pick up the input gloves and tug them on, flexing the fingertips to warm up the conductive threading. Most people only use one glove, but like most engineers you took the time to learn to use both hands, so you can enter commands no matter what you're doing.
+
+<< Computer display boot up routine, etc
