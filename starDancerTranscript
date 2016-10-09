@@ -28,11 +28,14 @@ You reach up and press the red button on the panel. The safety interlocks all re
 You have barely enough strength to clamber over the side without tumbling onto your ass. You feel sluggish, still disconnected from your body. 
 
 (look)
+// Medical Bay //
 You're in the medical bay, clinging to the side of the autodoc, naked as a jaybird. The emergency lights are on, bathing the room in their sapphire glow. The room looks disheveled, some of the cabinets hanging askew on their hinges. It has the look of a frantic search as opposed to a vicious struggle.
 
-< A storage locker along the wall appears to be intact, the red lock indicator still shining happily.
+A storage locker along the wall appears to be intact, the red lock indicator still shining happily.
 
-< A chemical shower stands on the opposite side of the room from the 'doc. Unlike the crew showers, this one gets priority status on hot water.
+A chemical shower stands on the opposite side of the room from the 'doc. Unlike the crew showers, this one gets priority status on hot water.
+
+There is a door to the east. It is locked: the indicator panel's red gleam looks almost purple under the emergency lights.
 
 < You're still warm from the autodoc, but you should find some clothes.
 
@@ -60,7 +63,7 @@ She's Lunar//Irish, pale and glowering under a cloudlike mass of raven-colored h
 
 > remember date
 
-You were never able to find out what it meant to her, nor why it had to be on the sword's blade like that. One of the many things she chose not to talk about.
+You were never able to find out what it meant to her. One of the many things she chose not to talk about.
 
 < You're starting to feel chilly. The bones in your feet are starting to ache.
 
@@ -84,8 +87,132 @@ They aren't much more complex than a pair of magnetic platforms with straps on t
 
 > take granola bar and planq
 
-You're too hungry to hold on to the granola bar; you peel the wrapper off and bite off a chunk.
+You're too hungry to wait; you peel the wrapper off the granola bar and bite off a chunk.
 
-It feels reassuring to just hold a planq again. You strap the readout around your left forearm, pulling the synthetic fabric nice and tight. Then you pick up the input gloves and tug them on, flexing the fingertips to warm up the conductive threading. Most people only use one glove, but like most engineers you took the time to learn to use both hands, so you can enter commands no matter what you're doing.
+It feels reassuring to just hold a planq again. You strap the readout around your left forearm, pulling the synthetic fabric nice and tight before switching it on. Then you pick up the input gloves and tug them on, flexing the fingertips to warm up the conductive threading. Most people only use one glove, but like most engineers you took the time to learn to use both hands, so you can enter commands no matter what you're doing.
 
-<< Computer display boot up routine, etc
+Generally, the readout only displays a single line at a time to save on battery power, although it has a hololens if it comes to that. The pale lettering in the emerald-crystal display gives off a reassuring and familiar glow.
+
+*** system cache integrity check: OK
+
+> examine door
+
+The medbay door is locked, and doesn't appear to have been tampered with or damaged.
+
+The indicator light on the lock panel gives off a weak glow.
+
+*** planqOS kernel integrity check: OK
+
+> examine lock
+
+A standard door interface panel found throughout starships the universe over. There are two buttons on the faceplate, labeled "UN/LOCK" and "OPEN/SHUT". An access port is situated below the buttons.
+
+*** planqOS v6.39-rev16 ("Eddward") booting...
+
+> press unlock|open
+
+The red indicator light bleeps a couple times, and stays red.
+
+*** DOOR: Security status invalid. Please contact duty supervisor.
+
+> examine access port
+
+A standard 32K optical port, for which you have a planq adapter. The gleaming array of diamond pins behind the plain dustcover sparkle in the light.
+
+*** planq: idle
+
+> connect planq to access port
+
+You slip free the little jack from the housing on the readout and plug it into the access port on the door.
+
+*** planq: connection detected: doorLock
+
+A menu appears in the air above your left arm.
+
+-[[ SOME NOTES ON THE SYSTEM ADDRESSING
+((All system addresses are in the form of DECK.ROOM.objTYPE))
+DECK A
+  A
+  |
+M-H-S
+B-H-L
+ /E
+
+ADDR	TYPE
+.000	system-reserved
+.100	terminal
+.200	hatch
+.300
+.400
+.500
+.600
+.700
+.800
+.900
+
+]]-
+-----
+ver:	DOORos v34.1
+adr:	1.2.201
+obj:	medbay.hatch
+sts:	closed; locked; idle
+lck:	error
+-----
+
+*** planq: idle
+
+> planq, list commands
+
+*** planq: medbay.hatch: [list of available commands]
+
+-[[ PLANQ FAQ
+TOOLS
+access:	invokes maintenance-level controls of connected module
+		-- Doing so usually invokes a core dump in turn from the module, which is interpreted by the planq
+light:	toggles the external flashlight
+		-- Drains battery
+
+SYSTEM
+status:	displays various info on the planq's current state
+config:	invokes config editor for planq
+power:	displays battery level; flags: --shutdown, --reboot
+quack:	planq integrity check utility
+reset:	resets the planq to factory-release status
+]]-
+
+> planq, access
+
+*** planq: accessing...
+
+-----
+:: COREDUMP: medbay.hatch (1.2.201) ::
+medbay.hatch.integOS:	checksum pass
+medbay.hatch.openState:	closed
+medbay.hatch.lockState:	locked
+medbay.hatch.authority:	aMckiernan
+medbay.hatch.note:		E: just do an axs:r -f, luv A
+-----
+
+It's not uncommon for engineers to leave notes to each other in the memory of the things they work on, though the content is just gossip as often as not. You smile to see Amaranthe's words, and wonder briefly where she is.
+
+> planq, axs:r -f
+(planq, access:reset -force)
+
+*** planq: medbay.hatch: resetting core...
+*** planq: disconnected (system reset)
+
+The indicator light on the door panel goes dark. A moment later, the light comes back on, glowing green.
+
+*** planq: medbay.hatch: connected
+
+> exit medbay
+(first disconnecting your planq)
+You unplug the access jack and wind it back into the planq's housing.
+
+(first opening the door)
+You touch the OPEN button on the panel and the door's halves whoosh apart.
+
+(going east)
+
+// Deck A: Hallway //
+
