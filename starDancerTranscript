@@ -180,18 +180,18 @@ quack:	planq integrity check utility
 reset:	resets the planq to factory-release status
 ]]-
 
-> planq, access
+> planq, connect
 
-*** planq: accessing...
+*** planq: connecting...
 
------
-:: COREDUMP: medbay.hatch (1.2.201) ::
-medbay.hatch.integOS:	checksum pass
+:: medbay.hatch (1.2.201) ::
+medbay.hatch.osck:		checksum pass
 medbay.hatch.openState:	closed
 medbay.hatch.lockState:	locked
 medbay.hatch.authority:	aMckiernan
 medbay.hatch.note:		E: just do an axs:r -f, luv A
------
+
+---
 
 It's not uncommon for engineers to leave notes to each other in the memory of the things they work on, though the content is just gossip as often as not. You smile to see Amaranthe's words, and wonder briefly where she is.
 
@@ -213,6 +213,116 @@ You unplug the access jack and wind it back into the planq's housing.
 You touch the OPEN button on the panel and the door's halves whoosh apart.
 
 (going east)
+Your magsandals click on the metal tiles as you step through the hatch.
+
+*** planq: disconnected
 
 // Deck A: Hallway //
+
+The emergency lighting paints the walls in bright blue shades. After the chaos of the Medbay, you'd been braced for the scenes of a struggle, but the hall is bare of any signs of passage.
+
+Astrogation lies to the fore, while the double doors of the Science Labs lie to starboard, opposite the Medbay. The access elevator lies to the aft, and beside it is a maintenance hatch. Astrogation and the elevator both appear to be locked.
+
+*** planq: idle
+
+> go fore
+
+The Astrogation hatch remains shut, the door locked, even after you touch the controls.
+
+*** DOOR: Inadequate security clearance detected. Level A required.
+
+> planq, status
+
+++ planqOS v6.39-rev16 ("Eddward") ++
+security.level	undef
+  ...
+---
+
+> planq, examine security.level
+
+*** planq: security.level = 0x0000 (undef)
+
+> go starboard
+The scent of soil and chlorophyll wafts by as the SciLab hatch slides open.
+
+// Deck A: Science Labs //
+
+The semitransparent specimen containers on the far wall each glow emerald and gold under their own little lights, pushing back the gloom of the emergency lights somewhat. Cabinets of equipment hang over lab benches, and Amaranthe's desk is pushed up into one corner.
+
+A couple of specimen containers at the end of the row are broken, and soil has spilled out of them into a mound on the decking.
+
+*** planq: idle
+
+> examine containers
+
+Along with the various other things stored down in the cargo hold, these specimen boxes are the trophies of the crew's mission: live samples of flora taken from potential garden planets. Their life support systems are powered from an independent power line, sipping volts off of a cold-core battery. The crystal walls are an inch-thick, strong enough to be proof against vaccuum. If something happened to the Starlight Dancer's crew, the samples would still be here waiting for the rescue mission to come get them.
+
+Two containers are broken: the cracked crystal sparkles under the lights.
+
+> examine broken containers
+
+The bottom of the cover has been broken open under some kind of blunt force; there are cracks spiderwebbing across the crystal.
+(( Were these empty? ))
+
+> examine desk
+
+The sole exception Amaranthe allowed to the sterile order of the laboratory was the chaotic mess of her desk. She claimed it was organized according to the memory swap needs of her subconscious, but with Amara it was hard to tell sometimes whether or not she was serious. Fans of hardcopy are sprayed across the desk, interpolated with memory chips, a fist-sized chunk of silicon, and various other scientific paraphernalia.
+
+> examine memory chips
+
+There are four of them, each labeled in Amara's hasty script: "Personal Logs", "Lab Data Backup 11-22-3333", "DELTA", and "GAMMA".
+(( Is there another chip hidden amongst the papers? ))
+
+> examine personal logs
+
+You pick up the memory chip labeled "Personal Logs". The actual chip is the size of your thumbnail, in a tiny molded frame inside the plastic case. Being careful not to drop it, you slide the chip into the [first] of three slots in your planq.
+
+The holo-display springs to life above your raised forearm, pale green letters floating in midair.
+++ planqOS
+Contents of: "Amaranthe's Personal Logs"
+notes/
+	((a log noting the bug Amara found allowing someone to upgrade their security.level))
+	((some other miscellany))
+memos/
+	3333/
+		((some stuff))
+	3332/
+		((some older stuff))
+journal/ - encrypted
+
+> planq, decrypt journal/
+
+** planq: no key found, please specify location of encryption key
+
+> planq, read memo ALPHA
+
+++	file: memo ALPHA
+++	date: XX-YY-3333
+I ran into some problems trying to access my backups, and got sidetracked trying to correct my account privileges. In the process, I found a bug that allows an unprivileged user to elevate their sec.lev. Maybe I can make some extra credit selling the report back to the planqOS team. When we get back to Terra System, that is.
+Here's how to reproduce the bug:
+	1) Boot the planq into service mode
+	2) Delete any existing .planqrc located in the user's profile directory
+	3) Using elevated privileges, open /def/.planqrc for editing
+	4) Change the line
+		security.level = 0^0111
+	to reflect the desired security level (ie, 0^RZZZ for standard top-level clearance)
+	5) Use regenConf to create a new user-level .planqrc
+	6) Reboot the planq into normal mode
+The internal security systems will detect that an attempt has been made to force-create a new security.level without using the admin-level toolset, but instead of using the system-issued credentials located at the security.home, it uses our edited default to generate a valid replacement.
+
+I've written a patch to prevent this, but I still have to get Ibrahim's chop before I can deploy it. Just one more thing to put on the to-do list...
+++	<EOF>
+
+> ((hack planq))
+(( see the above memo for the specifics ))
+
+> go port
+
+// Hallway A //
+
+> go fore
+
+When you approach the door to Astrogation, the indicator on the lock changes from crimson to emerald and beeps twice before the hatch whooshes open.
+
+// Astrogation //
 
