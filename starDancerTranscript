@@ -59,7 +59,7 @@ They're written in grease pencil by a fast hand, probably Amaranthe's.
 
 -> remember amaranthe
 
-She's Lunar//Irish, pale and glowering under a cloudlike mass of raven-colored hair that refused to be tamed. You have been friends since the beginning of the expedition, when you came upon her watching vintage 20th-century cinema. She has tattoos of ribbon bows on the backs of each thigh, and a third tattoo of a sword along the inside of her left arm. On the sword's blade, it read, "17-11-2057".
+She's Lunar//Irish, pale and glowering under a cloudlike mass of raven-colored hair that refused to be tamed. You have been friends since the beginning of the expedition, when you came upon her watching vintage 20th-century cinema. She has tattoos of ribbon bows on the back of each thigh, and a third of a sword along the inside of her left arm. On the sword's blade, it read, "17-11-2057".
 
 > remember date
 
@@ -79,7 +79,7 @@ Inside the locker is a shipsuit, a pair of magsandals, a granola bar, and your p
 
 > put on shipsuit
 
-The standard-issue uniform aboard starships the universe over, normally worn over regular clothing but perfectly serviceable on its own. The interior is lined with heat-reflective threads, and assuming no damage is proof to vaccuum in emergency situations. By the time you tug the collar around your neck and draw the zipper up from ankle to shoulder, you already feel warmer.
+The standard-issue uniform aboard starships the universe over, normally worn over regular clothing but perfectly serviceable on its own. The interior is lined with heat-reflective threads, and assuming it is undamaged, it is proof to vaccuum in emergency situations. By the time you tug the collar around your neck and draw the zipper up from ankle to shoulder, you already feel warmer.
 
 -> put on magsandals
 
@@ -238,9 +238,13 @@ security.level	undef
   ...
 ---
 
+That's not a good sign. How did your config file get to be like that? 
+
 > planq, examine security.level
 
 *** planq: security.level = 0x0000 (undef)
+
+Unfortunately, editing your own security clearance is a no-go for obvious reasons. You'll have to find Captain Al'Tasir and get him to change it. 
 
 > go starboard
 The scent of soil and chlorophyll wafts by as the SciLab hatch slides open.
@@ -313,6 +317,9 @@ The internal security systems will detect that an attempt has been made to force
 I've written a patch to prevent this, but I still have to get Ibrahim's chop before I can deploy it. Just one more thing to put on the to-do list...
 ++	<EOF>
 
+You let out a sigh of relief. Finding Captain Al'Tasir is still a top priority, but now at least you don't have to be stuck up here. 
+Amara's neurotic compulsion to document everything saves the day once again.
+
 > ((hack planq))
 (( see the above memo for the specifics ))
 
@@ -326,3 +333,39 @@ When you approach the door to Astrogation, the indicator on the lock changes fro
 
 // Astrogation //
 
+Although the hull is as thick here as anywhere else, the walls of the Astrogation chamber look transparent. The effect is as though you are walking unprotected into the cold vaccuum. The only giveaway of the projection screens is the faint waver of starlight, an artifact of the image processing. Out in vac, the stars are hard and unforgiving points of light. Impossible to mix them up when you know what to look for.
+
+The Astrogation terminal stands in the middle of the floor. The board is dark.
+
+> turn on terminal
+
+You reach under the edge of the terminal board and hit the mains switch. The terminal's surface comes to life, the glow of the interface buttons barely stronger than the starfield surrounding you.
+
+It's hard to tell whether it's just your nerves or something else, but it seems as though it takes longer than normal for the terminal to boot. When the ship's coat of arms finally appears on the screen, you let out a sigh of relief. At least something works around here.
+
+++ SHIP OS - ASTRO
+Available functions:
+	-- diagnostics
+	-- navigation
+	-- bridge access (disabled)
+
+> astro, diagnostics
+
+++ SHIP OS - ASTRO
+	DECK A - WARNING
+	!	Medbay: ERR: no response from autodoc
+	!	SciLab: ERR: no response from axs.node
+		Astro : No problem reports
+	!	LifeSp: ERR: no response from terminal
+	!	ElevA : ERR: shaft obstructed/damaged
+
+	DECK B - WARNING
+		
+
+	DECK C - ERR: no response from gateway node
+
+	DECK D - ERR: no response from gateway node
+
+> astro, navigation
+
+> astro, enable bridge access

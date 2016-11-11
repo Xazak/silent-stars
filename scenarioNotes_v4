@@ -5,7 +5,52 @@ PREMISE:
 - Two impending disasters? one the PC can dodge the ship around and another longer-term one to explain why get off the ship? (planetfall?)
 
 THE SHIP
+DECK A
+	As
+	|
+ M	H	Sci
+ B-	A-	Lab
+	|
+	ElevA
 
+DECK B
+
+CpQ   Rec  XOQ
+   \   |   /
+	HHHHHHH	
+  C	H  |  H C
+  Q-H-Brd-H-Q
+  W H  |  H E
+    HHHHHHH
+	   |
+	  Sec
+
+DECK C
+
+	 MachS
+	   |
+  F	HHHHHHH	F
+  u	H  |  H u
+  e-H-Brd-H-e
+  l H  |  H l
+  W HHHHHHH E
+  	   |
+	Eng Pit
+	   |
+	Thrustr
+	   V
+
+DECK D
+
+	Cargo
+	   |
+  C	HHHHHHH	C
+  a	H  |  H a
+  r-H-Brd-H-r
+  g H  |  H g
+  o HHHHHHH o
+	   |
+	E  V  A
 
 THE AI, AURITA, and THE FRAGMENTS
 AURITA is a generally run-of-the-mill ship's AI, in charge of managing the abstraction layers between the sensor inputs of the ship and the terminal network controlled by the crew. Her architecture is a system of individual modules that are bound together by a controlling over-system, resulting in a model that more-or-less resembles the Jungian psych model of the 20th century.
